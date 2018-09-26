@@ -37,3 +37,4 @@ package-lock\.json
 src/OpenApiGenerator/bin/*
 
 src/OpenApiGenerator/obj/*
+.DS_Store

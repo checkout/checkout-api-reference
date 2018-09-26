@@ -85,3 +85,7 @@ allOf:
         type: string
         description: The CVV check result
         example: Y
+      payment_account_reference:
+        type: string
+        description: A unique reference to the underlying card for network tokens e.g. Apple Pay/Google Pay
+        example: "EUNIX9AX7THOOJIEJ2AP6OOFAHGH4"
