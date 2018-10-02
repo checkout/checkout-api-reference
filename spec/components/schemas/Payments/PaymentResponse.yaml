@@ -92,6 +92,10 @@ properties:
     type: string
     description: Your reference for the payment
     example: ORD-5023-4E89
+  eci:
+    type: string
+    description: The Electronic Commerce Indicator security level used to authorize the payment
+    example: "06"  
   _links:
     type: object
     description: The links related to the payment

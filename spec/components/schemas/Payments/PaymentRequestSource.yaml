@@ -9,6 +9,7 @@ discriminator:
     ideal: '#/components/schemas/PaymentRequestIdealSource'
     id: '#/components/schemas/PaymentRequestIdSource'
     token: '#/components/schemas/PaymentRequestTokenSource'
+    network_token: '#/components/schemas/PaymentRequestNetworkTokenSource'
 required:
   - type
 properties:
