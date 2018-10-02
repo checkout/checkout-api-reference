@@ -128,6 +128,12 @@ properties:
     example:
       coupon_code: "NY2018"
       partner_id: 123989
+  eci:
+    type: string
+    description: |
+      The final Electronic Commerce Indicator security level used to authorize the payment. 
+      Applicable for 3D-Secure, digital wallets and network token payments.
+    example: "06"  
   _links:
     type: object
     description: The links related to the payment
