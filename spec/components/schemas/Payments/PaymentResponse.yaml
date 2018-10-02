@@ -94,7 +94,9 @@ properties:
     example: ORD-5023-4E89
   eci:
     type: string
-    description: The Electronic Commerce Indicator security level used to authorize the payment
+    description: |
+      The final Electronic Commerce Indicator security level used to authorize the payment. 
+      Applicable for 3D-Secure, digital wallets and network token payments.
     example: "06"  
   _links:
     type: object

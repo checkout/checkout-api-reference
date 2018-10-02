@@ -21,3 +21,15 @@ allOf:
         example: "956"
         minLength: 3
         maxLength: 4
+      eci:
+        type: string
+        description: |
+          For network tokens, the Electronic Commerce Indicator security level associated with the token. 
+          Can be omitted for recurring payments where the `previous_payment_id` is provided.
+        example: "05"
+      cryptogram:
+        type: string
+        description: |
+          For network tokens, the Cryptographic identifier used by card schemes to validate the integrity of the payment.
+          Can be omitted for recurring payments where the `previous_payment_id` is provided.
+        example: AgAAAAAAAIR8CQrXcIhbQAAAAAA=

@@ -5,7 +5,7 @@ allOf:
   - type: object
     required:
       - type
-      - number
+      - token
       - expiry_month
       - expiry_year
       - eci
@@ -31,7 +31,7 @@ allOf:
         example: 2025
       eci:
         type: string
-        description: The Electronic Commerce Indicator security level associated with the payment
+        description: The Electronic Commerce Indicator security level associated with the token
         example: "05"
       cryptogram:
         type: string
