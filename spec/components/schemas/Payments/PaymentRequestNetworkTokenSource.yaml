@@ -9,7 +9,7 @@ allOf:
       - expiry_month
       - expiry_year
       - eci
-      - cryptogram
+      - token_cryptogram
     properties:
       type:
         type: string
@@ -31,11 +31,15 @@ allOf:
         example: 2025
       eci:
         type: string
-        description: The Electronic Commerce Indicator security level associated with the token
+        description: The Electronic Commerce Indicator security level associated with the token or 3D-Secure enrollment result
         example: "05"
+      token_cryptogram:
+        type: string
+        description: Cryptographic identifier used by card schemes to validate the token verification result
+        example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
       cryptogram:
         type: string
-        description: Cryptographic identifier used by card schemes to validate the integrity of the payment
+        description: Cryptographic identifier used by the card schemes to validate the cardholder authentication result (3D-Secure)
         example: AgAAAAAAAIR8CQrXcIhbQAAAAAA=
       name:
         type: string
