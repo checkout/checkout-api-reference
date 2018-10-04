@@ -10,6 +10,7 @@ allOf:
       - expiry_year
       - eci
       - token_cryptogram
+      - token_type
     properties:
       type:
         type: string
@@ -37,10 +38,6 @@ allOf:
         type: string
         description: Cryptographic identifier used by card schemes to validate the token verification result
         example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
-      cryptogram:
-        type: string
-        description: Cryptographic identifier used by the card schemes to validate the cardholder authentication result (3D-Secure)
-        example: AgAAAAAAAIR8CQrXcIhbQAAAAAA=
       name:
         type: string
         description: The cardholder name
@@ -51,6 +48,13 @@ allOf:
         example: "956"
         minLength: 3
         maxLength: 4
+      token_type:
+        type: string
+        description: The type of token 
+        enum:
+          - vts
+          - applepay
+          - googlepay 
       billing_address:
         description: The cardholder's billing address
         allOf:
