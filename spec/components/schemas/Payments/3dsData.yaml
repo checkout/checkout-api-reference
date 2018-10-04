@@ -25,10 +25,6 @@ properties:
         * `A` - An authentication attempt occurred but could not be completed
         * `U` - Unable to perform authentication
     example: Y
-  eci:
-    type: string
-    description: Defines the Electronic Commerce Indicator security level associated with the payment
-    example: "01"
   cryptogram:
     type: string
     description: Cryptographic identifier used by the card schemes to validate the integrity of the 3D secure payment data
