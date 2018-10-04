@@ -82,18 +82,7 @@ properties:
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'
   3ds:
-    type: boolean
-    description: Whether to process this payment as a 3D-Secure
-    default: false
-    example: true
-  attempt_n3d:
-    type: boolean
-    description: |
-      Determines whether to attempt a 3D-Secure payment as non-3DS
-      should the card issuer not be enrolled.
-      [Read more](https://docs.checkout.com/getting-started/merchant-api/3d-secure-charges/attempt-non-3d-secure-charge).
-    default: false
-    example: true
+    $ref: '#/components/schemas/3dsRequest'
   previous_payment_id:
     type: string
     description: |
