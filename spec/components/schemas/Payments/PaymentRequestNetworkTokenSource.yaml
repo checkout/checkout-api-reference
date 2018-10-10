@@ -35,7 +35,7 @@ allOf:
           - vts
           - applepay
           - googlepay 
-      token_cryptogram:
+      cryptogram:
         type: string
         description: Cryptographic identifier used by card schemes to validate the token verification result. Required unless the `previous_payment_id` is specified.
         example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
