@@ -100,6 +100,14 @@ post:
     }
     ```
 
+  parameters:
+    - in: header
+      name: Cko-Idempotency-Key
+      schema:
+        type: string
+      required: false
+      description: Optional idempotency key for safely retrying payment requests
+
   requestBody:
     content:
       application/json:
