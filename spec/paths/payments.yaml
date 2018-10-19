@@ -142,8 +142,8 @@ post:
             $ref: "#/components/headers/Cko-Version"
     '401':
       description: Unauthorized
-    '409':
-      description: Conflict or duplicate request detected
+    '429':
+      description: Too many requests or duplicate request detected
       content:
         application/json:
           schema:
