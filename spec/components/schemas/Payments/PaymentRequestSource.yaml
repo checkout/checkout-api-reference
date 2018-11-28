@@ -10,6 +10,7 @@ discriminator:
     giropay: '#/components/schemas/PaymentRequestGiropaySource'
     ideal: '#/components/schemas/PaymentRequestIdealSource'
     id: '#/components/schemas/PaymentRequestIdSource'
+    qiwi: '#/components/schemas/PaymentRequestQiwiSource'
     token: '#/components/schemas/PaymentRequestTokenSource'
     network_token: '#/components/schemas/PaymentRequestNetworkTokenSource'
 required:
