@@ -12,6 +12,7 @@ discriminator:
     id: '#/components/schemas/PaymentRequestIdSource'
     qiwi: '#/components/schemas/PaymentRequestQiwiSource'
     token: '#/components/schemas/PaymentRequestTokenSource'
+    safetypay: '#/components/schemas/PaymentRequestSafetyPaySource'
     network_token: '#/components/schemas/PaymentRequestNetworkTokenSource'
 required:
   - type
