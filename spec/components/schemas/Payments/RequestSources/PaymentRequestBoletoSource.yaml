@@ -1,5 +1,5 @@
 type: object
-description: AstroPay Source for Boleto payments
+description: AstroPay Boleto Source
 required:
     - birthDate
     - cpf
@@ -12,7 +12,7 @@ allOf:
         type: string
         description: The payment source type
         enum:
-          - astropay
+          - boleto
       birthDate:
         type: string
         description: The date of birth (YYYY-MM-DD)
