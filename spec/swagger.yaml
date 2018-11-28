@@ -13,30 +13,20 @@ info:
   description: >
     # Introduction
 
-    The Checkout.com Gateway is a collection of APIs designed to allow you to process payments. It forms the bridge 
-    between you and the acquirer. The Gateway incorporates logic to handle features such as 
+    Checkout.com provide a collection of APIs that enable you to process and manage payments.  
+    
+
+    Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our SDKs (currently available in
+    [.NET](https://github.com/checkout/checkout-sdk-net) and [Python](https://github.com/checkout/checkout-sdk-python)).  
+
+
+    Our Gateway API includes features such as 
     AutoCapture, 3-D Secure payments, smart routing to acquirers, and much more.
 
-    
-    The API is built on HTTP and is RESTful. It has predictable
-    resource URLs and returns HTTP response codes to indicate errors. It also
-    accepts and returns JSON in the HTTP body.
 
-
-    You can use your favorite HTTP/REST library for your programming language to use Checkout.com's API,
-    or you can use one of our SDKs (currently available in
-    [PHP](https://github.com/checkout/checkout-php-library),
-    [.NET](https://github.com/checkout/checkout-net-library) and
-    [Java](https://github.com/checkout/checkout-java-library)).
-
-
-    Broadcast is our webhook notification system. When an event occurs, it sends a webhook notification 
-    to inform you of the situation. You'll find out what happened and the type of event at hand, 
-    enabling you to take action and keep your business running smoothly. Webhooks provide a definitive 
-    confirmation of a status update and are used for a variety of purposes, such as fulfilling orders, 
+    Broadcast is our webhook notification system informing you of events in near real-time, enabling you to take action and keep your business running smoothly. 
+    Webhooks provide a definitive confirmation of a status update and are used for a variety of purposes, such as fulfilling orders, 
     sending automated status updates to customers, or even integrating with third-party application services.
-
-
 
     # Authentication
 
