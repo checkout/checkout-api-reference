@@ -46,17 +46,5 @@ properties:
   metadata:
     type: object
     description: Set of key/value pairs that you can attach to an action
-  _links:
-    type: object
-    description: The links related to the action
-    minItems: 1
-    properties:
-      response-code:
-        type: object
-        allOf:
-          - $ref: '#/components/schemas/Link'
-        description: A link to the full response code details
-        example:
-          href: "https://api.checkout.com/refs/response-codes/10000"
 
 

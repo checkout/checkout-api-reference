@@ -135,11 +135,6 @@ properties:
         allOf:
           - $ref: '#/components/schemas/Link'
         description: A link to refund the payment, where applicable
-      response-code:
-        type: object
-        allOf:
-          - $ref: '#/components/schemas/Link'
-        description: A link to the full response code details
     example:
       self:
         href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"
@@ -149,5 +144,3 @@ properties:
         href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44/voids"
       capture:
         href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44/capture"
-      response-code:
-        href: "https://api.checkout.com/refs/response-codes/10000"

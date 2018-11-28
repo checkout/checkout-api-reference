@@ -60,13 +60,6 @@ properties:
         description: The URI of the payment
         example:
           href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"
-      response-code:
-        type: object
-        allOf:
-          - $ref: '#/components/schemas/Link'
-        description: A link to the full response code details
-        example:
-          href: "https://api.checkout.com/refs/response-codes/10000"
     required:
       - payment
 

@@ -12,9 +12,6 @@ example:
     "approved": true
     "response_code": "10000"
     "response_summary": "Approved"
-    "_links":
-      "response-code":
-        "href": "https://api.checkout.com/refs/response-codes/10000"
   - "id": "act_gefycn3jcvuupboxfmqrhk2aym"
     "type": "Capture"
     "processed_on": "2018-01-17T10:30:48Z"
@@ -24,9 +21,6 @@ example:
     "response_summary": "Approved"
     "metadata":
       "shipping_ref": "MQIBN2"
-    "_links":
-      "response-code":
-        "href": "https://api.checkout.com/refs/response-codes/10000"
   - "id": "act_y3oqhf46pyzuxjbcn2giaqnb44"
     "type": "Authorization"
     "processed_on": "2018-01-17T09:30:48Z"
@@ -36,6 +30,3 @@ example:
     "response_code": "10000"
     "response_summary": "Approved"
     "reference": "ORD-5023-4E89"
-    "_links":
-      "response-code":
-        "href": "https://api.checkout.com/refs/response-codes/10000"
