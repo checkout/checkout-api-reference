@@ -5,6 +5,7 @@ discriminator:
   mapping:
     card: '#/components/schemas/1st_PaymentRequestCardSource'
     alipay: '#/components/schemas/PaymentRequestAlipaySource'
+    astropay: '#/components/schemas/PaymentRequestAstroPaySource'
     customer: '#/components/schemas/PaymentRequestCustomerSource'
     giropay: '#/components/schemas/PaymentRequestGiropaySource'
     ideal: '#/components/schemas/PaymentRequestIdealSource'
