@@ -1,9 +1,9 @@
 type: object
 description: AstroPay Boleto Source
 required:
-    - birthDate
-    - cpf
-    - customerName
+  - birthDate
+  - cpf
+  - customerName
 allOf:
   - $ref: "#/components/schemas/PaymentRequestSource"
   - type: object

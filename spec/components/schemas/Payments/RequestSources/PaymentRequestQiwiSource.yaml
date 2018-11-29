@@ -1,7 +1,7 @@
 type: object
 description: QIWI Source
 required:
-    - walletId
+  - walletId
 allOf:
   - $ref: "#/components/schemas/PaymentRequestSource"
   - type: object
