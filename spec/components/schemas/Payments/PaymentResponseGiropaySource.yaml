@@ -17,7 +17,7 @@ allOf:
       bic:
         type: string
         maxLength: 11
-        description: BIC (8 or 11-digits)
+        description: BIC (8 or 11 characters)
         example: TESTDETT421
       iban: 
         type: string
