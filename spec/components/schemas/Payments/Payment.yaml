@@ -115,13 +115,6 @@ properties:
       - $ref: '#/components/schemas/IPAddress'
   recipient:
     $ref: '#/components/schemas/PaymentRecipient'
-  destinations:
-    type: array
-    items:
-      $ref: '#/components/schemas/PaymentDestination'
-    minItems: 0
-    description: |
-      For OpenPay payments, destinations determine the proportion of the payment amount credited to other OpenPay accounts
   metadata:
     type: object
     description: Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format
