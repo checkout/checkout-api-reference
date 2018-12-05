@@ -3,6 +3,8 @@ description: The source of the payment
 discriminator:
   propertyName: type
   mapping:
+    # the option with the alphabetically first mapping value is rendered as selected by default.
+    # '1st' prefix used here to ensure 'card' (which is default in the specs) is selected by default.
     card: '#/components/schemas/1st_PaymentRequestCardSource'
     alipay: '#/components/schemas/PaymentRequestAlipaySource'
     boleto: '#/components/schemas/PaymentRequestBoletoSource'
