@@ -89,6 +89,8 @@ post:
 
     For non-reusable payment methods such as those that use a redirect flow (e.g. iDEAL), provide the name of the payment method as the `source.type` along with any payment method specific data.
 
+    For the redirect flow, a 202 response will be returned containing the redirect href in the links.
+
     ```json
     {
       "source": {
