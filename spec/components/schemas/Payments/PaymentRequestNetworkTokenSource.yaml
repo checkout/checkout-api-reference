@@ -44,7 +44,7 @@ allOf:
         description: | 
           The Electronic Commerce Indicator security level associated with the token. 
           Required unless the `previous_payment_id` is specified.
-          For 3D-Secure payments the ECI must be provided in the `3ds` payment field.
+          For 3-D Secure payments the ECI must be provided in the `3ds` payment field.
         example: "05"
       name:
         type: string

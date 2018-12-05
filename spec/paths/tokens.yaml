@@ -3,7 +3,7 @@ post:
     - Tokens
   summary: Request a token
   description: |
-    Exchange card details or a digital wallet payment token for a reference token that can be later used to request a card payment.
+    Exchange card details or a digital wallet payment token for a reference token that can be used later to request a card payment.
 
     **To create tokens please authenticate using your public key**
   requestBody:

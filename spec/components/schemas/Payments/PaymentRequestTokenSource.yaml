@@ -13,7 +13,7 @@ allOf:
           - token
       token:
         type: string
-        description: The Checkout token for example a card, wallet or alternative payment token
+        description: The Checkout.com token for example a card or wallet or token
         example: tok_ubfj2q76miwundwlk72vxt2i7q
       billing_address:
         description: The payment source owner's billing address. This will override the billing address specified during tokenisation

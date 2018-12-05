@@ -105,7 +105,8 @@ patch:
 delete:
   tags:
     - Webhooks
-  summary: Removes a webhook
+  summary: Remove webhook
+  description: Removes an existing webhook
   parameters:
     - name: id
       required: true

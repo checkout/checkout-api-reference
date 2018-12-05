@@ -87,7 +87,7 @@ properties:
     type: string
     description: |
       For payments that use stored card details such as recurring payments,
-      an existing payment identifier from the recurring series or the Scheme Transaction Id. [Read more](https://docs.checkout.com/docs/stored-card-details).
+      an existing payment identifier from the recurring series or the Scheme Transaction Id. [Read more](https://docs.checkout.com/v2/docs/stored-card-details).
     example: "pay_fun26akvvjjerahhctaq2uzhu4"
   risk:
     $ref: '#/components/schemas/RiskRequest'
@@ -107,14 +107,6 @@ properties:
       - $ref: '#/components/schemas/IPAddress'
   recipient:
     $ref: '#/components/schemas/PaymentRecipient'
-  destinations:
-    type: array
-    items:
-      $ref: '#/components/schemas/PaymentDestination'
-    minItems: 0
-    description: |
-      For OpenPay payments, destinations determine the proportion of the payment amount that should
-      be credited to other OpenPay accounts
   metadata:
     type: object
     description: Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format

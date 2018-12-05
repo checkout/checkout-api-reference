@@ -26,7 +26,7 @@ properties:
       - $ref: '#/components/schemas/PaymentResponseCustomer'
   3ds:
     type: object
-    description: Provides 3D-Secure enrollment status
+    description: Provides 3-D Secure enrollment status
     allOf:
       - $ref: '#/components/schemas/3dsEnrollmentData'
   _links:

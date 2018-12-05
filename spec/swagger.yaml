@@ -3,7 +3,7 @@ info:
   version: '1.0.0'
   title: Checkout.com API Reference
   contact:
-    name: Checkout Support
+    name: Checkout.com Support
     url: 'https://checkout.com'
     email: support@checkout.com
   license:
@@ -13,16 +13,20 @@ info:
   description: >
     # Introduction
 
-    The Checkout.com API is built on HTTP. Our API is RESTful. It has predictable
-    resource URLs.  It returns HTTP response codes to indicate errors.  It also
-    accepts and returns JSON in the HTTP body.
+    Checkout.com provide a collection of APIs that enable you to process and manage payments.  
+    
+
+    Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our SDKs (currently available in
+    [.NET](https://github.com/checkout/checkout-sdk-net) and [Python](https://github.com/checkout/checkout-sdk-python)).  
 
 
-    You can use your favorite HTTP/REST library for your programming language to use Checkout's API,
-    or you can use one of our SDKs (currently available in
-    [PHP](https://github.com/checkout/checkout-php-library),
-    [.NET](https://github.com/checkout/checkout-net-library) and
-    [Java](https://github.com/checkout/checkout-java-library)).
+    Our Gateway API includes features such as 
+    AutoCapture, 3-D Secure payments, smart routing to acquirers, and much more.
+
+
+    Broadcast is our webhook notification system informing you of events in near real-time, enabling you to take action and keep your business running smoothly. 
+    Webhooks provide a definitive confirmation of a status update and are used for a variety of purposes, such as fulfilling orders, 
+    sending automated status updates to customers, or even integrating with third-party application services.
 
     # Authentication
 
@@ -47,7 +51,7 @@ tags:
       events happen in near real-time.
 
       They allow you to collect information about those events. Checkout.com can send
-      these information via POST to an URL of your choice.
+      this information via POST to an URL of your choice.
   - name: Files
     description: |
       Upload files to be used as input to other APIs

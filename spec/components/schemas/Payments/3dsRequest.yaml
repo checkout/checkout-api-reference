@@ -1,28 +1,28 @@
 type: object
-description: Information required for 3D-Secure payments
+description: Information required for 3-D Secure payments
 properties:
   enabled:
     type: boolean
-    description: Whether to process this payment as a 3D-Secure
+    description: Whether to process this payment as a 3-D Secure
     default: false
     example: true
   attempt_n3d:
     type: boolean
     description: |
-      Determines whether to attempt a 3D-Secure payment as non-3DS
+      Determines whether to attempt a 3-D Secure payment as non-3-D Secure
       should the card issuer not be enrolled.
       [Read more](https://docs.checkout.com/getting-started/merchant-api/3d-secure-charges/attempt-non-3d-secure-charge).
     default: false
     example: true
   eci:
     type: string
-    description: The Electronic Commerce Indicator security level associated with the 3D-Secure enrollment result. Required if using a third party MPI.
+    description: The Electronic Commerce Indicator security level associated with the 3-D Secure enrollment result. Required if using a third party MPI.
     example: "05"
   cryptogram:
     type: string
-    description: Cryptographic identifier used by the card schemes to validate the cardholder authentication result (3D-Secure). Required if using an external MPI.
+    description: Cryptographic identifier used by the card schemes to validate the cardholder authentication result (3-D Secure). Required if using an external MPI.
     example: AgAAAAAAAIR8CQrXcIhbQAAAAAA=
   xid:
     type: string
-    description: The 3D-Secure transaction identifier. Required if using an external MPI.
+    description: The 3-D Secure transaction identifier. Required if using an external MPI.
     example: MDAwMDAwMDAwMDAwMDAwMzIyNzY=

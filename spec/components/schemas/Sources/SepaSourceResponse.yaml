@@ -32,10 +32,3 @@ allOf:
             allOf:
               - $ref: '#/components/schemas/Link'
             description: A link to Cancel the SEPA direct debit mandate
-          response-code:
-            type: object
-            allOf:
-              - $ref: '#/components/schemas/Link'
-            description: A link to the full response code details
-            example:
-              href: "https://api.checkout.com/refs/response-codes/10000"

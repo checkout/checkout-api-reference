@@ -2,7 +2,7 @@ description: >
       Unless explicitly stated, all endpoints require authentication using your secret key. 
       Public keys should only be used in JavaScript or native applications. 
 
-      You can generate new API keys within the Checkout Hub.
+      You can generate new API keys within the [Checkout.com Hub](https://hub.checkout.com/v2).
 name: Authorization
 type: apiKey
-in: header
+in: Header

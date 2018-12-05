@@ -1,6 +1,6 @@
 type: object
 description: |
-  An optional dynamic billing descriptor displayed on the account owner's statement. [Read more](https://docs.checkout.com/reference/merchant-api-reference/complex-request-objects/dynamic-descriptor)
+  An optional dynamic billing descriptor displayed on the account owner's statement.
 properties:
   name:
     type: string

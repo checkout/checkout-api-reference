@@ -3,7 +3,7 @@ post:
     - Sources
   summary: Add a payment source
   description: |
-    Add a reusable payment sources that can be later used to make one or more payments.
+    Add a reusable payment source that can be used later to make one or more payments.
     Payment sources are linked to a specific customer and cannot be shared between customers.
 
   requestBody:

@@ -15,6 +15,7 @@ allOf:
           - account_iban
           - bic
           - billing_descriptor
+          - mandate_type
         properties:
           first_name:
             type: string
@@ -36,3 +37,10 @@ allOf:
             type: string
             description: The billing descriptor
             example: "ExampleCompany.com"
+          mandate_type:
+            type: string
+            description: The type of the mandate
+            enum:
+              - "single"
+              - "recurring"
+            example: "recurring"
