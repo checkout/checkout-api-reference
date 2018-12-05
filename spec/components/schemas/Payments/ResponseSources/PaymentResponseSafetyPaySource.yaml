@@ -1,0 +1,11 @@
+type: object
+description: A SafetyPay payment source
+allOf:
+  - $ref: "#/components/schemas/PaymentResponseSource"
+  - type: object
+    properties:
+      type:
+        type: string
+        description: The payment source type
+        enum:
+          - safetypay
