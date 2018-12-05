@@ -10,6 +10,7 @@ discriminator:
     alipay: '#/components/schemas/PaymentResponseAlipaySource'
     boleto: '#/components/schemas/PaymentResponseBoletoSource'
     giropay: '#/components/schemas/PaymentResponseGiropaySource'
+    ideal: '#/components/schemas/PaymentResponseIdealSource'
     poli: '#/components/schemas/PaymentResponsePoliSource'
     qiwi: '#/components/schemas/PaymentResponseQiwiSource'
     safetypay: '#/components/schemas/PaymentResponseSafetyPaySource'
