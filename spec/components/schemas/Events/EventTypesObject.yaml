@@ -6,7 +6,7 @@ properties:
   event_types:
     type: array
     items:
-      type: string
+      type: integer
     example:
       - payment_approved
       - payment_risk_matched
