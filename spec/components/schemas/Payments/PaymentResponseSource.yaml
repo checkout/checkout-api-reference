@@ -5,6 +5,7 @@ discriminator:
   propertyName: type
   mapping:
     card: '#/components/schemas/PaymentResponseCardSource'
+    giropay: '#/components/schemas/PaymentResponseGiropaySource'
 
 required:
   - type
