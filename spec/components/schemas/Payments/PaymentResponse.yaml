@@ -102,6 +102,7 @@ properties:
     type: string
     description: |
       The scheme transaction identifier
+    example: "489341065491658"
   _links:
     type: object
     description: The links related to the payment
