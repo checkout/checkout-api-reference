@@ -33,7 +33,7 @@ properties:
     minLength: 3
   approved:
     type: boolean
-    description: Whether the payment request was approved
+    description: Whether the authorization or capture was successful
     example: true
   status:
     type: string
