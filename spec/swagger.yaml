@@ -17,7 +17,7 @@ info:
     
 
     Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our SDKs (currently available in
-    [.NET](https://github.com/checkout/checkout-sdk-net) and [Python](https://github.com/checkout/checkout-sdk-python)).  
+    [.NET](https://github.com/checkout/checkout-sdk-net) and [Python](https://github.com/checkout/checkout-sdk-python/tree/unified-payments)).  
 
 
     Our Gateway API includes features such as 
