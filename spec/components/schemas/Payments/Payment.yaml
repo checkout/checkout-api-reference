@@ -6,6 +6,7 @@ required:
   - amount
   - currency
   - status
+  - approved
   - _links
 properties:
   id:
@@ -48,6 +49,10 @@ properties:
     type: string
     description: A description of the payment
     example: Set of 3 masks
+  approved:
+    type: boolean
+    description: Whether the authorization or capture was successful
+    example: true
   status:
     type: string
     description: The status of the payment
