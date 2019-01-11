@@ -1,5 +1,5 @@
 type: object
-description: Apple Pay Token Request
+description: Google Pay Token Request
 allOf:
   - $ref: '#/components/schemas/TokenRequest'
   - type: object

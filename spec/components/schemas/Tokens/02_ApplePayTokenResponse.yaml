@@ -2,4 +2,3 @@ type: object
 description: Apple Pay Token Response
 allOf:
   - $ref: '#/components/schemas/TokenResponse'
-  - type: object

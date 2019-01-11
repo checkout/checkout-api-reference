@@ -2,4 +2,3 @@ type: object
 description: An Alipay payment source
 allOf:
   - $ref: "#/components/schemas/PaymentResponseSource"
-  - type: object

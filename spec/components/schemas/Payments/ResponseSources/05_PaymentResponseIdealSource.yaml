@@ -2,4 +2,3 @@ type: object
 description: A iDEAL payment source
 allOf:
   - $ref: "#/components/schemas/PaymentResponseSource"
-  - type: object
