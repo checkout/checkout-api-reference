@@ -99,7 +99,9 @@ namespace OpenApiGenerator
             if (!Directory.Exists($"{_specDirectory}/components/{component}"))
                 return;
 
-            var yamlSchemaFiles = Directory.GetFiles($"{_specDirectory}/components/{component}/", "*.yaml", SearchOption.AllDirectories);
+            var yamlSchemaFiles = Directory.GetFiles($"{_specDirectory}/components/{component}/", "*.yaml", SearchOption.AllDirectories)
+                .OrderBy(filename => filename)
+                .ToArray();
             var text = $"  {component}:\n";
             text += GetComponentsText(yamlSchemaFiles);
             File.AppendAllText(_yamlOutputFile, text, Encoding.UTF8);
