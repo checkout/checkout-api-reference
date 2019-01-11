@@ -4,17 +4,15 @@ description: Payment source
 discriminator:
   propertyName: type
   mapping:
-    # the option with the alphabetically first mapping value is rendered as selected by default.
-    # '1st' prefix used here to ensure 'card' (which is default in the specs) is selected by default.
-    card: '#/components/schemas/1st_PaymentResponseCardSource'
-    alipay: '#/components/schemas/PaymentResponseAlipaySource'
-    boleto: '#/components/schemas/PaymentResponseBoletoSource'
-    giropay: '#/components/schemas/PaymentResponseGiropaySource'
-    ideal: '#/components/schemas/PaymentResponseIdealSource'
-    poli: '#/components/schemas/PaymentResponsePoliSource'
-    qiwi: '#/components/schemas/PaymentResponseQiwiSource'
-    safetypay: '#/components/schemas/PaymentResponseSafetyPaySource'
-    sofort: '#/components/schemas/PaymentResponseSofortSource'
+    card: '#/components/schemas/01_PaymentResponseCardSource'
+    alipay: '#/components/schemas/02_PaymentResponseAlipaySource'
+    boleto: '#/components/schemas/03_PaymentResponseBoletoSource'
+    giropay: '#/components/schemas/04_PaymentResponseGiropaySource'
+    ideal: '#/components/schemas/05_PaymentResponseIdealSource'
+    poli: '#/components/schemas/06_PaymentResponsePoliSource'
+    qiwi: '#/components/schemas/07_PaymentResponseQiwiSource'
+    safetypay: '#/components/schemas/08_PaymentResponseSafetyPaySource'
+    sofort: '#/components/schemas/09_PaymentResponseSofortSource'
 
 required:
   - type
