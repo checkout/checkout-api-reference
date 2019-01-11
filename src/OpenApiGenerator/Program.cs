@@ -99,15 +99,13 @@ namespace OpenApiGenerator
             if (!Directory.Exists($"{_specDirectory}/components/{component}"))
                 return;
 
-            var yamlSchemaFiles = Directory.GetFiles($"{_specDirectory}/components/{component}/", "*.yaml", SearchOption.AllDirectories)
-                .OrderBy(filename => filename)
-                .ToArray();
+            var yamlSchemaFiles = GetSpecFiles($"/components/{component}/", "*.yaml");
             var text = $"  {component}:\n";
             text += GetComponentsText(yamlSchemaFiles);
             File.AppendAllText(_yamlOutputFile, text, Encoding.UTF8);
         }
 
-        static string GetComponentsText(string[] yamlFiles)
+        static string GetComponentsText(IEnumerable<string> yamlFiles)
         {
             var text = "";
 
@@ -134,7 +132,7 @@ namespace OpenApiGenerator
         {
             LoadCodeSamples();
 
-            var yamlPathFiles = Directory.GetFiles($"{_specDirectory}/paths/", "*.yaml", SearchOption.AllDirectories);
+            var yamlPathFiles = GetSpecFiles("paths", "*.yaml");
             var text = "paths:\n";
 
             foreach (var file in yamlPathFiles)
@@ -189,7 +187,7 @@ namespace OpenApiGenerator
 
         static void LoadCodeSamples()
         {
-            var codeSampleFiles = Directory.GetFiles($"{_specDirectory}/code_samples/", "*.*", SearchOption.AllDirectories);
+            var codeSampleFiles = GetSpecFiles("code_samples", "*.*");
 
             foreach (var file in codeSampleFiles)
             {
@@ -206,6 +204,12 @@ namespace OpenApiGenerator
                     HttpVerb = filename
                 });
             }
+        }
+        
+        private static IEnumerable<string> GetSpecFiles(string relativePath, string searchPattern)
+        {
+            return Directory.GetFiles($"{_specDirectory}/{relativePath}", searchPattern, SearchOption.AllDirectories)
+                .OrderBy(fileName => fileName);
         }
     }
 }
