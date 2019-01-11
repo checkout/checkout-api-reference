@@ -3,9 +3,3 @@ description: An AstroPay Boleto payment source
 allOf:
   - $ref: "#/components/schemas/PaymentResponseSource"
   - type: object
-    properties:
-      type:
-        type: string
-        description: The payment source type
-        enum:
-          - boleto

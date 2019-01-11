@@ -9,11 +9,6 @@ allOf:
       - expiry_month
       - expiry_year
     properties:
-      type:
-        type: string
-        description: The payment source type
-        enum:
-          - card
       number:
         type: string
         description: The card number

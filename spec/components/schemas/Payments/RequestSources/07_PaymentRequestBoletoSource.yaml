@@ -8,11 +8,6 @@ allOf:
   - $ref: "#/components/schemas/PaymentRequestSource"
   - type: object
     properties:
-      type:
-        type: string
-        description: The payment source type
-        enum:
-          - boleto
       birthDate:
         type: string
         description: The date of birth (YYYY-MM-DD)

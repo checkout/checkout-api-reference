@@ -10,11 +10,6 @@ allOf:
       - fingerprint
       - bin
     properties:
-      type:
-        type: string
-        description: The payment source type
-        enum:
-          - card
       expiry_month:
         type: integer
         description: The two-digit expiry month

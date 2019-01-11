@@ -10,11 +10,6 @@ allOf:
       - expiry_year
       - token_type
     properties:
-      type:
-        type: string
-        description: The payment source type
-        enum:
-          - network_token
       token:
         type: string
         description: The network token PAN

@@ -6,11 +6,6 @@ allOf:
   - $ref: "#/components/schemas/PaymentRequestSource"
   - type: object
     properties:
-      type:
-        type: string
-        description: The payment source type. With the exception of some alternative payment methods, this is inferred automatically
-        enum:
-          - token
       token:
         type: string
         description: The Checkout.com token for example a card or wallet or token

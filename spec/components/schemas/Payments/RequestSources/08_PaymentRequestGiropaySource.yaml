@@ -7,11 +7,6 @@ allOf:
       - purpose
       - bic
     properties:
-      type:
-        type: string
-        description: The payment source type.
-        enum:
-          - giropay
       purpose:
         type: string
         maxLength: 27
