@@ -3,18 +3,23 @@ description: The source of the payment
 discriminator:
   propertyName: type
   mapping:
-    card: '#/components/schemas/PaymentRequestCardSource'
-    customer: '#/components/schemas/PaymentRequestCustomerSource'
-    giropay: '#/components/schemas/PaymentRequestGiropaySource'
-    ideal: '#/components/schemas/PaymentRequestIdealSource'
-    id: '#/components/schemas/PaymentRequestIdSource'
-    token: '#/components/schemas/PaymentRequestTokenSource'
-    network_token: '#/components/schemas/PaymentRequestNetworkTokenSource'
+    token: '#/components/schemas/01_PaymentRequestTokenSource'
+    id: '#/components/schemas/02_PaymentRequestIdSource'
+    card: '#/components/schemas/03_PaymentRequestCardSource'
+    customer: '#/components/schemas/04_PaymentRequestCustomerSource'
+    network_token: '#/components/schemas/05_PaymentRequestNetworkTokenSource'
+    alipay: '#/components/schemas/06_PaymentRequestAlipaySource'
+    boleto: '#/components/schemas/07_PaymentRequestBoletoSource'
+    giropay: '#/components/schemas/08_PaymentRequestGiropaySource'
+    ideal: '#/components/schemas/09_PaymentRequestIdealSource'
+    poli: '#/components/schemas/10_PaymentRequestPoliSource'
+    qiwi: '#/components/schemas/11_PaymentRequestQiwiSource'
+    safetypay: '#/components/schemas/12_PaymentRequestSafetyPaySource'
+    sofort: '#/components/schemas/13_PaymentRequestSofortSource'
 required:
   - type
 properties:
   type:
     type: string
     description: The payment source type
-    default: "card"
     example: "card"

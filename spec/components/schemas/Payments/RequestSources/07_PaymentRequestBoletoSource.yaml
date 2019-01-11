@@ -1,0 +1,27 @@
+type: object
+description: AstroPay Boleto Source
+required:
+  - birthDate
+  - cpf
+  - customerName
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    properties:
+      type:
+        type: string
+        description: The payment source type
+        enum:
+          - boleto
+      birthDate:
+        type: string
+        description: The date of birth (YYYY-MM-DD)
+        example: 1977-04-28
+      cpf:
+        type: string
+        description: The Brazilian personal tax identifier (Cadastro de Pessoas Físicas)
+        example: 123.456.789-00
+      customerName:
+        type: string
+        description: The customer's name
+        example: Igor Toupee

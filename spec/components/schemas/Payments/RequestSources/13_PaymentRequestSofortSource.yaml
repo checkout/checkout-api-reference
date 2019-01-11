@@ -1,0 +1,11 @@
+type: object
+description: Sofort Source
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    properties:
+      type:
+        type: string
+        description: The payment source type
+        enum:
+          - sofort

@@ -1,0 +1,17 @@
+type: object
+description: QIWI Source
+required:
+  - walletId
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    properties:
+      type:
+        type: string
+        description: The payment source type
+        enum:
+          - qiwi
+      walletId:
+        type: string
+        description: The QIWI wallet ID
+        example: +78000001234
