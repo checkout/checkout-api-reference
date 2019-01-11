@@ -8,10 +8,6 @@ allOf:
       - expiry_month
       - expiry_year
     properties:
-      type:
-        type: string
-        enum:
-          - card
       number:
         type: string
         description: The card number

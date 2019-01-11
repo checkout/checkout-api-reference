@@ -4,10 +4,6 @@ allOf:
   - $ref: '#/components/schemas/TokenRequest'
   - type: object
     properties:
-      type:
-        type: string
-        enum:
-          - applepay
       token_data:
         type: object
         description: The Apple Pay Payment Token

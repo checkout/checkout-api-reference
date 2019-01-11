@@ -4,7 +4,7 @@ required:
 discriminator:
   propertyName: type
   mapping:
-    sepa: '#/components/schemas/SepaSource'
+    sepa: '#/components/schemas/01_SepaSource'
 properties:
   type:
     type: string

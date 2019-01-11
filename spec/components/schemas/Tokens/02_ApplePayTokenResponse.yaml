@@ -3,8 +3,3 @@ description: Apple Pay Token Response
 allOf:
   - $ref: '#/components/schemas/TokenResponse'
   - type: object
-    properties:
-      type:
-        type: string
-        enum:
-          - applepay

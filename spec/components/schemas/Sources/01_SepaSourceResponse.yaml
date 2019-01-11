@@ -4,10 +4,6 @@ allOf:
   - $ref: '#/components/schemas/AddSourceResponse'
   - type: object
     properties:
-      type:
-        type: string
-        enum:
-          - sepa
       source_data:
         type: object
         description: SEPA direct debit details
@@ -18,7 +14,7 @@ allOf:
             example: "MANDXI9809809"
       _links:
         type: object
-        description: The links related to the PayPal payment source
+        description: The links related to the SEPA payment source
         readOnly: true
         minItems: 1
         properties:

@@ -18,12 +18,6 @@ post:
         application/json:
           schema:
             $ref: '#/components/schemas/AddSourceResponse'
-    '202':
-      description: Payment source asynchronous or further action required
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/SourceRedirectResponse'
     '401':
       description: Unauthorized
     '422':

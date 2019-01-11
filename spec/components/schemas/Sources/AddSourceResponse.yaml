@@ -2,8 +2,7 @@ type: object
 discriminator:
   propertyName: type
   mapping:
-    sepa: '#/components/schemas/SepaSourceResponse'
-    redirect: '#/components/schemas/SourceRedirectResponse'
+    sepa: '#/components/schemas/01_SepaSourceResponse'
 required:
   - type
   - customer
