@@ -27,6 +27,10 @@ properties:
     type: integer
     description: The action amount
     example: 6540
+  approved:
+    type: boolean
+    description: Whether the action was successful
+    example: true
   auth_code:
     type: string
     description: The acquirer authorization code for cards
