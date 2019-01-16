@@ -142,7 +142,7 @@ properties:
     items:
       $ref: '#/components/schemas/PaymentActionSummary'
     description: |
-      A summary of the payment actions, 
+      A summary of the payment's actions, 
       returned when a session ID is used to get the payment details
   _links:
     type: object
