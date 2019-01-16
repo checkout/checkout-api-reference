@@ -137,6 +137,13 @@ properties:
     description: |
       The scheme transaction identifier
     example: "488341541494658"
+  actions:
+    type: array
+    items:
+      $ref: '#/components/schemas/PaymentActionSummary'
+    description: |
+      A summary of the payment actions, 
+      returned when a session ID is used to get the payment details
   _links:
     type: object
     description: The links related to the payment

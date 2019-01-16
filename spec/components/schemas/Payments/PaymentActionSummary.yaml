@@ -1,0 +1,28 @@
+type: object
+required:
+  - id
+  - type
+  - response_code
+properties:
+  id:
+    description: The unique identifier of the payment action
+    allOf:
+      - $ref: '#/components/schemas/ActionId'
+  type:
+    type: string
+    description: The type of action
+    enum:
+      - Authorization
+      - Card Verification
+      - Void
+      - Capture
+      - Refund
+  response_code:
+    type: string
+    description: Gateway response code
+    example: "10000"
+  response_summary:
+    type: string
+    description: The Gateway response summary
+    example: "Approved"
+
