@@ -4,7 +4,7 @@ allOf:
   - $ref: '#/components/schemas/AddSourceResponse'
   - type: object
     properties:
-      source_data:
+      response_data:
         type: object
         description: SEPA direct debit details
         properties:
