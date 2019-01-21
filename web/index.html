@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Checkout.com API Reference</title>
-    <!-- needed for adaptive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--
+<head>
+  <title>Checkout.com API Reference</title>
+  <!-- needed for adaptive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
     ReDoc uses font options from the parent element
     So override default browser styles
     -->
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-      .scrollbar-container ul:first-child + div {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <redoc spec-url="./swagger.yaml">
-    </redoc>
-    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
-  </body>
+    redoc .api-info span {
+      display: none;
+    }
+
+    .scrollbar-container ul:first-child+div {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <redoc spec-url="./swagger.yaml">
+  </redoc>
+  <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+</body>
+
 </html>
