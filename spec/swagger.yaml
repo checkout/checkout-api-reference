@@ -43,26 +43,21 @@ servers:
     description: Sandbox API
 tags:
   - name: Payments
-    description: |
-      Unified payments API
+  - name: Sources
+  - name: Tokens
   - name: Webhooks
-    description: >
-      Webhooks are designed to notify your systems when certain/all registered
-      events happen in near real-time.
-
-      They allow you to collect information about those events. Checkout.com can send
-      this information via POST to an URL of your choice.
-  - name: Files
-    description: |
-      Upload files to be used as input to other APIs
-x-tagGroups:
-  - name: Gateway
-    tags:
-      - Payments
-      - Tokens
-      - Sources
-      - Files
-  - name: Broadcast
-    tags:
-      - Events
-      - Webhooks
+  - name: Events
+  # - name: Files
+  #   description: |
+  #     Upload files to be used as input to other APIs
+# x-tagGroups:
+#   - name: Gateway
+#     tags:
+#       - Payments
+#       - Tokens
+#       - Sources
+#       - Files
+#   - name: Broadcast
+#     tags:
+#       - Events
+#       - Webhooks
