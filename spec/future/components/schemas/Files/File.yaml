@@ -1,0 +1,50 @@
+type: object
+required:
+  - id
+  - filename
+  - purpose
+  - size
+  - uploaded_on
+  - _links
+properties:
+  id:
+    type: string
+    description: The file identifier
+    example: file_6lbss42ezvoufcb2beo76rvwly
+  filename:
+    type: string
+    description: The file name
+    example: receipt.jpg
+  purpose:
+    type: string
+    description: The purpose of the uploaded file
+    example: dispute_evidence
+  size:
+    type: number
+    description: The size in bytes of the file upload object
+    example: 1024
+  uploaded_on:
+    type: string
+    format: ISO-8601
+    description: File upload date and time in UTC
+    example: '2016-05-17T16:48:52.000Z'
+  _links:
+    type: object
+    required:
+      - self
+      - download
+    properties:
+      self:
+        type: object
+        allOf:
+          - $ref: '#/components/schemas/Link'
+        description: The file information retrieval URL
+        example:
+          href: https://api.checkout.com/files/file_6lbss42ezvoufcb2beo76rvwly
+      download:
+        type: object
+        allOf:
+          - $ref: '#/components/schemas/Link'
+        description: The temporary file download URL. The URL expires after a certain time period
+        example:
+          href: https://checkout-file-upload.s3.eu-west-2.amazonaws.com/ucdac/ucdac/6lbss42ezvoufcb2beo76rvwly?X-Amz-Expires=3600&x-amz-security-token=FQoDYXdzENL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEa

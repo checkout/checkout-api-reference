@@ -1,0 +1,31 @@
+get:
+  tags:
+    - Files
+  summary: Get file information
+  description: Gets the information of file with the specified file identifier.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        pattern: "^file_(\\w{26})$"
+      required: true
+      description: The file identifier
+  responses:
+    '200':
+      description: File was retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/File'
+      headers:
+        Cko-Request-Id:
+          schema:
+            $ref: '#/components/headers/Cko-Request-Id'
+        Cko-Version:
+          schema:
+            $ref: '#/components/headers/Cko-Version'
+    '401':
+      description: Unauthorized
+    '404':
+      description: File not found

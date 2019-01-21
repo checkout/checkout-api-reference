@@ -1,0 +1,46 @@
+post:
+  tags:
+    - Files
+  summary: Upload a file
+  description: |
+    Upload a file so that it can be used by other APIs, e.g. submit dispute evidence.
+    The file requirements (type/size) differ depending on the file `purpose`.
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          required:
+            - file
+            - purpose
+          properties:
+            file:
+              type: string
+              format: binary
+              description: The file to upload
+            purpose:
+              type: string
+              enum:
+                - dispute_evidence
+              description: The purpose of the file upload
+  responses:
+    '201':
+      description: File uploaded successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FileUploadResponse'
+      headers:
+        Cko-Request-Id:
+          schema:
+            $ref: '#/components/headers/Cko-Request-Id'
+        Cko-Version:
+          schema:
+            $ref: '#/components/headers/Cko-Version'
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'

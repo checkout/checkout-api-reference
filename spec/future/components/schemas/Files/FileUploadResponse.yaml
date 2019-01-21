@@ -1,0 +1,24 @@
+type: object
+required:
+  - id
+  - _links
+properties:
+  id:
+    type: string
+    description: The unique identifier of the file uploaded
+    example: file_6lbss42ezvoufcb2beo76rvwly
+  _links:
+    type: object
+    description: The links related to the file
+    readOnly: true
+    minItems: 1
+    properties:
+      self:
+        type: object
+        allOf:
+          - $ref: '#/components/schemas/Link'
+        description: The URI of the file uploaded. Use this to retrieve detailed file information
+        example:
+          href: https://api.checkout.com/files/file_6lbss42ezvoufcb2beo76rvwly
+    required:
+      - self
