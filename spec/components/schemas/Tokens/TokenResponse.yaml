@@ -14,7 +14,6 @@ properties:
   type:
     type: string
     description: The type of card details to be tokenized
-    default: "card"
     example: "card"
   token:
     type: string
