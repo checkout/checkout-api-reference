@@ -20,7 +20,7 @@ properties:
     example: "05"
   cryptogram:
     type: string
-    description: Cryptographic identifier used by the card schemes to validate the cardholder authentication result (3-D Secure). Required if using an external MPI.
+    description: Base64 encoded cryptographic identifier (CAVV) used by the card schemes to validate the cardholder authentication result (3-D Secure). Required if using an external MPI.
     example: AgAAAAAAAIR8CQrXcIhbQAAAAAA=
   xid:
     type: string

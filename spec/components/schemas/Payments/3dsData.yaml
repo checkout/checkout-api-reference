@@ -27,7 +27,7 @@ properties:
     example: Y
   cryptogram:
     type: string
-    description: Cryptographic identifier used by the card schemes to validate the integrity of the 3-D secure payment data
+    description: Base64 encoded cryptographic identifier (CAVV) used by the card schemes to validate the integrity of the 3-D secure payment data
     example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
   xid:
     type: string

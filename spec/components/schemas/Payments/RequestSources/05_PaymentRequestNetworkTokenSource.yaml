@@ -32,7 +32,7 @@ allOf:
           - googlepay 
       cryptogram:
         type: string
-        description: Cryptographic identifier used by card schemes to validate the token verification result. Required unless the `previous_payment_id` is specified.
+        description: Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Required unless the `previous_payment_id` is specified.
         example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
       eci:
         type: string
