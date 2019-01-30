@@ -6,7 +6,7 @@ description: |
   The payment actions
 example:
   - "id": "act_gefycn3jcvuupboxfmqrhk2aym"
-    "type": "Partial Refund"
+    "type": "Refund"
     "processed_on": "2018-01-20T10:30:48Z"
     "amount": 1000
     "approved": true
