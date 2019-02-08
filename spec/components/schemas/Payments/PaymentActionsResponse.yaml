@@ -5,7 +5,7 @@ minItems: 1
 description: |
   The payment actions
 example:
-  - "id": "act_gefycn3jcvuupboxfmqrhk2aym"
+  - "id": "act_fd3h6evhpn3uxdoqbuu3lqnqbm"
     "type": "Refund"
     "processed_on": "2018-01-20T10:30:48Z"
     "amount": 1000
