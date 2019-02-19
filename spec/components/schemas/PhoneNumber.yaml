@@ -4,8 +4,12 @@ properties:
   country_code: 
     type: string
     description: The international country calling code. Required for some risk checks.
+    minLength: 1
+    maxLength: 7
     example: "+1"
   number:
     type: string
     description: The phone number
+    minLength: 6
+    maxLength: 25
     example: 415 555 2671
