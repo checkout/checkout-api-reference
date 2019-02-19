@@ -30,11 +30,9 @@ post:
             $ref: '#/components/schemas/PaymentResponse'
       headers:
         Cko-Request-Id:
-          schema:
-            $ref: "#/components/headers/Cko-Request-Id"
+          $ref: "#/components/headers/Cko-Request-Id"
         Cko-Version:
-          schema:
-            $ref: "#/components/headers/Cko-Version"
+          $ref: "#/components/headers/Cko-Version"
     '202':
       description: Payment asynchronous or further action required
       content:
@@ -43,11 +41,9 @@ post:
             $ref: '#/components/schemas/PaymentAcceptedResponse'
       headers:
         Cko-Request-Id:
-          schema:
-            $ref: "#/components/headers/Cko-Request-Id"
+          $ref: "#/components/headers/Cko-Request-Id"
         Cko-Version:
-          schema:
-            $ref: "#/components/headers/Cko-Version"
+          $ref: "#/components/headers/Cko-Version"
     '401':
       description: Unauthorized
     '429':

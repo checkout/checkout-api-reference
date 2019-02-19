@@ -50,11 +50,9 @@ get:
             $ref: '#/components/schemas/EventResult'
       headers:
         Cko-Request-Id:
-          schema:
-            $ref: "#/components/headers/Cko-Request-Id"
+          $ref: "#/components/headers/Cko-Request-Id"
         Cko-Version:
-          schema:
-            $ref: "#/components/headers/Cko-Version"
+          $ref: "#/components/headers/Cko-Version"
     '204':
       description: No events found
     '401':
