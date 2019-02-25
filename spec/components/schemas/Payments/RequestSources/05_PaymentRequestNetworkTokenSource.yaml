@@ -28,6 +28,7 @@ allOf:
         description: The type of token 
         enum:
           - vts
+          - mdes
           - applepay
           - googlepay 
       cryptogram:
