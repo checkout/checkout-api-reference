@@ -9,6 +9,8 @@ allOf:
       - expiry_month
       - expiry_year
       - token_type
+      - cryptogram
+      - eci
     properties:
       token:
         type: string
@@ -33,14 +35,12 @@ allOf:
           - googlepay 
       cryptogram:
         type: string
-        description: Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Required unless the `previous_payment_id` is specified.
+        description: Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Optional if `previous_payment_id` is specified and `3ds.enabled` is false.
         example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
       eci:
         type: string
         description: | 
-          The Electronic Commerce Indicator security level associated with the token. 
-          Required unless the `previous_payment_id` is specified.
-          For 3-D Secure payments the ECI must be provided in the `3ds` payment field.
+          The Electronic Commerce Indicator security level associated with the token. Optional if `previous_payment_id` is specified and `3ds.enabled` is false.
         example: "05"
       name:
         type: string
