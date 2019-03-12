@@ -28,11 +28,6 @@ properties:
       - MOTO
     default: Regular
     example: Recurring
-  card_on_file:
-    type: boolean
-    description: Must be set to `true` for payments that use stored card details. [Read more](https://docs.checkout.com/v2/docs/stored-card-details).
-    default: false
-    example: true
   reference:
     type: string
     description: A reference you can later use to identify this payment such as an order number

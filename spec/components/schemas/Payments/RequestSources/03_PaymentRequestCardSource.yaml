@@ -32,6 +32,11 @@ allOf:
         example: "956"
         minLength: 3
         maxLength: 4
+      stored:
+        type: boolean
+        description: Must be set to `true` for payments that use stored card details. [Read more](https://docs.checkout.com/v2/docs/stored-card-details).
+        default: false
+        example: true
       billing_address:
         description: The payment source owner's billing address
         allOf:

@@ -42,6 +42,11 @@ allOf:
           Required unless the `previous_payment_id` is specified.
           For 3-D Secure payments the ECI must be provided in the `3ds` payment field.
         example: "05"
+      stored:
+        type: boolean
+        description: Must be set to `true` for payments that use stored card details. [Read more](https://docs.checkout.com/v2/docs/stored-card-details).
+        default: false
+        example: true
       name:
         type: string
         description: The cardholder name
