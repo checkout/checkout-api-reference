@@ -11,7 +11,7 @@ properties:
     description: |
       Determines whether to attempt a 3-D Secure payment as non-3-D Secure
       should the card issuer not be enrolled.
-      [Read more](https://docs.checkout.com/getting-started/merchant-api/3d-secure-charges/attempt-non-3d-secure-charge).
+      [Read more](https://docs.checkout.com/docs/3-d-secure-payments#section-handle-non-enrolled-cards).
     default: false
     example: true
   eci:

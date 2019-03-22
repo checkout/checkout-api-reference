@@ -1,5 +1,5 @@
 type: object
-description: Required by VISA and MasterCard for domestic UK transactions processed by Financial Institutions. [Read more](https://docs.checkout.com/v2/docs/requirements-for-financial-institutions)
+description: Required by VISA and MasterCard for domestic UK transactions processed by Financial Institutions. [Read more](https://docs.checkout.com/docs/requirements-for-financial-institutions)
 properties:
   dob:
     type: string
