@@ -87,7 +87,7 @@ properties:
     type: string
     description: |
       For payments that use stored card details such as recurring payments,
-      an existing payment identifier from the recurring series or the Scheme Transaction Id. [Read more](https://docs.checkout.com/v2/docs/stored-card-details).
+      an existing payment identifier from the recurring series or the Scheme Transaction Id. [Read more](https://docs.checkout.com/docs/stored-card-details).
     example: "pay_fun26akvvjjerahhctaq2uzhu4"
   risk:
     $ref: '#/components/schemas/RiskRequest'
