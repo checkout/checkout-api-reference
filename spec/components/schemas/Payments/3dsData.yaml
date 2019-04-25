@@ -33,3 +33,7 @@ properties:
     type: string
     description: Unique identifier for the transaction assigned by the MPI
     example: MDAwMDAwMDAwMDAwMDAwMzIyNzY=
+  version:
+    type: string
+    description: Indicates the version of 3-D Secure that was used for authentication
+    example: "2.1.0"
