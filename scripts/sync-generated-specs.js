@@ -9,23 +9,25 @@ set('-v');
 
 var syncPaymentSources = function()
 {
-  syncPaymentRequest('Giropay', 'http://sb-gateway-internal.cko.lon/giropay-internal/giropay/relations/gw/pay', '08');
-  syncPaymentResponse('Giropay', 'http://sb-gateway-internal.cko.lon/giropay-internal/giropay/relations/gw/payment', '04');
-  syncPaymentRequest('Ideal', 'http://sb-gateway-internal.cko.lon/ideal-internal-api/relations/gw/pay', '09');
-  syncPaymentResponse('Ideal', 'http://sb-gateway-internal.cko.lon/ideal-internal-api/relations/gw/payment', '05');
-  syncPaymentRequest('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/pay', '10');
-  syncPaymentResponse('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/payment', '06');
+  syncPaymentRequest('Giropay', 'http://sb-gateway-internal.cko.lon/giropay-internal/giropay/relations/gw/pay');
+  syncPaymentResponse('Giropay', 'http://sb-gateway-internal.cko.lon/giropay-internal/giropay/relations/gw/payment');
+  syncPaymentRequest('Eps', 'http://sb-gateway-internal.cko.lon/giropay-internal/eps/relations/gw/pay');
+  syncPaymentResponse('Eps', 'http://sb-gateway-internal.cko.lon/giropay-internal/eps/relations/gw/payment');
+  syncPaymentRequest('Ideal', 'http://sb-gateway-internal.cko.lon/ideal-internal-api/relations/gw/pay');
+  syncPaymentResponse('Ideal', 'http://sb-gateway-internal.cko.lon/ideal-internal-api/relations/gw/payment');
+  syncPaymentRequest('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/pay');
+  syncPaymentResponse('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/payment');
 }
 
-var syncPaymentRequest = function(paymentSourceName, paymentSpecUrl, outputFilePrefix) {
-  var outputFilename =  outputFilePrefix + '_PaymentRequest' + paymentSourceName + 'Source.yaml'
+var syncPaymentRequest = function(paymentSourceName, paymentSpecUrl) {
+  var outputFilename =  'PaymentRequest' + paymentSourceName + 'Source.yaml'
   var outputFilePath = 'spec/components/schemas/Payments/RequestSources/' + outputFilename;
   var buildPaymentRequestFunction = getFunctionToBuildPaymentRequest(paymentSourceName);
   sync(paymentSpecUrl, buildPaymentRequestFunction, outputFilePath);
 };
 
-var syncPaymentResponse = function(paymentSourceName, paymentSpecUrl, outputFilePrefix) {
-  var outputFilename =  outputFilePrefix + '_PaymentResponse' + paymentSourceName + 'Source.yaml'
+var syncPaymentResponse = function(paymentSourceName, paymentSpecUrl) {
+  var outputFilename =  'PaymentResponse' + paymentSourceName + 'Source.yaml'
   var outputFilePath = 'spec/components/schemas/Payments/ResponseSources/' + outputFilename;
   var buildPaymentResponseFunction = getFunctionToBuildPaymentResponse(paymentSourceName);
   sync(paymentSpecUrl, buildPaymentResponseFunction, outputFilePath);

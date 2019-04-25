@@ -1,0 +1,26 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'Eps Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      purpose:
+        maxLength: 27
+        type: string
+        description: 'Purpose of the payment as appearing on customer''s bank statement.'
+      bic:
+        maxLength: 11
+        type: string
+        description: 'Bank Identifier Code (BIC). It can be exactly 8 characters or 11 characters long.'
+      iban:
+        maxLength: 34
+        type: string
+        description: 'International Bank Account Number (IBAN) without whitespaces.'
+      account_holder:
+        type: string
+        description: 'Account holder information.'

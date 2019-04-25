@@ -10,7 +10,6 @@ allOf:
     type: object
     required:
       - purpose
-      - bic
     properties:
       purpose:
         maxLength: 27
@@ -20,10 +19,6 @@ allOf:
         maxLength: 11
         type: string
         description: 'BIC (8 or 11-digits)'
-      iban:
-        maxLength: 34
-        type: string
-        description: 'IBAN without whitespaces. This parameter is optional.'
       info_fields:
         maxItems: 5
         type: array

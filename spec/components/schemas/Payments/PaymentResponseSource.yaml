@@ -5,15 +5,16 @@ discriminator:
   propertyName: type
   mapping:
     card: '#/components/schemas/01_PaymentResponseCardSource'
-    alipay: '#/components/schemas/02_PaymentResponseAlipaySource'
-    boleto: '#/components/schemas/03_PaymentResponseBoletoSource'
-    giropay: '#/components/schemas/04_PaymentResponseGiropaySource'
-    ideal: '#/components/schemas/05_PaymentResponseIdealSource'
-    klarna: '#/components/schemas/06_PaymentResponseKlarnaSource'
-    poli: '#/components/schemas/07_PaymentResponsePoliSource'
-    qiwi: '#/components/schemas/08_PaymentResponseQiwiSource'
-    safetypay: '#/components/schemas/09_PaymentResponseSafetyPaySource'
-    sofort: '#/components/schemas/10_PaymentResponseSofortSource'
+    alipay: '#/components/schemas/PaymentResponseAlipaySource'
+    boleto: '#/components/schemas/PaymentResponseBoletoSource'
+    eps: '#/components/schemas/PaymentResponseEpsSource'
+    giropay: '#/components/schemas/PaymentResponseGiropaySource'
+    ideal: '#/components/schemas/PaymentResponseIdealSource'
+    klarna: '#/components/schemas/PaymentResponseKlarnaSource'
+    poli: '#/components/schemas/PaymentResponsePoliSource'
+    qiwi: '#/components/schemas/PaymentResponseQiwiSource'
+    safetypay: '#/components/schemas/PaymentResponseSafetyPaySource'
+    sofort: '#/components/schemas/PaymentResponseSofortSource'
 
 required:
   - type
