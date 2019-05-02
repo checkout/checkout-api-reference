@@ -30,7 +30,7 @@ properties:
     example: Recurring
   reference:
     type: string
-    description: A reference you can later use to identify this payment such as an order number
+    description: A reference you can later use to identify this payment
     example: ORD-5023-4E89
   description:
     type: string
