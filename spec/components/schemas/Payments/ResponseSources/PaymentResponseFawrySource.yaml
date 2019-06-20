@@ -1,0 +1,18 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'Fawry Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      description:
+        maxLength: 65534
+        type: string
+        description: 'Payment description'
+      reference_number:
+        type: string
+        description: 'The customer pays using this number at Fawry''s outlets'

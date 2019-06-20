@@ -16,10 +16,10 @@ discriminator:
     klarna: '#/components/schemas/PaymentRequestKlarnaSource'
     knet: '#/components/schemas/PaymentRequestKnetSource'
     poli: '#/components/schemas/PaymentRequestPoliSource'
-    qiwi: '#/components/schemas/PaymentRequestQiwiSource'
-    safetypay: '#/components/schemas/PaymentRequestSafetyPaySource'
     sofort: '#/components/schemas/PaymentRequestSofortSource'
     bancontact: '#/components/schemas/PaymentRequestBancontactSource'
+    fawry: '#/components/schemas/PaymentRequestFawrySource'
+    qpay: '#/components/schemas/PaymentRequestQPaySource'
 required:
   - type
 properties:

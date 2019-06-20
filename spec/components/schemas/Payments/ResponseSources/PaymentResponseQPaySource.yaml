@@ -1,0 +1,14 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'QPay Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      description:
+        type: string
+        description: 'Alphanumeric string containing a description of the payment order.'
