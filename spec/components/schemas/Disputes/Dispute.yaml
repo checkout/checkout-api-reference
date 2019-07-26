@@ -1,0 +1,90 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The dispute identifier. This is the same as the payment action ID
+    example: "dsp_rbhwd2qrg13uhrp2newf"
+  category:
+    type: string
+    description: The reason for the dispute
+    enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general, general_restricted]
+    example: "fraudulent"
+  amount:
+    type: number
+    description: The amount that is being disputed, in the processing currency
+    example: 999
+  currency:
+    type: string
+    description: The processing currency
+    example: "GBP"
+  reason_code:
+    type: string
+    description: The reason code provided by the card scheme
+    example: "C42"
+  status:
+    type: string
+    description: The current status of the dispute
+    enum: [received, evidence_required, evidence_under_review, resolved, closed, won, lost, canceled, accepted]
+    example: "evidence_required"
+  relevant_evidence:
+    type: array
+  items:
+    type: string
+    enum: [proof_of_delivery_or_service, invoice_or_receipt, invoice_showing_distinct_transactions, customer_communication, refund_or_cancellation_policy, proof_of_delivery_or_service_date, recurring_transaction_agreement, additional_evidence]
+    example: "proof_of_delivery_or_service"
+  evidence_required_by:
+    type: string
+    format: ISO-8601
+    description: The deadline by which to respond to the dispute. This corresponds to `received_on` + `n`, where `n` is a number of calendar days set by the scheme/acquirer
+    example: "2018-08-21T00:00:00Z"
+  received_on:
+    type: string
+    format: ISO-8601
+    description: The date and time at which the dispute was issued
+    example: "2018-08-01T04:00:10Z"
+  last_update:
+    type: string
+    format: ISO-8601
+    description: The date and time at which the dispute was last updated
+    example: "2018-08-04T10:53:13Z"
+  payment:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The payment identifier
+        example: 'pay_C8DAAE073P1E4B5B8A4A'
+      amount:
+        type: number
+        description: The amount that is being disputed, in the processing currency
+        example: 999
+      currency:
+        type: string
+        description: The payment currency
+        example: 'GBP'
+      method:
+        type: string
+        description: The payment method used
+        example: 'Visa'
+      arn:
+        type: string
+        description: The acquirer reference number (ARN)
+        example: 'AA246873253573571073808'
+      processed_on:
+        type: string
+        format: ISO-8601
+        description: The date and time at which the payment was requested
+        example: "2018-08-01T08:18:10Z"
+  _links:
+    type: object
+    properties:
+      self:
+        description: The dispute retrieval endpoint
+        properties:    
+          href:
+            example: "https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf"
+      evidence:
+        description: The dispute evidence retrieval endopint
+        properties:    
+          href:
+            example: "https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf/evidence"

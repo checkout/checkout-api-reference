@@ -1,0 +1,35 @@
+type: object
+description: File was retrieved successfully
+properties:
+  id:
+    type: string
+    description: The file identifier
+    example: "file_6lbss42ezvoufcb2beo76rvwly"
+  filename:
+    type: string
+    description: The filename, including its extension
+    example: "receipt.jpg"
+  purpose:
+    $ref: "#/components/schemas/FilePurpose"
+  size:
+    type: integer
+    description: The size of the file upload object (in bytes)
+    example: 1024
+  uploaded_on:
+    type: string
+    format: ISO-8601
+    description: The date and time file was uploaded (in UTC)
+    example: "2019-05-17T16:48:52Z"
+  _links:
+    type: object
+    properties:
+      self:
+        description: The file information retrieval URL
+        properties:    
+          href:
+            example: "https://api.checkout.com/files/file_6lbss42ezvoufcb2beo76rvwly"
+      download:
+        description: The temporary file download URL. This expires after 60 minutes
+        properties:    
+          href:
+            example: "https://cabinet-upload-prod.s3.eu-west-1.amazonaws.com/ucdac/ucdac/6lbss42ezvoufcb2beo76rvwly?X-Amz-Expires=3600&x-amz-security-token=FQoDYXdzENL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEa"

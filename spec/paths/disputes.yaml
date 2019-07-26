@@ -1,0 +1,91 @@
+get:
+  tags:
+    - Disputes
+  summary: Get disputes
+  description:
+    Returns a list of all disputes against your business. This list is provided in chronological order, showing the latest updates first.
+    You can use the optional parameters below to skip or limit results.
+  parameters:
+    - in: query
+      name: limit
+      schema: 
+        type: integer
+        minimum: 1
+        maximum: 250
+        default: 50
+      required: false
+      description: The numbers of results to return
+    - in: query
+      name: skip
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+      required: false
+      description: The number of results to skip
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: ISO-8601
+      required: false
+      description: The date and time from which to filter disputes, based on the dispute's `last_update` field
+    - in: query
+      name: to
+      schema:
+        type: string
+        format: ISO-8601
+      required: false
+      description: The date and time until which to filter disputes, based on the dispute's `last_update` field
+    - in: query
+      name: id
+      schema:
+        type: string
+      required: false
+      description: The unique identifier of the dispute
+    - in: query
+      name: statuses
+      schema:
+        type: string
+        example: evidence_required,evidence_under_review
+      required: false
+      description: One or more comma-separated statuses. This works like a logical *OR* operator
+    - in: query
+      name: payment_id
+      schema:
+        type: string
+      required: false
+      description: The unique identifier of the payment
+    - in: query
+      name: payment_reference
+      schema:
+        type: string
+      required: false
+      description: An optional reference (such as an order ID) that you can use later to identify the payment. Previously known as `TrackId`
+    - in: query
+      name: payment_arn
+      schema:
+        type: string
+      required: false
+      description: The acquirer reference number (ARN) that you can use to query the issuing bank
+    - in: query
+      name: this_channel_only
+      schema:
+        type: boolean
+      required: false
+      description: If `true`, only returns disputes of the specific channel that the secret key is associated with. Otherwise, returns all disputes for that business
+  responses:
+    "200":
+      description: Disputes retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/DisputePaged"
+    "401":
+      description: Unauthorized
+    "422":
+      description: Unprocessable paging
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PagingError"

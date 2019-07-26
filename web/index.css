@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #013a51!important;
+}
+
+.redoc-wrap p {
+    color: #013a51;
+}
+
+h1, h1 a {
+    color: #013a51!important;
+}
+
+a {
+    color: #35ad88!important;
+}
+
+a:active, .active, ul[role=navigation] label:hover, .loading {
+    color: #013a51!important;
+    font-weight: bold!important;
+}
+
+ul[role=navigation] label:hover {
+    background: white!important;
+}
+
+a:hover {
+    color: #013a51!important;
+    text-decoration: underline!important;
+}
+
+h1, h2, h3 {
+    font-weight: 300!important;
+}
+
+h1, h3 {
+    color: #013a51!important;
+}
+
+h2 {
+    color: #587484!important;
+}
+
+h5.shv3r-4.gLzrjW {
+    border-bottom: 0;
+    padding: 20px 0 10px 0;
+}
+
+code, .evgDyP {
+    background: #f8f8f8!important;
+    border: 1px solid rgba(96, 105, 113, .1)!important;
+    padding: 1px!important;
+    border-radius: 3px!important;
+    color: #555!important;
+    font-size: 12px!important;
+}
+
+.http-verb {
+    border-radius: 3px;
+}
+
+.delete {
+    background: #fd755f!important;
+}
+
+.get {
+    background: #2db388!important;
+}
+
+.post {
+    background: #00aeef!important;
+}
+
+.put {
+    background: #b77ba1!important;
+}
+
+.patch {
+    background: #fab82b!important;
+}
+
+ul.obj.collapsible, ul.array.collapsible {
+    margin-left: 1em!important;
+}
+
+span.sc-1noysbl-1.jCuzSX {
+    color: rgb(1, 58, 81, 0.7);
+}
+
+td.dz44d2-1 {
+    font-family: Courier, monospace;
+}
+
+td.dz44d2-4 {
+    font-family: Arial, sans-serif;
+}
+
+.jXDsIv {
+    color: #fd755f!important;
+    font-family: Arial, sans-serif;
+    font-size: 9px!important;
+    margin-left: 20px!important;
+    line-height: 20px!important;
+    font-weight: 600!important;
+    text-transform: uppercase!important;
+}
+
+.scrollbar-container.undefined.i2xdng-0.gakpRU.ps {
+    padding-bottom: 20px;
+}
+
+.futasu-2.jQhtam {
+    display: none;
+}
+
+/* Successful response */
+
+.kXBEML, .gIwhKV {
+    color: rgb(45, 179, 136)!important;
+    background: rgb(45, 179, 136, 0.1)!important;
+}
+
+.gneRca polygon, .fgqOex polygon {
+    fill: rgb(45, 179, 136)!important;
+}
+
+/* Error response */
+
+.cxEeEe, .jtbdMW {
+    color: rgb(253, 117, 95)!important;
+    background: rgb(253, 117, 95, 0.1)!important;
+}
+
+.jtbdMW polygon {
+    fill: rgb(253, 117, 95)!important;
+}
+
+/* Parameters */
+
+.Dropdown-control {
+    border-radius: 0!important;
+}
+
+.Dropdown-arrow {
+    border-color: #00aeef transparent transparent!important;
+}
+
+.Dropdown-menu {
+    box-shadow: none!important;
+    margin-top: 0!important;
+    border-top: 0!important;
+}
+
+.Dropdown-control:hover {
+    color: #00aeef!important;
+    border-color: #00aeef!important;
+    box-shadow: none!important;
+}
+
+/* LEFT MENU */
+
+.menu-content {
+    background: #f8f8f8!important;
+    top: 66px!important;
+}
+
+/* Search box */
+
+div[role=search] {
+    margin: 10px 20px!important;
+    border: 1px solid rgb(1, 58, 81, 0.2);
+    border-radius: 3px;
+    background: #f8f8f8;
+}
+
+.search-input {
+    border: 0!important;
+}
+
+input.search-input {
+    font-weight: 300;
+}
+
+.search-icon {
+    left: 30px!important;
+}
+
+i.k4h4y9-4.jGkewb {
+    right: 30px;
+    top: 13px;
+}
+
+.eJUTHL {
+    border-bottom: 0!important;
+    padding-bottom: 0!important;
+    background: #f8f8f8!important;
+}
+
+/* Navigation */
+
+label.active {
+    background: rgb(1, 58, 81, 0.1)!important
+}
+
+label.hover {
+    background: white!important;
+}
+
+/* RIGHT MENU */
+
+/* Hide application/json */
+
+.futasu-0.wbaPa {
+    display: none;
+}
+
+/* Endpoint drop-down */
+
+.jmkkdP, .fegejV {
+    background-color: rgb(1, 58, 81, 0.8)!important;
+    border-radius: 0!important;
+}
+
+.nrhuz6-4.gWOwls {
+    box-shadow: none!important;
+    border: 1px solid #efefef;
+    background-color: #f8f8f8!important;
+}
+
+.iuqUuR {
+    color: rgb(1, 58, 81, 0.8)!important;
+}
+
+/* Code samples */
+
+.react-tabs__tab-panel, .react-tabs__tab.react-tabs__tab--selected {
+    background: #f8f8f8!important;
+    color: #013a51!important;
+    border-color: #013a51!important;
+}
+
+.react-tabs__tab {
+    color: rgb(1, 58, 81, 0.5!important);
+}
+
+ul>li.react-tabs__tab, ul>li.tab-success, ul>li.tab-error {
+    margin: 0 5px!important;
+    border-radius: 0!important;
+    border-width: 2px 0 0 0!important;
+    background-color: #f8f8f8!important;
+}
+
+ul>li.tab-success {
+    color: rgb(45, 179, 136, 0.5)!important;
+    border-color: rgb(45, 179, 136, 0.5)!important;
+}
+
+ul>li.tab-error {
+    color: rgb(253, 117, 95, 0.5)!important;
+    border-color: rgb(253, 117, 95, 0.5)!important;
+}
+
+ul>li.tab-success.react-tabs__tab--selected {
+    color: #2db388!important;
+    border-color: #2db388!important;
+    background: #f8f8f8!important;
+}
+
+ul>li.tab-error.react-tabs__tab--selected {
+    color: #fd755f!important;
+    border-color: #fd755f!important;
+    background: #f8f8f8!important;
+}
+
+.diZwLN>ul>li {
+    color: rgb(1, 58, 81, 0.5)!important;
+    background: #efefef!important;
+    border-top: 0!important;
+}
+
+.diZwLN>ul>li:hover {
+    color: #013a51!important;
+}
+
+.diZwLN>ul>li.react-tabs__tab--selected {
+    border-top: 0;
+    border-bottom: 2px solid #013a51!important;
+    color: #013a51!important;
+    font-weight: bold;
+}
+
+/* Code samples */
+
+span.property.token.string {
+    color: #1d75b3!important;
+}
+
+span.token.string {
+    color: #b35e14!important
+}
+
+span.token.number {
+    color: #75438a!important;
+}
+
+span.token.keyword {
+	color: #DB7093!important;
+}
+
+.egwcPy, .iJUwRU {
+    background: white!important;
+}
+
+/* Version */
+
+.api-info span {
+    display: none;
+}
+
+/* Download */
+
+.api-info p>a {
+    border-color: #35ad88;
+}
+
+.api-info p>a {
+    border-color: #35ad88;
+}
+
+.api-info p>a:hover {
+    border-color: #305e4c;
+}
+
+.scrollbar-container ul:first-child+div {
+    display: none;
+}
+
+/* Logo */
+
+.logo {
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f8f8f8!important;
+}
+
+.logo img {
+    padding: 5px;
+}
+
+@media (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+    .menu-content {
+        top: 0!important;
+    }
+}

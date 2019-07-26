@@ -9,7 +9,6 @@ required:
   - status
   - response_code
   - processed_on
-  - source
   - _links
 properties:
   id:
@@ -43,6 +42,7 @@ properties:
       - Card Verified
       - Captured
       - Declined
+      - Paid
     example: Authorized
   auth_code:
     type: string
@@ -78,6 +78,11 @@ properties:
     type: object
     allOf:
       - $ref: '#/components/schemas/PaymentResponseSource'
+  destination:
+    description: The destination of the payment
+    type: object
+    allOf:
+      - $ref: '#/components/schemas/PaymentResponseDestination'
   customer:
     type: object
     description: The customer associated with the payment if provided in the request

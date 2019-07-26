@@ -3,8 +3,7 @@ post:
     - Payments
   summary: Request a payment
   description: |
-    Checkout.com supports payments from a variety of sources, from cards to
-    SEPA direct debits. The source of payment must be specified using the `source.type` field along with any source specific data.
+    Accept payments from <a href="https://docs.checkout.com/docs/cards" target="blank">cards</a>, <a href="https://docs.checkout.com/docs/wallets" target="blank">digital wallets</a> and many <a href="https://docs.checkout.com/docs/bank-transfers" target="blank">alternative payment methods</a>, and pay out to a variety of destinations. Just specify the source or destination of the payment using the `source.type` or `destination.type` field, along with the source- or destination-specific data.
 
     To verify the success of the payment, check the `approved` field in the response.
 

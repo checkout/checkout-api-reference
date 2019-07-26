@@ -1,0 +1,83 @@
+put:
+  tags:
+    - Disputes
+  summary: Provide dispute evidence
+  description: |
+    Adds supporting evidence to a dispute. Before using this endpoint, you first need to [upload your files](#tag/Disputes/paths/~1files/post) using the file uploader. You will receive a file id (prefixed by `file_`) which you can then use in your request.
+    Note that this only attaches the evidence to the dispute, it does not send it to us. Once ready, you will need to submit it.
+
+    **You must provide at least one evidence type in the body of your request.**
+  parameters:
+    - in: path
+      name: dispute_id
+      schema:
+        type: string
+        pattern: "^(dsp)_(\\w{26})$"
+      required: true
+      description: The dispute identifier
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ProvideEvidenceRequest"
+        required: true
+  responses:
+    "204":
+      description: Dispute evidence provided successfully
+    "400":
+      description: Unprocessable
+    "401":
+      description: Unauthorized
+    "404":
+      description: Dispute not found
+    "422":
+      description: Unprocessable entity
+
+get:
+  tags:
+    - Disputes
+  summary: Get dispute evidence
+  description: |
+    Retrieves a list of the evidence submitted in response to a specific dispute. 
+  parameters:
+    - in: path
+      name: dispute_id
+      schema:
+        type: string
+        pattern: "^(dsp)_(\\w{26})$"
+      required: true
+      description: The dispute identifier
+  responses:
+    "200":
+      description: Dispute evidence retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Evidence"
+    "401":
+      description: Unauthorized
+    "404":
+      description: Dispute not found
+
+post:
+  tags:
+    - Disputes
+  summary: Submit dispute evidence
+  description: 
+    With this final request, you can submit the evidence that you have previously provided. Make sure you have provided all the relevant information before using this request.
+    You will not be able to amend your evidence once you have submitted it.
+  parameters:
+    - in: path
+      name: dispute_id
+      schema:
+        type: string
+        pattern: "^(dsp)_(\\w{26})$"
+      required: true
+      description: The dispute identifier
+  responses:
+    "204":
+      description: Dispute evidence submitted successfully
+    "401":
+      description: Unauthorized
+    "404":
+      description: Dispute not found

@@ -1,0 +1,15 @@
+type: object
+description: The destination of the payment
+discriminator:
+  propertyName: type
+  mapping:
+    token: '#/components/schemas/01_PaymentRequestTokenDestination'
+    id: '#/components/schemas/02_PaymentRequestIdDestination'
+    card: '#/components/schemas/03_PaymentRequestCardDestination'
+required:
+  - type
+properties:
+  type:
+    type: string
+    description: The payment destination type
+    example: "card"

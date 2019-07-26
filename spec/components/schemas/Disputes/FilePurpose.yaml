@@ -1,0 +1,5 @@
+type: string
+description: The list of file upload purposes. Currently this is only `dispute_evidence`
+example: "dispute_evidence"
+enum:
+  - dispute_evidence

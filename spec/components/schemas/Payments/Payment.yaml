@@ -22,6 +22,11 @@ properties:
     type: object
     allOf:
       - $ref: '#/components/schemas/PaymentResponseSource'
+  destination:
+    description: The destination of the payment
+    type: object
+    allOf:
+      - $ref: '#/components/schemas/PaymentResponseDestination'
   amount:
     type: integer
     description: The original payment amount
@@ -51,7 +56,7 @@ properties:
     example: Set of 3 masks
   approved:
     type: boolean
-    description: Whether the authorization or capture was successful
+    description: Whether the payment was successful
     example: true
   status:
     type: string
@@ -67,6 +72,7 @@ properties:
       - Refunded
       - Declined
       - Cancelled
+      - Paid
     example: Authorized
   3ds:
     type: object

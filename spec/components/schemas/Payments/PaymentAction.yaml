@@ -19,6 +19,7 @@ properties:
       - Void
       - Capture
       - Refund
+      - Payout
   processed_on:
     description: The date/time the action was processed
     allOf:

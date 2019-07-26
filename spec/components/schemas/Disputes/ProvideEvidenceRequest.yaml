@@ -1,0 +1,87 @@
+type: object
+properties:
+  proof_of_delivery_or_service_file:
+    type: string
+    description: A file containing proof of delivery of goods or services
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  proof_of_delivery_or_service_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "http://checkout.com/document.pdf"
+  invoice_or_receipt_file:
+    type: string
+    description: A file containing an invoice/receipt
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  invoice_or_receipt_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Copy of the invoice"
+  invoice_showing_distinct_transactions_file:
+    type: string
+    description: A file containing invoice showing two distinct transactions
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  invoice_showing_distinct_transactions_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Copy of invoice #1244 showing two transactions"
+  customer_communication_file:
+    type: string
+    description: A file containing customer cummunication
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  customer_communication_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Copy of an email exchange with the cardholder"
+  refund_or_cancellation_policy_file:
+    type: string
+    description: A file containing refund/cancellation policy
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  refund_or_cancellation_policy_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Copy of the refund policy"
+  recurring_transaction_agreement_file:
+    type: string
+    description: A file containing the recurring transaction agreement
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  recurring_transaction_agreement_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Copy of the recurring transaction agreement"
+  additional_evidence_file:
+    type: string
+    description: A file containing additional supporting documents
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  additional_evidence_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Scanned document"
+  proof_of_delivery_or_service_date_file:
+    type: string
+    description: A file showing the delivery date of the provided service/merchandise
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  proof_of_delivery_or_service_date_text:
+    type: string
+    maximum: 500
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Copy of the customer receipt showing the merchandise was delivered on 2018-12-20"
+    _links:
+      type: object
+      properties:
+        self:
+          description: The evidence retrieval endpoint
+          properties:    
+            href:
+              example: "https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf/evidence"
+        parent:
+          description: The dispute retrieval endpoint
+          properties:    
+            href:
+               example: "https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf"

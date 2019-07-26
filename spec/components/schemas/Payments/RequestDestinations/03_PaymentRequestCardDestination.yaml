@@ -1,0 +1,46 @@
+type: object
+description: A card payment destination
+required:
+  - type
+  - number
+  - expiry_month
+  - expiry_year
+  - first_name
+  - last_name
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestDestination"
+  - type: object
+    properties:
+      number:
+        type: string
+        description: The card number
+        example: "4543474002249996"
+      expiry_month:
+        type: integer
+        description: The two-digit expiry month of the card
+        minimum: 1
+        example: 6
+      expiry_year:
+        type: integer
+        description: The four-digit expiry year of the card
+        example: 2025
+      first_name:
+        type: string
+        description: The payment destination owner's first name
+        example: John
+      last_name:
+        type: string
+        description: The payment destination owner's last name
+        example: Smith
+      name:
+        type: string
+        description: The cardholder's name
+        example: "Bruce Wayne"
+      billing_address:
+        description: The payment destination owner's billing address
+        allOf:
+          - $ref: '#/components/schemas/Address'
+      phone:
+        description: The payment destination owner's phone number
+        allOf:
+          - $ref: '#/components/schemas/PhoneNumber'
