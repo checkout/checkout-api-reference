@@ -24,5 +24,9 @@ properties:
     example: AgAAAAAAAIR8CQrXcIhbQAAAAAA=
   xid:
     type: string
-    description: The 3-D Secure transaction identifier. Required if using an external MPI.
+    description: The 3-D Secure transaction identifier. Required if using an external MPI with 3-D Secure 2.X.X and a Mastercard card or with 3-D Secure 1.X.X for any supported card scheme.
     example: MDAwMDAwMDAwMDAwMDAwMzIyNzY=
+  version:
+    type: string
+    description: Indicates the version of 3-D Secure that was used for authentication. Defaults to 1.0.0 if not provided.
+    example: "2.0.1"
