@@ -19,7 +19,7 @@ var syncPaymentSources = function()
   syncPaymentResponse('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/payment');
   syncPaymentRequest('Knet', 'http://sb-gateway-internal.cko.lon/knet-internal/relations/gw/pay');
   syncPaymentResponse('Knet', 'http://sb-gateway-internal.cko.lon/knet-internal/relations/gw/payment');
-  syncPaymentResponse('Bancontact', 'http://sb-gateway-internal.cko.lon/ppro-internal/bancontact/relations/gw/pay');
+  syncPaymentRequest('Bancontact', 'http://sb-gateway-internal.cko.lon/ppro-internal/bancontact/relations/gw/pay');
   syncPaymentResponse('Bancontact', 'http://sb-gateway-internal.cko.lon/ppro-internal/bancontact/relations/gw/payment');
   syncPaymentRequest('Fawry', 'http://sb-gateway-internal.cko.lon/fawry-internal/relations/gw/pay');
   syncPaymentResponse('Fawry', 'http://sb-gateway-internal.cko.lon/fawry-internal/relations/gw/payment');

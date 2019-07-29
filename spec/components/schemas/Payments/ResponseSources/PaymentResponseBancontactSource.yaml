@@ -9,7 +9,7 @@ allOf:
   -
     type: object
     properties:
-      description:
-        maxLength: 65534
+      iban:
+        maxLength: 34
         type: string
-        description: 'Payment description'
+        description: "The IBAN of the Consumer Bank account used for payment (if applicable).\n"
