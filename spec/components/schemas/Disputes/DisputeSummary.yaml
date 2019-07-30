@@ -2,12 +2,12 @@ type: object
 properties:
   id:
     type: string
-    description: The dispute identifier. This is the same as the Action ID in the Recon API or the Charge ID in The Hub.
+    description: The dispute identifier. This is the same as the action ID in the reconciliation API or the charge ID in the Hub.
     example: "dsp_rbhwd2qrg13uhrp2newf"
   category:
     type: string
-    description: The reason for the dispute
-    enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general, general_restricted]
+    description: The reason for the dispute. [Find out more](https://docs.checkout.com/docs/disputes#section-dispute-reasons-and-recommended-evidence)
+    enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general]
     example: "fraudulent"
   status:
     type: string
@@ -16,7 +16,7 @@ properties:
     example: "evidence_required"
   amount:
     type: number
-    description: The amount that is being disputed in processing currency
+    description: The amount that is being disputed, in the processing currency
     example: 999
   currency:
     type: string
@@ -36,23 +36,23 @@ properties:
     example: "74548998294293193445538"
   payment_method:
     type: string
-    description: Payment method/card scheme
+    description: The payment method/card scheme
     example: VISA
   evidence_required_by:
     type: string
     format: ISO-8601
-    description: Deadline to respond to the dispute. It's calculated as calendar days from the day of the dispute issue as explained for each scheme/acquirer
-    example: '2018-08-22T00:00:00Z'
+    description: The deadline by which to respond to the dispute. This corresponds to `received_on` + `n`, where `n` is a number of calendar days set by the scheme/acquirer
+    example: "2018-08-22T00:00:00Z"
   received_on:
     type: string
     format: ISO-8601
-    description: Date and time the dispute was issued on formatted in ISO 8601
-    example: '2018-08-01T01:15:56Z'
+    description: The date and time at which the dispute was issued
+    example: "2018-08-01T01:15:56Z"
   last_update:
     type: string
     format: ISO-8601
-    description: Date and time when the dispute was updated formatted in ISO 8601
-    example: '2018-08-12T04:15:56Z'
+    description: The date and time at which the dispute was last updated
+    example: "2018-08-12T04:15:56Z"
   _links:
     type: object
     properties:
