@@ -19,10 +19,10 @@ properties:
       - Refund
   response_code:
     type: string
-    description: Gateway response code
+    description: The gateway response code
     example: "10000"
   response_summary:
     type: string
-    description: The Gateway response summary
+    description: The gateway response summary
     example: "Approved"
 

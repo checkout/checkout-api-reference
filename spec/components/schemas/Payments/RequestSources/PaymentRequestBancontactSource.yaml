@@ -15,6 +15,8 @@ allOf:
       payment_country:
         maxLength: 2
         minLength: 2
+        enum:
+          - BE
         type: string
         description: 'The 2-letter ISO country code of the country in which the payment instrument is issued/operated.'
       account_holder_name:
@@ -26,3 +28,15 @@ allOf:
         maxLength: 65534
         type: string
         description: 'Payment billing descriptor.'
+      language:
+        maxLength: 2
+        minLength: 2
+        enum:
+          - fr
+          - nl
+          - de
+          - en
+        type: string
+        description: 'The 2-letter ISO language code that should be preferred when presenting payment pages to the consumer.'
+        default: fr
+        example: nl

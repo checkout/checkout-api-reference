@@ -1,0 +1,53 @@
+type: object
+properties:
+  limit:
+    type: integer
+    description: The numbers of items to return
+    example: 10
+  skip:
+    type: integer
+    description: The number of results to skip
+    example: 10
+  from:
+    type: string
+    format: ISO-8601
+    description: The date and time from which to filter disputes, based on the dispute's `last_update` field
+    example: "2018-08-12T01:15:56Z"
+  to:
+    type: string
+    format: ISO-8601
+    description: The date and time until which to filter disputes, based on the dispute's `last_update` field
+    example: "2018-08-13T11:09:01Z"
+  statuses:
+    type: string
+    description: One or more comma-separated statuses. This works like a logical *OR* operator
+    example: "evidence_required,evidence_under_review"
+  id:
+    type: string
+    description: The unique identifier of the dispute
+    example: "dsp_rbhwd2qrg13uhrp2newf"
+  payment_id:
+    type: string
+    description: The unique identifier of the payment
+    example: "pay_88cb4e671m1da22e9bbb"
+  payment_reference:
+    type: string
+    description: An optional reference (such as an order ID) that you can use later to identify the payment. Previously known as `TrackId`
+    example: "th7zxa1kcnqmes8"
+  payment_arn:
+    type: string
+    description: The acquirer reference number (ARN) that you can use to query the issuing bank
+    example: "74548998294293193445538"
+  this_channel_only:
+    type: boolean
+    description: If `true`, only returns disputes of the specific channel that the secret key is associated with. Otherwise, returns all disputes for that business
+    example: true
+  total_count:
+    type: integer
+    description: The total number of disputes retrieved (without taking into consideration skip and limit parameters)
+    example: 1
+  data:
+    type: array
+    description: The list of disputes
+    items:
+      $ref: "#/components/schemas/DisputeSummary"

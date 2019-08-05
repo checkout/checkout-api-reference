@@ -1,0 +1,29 @@
+post:
+  tags:
+    - Disputes
+  summary: Upload file
+  description:
+    Upload a file to use as evidence in a dispute. Your file must be in either JPEG/JPG, PNG or PDF format, and be no larger than 4MB.
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: "#/components/schemas/File"
+  responses:
+    "200":
+      description: File uploaded successfully
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/FileUploadResponse"
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    "401":
+      description: Unauthorized
+    "422":
+      description: Unprocessable
+    "429":
+      description: Too many requests

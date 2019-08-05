@@ -1,0 +1,21 @@
+post:
+  tags:
+    - Disputes
+  summary: Accept dispute
+  description:
+    If a dispute is legitimate, you can choose to accept it. This will close it for you and remove it from your list of open disputes. There are no further financial implications.
+  parameters:
+    - in: path
+      name: dispute_id
+      schema:
+        type: string
+        pattern: "^(dsp)_(\\w{26})$"
+      required: true
+      description: The dispute identifier
+  responses:
+    "204":
+      description: Dispute accepted successfully
+    "401":
+      description: Unauthorized
+    "404":
+      description: Dispute not found

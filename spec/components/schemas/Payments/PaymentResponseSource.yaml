@@ -13,11 +13,10 @@ discriminator:
     klarna: '#/components/schemas/PaymentResponseKlarnaSource'
     knet: '#/components/schemas/PaymentResponseKnetSource'
     poli: '#/components/schemas/PaymentResponsePoliSource'
-    qiwi: '#/components/schemas/PaymentResponseQiwiSource'
-    safetypay: '#/components/schemas/PaymentResponseSafetyPaySource'
     sofort: '#/components/schemas/PaymentResponseSofortSource'
     bancontact: '#/components/schemas/PaymentResponseBancontactSource'
     fawry: '#/components/schemas/PaymentResponseFawrySource'
+    qpay: '#/components/schemas/PaymentResponseQPaySource'
 required:
   - type
 
@@ -25,8 +24,8 @@ properties:
   type:
     type: string
     description: |
-      The payment source type. For any payment request sources that result in a card token (token, source ID etc.)
-      this will be `card` otherwise the name of the alternative payment method.
+      The payment source type. For any payment request sources that result in a card token (token, source ID, etc.),
+      this will be `card`; otherwise it will be the name of the alternative payment method.
     example: "card"
   id:
     type: string

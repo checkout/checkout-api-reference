@@ -1,4 +1,0 @@
-type: object
-description: SafetyPay Source
-allOf:
-  - $ref: "#/components/schemas/PaymentRequestSource"

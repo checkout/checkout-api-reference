@@ -16,15 +16,14 @@ discriminator:
     klarna: '#/components/schemas/PaymentRequestKlarnaSource'
     knet: '#/components/schemas/PaymentRequestKnetSource'
     poli: '#/components/schemas/PaymentRequestPoliSource'
-    qiwi: '#/components/schemas/PaymentRequestQiwiSource'
-    safetypay: '#/components/schemas/PaymentRequestSafetyPaySource'
     sofort: '#/components/schemas/PaymentRequestSofortSource'
     bancontact: '#/components/schemas/PaymentRequestBancontactSource'
     fawry: '#/components/schemas/PaymentRequestFawrySource'
+    qpay: '#/components/schemas/PaymentRequestQPaySource'
 required:
   - type
 properties:
   type:
     type: string
-    description: The payment source type
+    description: The payment source type <br> *Note:* *To make a payment with full card details, you must be <a href="https://docs.checkout.com/docs/pci-compliance" target="blank">SAQ D PCI compliant</a>.*
     example: "card"

@@ -8,7 +8,7 @@ allOf:
     properties:
       id:
         type: string
-        description: The payment source identifer for example, a card source identifier
+        description: The payment source identifer (e.g., a card source identifier)
         example: src_wmlfc3zyhqzehihu7giusaaawu
       cvv:
         type: string

@@ -1,0 +1,27 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'QPay Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentRequestSource'
+  -
+    type: object
+    required:
+      - description
+    properties:
+      quantity:
+        minimum: 1
+        type: integer
+        description: 'A numeric value greater than zero represents the quantity of purchased Item. The value is used for display purposes only and does not affect the total amount of the payment. The minimum allowed value is 1.'
+      description:
+        type: string
+        description: 'Alphanumeric string containing a description of the payment order. Note: The maximum allowed length of this property is 255 characters after UTF-8 URL encoding.'
+      language:
+        type: string
+        description: 'Alphabetic value representing the language of the interface displayed to customer at merchant site, and used as language for the payment description parameter.  PG will use this value to display the interface supporting selected language to the customer during the payment process.  Supported values are: En, Ar. The default value is En.'
+      national_id:
+        maxLength: 32
+        type: string
+        description: 'Alphanumeric value representing the national id of the customer performing the transaction. The maximum allowed length of this property is 32.'
