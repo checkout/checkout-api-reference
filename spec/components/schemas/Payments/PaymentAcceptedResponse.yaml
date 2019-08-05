@@ -5,7 +5,7 @@ required:
   - status
 properties:
   id:
-    description: Payment unique identifier
+    description: The payment's unique identifier
     readOnly: true
     allOf:
       - $ref: '#/components/schemas/PaymentId'
@@ -20,17 +20,17 @@ properties:
     example: ORD-5023-4E89
   customer:
     type: object
-    description: The customer associated with the payment if provided in the request
+    description: The customer associated with the payment, if provided in the request.
     allOf:
       - $ref: '#/components/schemas/PaymentResponseCustomer'
   3ds:
     type: object
-    description: Provides 3-D Secure enrollment status
+    description: Provides 3D Secure enrollment status
     allOf:
       - $ref: '#/components/schemas/3dsEnrollmentData'
   _links:
     type: object
-    description: Payment links
+    description: The links related to the payment
     readOnly: true
     minItems: 2
     properties:

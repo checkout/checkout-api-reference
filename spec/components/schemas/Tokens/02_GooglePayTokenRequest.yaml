@@ -6,14 +6,14 @@ allOf:
     properties:
       token_data:
         type: object
-        description: The Google Pay Payment Token
+        description: The Google Pay payment token
         properties:
           signature:
             type: string
             description: Verifies the message came from Google. The signature is created using ECDSA.
           protocolVersion:
             type: string
-            description: Identifies which encryption/signing scheme this message has been created. In this way, the protocol can evolve over time if needed. If it is not set, assume ECv0.
+            description: Identifies which encryption/signing scheme created this message. In this way, the protocol can evolve over time if needed. If it is not set, assume ECv0.
           signedMessage:
             type: string
             description: A serialized JSON string containing the encryptedMessage, ephemeralPublicKey and tag. To simplify the signature verification process, this value is serialized.

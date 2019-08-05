@@ -24,8 +24,8 @@ properties:
   type:
     type: string
     description: |
-      The payment source type. For any payment request sources that result in a card token (token, source ID etc.)
-      this will be `card` otherwise the name of the alternative payment method.
+      The payment source type. For any payment request sources that result in a card token (token, source ID, etc.),
+      this will be `card`; otherwise it will be the name of the alternative payment method.
     example: "card"
   id:
     type: string

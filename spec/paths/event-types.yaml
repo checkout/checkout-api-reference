@@ -2,7 +2,7 @@ get:
   tags:
     - Events
   summary: Retrieve event types
-  description: Retrieve a list of event types grouped by their respective version that you can configure on your webhooks
+  description: Retrieve a list of event types grouped by their respective version that you can configure on your webhooks.
   parameters:
     - in: query
       name: version

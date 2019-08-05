@@ -5,7 +5,7 @@ get:
   description: |
     Returns the details of the payment with the specified identifier string.
 
-    If the payment method requires a redirection to a third party (e.g. 3-D Secure),
+    If the payment method requires a redirection to a third party (e.g., 3D Secure),
     the redirect URL back to your site will include a `cko-session-id` query parameter
     containing a payment session ID that can be used to obtain the details of the payment, for example:
 

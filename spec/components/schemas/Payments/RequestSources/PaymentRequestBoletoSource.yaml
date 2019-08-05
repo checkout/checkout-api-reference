@@ -10,7 +10,7 @@ allOf:
     properties:
       birthDate:
         type: string
-        description: The date of birth (YYYY-MM-DD)
+        description: The customer's date of birth (YYYY-MM-DD)
         example: 1977-04-28
       cpf:
         type: string
