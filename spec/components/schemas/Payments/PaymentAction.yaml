@@ -42,7 +42,7 @@ properties:
     example: "10000"
   response_summary:
     type: string
-    description: The Gateway response summary
+    description: The gateway response summary
     example: "Approved"
   reference:
     type: string
@@ -66,6 +66,6 @@ properties:
         example: "440644309099499894406"
   metadata:
     type: object
-    description: A set of key/value pairs that you can attach to an action
+    description: A set of key-value pairs that you can attach to an action
 
 

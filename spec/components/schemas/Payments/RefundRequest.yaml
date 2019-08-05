@@ -3,7 +3,7 @@ properties:
   amount:
     type: integer
     description: |
-      The amount to refund in the major currency. If not specified, the full payment amount will be refunded
+      The amount to refund in the major currency. If not specified, the full payment amount will be refunded.
     minimum: 0
     example: 6540
   reference:
@@ -12,7 +12,7 @@ properties:
     example: ORD-5023-4E89
   metadata:
     type: object
-    description: Set of key/value pairs that you can attach to the refund request. It can be useful for storing additional information in a structured format
+    description: A set of key-value pairs that you can attach to the refund request. It can be useful for storing additional information in a structured format.
     example:
       coupon_code: "NY2018"
       partner_id: 123989

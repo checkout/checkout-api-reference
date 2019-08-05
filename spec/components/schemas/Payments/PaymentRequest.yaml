@@ -10,19 +10,19 @@ properties:
     type: integer
     description: |
       The payment amount in the major currency.
-      Omitting the amount or providing 0 will perform a card verification.
+      Omit the amount or provide a value of 0 to perform a card verification.
     minimum: 0
     example: 6540
   currency:
     type: string
     description: |
-      The three-letter ISO currency code
+      The three-letter <a href="https://docs.checkout.com/docs/currency-codes" target="blank">ISO currency code</a>
     example: USD
     maxLength: 3
     minLength: 3
   payment_type:
     type: string
-    description: Must be specified for card payments where the cardholder is not present (recurring or Merchant Offline Telephone Order)
+    description: This must be specified for card payments where the cardholder is not present (i.e., recurring or mail order / telephone order).
     enum:
       - Regular
       - Recurring
@@ -31,7 +31,7 @@ properties:
     example: Recurring
   reference:
     type: string
-    description: A reference you can later use to identify this payment such as an order number
+    description: A reference you can later use to identify this payment, such as an order number.
     example: ORD-5023-4E89
   description:
     type: string
@@ -44,20 +44,20 @@ properties:
     example: true
   capture_on:
     description: |
-      An ISO 8601 timestamp that determines when the payment should be captured.
+      A timestamp (ISO 8601 code) that determines when the payment should be captured.
       Providing this field will automatically set `capture` to true.
 
     allOf:
       - $ref: '#/components/schemas/Timestamp'
   customer:
     type: object
-    description: Details of the customer associated with the payment
+    description: The customer's details
     properties:
       id:
         type: string
         description: |
-          The identifier of an existing customer. If neither customer `id` or `email` is provided
-          a new customer will be registered
+          The identifier of an existing customer. If neither customer `id` nor `email` is provided,
+          a new customer will be registered.
         example: cus_y3oqhf46pyzuxjbcn2giaqnb44
       email:
         type: string
@@ -66,13 +66,13 @@ properties:
         example: jokershere@gmail.com
       name:
         type: string
-        description: The customer's name. This will only set the name for *new* customers
+        description: The customer's name. This will only set the name for *new* customers.
         example: Jack Napier
   billing_descriptor:
     $ref: '#/components/schemas/BillingDescriptor'
   shipping:
     type: object
-    description: The payment shipping details
+    description: The shipping details
     properties:
       address:
         description: The shipping address
@@ -87,20 +87,20 @@ properties:
   previous_payment_id:
     type: string
     description: |
-      For payments that use stored card details such as recurring payments,
-      an existing payment identifier from the recurring series or the Scheme Transaction Id. [Read more](https://docs.checkout.com/docs/stored-card-details).
+      For payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>, such as recurring payments –
+      an existing payment identifier from the recurring series or the Scheme Transaction Id.
     example: "pay_fun26akvvjjerahhctaq2uzhu4"
   risk:
     $ref: '#/components/schemas/RiskRequest'
   success_url:
     type: string
     format: uri
-    description: For redirect payment methods, overrides the default success redirect URL configured on your account
+    description: For redirect payment methods, this overrides the default success redirect URL configured on your account.
     example: "http://example.com/payments/success"
   failure_url:
     type: string
     format: uri
-    description: For redirect payment methods, overrides the default failure redirect URL configured on your account
+    description: For redirect payment methods, this overrides the default failure redirect URL configured on your account.
     example: "http://example.com/payments/fail"
   payment_ip:
     description: The IP address used to make the payment. Required for some risk checks.
@@ -110,15 +110,15 @@ properties:
     $ref: '#/components/schemas/PaymentRecipient'
   processing:
     type: object
-    description: Use the processing object to influence or override the data sent during card processing
+    description: Use the processing object to influence or override the data sent during card processing.
     properties:
       mid:
         type: string
-        description: Overrides the default Merchant/Acceptor identifier (MID) configured on your account
+        description: Overrides the default merchant/acceptor identifier (MID) configured on your account
         example: "1234567"
   metadata:
     type: object
-    description: Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format
+    description: A set of key-value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format.
     example:
       coupon_code: "NY2018"
       partner_id: 123989

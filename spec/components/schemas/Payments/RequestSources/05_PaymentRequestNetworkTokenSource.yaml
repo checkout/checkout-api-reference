@@ -35,7 +35,7 @@ allOf:
           - googlepay 
       cryptogram:
         type: string
-        description: Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Optional if `previous_payment_id` is specified and `3ds.enabled` is false.
+        description: The Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Optional if `previous_payment_id` is specified and `3ds.enabled` is false.
         example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
       eci:
         type: string
@@ -44,12 +44,12 @@ allOf:
         example: "05"
       stored:
         type: boolean
-        description: Must be set to `true` for payments that use stored card details. [Read more](https://docs.checkout.com/v2/docs/stored-card-details).
+        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>.
         default: false
         example: true
       name:
         type: string
-        description: The cardholder name
+        description: The customer's name
         example: "Bruce Wayne"
       cvv:
         type: string
@@ -58,10 +58,10 @@ allOf:
         minLength: 3
         maxLength: 4
       billing_address:
-        description: The cardholder's billing address
+        description: The customer's billing address
         allOf:
           - $ref: '#/components/schemas/Address'
       phone:
-        description: The cardholder's phone number
+        description: The customer's phone number
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'

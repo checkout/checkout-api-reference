@@ -23,7 +23,7 @@ allOf:
         example: 2025
       name:
         type: string
-        description: The card-holder name
+        description: The cardholder's name
         example: "Bruce Wayne"
       cvv:
         type: string

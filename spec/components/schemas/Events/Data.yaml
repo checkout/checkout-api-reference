@@ -1,8 +1,8 @@
 type: object
-description: Event Data
+description: The event data
 properties:
   id:
-    description: Payment unique identifier
+    description: The payment unique identifier
     allOf:
       - $ref: '#/components/schemas/PaymentId'
   action_id:
@@ -15,7 +15,7 @@ properties:
     example: 6540
   currency:
     type: string
-    description: The three-letter ISO currency code of the payment
+    description: The currency in which the payment was made (<a href="https://docs.checkout.com/docs/currency-codes" target="blank">three-letter ISO code</a>)
     example: USD
     maxLength: 3
     minLength: 3
@@ -39,19 +39,19 @@ properties:
     example: Authorized
   auth_code:
     type: string
-    description: The acquirer authorization code if the payment was Authorized
+    description: The acquirer authorization code, if the payment was authorized.
     example: "643381"
   response_code:
     type: string
-    description: Gateway response code
+    description: The gateway response code
     example: "10000"
   response_summary:
     type: string
-    description: The Gateway response summary
+    description: The gateway response summary
     example: "Approved"
   3ds:
     type: object
-    description: Provides 3-D Secure enrollment status if the payment was downgraded to non-3D Secure
+    description: Provides 3D Secure enrollment status if the payment was downgraded to non-3D Secure
     allOf:
       - $ref: '#/components/schemas/3dsEnrollmentData'
     example:
@@ -82,7 +82,7 @@ properties:
     example: ORD-5023-4E89
   metadata:
     type: object
-    description: Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format
+    description: A set of key-value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format.
     example:
       coupon_code: "NY2018"
       partner_id: 123989

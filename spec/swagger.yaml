@@ -13,25 +13,22 @@ info:
   description: >
     # Introduction
 
-    Checkout.com provide a collection of APIs that enable you to process and manage payments.  
+    Checkout.com provides a collection of APIs that enable you to process and manage payments.  
     
 
     Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our SDKs (currently available in
-    [.NET](https://github.com/checkout/checkout-sdk-net) and [Python](https://github.com/checkout/checkout-sdk-python/tree/unified-payments)).  
+    <a href="https://github.com/checkout/checkout-sdk-net" target="blank">.NET</a>, <a href="https://github.com/checkout/checkout-sdk-php" target="blank">PHP</a> and <a href="https://github.com/checkout/checkout-sdk-python/tree/unified-payments" target="blank">Python</a>).  
 
 
-    Our Gateway API includes features such as 
-    AutoCapture, 3-D Secure payments, smart routing to acquirers, and much more.
+    Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, as well as pay out to a variety of destinations, all using the same integration.
 
 
-    Broadcast is our webhook notification system informing you of events in near real-time, enabling you to take action and keep your business running smoothly. 
-    Webhooks provide a definitive confirmation of a status update and are used for a variety of purposes, such as fulfilling orders, 
-    sending automated status updates to customers, or even integrating with third-party application services.
+    And with our webhook management, events and disputes APIs, you can keep on top of your transactions and react to any chargebacks, keeping your business running smoothly.
 
     # Authentication
 
     When you sign up for an account, you are given a secret and public API key
-    pair. You authenticate with the Checkout.com API by providing the appropriate key in
+    pair. You authenticate with our API by providing the appropriate key in
     the request Authorization header.
 
 
@@ -43,10 +40,17 @@ servers:
     description: Sandbox API
 tags:
   - name: Payments
+    description: Process and manage payments from a variety of sources and to various destinations all within one integration.
   - name: Sources
+    description: Create a payment source for a customer that you can use for one or more payments.
   - name: Tokens
+    description: Create a token that represents a card's details (or their tokenized form in a digital wallet) that you can later use to request a payment, without you having to process or store any sensitve information.
   - name: Webhooks
+    description: Create and manage the webhook notifications you receive to keep up to date with the status of your transactions.
   - name: Events
+    description: Use events to monitor and get insights into your transactions.
+  - name: Disputes
+    description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs

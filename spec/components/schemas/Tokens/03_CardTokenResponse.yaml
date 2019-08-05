@@ -28,7 +28,7 @@ allOf:
         example: 2025
       name:
         type: string
-        description: The card-holder name
+        description: The cardholder's name
         example: "Bruce Wayne"
       scheme:
         type: string
@@ -40,7 +40,7 @@ allOf:
         example: "9996"
       bin:
         type: string
-        description: The card issuer BIN
+        description: The card issuer's BIN
         example: "454347"
       card_type:
         type: string
@@ -65,7 +65,7 @@ allOf:
         type: string
         maxLength: 2
         minLength: 2
-        description: The card issuer country ISO-2 code
+        description: The card issuer's country (<a href="https://docs.checkout.com/docs/country-codes" target="blank">two-letter ISO code</a>)
         example: "US"
       product_id:
         type: string
