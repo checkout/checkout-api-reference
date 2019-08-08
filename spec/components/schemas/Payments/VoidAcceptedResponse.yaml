@@ -10,7 +10,7 @@ properties:
   reference:
     type: string
     description: Your reference for the void request
-    example: ORD-5023-4E89
+    example: "ORD-5023-4E89"
   _links:
     type: object
     description: The links related to the void
@@ -21,7 +21,6 @@ properties:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: The URI of the payment to be refund. Use this to check the status of the payment.
         example:
           href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"
     required:

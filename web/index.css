@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     color: #013a51!important;
+    background-color: white;
 }
 
 .redoc-wrap p {
@@ -213,6 +214,12 @@ label.hover {
 
 /* RIGHT MENU */
 
+/* White background */
+
+.dtUibw, .fLUKgj, .api-content.sc-cMhqgX.iniCdN {
+    background-color: white!important;
+}
+
 /* Hide application/json */
 
 .futasu-0.wbaPa {
@@ -221,7 +228,7 @@ label.hover {
 
 /* Endpoint drop-down */
 
-.jmkkdP, .fegejV {
+.dHLKeu, .fVaxnA {
     background-color: rgb(1, 58, 81, 0.8)!important;
     border-radius: 0!important;
 }
