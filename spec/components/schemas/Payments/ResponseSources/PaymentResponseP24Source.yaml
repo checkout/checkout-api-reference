@@ -1,0 +1,14 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'P24 Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      p24_descriptor:
+        type: string
+        description: 'P24 generated payment descriptor, which will contain requested billing descriptor or merchant''s default descriptor  (subject to truncation).'
