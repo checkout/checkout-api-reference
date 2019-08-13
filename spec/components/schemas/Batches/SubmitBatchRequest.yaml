@@ -17,5 +17,5 @@ properties:
     example: "payment"
   reference:
     type: string
-    description: Your reference for the batch. If provided, this will be validated against the batch file's header.
+    description: Your reference for the batch. If provided, this will be validated against the batch file's header
     example: payments-20180701

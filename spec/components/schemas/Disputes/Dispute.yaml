@@ -2,6 +2,7 @@ type: object
 properties:
   id:
     type: string
+    pattern: "^(dsp)_(\\w{22})$"
     description: The dispute identifier. This is the same as the payment action ID
     example: "dsp_rbhwd2qrg13uhrp2newf"
   category:
@@ -53,7 +54,7 @@ properties:
       id:
         type: string
         description: The payment identifier
-        example: "pay_C8DAAE073P1E4B5B8A4A"
+        example: "pay_88cb4e671m1da22e9bbbyx"
       amount:
         type: number
         description: The amount that is being disputed, in the processing currency

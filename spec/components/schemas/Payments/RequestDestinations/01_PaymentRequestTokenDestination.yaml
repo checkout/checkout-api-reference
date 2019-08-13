@@ -10,22 +10,23 @@ allOf:
     properties:
       token:
         type: string
+        pattern: "^(tok)_(\\w{26})$"
         description: The Checkout.com token (e.g., a card, wallet or token)
-        example: tok_ubfj2q76miwundwlk72vxt2i7q
+        example: "tok_ubfj2q76miwundwlk72vxt2i7q"
       first_name:
         type: string
         description: The payment destination owner's first name
-        example: John
+        example: "John"
       last_name:
         type: string
         description: The payment destination owner's last name
-        example: Smith
+        example: "Smith"
       billing_address:
-        description: The payment destination owner's billing address. This will override the billing address specified during tokenisation.
+        description: The payment destination owner's billing address. This will override the billing address specified during tokenization
         allOf:
           - $ref: '#/components/schemas/Address'
       phone:
-        description: The payment destination owner's phone number. This will override the phone number specified during tokenisation.
+        description: The payment destination owner's phone number. This will override the phone number specified during tokenization
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'
 

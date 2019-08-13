@@ -15,9 +15,10 @@ post:
       name: webhookId
       schema:
         type: string
-        pattern: "^(wh)_(\\w{26})$"
+        pattern: "^(wh)_(\\w{32})$"
       required: true
       description: The webhook identifier
+      example: "wh_387ac7a83a054e37ae140105429d76b5"
   responses:
     '202':
       description: Retry accepted

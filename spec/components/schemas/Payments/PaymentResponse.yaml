@@ -54,7 +54,7 @@ properties:
     example: "10000"
   response_summary:
     type: string
-    description: The gateway response summary
+    description: The Gateway response summary
     example: "Approved"
   3ds:
     type: object
@@ -85,7 +85,7 @@ properties:
       - $ref: '#/components/schemas/PaymentResponseDestination'
   customer:
     type: object
-    description: The customer associated with the payment, if provided in the request.
+    description: The customer associated with the payment, if provided in the request
     allOf:
       - $ref: '#/components/schemas/PaymentResponseCustomer'
   processed_on:
@@ -112,7 +112,7 @@ properties:
     type: string
     description:
       The final Electronic Commerce Indicator (ECI) security level used to authorize the payment. 
-      Applicable for 3D Secure, digital wallet and network token payments.
+      Applicable for 3D Secure, digital wallet, and network token payments
     example: "06"  
   scheme_id:
     type: string

@@ -10,7 +10,7 @@ properties:
   reference:
     type: string
     description: Your reference for the capture request
-    example: ORD-5023-4E89
+    example: "ORD-5023-4E89"
   _links:
     type: object
     description: The links related to the capture
@@ -21,14 +21,14 @@ properties:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: The URI of the payment to be captured. Use this to check the status of the payment.
+        description: The URI of the payment to be captured. Use this to check the status of the payment
         example:
           href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"
       redirect:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: For some alternative payments, the URI that the customer should be redirected to to complete the capture.
+        description: For some alternative payments, the URI that the customer should be redirected to to complete the capture
         example:
           href: "https://api.checkout.com/redirect/act_y3oqhf46pyzuxjbcn2giaqnb44"
     required:

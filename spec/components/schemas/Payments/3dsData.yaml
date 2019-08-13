@@ -14,7 +14,7 @@ properties:
     example: Y
   signature_valid:
     type: string
-    description: Verification to ensure the integrity of the response.
+    description: Verification to ensure the integrity of the response
     example: Y
   authentication_response:
     type: string

@@ -17,7 +17,7 @@ properties:
     example: "sepa"
   response_code:
     type: string
-    description: The gateway response code
+    description: The Gateway response code
     example: "10000"
   customer:
     type: object

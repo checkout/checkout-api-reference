@@ -20,7 +20,7 @@ properties:
     example: ORD-5023-4E89
   customer:
     type: object
-    description: The customer associated with the payment, if provided in the request.
+    description: The customer associated with the payment, if provided in the request
     allOf:
       - $ref: '#/components/schemas/PaymentResponseCustomer'
   3ds:

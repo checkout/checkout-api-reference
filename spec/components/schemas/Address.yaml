@@ -22,5 +22,7 @@ properties:
     example: W1T 4TJ
   country:
     type: string
-    description: The <a href="https://docs.checkout.com/docs/country-codes" target="blank">two-letter ISO code</a> of the address country
+    description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
     example: GB
+    maxLength: 2
+    minLength: 2

@@ -3,10 +3,10 @@ properties:
   reference:
     type: string
     description: A reference you can later use to identify this void request
-    example: ORD-5023-4E89
+    example: "ORD-5023-4E89"
   metadata:
     type: object
-    description: A set of key-value pairs that you can attach to the void request. It can be useful for storing additional information in a structured format.
+    description: A set of key-value pairs that you can attach to the void request. It can be useful for storing additional information in a structured format
     example:
       coupon_code: "NY2018"
       partner_id: 123989

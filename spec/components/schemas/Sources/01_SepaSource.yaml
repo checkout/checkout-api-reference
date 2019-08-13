@@ -40,7 +40,7 @@ allOf:
             example: "ExampleCompany.com"
           mandate_type:
             type: string
-            description: The type of the mandate
+            description: The type of mandate
             enum:
               - "single"
               - "recurring"

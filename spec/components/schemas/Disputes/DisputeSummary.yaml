@@ -2,6 +2,7 @@ type: object
 properties:
   id:
     type: string
+    pattern: "^(dsp)_(\\w{22})$"
     description: The dispute identifier. This is the same as the action ID in the reconciliation API or the charge ID in the Hub.
     example: "dsp_rbhwd2qrg13uhrp2newf"
   category:
@@ -25,7 +26,7 @@ properties:
   payment_id:
     type: string
     description: The unique payment identifier
-    example: "pay_88cb4e671m1da22e9bbb"
+    example: "pay_88cb4e671m1da22e9bbbyx"
   payment_reference:
     type: string
     description: An optional reference (such as an order ID) a merchant can use to later identify the charge. Previously known as TrackId

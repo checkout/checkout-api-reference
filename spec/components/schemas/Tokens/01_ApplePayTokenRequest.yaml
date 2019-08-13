@@ -10,16 +10,16 @@ allOf:
         properties:
           version:
             type: string
-            description: Version information about the payment token. The token uses `EC_v1` for ECC-encrypted data, and `RSA_v1` for RSA-encrypted data.
+            description: Version information about the payment token. The token uses `EC_v1` for ECC-encrypted data, and `RSA_v1` for RSA-encrypted data
           data:
             type: string
-            description: Encrypted payment data. Base64 encoded as a string.
+            description: Encrypted payment data. Base64 encoded as a string
           signature:
             type: string
-            description: Signature of the payment and header data. The signature includes the signing certificate, its intermediate CA certificate, and information about the signing algorithm.
+            description: Signature of the payment and header data. The signature includes the signing certificate, its intermediate CA certificate, and information about the signing algorithm
           header:
             type: object
-            description: Additional version-dependent information used to decrypt and verify the payment.
+            description: Additional version-dependent information used to decrypt and verify the payment
         example:
           {
             "version":"EC_v1",

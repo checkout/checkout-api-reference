@@ -8,14 +8,15 @@ allOf:
     properties:
       token:
         type: string
+        pattern: "^(tok)_(\\w{26})$"
         description: The Checkout.com token (e.g., a card or digital wallet token)
         example: tok_ubfj2q76miwundwlk72vxt2i7q
       billing_address:
-        description: The customer's billing address. This will override the billing address specified during tokenization.
+        description: The customer's billing address. This will override the billing address specified during tokenization
         allOf:
           - $ref: '#/components/schemas/Address'
       phone:
-        description: The customer's phone number. This will override the phone number specified during tokenization.
+        description: The customer's phone number. This will override the phone number specified during tokenization
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'
 

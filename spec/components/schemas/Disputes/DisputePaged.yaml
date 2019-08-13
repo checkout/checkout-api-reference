@@ -24,12 +24,14 @@ properties:
     example: "evidence_required,evidence_under_review"
   id:
     type: string
+    pattern: "^(dsp)_(\\w{22})$"
     description: The unique identifier of the dispute
     example: "dsp_rbhwd2qrg13uhrp2newf"
   payment_id:
     type: string
+    pattern: "^(pay)_(\\w{26})$"
     description: The unique identifier of the payment
-    example: "pay_88cb4e671m1da22e9bbb"
+    example: "pay_88cb4e671m1da22e9bbbyx"
   payment_reference:
     type: string
     description: An optional reference (such as an order ID) that you can use later to identify the payment. Previously known as `TrackId`

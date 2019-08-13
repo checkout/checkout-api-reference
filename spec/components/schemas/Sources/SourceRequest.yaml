@@ -28,16 +28,17 @@ properties:
     properties:
       id:
         type: string
+        pattern: "^(cus)_(\\w{26})$"
         description: |
-          The identifier of an existing customer. If neither customer `id` or `email` is provided
-          a new customer will be registered.
-        example: cus_y3oqhf46pyzuxjbcn2giaqnb44
+          The identifier of an existing customer. If neither customer `id` or `email` is provided, then 
+          a new customer will be registered
+        example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
       email:
         type: string
         format: email
         description: An optional email address to associate with the customer
-        example: jokershere@gmail.com
+        example: "jokershere@gmail.com"
       name:
         type: string
-        description: The customer's name. This will only set the name for *new* customers.
-        example: Jack Napier
+        description: The customer's name. This will only set the name for *new* customers
+        example: "Jack Napier"

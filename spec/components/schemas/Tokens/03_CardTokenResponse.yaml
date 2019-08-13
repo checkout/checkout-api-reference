@@ -22,10 +22,13 @@ allOf:
         description: The two-digit expiry month
         minimum: 1
         example: 6
+        maxLength: 2
       expiry_year:
         type: integer
         description: The four-digit expiry year
         example: 2025
+        minLength: 4
+        maxLength: 4
       name:
         type: string
         description: The cardholder's name
@@ -38,10 +41,13 @@ allOf:
         type: string
         description: The last four digits of the card number
         example: "9996"
+        minLength: 4
+        maxLength: 4
       bin:
         type: string
         description: The card issuer's BIN
         example: "454347"
+        maxLength: 4
       card_type:
         type: string
         description: The card type

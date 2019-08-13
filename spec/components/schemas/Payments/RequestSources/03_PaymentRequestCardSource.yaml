@@ -11,37 +11,43 @@ allOf:
     properties:
       number:
         type: string
-        description: The card number
+        description: The card number (without separators)
         example: "4543474002249996"
+        minLength: 16
+        maxLength: 16
       expiry_month:
         type: integer
-        description: The two-digit expiry month of the card
+        description: The expiry month of the card
         minimum: 1
+        minLength: 1
+        maxLength: 2
         example: 6
       expiry_year:
         type: integer
-        description: The four-digit expiry year of the card
+        description: The expiry year of the card
+        minLength: 4
+        maxLength: 4
         example: 2025
       name:
         type: string
-        description: The cardholder's name
+        description: The name of the cardholder
         example: "Bruce Wayne"
       cvv:
         type: string
-        description: The card verification value/code. 3 digits, except for Amex (4 digits).
+        description: The card verification value/code. 3 digits, except for Amex (4 digits)
         example: "956"
         minLength: 3
         maxLength: 4
       stored:
         type: boolean
-        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>.
+        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>
         default: false
         example: true
       billing_address:
-        description: The customer's billing address
+        description: The billing address of the cardholder
         allOf:
           - $ref: '#/components/schemas/Address'
       phone:
-        description: The customer's phone number
+        description: The phone number of the cardholder
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'

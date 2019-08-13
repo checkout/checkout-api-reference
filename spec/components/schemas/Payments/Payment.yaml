@@ -39,7 +39,7 @@ properties:
     minLength: 3
   payment_type:
     type: string
-    description: This must be specified for card payments where the cardholder is not present (i.e., recurring or mail order / telephone order).
+    description: This must be specified for card payments where the cardholder is not present (i.e., recurring or mail order / telephone order)
     enum:
       - Regular
       - Recurring
@@ -94,16 +94,17 @@ properties:
     properties:
       id:
         type: string
-        description: The unique identifier of the customer. This can be passed as a source when making a payment.
-        example: cus_y3oqhf46pyzuxjbcn2giaqnb44
+        pattern: "^(cus)_(\\w{26})$"
+        description: The unique identifier of the customer. This can be passed as a source when making a payment
+        example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
       email:
         type: string
-        description: The customer's email address.
-        example: jokershere@gmail.com
+        description: The customer's email address
+        example: "jokershere@gmail.com"
       name:
         type: string
-        description: The customer's name.
-        example: Jack Napier
+        description: The customer's name
+        example: "Jack Napier"
     required:
       - id
   billing_descriptor:
@@ -128,15 +129,15 @@ properties:
     $ref: '#/components/schemas/PaymentRecipient'
   metadata:
     type: object
-    description: A set of key-value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format.
+    description: A set of key-value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format
     example:
       coupon_code: "NY2018"
       partner_id: 123989
   eci:
     type: string
     description: |
-      The final Electronic Commerce Indicator security level used to authorize the payment. 
-      Applicable for 3D Secure, digital wallets and network token payments.
+      The final Electronic Commerce Indicator (ECI) security level used to authorize the payment. 
+      Applicable for 3D Secure, digital wallets, and network token payments
     example: "06"  
   scheme_id:
     type: string
@@ -149,7 +150,7 @@ properties:
       $ref: '#/components/schemas/PaymentActionSummary'
     description: |
       A summary of the payment's actions, 
-      returned when a session ID is used to get the payment details.
+      returned when a session ID is used to get the payment details
   _links:
     type: object
     description: The links related to the payment
@@ -172,17 +173,17 @@ properties:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: A link to void the payment, where applicable.
+        description: A link to void the payment, where applicable
       capture:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: A link to capture the payment, where applicable.
+        description: A link to capture the payment, where applicable
       refund:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: A link to refund the payment, where applicable.
+        description: A link to refund the payment, where applicable
     example:
       self:
         href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"

@@ -18,13 +18,17 @@ allOf:
         example: "4543474002249996"
       expiry_month:
         type: integer
-        description: The two-digit expiry month of the token
+        description: The expiry month of the token
         minimum: 1
         example: 6
+        minLength: 1
+        maxLength: 2
       expiry_year:
         type: integer
-        description: The four-digit expiry year of the token
+        description: The expiry year of the token
         example: 2025
+        minLength: 4
+        maxLength: 4
       token_type:
         type: string
         description: The type of token 
@@ -35,16 +39,16 @@ allOf:
           - googlepay 
       cryptogram:
         type: string
-        description: The Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Optional if `previous_payment_id` is specified and `3ds.enabled` is false.
+        description: The Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Optional if `previous_payment_id` is specified and `3ds.enabled` is false
         example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
       eci:
         type: string
-        description: | 
-          The Electronic Commerce Indicator security level associated with the token. Optional if `previous_payment_id` is specified and `3ds.enabled` is false.
+        description: |
+          The Electronic Commerce Indicator (ECI) security level associated with the token. Optional if `previous_payment_id` is specified and `3ds.enabled` is false
         example: "05"
       stored:
         type: boolean
-        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>.
+        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>
         default: false
         example: true
       name:
@@ -53,7 +57,7 @@ allOf:
         example: "Bruce Wayne"
       cvv:
         type: string
-        description: The card verification value/code. 3 digits, except for Amex (4 digits).
+        description: The card verification value/code. 3 digits, except for Amex (4 digits)
         example: "956"
         minLength: 3
         maxLength: 4

@@ -8,11 +8,12 @@ allOf:
     properties:
       id:
         type: string
+        pattern: "^(src)_(\\w{26})$"
         description: The payment source identifer (e.g., a card source identifier)
         example: src_wmlfc3zyhqzehihu7giusaaawu
       cvv:
         type: string
-        description: The card verification value/code (for card sources). 3 digits, except for Amex (4 digits).
+        description: The card verification value/code (for card sources). 3 digits, except for Amex (4 digits)
         example: "956"
         minLength: 3
         maxLength: 4

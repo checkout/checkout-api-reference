@@ -42,12 +42,12 @@ properties:
     example: "10000"
   response_summary:
     type: string
-    description: The gateway response summary
+    description: The Gateway response summary
     example: "Approved"
   reference:
     type: string
     description: Your reference for the action
-    example: ORD-5023-4E89
+    example: "ORD-5023-4E89"
   processing:
     type: object
     description: Returns information related to the processing of the payment

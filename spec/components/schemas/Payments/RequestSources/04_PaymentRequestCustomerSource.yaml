@@ -6,11 +6,12 @@ allOf:
     properties:
       id:
         type: string
-        description: The customer's identifier – required if `email` is not provided.
-        example: cus_y3oqhf46pyzuxjbcn2giaqnb44
+        pattern: "^(cus)_(\\w{26})$"
+        description: The customer's identifier. Required if `email` is not provided
+        example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
       email:
         type: string
         format: email
-        description: The customer's email address – required if `id` is not provided.
-        example: jokershere@gmail.com
+        description: The customer's email address. Required if `id` is not provided
+        example: "jokershere@gmail.com"
 

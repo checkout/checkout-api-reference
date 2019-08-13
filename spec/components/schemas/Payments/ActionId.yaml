@@ -1,4 +1,5 @@
 type: string
+pattern: "^(act)_(\\w{26})$"
 description: The action identifier
 maxLength: 30
 minLength: 30

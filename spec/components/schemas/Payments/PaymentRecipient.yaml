@@ -1,5 +1,5 @@
 type: object
-description: Required by VISA and Mastercard for domestic UK transactions <a href="https://docs.checkout.com/docs/requirements-for-financial-institutions" target="blank">processed by financial institutions</a>.
+description: Required by VISA and Mastercard for domestic UK transactions <a href="https://docs.checkout.com/docs/requirements-for-financial-institutions" target="blank">processed by financial institutions</a>
 properties:
   dob:
     type: string
@@ -8,18 +8,18 @@ properties:
     example: "1985-05-15"
   account_number:
     type: string
-    description: The first six digits and the last four digits of the primary recipient's card, without spaces, or up to ten digits of the primary recipient's account number.
+    description: The first six digits and the last four digits of the primary recipient's card, without spaces, or up to ten digits of the primary recipient's account number
     minLength: 10
     maxLength: 10
     example: "5555554444"
   zip:
     type: string
-    description: The first part of the UK postcode (e.g., W1T 4TJ would be W1T). 
-    example: W1T 
+    description: The first part of the UK postcode (e.g., W1T 4TJ would be W1T).
+    example: "W1T"
   last_name:
     type: string
     description: The recipient's last name
-    example: Jones
+    example: "Jones"
 required:
   - dob
   - account_number

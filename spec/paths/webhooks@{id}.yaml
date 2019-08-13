@@ -9,9 +9,11 @@ get:
       required: true
       schema:
         type: string
+        pattern: "^(wh)_(\\w{32})$"
       in: path
       description: |
-        The webhook identifier, for example `wh_387ac7a83a054e37ae140105429d76b5`
+        The webhook identifier
+      example: "wh_387ac7a83a054e37ae140105429d76b5"
   responses:
     '200':
       description: Webhook was retrieved successfully
@@ -38,9 +40,11 @@ put:
       required: true
       schema:
         type: string
+        pattern: "^(wh)_(\\w{32})$"
       in: path
       description: |
-        The webhook identifier, for example `wh_387ac7a83a054e37ae140105429d76b5`
+        The webhook identifier
+      example: "wh_387ac7a83a054e37ae140105429d76b5"
   requestBody:
     content:
       application/json:
@@ -64,7 +68,7 @@ put:
     '404':
       description: Webhook not found
     '409':
-      description: Url already registered for another webhook
+      description: URL already registered for another webhook
 patch:
   tags:
     - Webhooks
@@ -75,9 +79,11 @@ patch:
       required: true
       schema:
         type: string
+        pattern: "^(wh)_(\\w{32})$"
       in: path
       description: |
-        The webhook identifier, for example `wh_387ac7a83a054e37ae140105429d76b5`
+        The webhook identifier
+      example: "wh_387ac7a83a054e37ae140105429d76b5"
   requestBody:
     content:
       application/json:
@@ -106,7 +112,7 @@ patch:
     '404':
       description: Webhook not found
     '409':
-      description: Url already exists in another webhook configuration
+      description: URL already exists in another webhook configuration
 delete:
   tags:
     - Webhooks
@@ -117,9 +123,11 @@ delete:
       required: true
       schema:
         type: string
+        pattern: "^(wh)_(\\w{32})$"
       in: path
       description: |
-        The webhook identifier, for example `wh_387ac7a83a054e37ae140105429d76b5`
+        The webhook identifier
+      example: "wh_387ac7a83a054e37ae140105429d76b5"
   responses:
     '200':
       description: Webhook removed successfully

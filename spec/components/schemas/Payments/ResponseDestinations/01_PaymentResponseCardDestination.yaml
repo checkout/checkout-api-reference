@@ -12,13 +12,17 @@ allOf:
     properties:
       expiry_month:
         type: integer
-        description: The two-digit expiry month
-        minimum: 1
+        description: The expiry month
         example: 6
+        minimum: 1
+        maxLength: 1
+        minLength: 2
       expiry_year:
         type: integer
-        description: The four-digit expiry year
+        description: The expiry year
         example: 2025
+        maxLength: 4
+        minLength: 4
       name:
         type: string
         description: The cardholder's name
@@ -31,14 +35,17 @@ allOf:
         type: string
         description: The last four digits of the card number
         example: "9996"
+        maxLength: 4
+        minLength: 4
       fingerprint:
         type: string
-        description: Uniquely identifies this particular card number. You can use this to compare cards across customers.
+        description: Uniquely identifies this particular card number. You can use this to compare cards across customers
         example: "F639CAB2745BEE4140BF86DF6B6D6"
       bin:
         type: string
         description: The card issuer's BIN
         example: "454347"
+        maxLength: 6
       card_type:
         type: string
         description: The card type

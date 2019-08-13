@@ -3,7 +3,7 @@ description: A phone number
 properties:
   country_code: 
     type: string
-    description: The international <a href="https://docs.checkout.com/docs/country-codes" target="blank">country calling code</a>. Required for some risk checks.
+    description: The international <a href="https://docs.checkout.com/docs/country-codes" target="blank">country calling code</a>. Required for some risk checks
     minLength: 1
     maxLength: 7
     example: "+1"

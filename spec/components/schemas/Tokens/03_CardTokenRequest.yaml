@@ -27,7 +27,7 @@ allOf:
         example: "Bruce Wayne"
       cvv:
         type: string
-        description: The card verification value/code. 3 digits, except for Amex (4 digits).
+        description: The card verification value/code. 3 digits, except for Amex (4 digits)
         example: "956"
         minLength: 3
         maxLength: 4

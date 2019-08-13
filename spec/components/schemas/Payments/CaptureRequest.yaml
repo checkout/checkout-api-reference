@@ -3,16 +3,16 @@ properties:
   amount:
     type: integer
     description: |
-      The amount to capture in the major currency. If not specified, the full payment amount will be captured.
+      The amount to capture in the major currency. If not specified, the full payment amount will be captured
     minimum: 0
     example: 6540
   reference:
     type: string
     description: A reference you can later use to identify this capture request
-    example: ORD-5023-4E89
+    example: "ORD-5023-4E89"
   metadata:
     type: object
-    description: A set of key-value pairs that you can attach to the capture request. It can be useful for storing additional information in a structured format.
+    description: A set of key-value pairs that you can attach to the capture request. This can be useful for storing additional information in a structured format
     example:
       coupon_code: "NY2018"
       partner_id: 123989

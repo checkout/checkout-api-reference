@@ -25,14 +25,14 @@ properties:
     type: string
     description: |
       The payment source type. For any payment request sources that result in a card token (token, source ID, etc.),
-      this will be `card`; otherwise it will be the name of the alternative payment method.
+      this will be `card`; otherwise it will be the name of the alternative payment method
     example: "card"
   id:
     type: string
     description: |
       The payment source identifier that can be used for subsequent payments.
       For new sources, this will only be returned if the payment was approved.
-    example: src_wmlfc3zyhqzehihu7giusaaawu
+    example: "src_wmlfc3zyhqzehihu7giusaaawu"
   billing_address:
     description: The payment source owner's billing address
     allOf:

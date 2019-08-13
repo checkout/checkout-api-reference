@@ -21,7 +21,7 @@ properties:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: The URI of the payment to be refunded. Use this to check the status of the payment.
+        description: The URI of the payment to be refunded. Use this to check the status of the payment
         example:
           href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"
     required:
