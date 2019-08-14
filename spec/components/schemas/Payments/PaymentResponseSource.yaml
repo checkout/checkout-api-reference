@@ -12,6 +12,7 @@ discriminator:
     ideal: '#/components/schemas/PaymentResponseIdealSource'
     klarna: '#/components/schemas/PaymentResponseKlarnaSource'
     knet: '#/components/schemas/PaymentResponseKnetSource'
+    p24: '#/components/schemas/PaymentResponseP24Source'
     poli: '#/components/schemas/PaymentResponsePoliSource'
     sofort: '#/components/schemas/PaymentResponseSofortSource'
     bancontact: '#/components/schemas/PaymentResponseBancontactSource'
