@@ -1,5 +1,5 @@
 type: object
-description: The source of the payment
+description: The source of the payment.<br><i>Use to request a payment</i>.
 discriminator:
   propertyName: type
   mapping:
