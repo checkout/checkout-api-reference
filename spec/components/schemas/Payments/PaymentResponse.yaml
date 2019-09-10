@@ -78,11 +78,11 @@ properties:
     type: object
     allOf:
       - $ref: '#/components/schemas/PaymentResponseSource'
-  destination:
-    description: The destination of the payment
-    type: object
-    allOf:
-      - $ref: '#/components/schemas/PaymentResponseDestination'
+  #destination:
+    #description: The destination of the payment
+    #type: object
+    #allOf:
+     # - $ref: '#/components/schemas/PaymentResponseDestination'
   customer:
     type: object
     description: The customer associated with the payment, if provided in the request
