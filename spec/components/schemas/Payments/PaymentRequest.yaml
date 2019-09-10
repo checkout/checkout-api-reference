@@ -4,8 +4,6 @@ required:
 properties:
   source:
     $ref: '#/components/schemas/PaymentRequestSource'
-  destination:
-    $ref: '#/components/schemas/PaymentRequestDestination'
   amount:
     type: integer
     description: |
