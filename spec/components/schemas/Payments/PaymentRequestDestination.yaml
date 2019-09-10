@@ -11,5 +11,5 @@ required:
 properties:
   type:
     type: string
-    description: The payment destination type
-    example: "card"
+    description: The payout destination type
+    example: "token"

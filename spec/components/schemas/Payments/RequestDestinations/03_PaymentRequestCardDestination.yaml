@@ -30,21 +30,21 @@ allOf:
         maxLength: 4
       first_name:
         type: string
-        description: The payment destination owner's first name
+        description: The payout destination owner's first name
         example: John
       last_name:
         type: string
-        description: The payment destination owner's last name
+        description: The payout destination owner's last name
         example: Smith
       name:
         type: string
         description: The cardholder's name
         example: "Bruce Wayne"
       billing_address:
-        description: The payment destination owner's billing address
+        description: The payout destination owner's billing address
         allOf:
           - $ref: '#/components/schemas/Address'
       phone:
-        description: The payment destination owner's phone number
+        description: The payout destination owner's phone number
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'
