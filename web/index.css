@@ -119,10 +119,6 @@ li#react-tabs-2 {
     border-top: 2px solid #999;
 }
 
-.gZdDsM {
-    width: 300px;
-}
-
 .jXDsIv {
     color: #fd755f!important;
     font-family: Arial, sans-serif;
@@ -194,6 +190,7 @@ li#react-tabs-2 {
 .menu-content {
     background: #f8f8f8!important;
     top: 66px!important;
+    width: 280px!important;
 }
 
 /* Search box */
@@ -376,7 +373,7 @@ span.token.keyword {
 /* Logo */
 
 .logo {
-    width: 260px;
+    width: 280px;
     position: fixed;
     top: 0;
     left: 0;
