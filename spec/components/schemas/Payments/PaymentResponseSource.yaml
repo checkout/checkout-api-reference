@@ -32,7 +32,7 @@ properties:
     type: string
     description: |
       The payment source identifier that can be used for subsequent payments.
-      For new sources, this will only be returned if the payment was approved.
+      For new sources, this will only be returned if the payment was approved
     example: "src_nwd3m4in3hkuddfpjsaevunhdy"
   billing_address:
     description: The payment source owner's billing address
