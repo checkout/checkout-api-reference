@@ -199,7 +199,7 @@ div[role=search] {
     margin: 10px 20px!important;
     border: 1px solid rgb(1, 58, 81, 0.2);
     border-radius: 3px;
-    background: #f8f8f8;
+    background: #fff;
 }
 
 .search-input {
@@ -223,6 +223,15 @@ i.k4h4y9-4.jGkewb {
     border-bottom: 0!important;
     padding-bottom: 0!important;
     background: #f8f8f8!important;
+}
+
+i.sc-gqPbQI.hQYSSu {
+    margin-right: 5px!important:
+}
+
+.sc-cLQEGU.kYDFzp {
+    background-color: #ffffff!important;
+    border-bottom: none!important;
 }
 
 /* Navigation */
@@ -373,7 +382,7 @@ span.token.keyword {
 /* Logo */
 
 .logo {
-    width: 280px;
+    width: 276px;
     position: fixed;
     top: 0;
     left: 0;
