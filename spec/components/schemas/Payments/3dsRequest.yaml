@@ -6,6 +6,20 @@ properties:
     description: Whether to process this payment as a 3D Secure payment
     default: false
     example: true
+  auto_complete:
+    type: boolean
+    description: >
+      Whether the payment session should be completed and authorised/captured by Checkout.com automatically.</br>
+      When using this feature you should consume <a href="https://docs.checkout.com/docs/webhooks" target="blank">webhooks</a>.
+    default: true
+    example: false
+  hosted:
+    type: boolean
+    description: > 
+      Whether the session should be hosted by Checkout.com</br>
+      When this value is `true` the response will include a `redirect` link.
+    default: true
+    example: true
   attempt_n3d:
     type: boolean
     description: |

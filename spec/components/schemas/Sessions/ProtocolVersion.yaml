@@ -1,0 +1,3 @@
+type: string
+description: The Protocol Version Number of the specification utilised by the API when the authentication.
+example: "2.2.0"

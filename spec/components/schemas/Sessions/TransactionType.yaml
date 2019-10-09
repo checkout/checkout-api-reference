@@ -1,0 +1,10 @@
+type: string
+enum:
+  - goods_service
+  - check_acceptance
+  - account_funding
+  - quashi_card_transaction
+  - prepaid_activation_and_load
+description: Identifies the type of transaction being authenticated.
+example: goods_service
+default: goods_service

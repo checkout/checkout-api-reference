@@ -1,0 +1,14 @@
+type: object
+description: >
+  When present, it identifies what actions to take in order to complete the session.
+properties:
+  type:
+    description: The type of action to perform
+    enum:
+      - collect_channel_data
+      - load_3ds_method
+      - load_challenge
+  documentation_url:
+    type: string
+    description: The url pointing to some content that might help you.
+    example: https://developer.checkout.com/sessions#session-sdk

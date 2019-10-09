@@ -1,0 +1,9 @@
+type: string
+enum:
+  - no_preference
+  - no_challenge_requested
+  - challenge_requested
+  - challenge_requested_mandate
+description: Indicates whether a challenge is requested for this transaction.
+example: no_preference
+default: no_preference

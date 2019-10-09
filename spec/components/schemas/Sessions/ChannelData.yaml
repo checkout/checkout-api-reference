@@ -1,0 +1,13 @@
+required:
+  - channel
+description: The information gathered from the environment used to initiate the session
+discriminator:
+  propertyName: channel
+  mapping:
+    browser: '#/components/schemas/Browser'
+    app: '#/components/schemas/App'
+properties:
+  channel:
+    type: string
+    description: "Indicates the type of channel interface being used to initiate the transaction"
+    default: "browser"

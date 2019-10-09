@@ -1,0 +1,14 @@
+type: object
+description: "The directory server information"
+properties:
+  reference_number:
+    description: EMVCo-assigned unique identifier to track approved DS.
+    type: string
+    maxLength: 32
+    example: PIT2DSREFERENCENO2
+  transaction_id:
+    description: Universally unique transaction identifier assigned by the DS
+    type: string
+    minLength: 36
+    maxLength: 36
+    example: 9aea641d-0549-4222-9ca9-d90b43a4f38c

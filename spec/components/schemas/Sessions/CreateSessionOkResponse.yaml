@@ -1,0 +1,27 @@
+properties:
+  id:
+    $ref: '#/components/schemas/3dsId'
+  amount:
+    $ref: '#/components/schemas/Amount'
+  currency:
+    $ref: '#/components/schemas/Currency'
+  status:
+    $ref: '#/components/schemas/Status'
+  approved:
+    $ref: '#/components/schemas/Approved'
+  protocol_version:
+    $ref: '#/components/schemas/ProtocolVersion'
+  ds:
+    $ref: '#/components/schemas/Ds'
+  acs:
+    $ref: '#/components/schemas/Acs'
+  response_code:
+    $ref: '#/components/schemas/ResponseCode'
+  response_reason:
+    $ref: '#/components/schemas/ResponseReason'
+  authentication_value:
+    $ref: '#/components/schemas/AuthenticationValue'
+  eci:
+    $ref: '#/components/schemas/Eci'
+  _links:
+    $ref: '#/components/schemas/GetSessionLinks'

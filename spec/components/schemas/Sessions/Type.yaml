@@ -1,0 +1,10 @@
+type: string
+enum:
+  - payment_transaction
+  - recurring_transaction
+  - instalment_transaction
+  - add_card
+  - maintain_card
+  - token_cardholder_verification
+description: Indicates the type of Authentication request.
+default: payment_transaction

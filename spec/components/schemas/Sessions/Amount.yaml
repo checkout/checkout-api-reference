@@ -1,0 +1,4 @@
+type: integer
+description: "The amount in the major currency."
+example: 120
+minimum: 0

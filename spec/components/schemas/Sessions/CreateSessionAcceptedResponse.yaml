@@ -1,0 +1,15 @@
+properties:
+  id:
+    $ref: '#/components/schemas/3dsId'
+  amount:
+    $ref: '#/components/schemas/Amount'
+  currency:
+    $ref: '#/components/schemas/Currency'
+  status:
+    $ref: '#/components/schemas/Status'
+  next_action:
+    $ref: '#/components/schemas/NextAction'
+  protocol_version:
+    $ref: '#/components/schemas/ProtocolVersion'
+  _links:
+    $ref: '#/components/schemas/CreateSessionLinks'

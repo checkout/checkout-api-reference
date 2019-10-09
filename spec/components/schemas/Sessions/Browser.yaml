@@ -1,0 +1,88 @@
+allOf:
+  - $ref: '#/components/schemas/ChannelData'
+  - type: object
+    required:
+      - 3ds_method_completion
+      - accept_header
+      - java_enabled
+      - language
+      - color_depth
+      - screen_height
+      - screen_width
+      - timezone
+      - user_agent
+      - ip_address
+    properties:
+      channel:
+        type: string
+        enum:
+          - browser
+      3ds_method_completion:
+        type: string
+        description: >
+          Indicates whether the 3DS Method successfully completed <br/><br/>
+          • Y = Successfully completed <br/>
+          • N = Did not successfully complete <br/>
+          • U = Unavailable—3DS Method URL was not present in the PRes message data for the card range associated with the Cardholder Account Number.
+        enum:
+          - Y
+          - N
+          - U
+      accept_header:
+        type: string
+        maxLength: 2048
+        description: >
+          Exact content of the HTTP accept headers as sent to the 3DS Requestor from the Cardholder’s browser.
+        example: "Accept:  *.*, q=0.1"
+      java_enabled:
+        type: boolean
+        description: >
+          Boolean that represents the ability of the cardholder browser to execute Java. Value is returned from the navigator.javaEnabled property.
+        example: true
+      language:
+        type: string
+        minLength: 1
+        maxLength: 8
+        description: >
+          Value representing the browser language as defined in IETF BCP47. Returned from navigator.language property.
+        example: "FR-fr"
+      color_depth:
+        type: string
+        minLength: 1
+        maxLength: 2
+        description: >
+          Value representing the bit depth of the colour palette for displaying images, in bits per pixel. Obtained from Cardholder browser using the screen.colorDepth property.
+        example: "16"
+      screen_height:
+        type: string
+        minLength: 1
+        maxLength: 6
+        description: >
+          Total height of the Cardholder’s screen in pixels. Value is returned from the screen.height property.
+        example: "1080"
+      screen_width:
+        type: string
+        minLength: 1
+        maxLength: 6
+        description: >
+          Total width of the cardholder’s screen in pixels. Value is returned from the screen.width property.
+        example: "1920"
+      timezone:
+        type: string
+        minLength: 1
+        maxLength: 5
+        description: >
+          Time difference between UTC time and the Cardholder browser local time, in minutes.
+        example: "60"
+      user_agent:
+        type: string
+        maxLength: 2048
+        description: >
+          Exact content of the HTTP user-agent header.
+        example: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ip_address:
+        description: >
+          IP address of the browser as returned by the HTTP headers to the 3DS Requestor.
+        type: string 
+        maxLength: 45
+        example: "1.12.123.255"

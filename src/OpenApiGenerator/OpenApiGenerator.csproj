@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.openapi" Version="1.0.1" />
-    <PackageReference Include="microsoft.openapi.readers" Version="1.0.1" />
+    <PackageReference Include="microsoft.openapi" Version="1.1.4" />
+    <PackageReference Include="microsoft.openapi.readers" Version="1.1.4" />
   </ItemGroup>
 
 </Project>

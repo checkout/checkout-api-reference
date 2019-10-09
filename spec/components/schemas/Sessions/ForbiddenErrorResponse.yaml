@@ -1,0 +1,17 @@
+type: object
+description: >-
+  Error response. Full list of error codes is on GitHub
+properties:
+  request_id:
+    type: string
+    example: 5342217f-7fa2-4626-a6c9-c979a04671a6
+  error_type:
+    type: string
+    enum:
+      - operation_not_allowed
+  error_codes:
+    type: array
+    items:
+      type: string
+      enum:
+        - card_not_enrolled

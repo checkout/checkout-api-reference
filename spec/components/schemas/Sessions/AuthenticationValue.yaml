@@ -1,0 +1,3 @@
+description: Payment System-specific value provided as part of the ACS registration for each supported DS.
+type: string
+example: "MTIzNDU2Nzg5MDA5ODc2NTQzMjE="

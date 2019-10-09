@@ -1,0 +1,20 @@
+description: >
+  The response from the DS or ACS which indicates whether a transaction qualifies as an authenticated transaction or account verification. <br/><br/>
+  • Y = Authentication Verification Successful. <br/>
+  • N = Not Authenticated /Account Not Verified; Transaction denied. <br/>
+  • U = Authentication/ Account Verification Could Not Be Performed; Technical or other problem, as indicated in ARes or RReq. <br/>
+  • A = Attempts Processing Performed; Not Authenticated/Verified, but a proof of attempted authentication/verification is provided. <br/>
+  • C = Challenge Required; Additional authentication is required using the CReq/CRes. <br/>
+  • D = Challenge Required; Decoupled Authentication confirmed. <br/>
+  • R = Authentication/ Account Verification Rejected; Issuer is rejecting authentication/verification and request that authorization not be attempted. <br/>
+  • I = Informational Only; 3DS Requestor challenge preference acknowledged.
+type: string
+enum:
+  - "Y"
+  - "N"
+  - "U"
+  - "A"
+  - "C"
+  - "D"
+  - "R"
+  - "I"

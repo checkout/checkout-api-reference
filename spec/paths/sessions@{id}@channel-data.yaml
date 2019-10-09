@@ -1,0 +1,46 @@
+ put:
+  summary: Add channel data
+  tags:
+    - Session
+  parameters:
+    - name: sid
+      in: path
+      description: Session ID
+      required: true
+      schema:
+        type: string
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/ChannelData'
+  responses:
+    '200':
+      description: Authentication updated. DS has processed the authentication.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateSessionOkResponse'
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/forbidden-error-response'
+    '404':
+      description: Session not found
+    '422':
+      description: Unprocessable channel information
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error-response'
+    '501':
+      description: Feature not implemented
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/not-implemented-error-response'

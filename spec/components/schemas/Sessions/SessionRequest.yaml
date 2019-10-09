@@ -1,0 +1,45 @@
+type: object
+required:
+  - currency
+  - source
+properties:
+  source:
+    $ref: '#/components/schemas/CardRequestSource'
+  # type:
+  #   $ref: '#/components/schemas/type'
+  # category:
+  #   $ref: '#/components/schemas/category'
+  amount:
+    type: integer
+    description: |
+      The payment amount in the major currency.
+      Omitting the amount or providing 0 will perform a card verification.
+    minimum: 0
+    example: 6540
+  currency:
+    type: string
+    description: |
+      The three-letter ISO currency code
+    example: USD
+    maxLength: 3
+    minLength: 3
+  # shipping_address:
+  #   $ref: '#/components/schemas/address'
+  # challenge_indicator:
+  #   $ref: '#/components/schemas/challenge_indicator'
+  # transaction_type:
+  #   $ref: '#/components/schemas/transaction_type'
+  hosted:
+    type: boolean
+    description: > 
+      Whether the session should be hosted by Checkout.com</br>
+      When this value is `true` the response will include a `redirect` link.
+    default: true
+    example: true
+  redirect_url:
+    type: string
+    format: uri
+    description: For `hosted` sessions, this overrides the default success/failure redirect URL configured on your account
+    example: "http://example.com/payments/complete"
+  channel_data:
+    $ref: '#/components/schemas/ChannelData'
