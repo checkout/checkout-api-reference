@@ -1,6 +1,6 @@
 properties:
   id:
-    $ref: '#/components/schemas/3dsId'
+    $ref: '#/components/schemas/SessionId'
   amount:
     $ref: '#/components/schemas/Amount'
   currency:
@@ -11,5 +11,7 @@ properties:
     $ref: '#/components/schemas/NextAction'
   protocol_version:
     $ref: '#/components/schemas/ProtocolVersion'
+  reference:
+    $ref: '#/components/schemas/Reference'
   _links:
     $ref: '#/components/schemas/CreateSessionLinks'

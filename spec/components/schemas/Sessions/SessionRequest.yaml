@@ -5,10 +5,6 @@ required:
 properties:
   source:
     $ref: '#/components/schemas/CardRequestSource'
-  # type:
-  #   $ref: '#/components/schemas/type'
-  # category:
-  #   $ref: '#/components/schemas/category'
   amount:
     type: integer
     description: |
@@ -23,12 +19,8 @@ properties:
     example: USD
     maxLength: 3
     minLength: 3
-  # shipping_address:
-  #   $ref: '#/components/schemas/address'
-  # challenge_indicator:
-  #   $ref: '#/components/schemas/challenge_indicator'
-  # transaction_type:
-  #   $ref: '#/components/schemas/transaction_type'
+  reference:
+    $ref: '#/components/schemas/Reference'
   hosted:
     type: boolean
     description: > 

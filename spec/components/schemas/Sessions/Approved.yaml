@@ -1,2 +1,3 @@
 type: boolean
 description: "Whether the authentication was successful"
+example: false

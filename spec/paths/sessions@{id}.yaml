@@ -25,11 +25,7 @@ get:
           $ref: "#/components/headers/Cko-Version"
     '401':
       description: Unauthorized
-    '422':
-      description: Invalid data was sent
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ValidationError'
+    '404':
+      description: Session not found
     '502':
       description: Bad gateway

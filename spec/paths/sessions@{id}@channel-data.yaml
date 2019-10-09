@@ -1,7 +1,7 @@
  put:
-  summary: Add channel data
+  summary: Update a session
   tags:
-    - Session
+    - Sessions
   parameters:
     - name: sid
       in: path
@@ -29,7 +29,7 @@
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/forbidden-error-response'
+            $ref: '#/components/schemas/ForbiddenErrorResponse'
     '404':
       description: Session not found
     '422':
@@ -37,10 +37,4 @@
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/error-response'
-    '501':
-      description: Feature not implemented
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/not-implemented-error-response'
+            $ref: '#/components/schemas/ErrorResponse'
