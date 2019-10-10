@@ -1,0 +1,21 @@
+type: object
+description: Session Source. Use this payment source to create a SCA payment.
+required:
+  - session
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    properties:
+      session:
+        type: string
+        pattern: "^(sid)_(\\w{26})$"
+        description: The Checkout.com Session Id
+        example: sid_ubfj2q76miwundwlk72vxt2i7q
+      billing_address:
+        description: The customer's billing address. This will override the billing address specified during tokenization
+        allOf:
+          - $ref: '#/components/schemas/Address'
+      phone:
+        description: The customer's phone number. This will override the phone number specified during tokenization
+        allOf:
+          - $ref: '#/components/schemas/PhoneNumber'

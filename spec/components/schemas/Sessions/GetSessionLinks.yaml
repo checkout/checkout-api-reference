@@ -15,10 +15,3 @@ properties:
         type: string
         description: The URI of the Issuer FingerPrint (3DS Method)
         example: https://api.hbsc.com/3dsmethod?tx=123456
-  next_action_documentation:
-    type: object
-    properties:
-      href:
-        type: string
-        description: The url pointing to some content that might help you.
-        example: https://developer.checkout.com/sessions#session-sdk

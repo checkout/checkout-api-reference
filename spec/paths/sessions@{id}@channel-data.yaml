@@ -1,5 +1,6 @@
  put:
   summary: Update a session
+  description: Update a session by providing information about the environment it was created.
   tags:
     - Sessions
   parameters:
@@ -21,7 +22,7 @@
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CreateSessionOkResponse'
+            $ref: '#/components/schemas/GetSessionResponse'
     '401':
       description: Unauthorized
     '403':

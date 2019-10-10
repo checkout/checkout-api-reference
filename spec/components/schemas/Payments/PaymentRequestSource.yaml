@@ -22,6 +22,7 @@ discriminator:
     bancontact: '#/components/schemas/PaymentRequestBancontactSource'
     fawry: '#/components/schemas/PaymentRequestFawrySource'
     qpay: '#/components/schemas/PaymentRequestQPaySource'
+    session: '#/components/schemas/PaymentRequestSessionSource'
 required:
   - type
 properties:
