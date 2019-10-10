@@ -2,6 +2,7 @@ var api = CheckoutApi.Create("your secret key");
 var tokenSource = new TokenSource("tok_ubfj2q76miwundwlk72vxt2i7q");
 var sessionRequest = new Session<TokenSource>(tokenSource, Currency.USD, 5600)
 {
+    Hosted = true,
     Reference = "ORD-090857"
 };
 
@@ -9,7 +10,7 @@ try
 {
     var response = await api.Sessions.RequestAsync(sessionRequest);
 
-    if (response.IsPending && response.Pending.RequiresRedirect())
+    if (response.IsHosted)
     {
         return Redirect(response.Pending.GetRedirectLink().Href);
     }

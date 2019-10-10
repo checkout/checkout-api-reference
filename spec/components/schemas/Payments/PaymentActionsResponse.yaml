@@ -36,3 +36,12 @@ example:
     "processing":
       "retrieval_reference_number": "909913440644"
       "acquirer_transaction_id": "440644309099499894406"
+  - "id": "act_pj7zcb5gthkenk5uznvtosfb2e"
+    "type": "Authentication"
+    "processed_on": "2018-01-17T09:30:48Z"
+    "amount": 6540
+    "approved": true
+    "response_code": "Y"
+    "response_reason": "01"
+    "reference": "ORD-5023-4E89"
+
