@@ -9,6 +9,12 @@ properties:
     $ref: '#/components/schemas/Status'
   approved:
     $ref: '#/components/schemas/Approved'
+  auto_complete:
+    type: boolean
+    description: >
+      Whether the payment session should be completed and authorised/captured by Checkout.com automatically.</br>
+      When using this feature you should consume <a href="https://docs.checkout.com/docs/webhooks" target="blank">webhooks</a>.
+    example: true
   protocol_version:
     $ref: '#/components/schemas/ProtocolVersion'
   reference:
