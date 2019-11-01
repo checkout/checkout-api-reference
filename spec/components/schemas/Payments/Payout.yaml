@@ -8,7 +8,8 @@ properties:
     type: integer
     description: |
       The payment amount in the major currency.
-      Omit the amount or provide a value of 0 to perform a card verification
+      The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">depends on the currency</a>.
+      Omit the amount or provide a value of `0` to perform a card verification.
     minimum: 0
     example: 6540
   currency:
