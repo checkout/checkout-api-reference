@@ -40,14 +40,14 @@ properties:
           - $ref: '#/components/schemas/Link'
         description: The URI of the payment
         example:
-          href: "https://api.checkout.com/payments/pay_y3oqhf46pyzuxjbcn2giaqnb44"
+          href: "https://api.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4"
       redirect:
         type: object
         allOf:
           - $ref: '#/components/schemas/Link'
-        description: The URI that the customer should be redirected to, to complete the payment
+        description: The URI that the customer should be redirected to in order to complete the payment
         example:
-          href: "https://api.checkout.com/3ds/pay_y3oqhf46pyzuxjbcn2giaqnb44"
+          href: "https://api.checkout.com/3ds/pay_mbabizu24mvu3mela5njyhpit4"
     required:
       - self
 

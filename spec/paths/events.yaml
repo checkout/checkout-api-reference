@@ -23,7 +23,7 @@ get:
         type: integer
         default: 10
         minimum: 1
-        maximum: 100
+        maximum: 50
     - name: skip
       in: query
       description: The number of events to skip
@@ -34,11 +34,6 @@ get:
     - name: payment_id
       in: query
       description: Search for an event by payment ID
-      schema:
-        type: string
-    - name: reference
-      in: query
-      description: Search for an event by reference
       schema:
         type: string
   responses:

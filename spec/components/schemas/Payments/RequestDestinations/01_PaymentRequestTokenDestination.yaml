@@ -15,18 +15,18 @@ allOf:
         example: "tok_ubfj2q76miwundwlk72vxt2i7q"
       first_name:
         type: string
-        description: The payment destination owner's first name
+        description: The payout destination owner's first name
         example: "John"
       last_name:
         type: string
-        description: The payment destination owner's last name
+        description: The payout destination owner's last name
         example: "Smith"
       billing_address:
-        description: The payment destination owner's billing address. This will override the billing address specified during tokenization
+        description: The payout destination owner's billing address. This will override the billing address specified during tokenization
         allOf:
           - $ref: '#/components/schemas/Address'
       phone:
-        description: The payment destination owner's phone number. This will override the phone number specified during tokenization
+        description: The payout destination owner's phone number. This will override the phone number specified during tokenization
         allOf:
           - $ref: '#/components/schemas/PhoneNumber'
 

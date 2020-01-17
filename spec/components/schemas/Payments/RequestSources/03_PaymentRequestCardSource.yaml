@@ -13,8 +13,6 @@ allOf:
         type: string
         description: The card number (without separators)
         example: "4543474002249996"
-        minLength: 16
-        maxLength: 16
       expiry_month:
         type: integer
         description: The expiry month of the card

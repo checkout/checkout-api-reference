@@ -1,82 +1,77 @@
 type: object
-description: A card payment destination
-allOf:
-  - $ref: "#/components/schemas/PaymentResponseDestination"
-  - type: object
-    required:
-      - expiry_month
-      - expiry_year
-      - last4
-      - fingerprint
-      - bin
-    properties:
-      expiry_month:
+required:
+  - id
+  - type
+  - expiry_month
+  - expiry_year
+  - last4
+  - bin
+properties:
+    id:
+        description: The unique identifier of the payment source or destination that can be used later for payments
+        type: string
+        example: 'src_wmlfc3zyhqzehihu7giusaaawu'
+    type:
+        description: The underlying instrument type (for instruments created from Checkout.com tokens, this will reflect the type of instrument that was tokenized)
+        type: string
+        example: "card"
+    expiry_month:
         type: integer
         description: The expiry month
-        example: 6
         minimum: 1
-        maxLength: 1
-        minLength: 2
-      expiry_year:
+        example: 6
+        maxLength: 2
+    expiry_year:
         type: integer
         description: The expiry year
         example: 2025
-        maxLength: 4
         minLength: 4
-      name:
-        type: string
-        description: The cardholder's name
-        example: "Bruce Wayne"
-      scheme:
+        maxLength: 4
+    scheme:
         type: string
         description: The card scheme
         example: "VISA"
-      last4:
+    last4:
         type: string
         description: The last four digits of the card number
         example: "9996"
-        maxLength: 4
         minLength: 4
-      fingerprint:
+        maxLength: 4
+    bin:
         type: string
-        description: Uniquely identifies this particular card number. You can use this to compare cards across customers
-        example: "F639CAB2745BEE4140BF86DF6B6D6"
-      bin:
-        type: string
-        description: The card issuer's Bank Identification Number (BIN)
+        description: The card issuer's bank identification number (BIN)
         example: "454347"
-        maxLength: 6
-      card_type:
+    card_type:
         type: string
         description: The card type
         enum:
-          - Credit
-          - Debit
-          - Prepaid
-          - Charge
+        - Credit
+        - Debit
+        - Prepaid
+        - Charge
         example: Credit
-      card_category:
+    card_category:
         type: string
         description: The card category
         enum:
-          - Consumer
-          - Commercial
+        - Consumer
+        - Commercial
         example: Consumer
-      issuer:
+    issuer:
         type: string
         description: The name of the card issuer
         example: "GOTHAM STATE BANK"
-      issuer_country:
+    issuer_country:
         type: string
         maxLength: 2
         minLength: 2
         description: The card issuer's country (<a href="https://docs.checkout.com/docs/country-codes" target="blank">two-letter ISO code</a>)
         example: "US"
-      product_id:
+    product_id:
         type: string
         description: The issuer/card scheme product identifier
         example: "F"
-      product_type:
+    product_type:
         type: string
         description: The issuer/card scheme product type
         example: CLASSIC

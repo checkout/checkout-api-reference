@@ -14,9 +14,9 @@ allOf:
         example: src_wmlfc3zyhqzehihu7giusaaawu
       first_name:
         type: string
-        description: The payment destination owner's first name
+        description: The payout destination owner's first name
         example: John
       last_name:
         type: string
-        description: The payment destination owner's last name
+        description: The payout destination owner's last name
         example: Smith

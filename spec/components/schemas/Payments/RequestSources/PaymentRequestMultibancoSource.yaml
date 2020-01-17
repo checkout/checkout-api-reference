@@ -1,0 +1,30 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'Multibanco Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentRequestSource'
+  -
+    type: object
+    required:
+      - payment_country
+      - account_holder_name
+    properties:
+      payment_country:
+        maxLength: 2
+        minLength: 2
+        enum:
+          - PT
+        type: string
+        description: 'The 2-letter ISO country code of the country in which the payment instrument is issued/operated.'
+      account_holder_name:
+        maxLength: 100
+        minLength: 3
+        type: string
+        description: 'The account holder.'
+      billing_descriptor:
+        maxLength: 65534
+        type: string
+        description: 'Payment billing descriptor.'

@@ -97,6 +97,28 @@ td.dz44d2-4 {
     font-family: Arial, sans-serif;
 }
 
+span.sc-jKJlTe.iJiUyY {
+    font-family: Arial;
+    color: #013a51;
+    margin-right: 5px;
+}
+
+li.sc-eNQAEJ.gYsnwL {
+    background: #013a51;
+    border: 1px solid #013a51;
+    font-weight: bold;
+}
+
+li.sc-eNQAEJ.jdXjUh {
+    color: #999;
+    border: 1px solid #999;
+    font-weight: bold
+}
+
+li#react-tabs-2 {
+    border-top: 2px solid #999;
+}
+
 .jXDsIv {
     color: #fd755f!important;
     font-family: Arial, sans-serif;
@@ -168,6 +190,7 @@ td.dz44d2-4 {
 .menu-content {
     background: #f8f8f8!important;
     top: 66px!important;
+    width: 280px!important;
 }
 
 /* Search box */
@@ -176,7 +199,7 @@ div[role=search] {
     margin: 10px 20px!important;
     border: 1px solid rgb(1, 58, 81, 0.2);
     border-radius: 3px;
-    background: #f8f8f8;
+    background: #fff;
 }
 
 .search-input {
@@ -200,6 +223,15 @@ i.k4h4y9-4.jGkewb {
     border-bottom: 0!important;
     padding-bottom: 0!important;
     background: #f8f8f8!important;
+}
+
+i.sc-gqPbQI.hQYSSu {
+    margin-right: 5px!important:
+}
+
+.sc-cLQEGU.kYDFzp {
+    background-color: #ffffff!important;
+    border-bottom: none!important;
 }
 
 /* Navigation */
@@ -350,7 +382,7 @@ span.token.keyword {
 /* Logo */
 
 .logo {
-    width: 260px;
+    width: 276px;
     position: fixed;
     top: 0;
     left: 0;
