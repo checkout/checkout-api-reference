@@ -43,7 +43,7 @@ allOf:
         example: "F639CAB2745BEE4140BF86DF6B6D6"
       bin:
         type: string
-        description: The card issuer's BIN
+        description: The card issuer's Bank Identification Number (BIN)
         example: "454347"
         maxLength: 6
       card_type:
@@ -53,6 +53,7 @@ allOf:
           - Credit
           - Debit
           - Prepaid
+          - Charge
         example: Credit
       card_category:
         type: string

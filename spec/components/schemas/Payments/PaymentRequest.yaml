@@ -117,6 +117,9 @@ properties:
         type: string
         description: Overrides the default merchant/acceptor identifier (MID) configured on your account
         example: "1234567"
+      aft:
+        type: boolean
+        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions) 
   metadata:
     type: object
     description: A set of key-value pairs that you can attach to a payment. This can be useful for storing additional information in a structured format
