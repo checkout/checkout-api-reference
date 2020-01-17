@@ -17,10 +17,10 @@ allOf:
         description: 'String for generating the QR code to be scanned'
       failure_reason:
         type: string
-        description: 'High level reason for error with payment'
+        description: 'Reason for error with payment'
       error_code:
         type: string
-        description: 'Error code returned from BenefitPay'
+        description: "Error code returned from BenefitPay.  For further detail, the full code meaning has to be requested directly from BenefitPay,  as CKO does not have access to this.\n"
       error_description:
         type: string
         description: 'Error description returned from BenefitPay'

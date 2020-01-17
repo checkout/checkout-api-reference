@@ -45,6 +45,8 @@ tags:
     description: Create a payment source for a customer that you can use for one or more payments.
   - name: Tokens
     description: Create a token that represents a card's details (or their tokenized form in a digital wallet) that you can later use to request a payment, without you having to process or store any sensitive information.
+  - name: Instruments
+    description: Create a payment instrument that you can later use as the source or destination for one or more payments.
   - name: Webhooks
     description: Create and manage the webhook notifications you receive to keep up to date with the status of your transactions.
   - name: Events

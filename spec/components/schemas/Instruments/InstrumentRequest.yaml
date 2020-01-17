@@ -1,0 +1,15 @@
+type: object
+required:
+  - type
+  - token
+properties:
+  type:
+    type: string
+    description: The instrument type
+    pattern: token
+    example: token
+  token:
+    type: string
+    description: The Checkout.com token
+    pattern: ^(tok)_(\w{26})$ | ^(card_tok)_(\w{12})$
+    example: tok_asoto22g2fsu7prwomy12sgfsa
