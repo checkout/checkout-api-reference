@@ -14,7 +14,7 @@ properties:
       - dispute_evidence_required
       - dispute_expired
       - dispute_lost
-      - dispute_resvoled
+      - dispute_resolved
       - dispute_won
       - payment_approved
       - payment_risk_matched
