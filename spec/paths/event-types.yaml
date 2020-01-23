@@ -8,8 +8,8 @@ get:
       name: version
       schema:
         type: string
-      description: The events version
-      required: true
+      description: The API version for which you want to retrieve the event types. Set this to `1.0` for the legacy API or `2.0` for the Unified Payments API. If no version is specified, event types for both versions will be returned.
+      required: false
   responses:
     '200':
       description: Event types retrieved successfully

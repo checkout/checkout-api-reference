@@ -1,0 +1,17 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'Multibanco Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      payment_reference:
+        type: string
+        description: 'Multibanco payment reference'
+      service_supplier_id:
+        type: string
+        description: 'The identifier of a supplier charging for its service or product'

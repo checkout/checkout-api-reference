@@ -1,5 +1,5 @@
 type: object
-description: Required by VISA and Mastercard for domestic UK transactions <a href="https://docs.checkout.com/docs/requirements-for-financial-institutions" target="blank">processed by financial institutions</a>
+description: Information about the recipent of the payment's funds. Relevant for both [Account Funding Transactions](https://docs.checkout.com/docs/account-funding-transactions) and VISA or MasterCard [domestic UK transactions processed by Financial Institutions](https://docs.checkout.com/docs/requirements-for-financial-institutions).
 properties:
   dob:
     type: string
@@ -14,14 +14,13 @@ properties:
     example: "5555554444"
   zip:
     type: string
-    description: The first part of the UK postcode (e.g., W1T 4TJ would be W1T).
+    description: The first part of the UK postcode (e.g., W1T 4TJ would be W1T)
     example: "W1T"
+  first_name:
+    type: string
+    description: The recipient's first name
+    example: "John"
   last_name:
     type: string
     description: The recipient's last name
     example: "Jones"
-required:
-  - dob
-  - account_number
-  - zip
-  - last_name

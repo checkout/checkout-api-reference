@@ -8,7 +8,8 @@ properties:
     type: integer
     description: |
       The payment amount in the major currency.
-      Omit the amount or provide a value of 0 to perform a card verification
+      The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">depends on the currency</a>.
+      Omit the amount or provide a value of `0` to perform a card verification. 
     minimum: 0
     example: 6540
   currency:
@@ -116,6 +117,9 @@ properties:
         type: string
         description: Overrides the default merchant/acceptor identifier (MID) configured on your account
         example: "1234567"
+      aft:
+        type: boolean
+        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions) 
   metadata:
     type: object
     description: A set of key-value pairs that you can attach to a payment. This can be useful for storing additional information in a structured format

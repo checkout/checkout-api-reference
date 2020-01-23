@@ -25,7 +25,7 @@ properties:
   status:
     type: string
     description: The current status of the dispute
-    enum: [received, evidence_required, evidence_under_review, resolved, closed, won, lost, canceled, accepted]
+    enum: [evidence_required, evidence_under_review, resolved, won, lost, canceled, expired, accepted]
     example: "evidence_required"
   relevant_evidence:
     type: array

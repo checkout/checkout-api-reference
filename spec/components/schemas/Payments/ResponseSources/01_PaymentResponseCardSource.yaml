@@ -12,12 +12,16 @@ allOf:
     properties:
       expiry_month:
         type: integer
-        description: The two-digit expiry month
+        description: The expiry month
         minimum: 1
+        minLength: 1
+        maxLength: 2
         example: 6
       expiry_year:
         type: integer
-        description: The four-digit expiry year
+        description: The expiry year
+        minLength: 4
+        maxLength: 4
         example: 2025
       name:
         type: string
@@ -37,7 +41,8 @@ allOf:
         example: "F639CAB2745BEE4140BF86DF6B6D6"
       bin:
         type: string
-        description: The card issuer's bank identification number (BIN)
+        description: The card issuer's Bank Identification Number (BIN)
+        maxLength: 6
         example: "454347"
       card_type:
         type: string
@@ -46,6 +51,7 @@ allOf:
           - Credit
           - Debit
           - Prepaid
+          - Charge
         example: Credit
       card_category:
         type: string

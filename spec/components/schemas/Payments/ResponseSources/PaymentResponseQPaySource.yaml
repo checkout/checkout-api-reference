@@ -12,3 +12,12 @@ allOf:
       description:
         type: string
         description: 'Alphanumeric string containing a description of the payment order.'
+      qpay_status:
+        type: string
+        description: 'The status code returned from the QPay gateway on payment, if available.'
+      status_message:
+        type: string
+        description: 'A message giving further detail on the payment status, for failure/cancelled/success status payments.'
+      confirmation_id:
+        type: string
+        description: 'An identifier from the QPay gateway for a successful payment.'

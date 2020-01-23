@@ -1,0 +1,26 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'BenefitPay Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      reference_number:
+        type: string
+        description: 'Unique transaction reference number from BenefitPay'
+      qr_data:
+        type: string
+        description: 'String for generating the QR code to be scanned'
+      failure_reason:
+        type: string
+        description: 'Reason for error with payment'
+      error_code:
+        type: string
+        description: "Error code returned from BenefitPay.  For further detail, the full code meaning has to be requested directly from BenefitPay,  as CKO does not have access to this.\n"
+      error_description:
+        type: string
+        description: 'Error description returned from BenefitPay'
