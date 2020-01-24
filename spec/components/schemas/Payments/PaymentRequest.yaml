@@ -122,7 +122,7 @@ properties:
         description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions) 
   metadata:
     type: object
-    description: A set of key-value pairs that you can attach to a payment. This can be useful for storing additional information in a structured format
+    description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.
     example:
       coupon_code: "NY2018"
       partner_id: 123989
