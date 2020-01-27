@@ -1,0 +1,64 @@
+type: object
+properties:
+  id:
+    type: string
+    pattern: "^(dsp)_(\\w{22})$"
+    description: The dispute identifier. This is the same as the action ID in the reconciliation API or the charge ID in the Hub.
+    example: "dsp_rbhwd2qrg13uhrp2newf"
+  category:
+    type: string
+    description: The reason for the dispute. [Find out more](https://docs.checkout.com/docs/disputes#section-dispute-reasons-and-recommended-evidence)
+    enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general]
+    example: "fraudulent"
+  status:
+    type: string
+    description: The current status of the dispute
+    enum: [received, evidence_required, evidence_under_review, resolved, closed, won, lost, canceled, accepted]
+    example: "evidence_required"
+  amount:
+    type: number
+    description: The amount that is being disputed, in the processing currency
+    example: 999
+  currency:
+    type: string
+    description: The currency the payment was made in
+    example: "GBP"
+  payment_id:
+    type: string
+    description: The unique payment identifier
+    example: "pay_88cb4e671m1da22e9bbbyx"
+  payment_reference:
+    type: string
+    description: An optional reference (such as an order ID) a merchant can use to later identify the charge. Previously known as TrackId
+    example: "th7zxa1kcnqmes8"
+  payment_arn:
+    type: string
+    description: The acquirer reference number that can be used to query the issuing bank
+    example: "74548998294293193445538"
+  payment_method:
+    type: string
+    description: The payment method/card scheme
+    example: VISA
+  evidence_required_by:
+    type: string
+    format: ISO-8601
+    description: The deadline by which to respond to the dispute. This corresponds to `received_on` + `n`, where `n` is a number of calendar days set by the scheme/acquirer
+    example: "2018-08-22T00:00:00Z"
+  received_on:
+    type: string
+    format: ISO-8601
+    description: The date and time at which the dispute was issued
+    example: "2018-08-01T01:15:56Z"
+  last_update:
+    type: string
+    format: ISO-8601
+    description: The date and time at which the dispute was last updated
+    example: "2018-08-12T04:15:56Z"
+  _links:
+    type: object
+    properties:
+      self:
+        description: The dispute retrieval endpoint
+        properties:    
+          href:
+            example: 'https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf'

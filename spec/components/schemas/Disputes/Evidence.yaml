@@ -1,0 +1,14 @@
+type: object
+properties:
+  proof_of_delivery_or_service_file:
+    type: string
+    description: The file ID of the file you uploaded as a proof of delivery or service
+    example: "file_jmbfgkjromvcrn9t4qu4"
+  proof_of_delivery_or_service_text:
+    type: string
+    description: A brief text description of the file. You can also use this field to provide a link
+    example: "Delivery slip signed by the customer"
+  proof_of_delivery_or_service_date_text:
+    type: string
+    description: The date on which the item was delivered. You can also use this field to provide a link
+    example: "Merchandise was delivered on 2018-12-30"

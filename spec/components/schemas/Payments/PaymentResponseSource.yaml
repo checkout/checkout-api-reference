@@ -6,16 +6,21 @@ discriminator:
   mapping:
     card: '#/components/schemas/01_PaymentResponseCardSource'
     alipay: '#/components/schemas/PaymentResponseAlipaySource'
+    benefitpay: '#/components/schemas/PaymentResponseBenefitPaySource'
     boleto: '#/components/schemas/PaymentResponseBoletoSource'
     eps: '#/components/schemas/PaymentResponseEpsSource'
     giropay: '#/components/schemas/PaymentResponseGiropaySource'
     ideal: '#/components/schemas/PaymentResponseIdealSource'
     klarna: '#/components/schemas/PaymentResponseKlarnaSource'
     knet: '#/components/schemas/PaymentResponseKnetSource'
+    oxxo: '#/components/schemas/PaymentResponseOXXOSource'
+    p24: '#/components/schemas/PaymentResponseP24Source'
     poli: '#/components/schemas/PaymentResponsePoliSource'
     sofort: '#/components/schemas/PaymentResponseSofortSource'
     bancontact: '#/components/schemas/PaymentResponseBancontactSource'
     fawry: '#/components/schemas/PaymentResponseFawrySource'
+    qpay: '#/components/schemas/PaymentResponseQPaySource'
+    multibanco: '#/components/schemas/PaymentResponseMultibancoSource'
 required:
   - type
 
@@ -23,15 +28,15 @@ properties:
   type:
     type: string
     description: |
-      The payment source type. For any payment request sources that result in a card token (token, source ID etc.)
-      this will be `card` otherwise the name of the alternative payment method.
+      The payment source type. For any payment request sources that result in a card token (token, source ID, etc.),
+      this will be `card`; otherwise it will be the name of the alternative payment method
     example: "card"
   id:
     type: string
     description: |
       The payment source identifier that can be used for subsequent payments.
-      For new sources, this will only be returned if the payment was approved.
-    example: src_wmlfc3zyhqzehihu7giusaaawu
+      For new sources, this will only be returned if the payment was approved
+    example: "src_nwd3m4in3hkuddfpjsaevunhdy"
   billing_address:
     description: The payment source owner's billing address
     allOf:

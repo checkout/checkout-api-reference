@@ -9,13 +9,13 @@ get:
       schema:
         type: string
         format: date-time
-      description: An ISO8601 formatted date and time to search from (default = last 6 months)
+      description: A date and time (ISO 8601 format) to search from (default = last 6 months)
     - name: to
       in: query
       schema:
         type: string
         format: date-time
-      description: An ISO8601 formatted date and time to search to (default = now)
+      description: A date and time (ISO 8601 format) to search to (default = now)
     - name: limit
       in: query
       description: The number of events to return per page
@@ -23,7 +23,7 @@ get:
         type: integer
         default: 10
         minimum: 1
-        maximum: 100
+        maximum: 50
     - name: skip
       in: query
       description: The number of events to skip
@@ -33,12 +33,7 @@ get:
         minimum: 0
     - name: payment_id
       in: query
-      description: Search for an event by Payment ID
-      schema:
-        type: string
-    - name: reference
-      in: query
-      description: Search for an event by Reference
+      description: Search for an event by payment ID
       schema:
         type: string
   responses:

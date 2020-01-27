@@ -3,7 +3,7 @@ description: The order line item or product that is being purchased
 properties:
   sku:
     type: string
-    description: The stock-keeping unit identifier of the item
+    description: The stock-keeping unit (SKU) identifier of the item
     example: 858818ac
   name:
     type: string

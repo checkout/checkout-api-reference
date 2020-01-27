@@ -11,7 +11,7 @@ required:
   - _links
 properties:
   id:
-    description: Payment unique identifier
+    description: The unique payment identifier
     allOf:
       - $ref: '#/components/schemas/PaymentId'
   action_id:
@@ -34,7 +34,7 @@ properties:
     example: "Voided"
   response_code:
     type: string
-    description: Gateway response code
+    description: The Gateway response code
     example: "10000"
   response_summary:
     type: string

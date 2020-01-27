@@ -1,0 +1,28 @@
+type: object
+description: Payment destination
+discriminator:
+  propertyName: type
+  mapping:
+    card: '#/components/schemas/01_PaymentResponseCardDestination'
+required:
+  - type
+properties:
+  type:
+    type: string
+    description: |
+      The payment destination type.
+    example: "card"
+  id:
+    type: string
+    description: |
+      The payment source identifier that can be used for subsequent payments.
+      For new sources, this will only be returned if the payment was approved
+    example: src_wmlfc3zyhqzehihu7giusaaawu
+  billing_address:
+    description: The payment source owner's billing address
+    allOf:
+      - $ref: '#/components/schemas/Address'
+  phone:
+    description: The payment source owner's phone number
+    allOf:
+      - $ref: '#/components/schemas/PhoneNumber'

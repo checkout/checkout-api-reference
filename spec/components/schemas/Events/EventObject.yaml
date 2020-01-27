@@ -18,7 +18,7 @@ properties:
     $ref: '#/components/schemas/Data'
   notifications:
     type: array
-    description: The notifications (e.g. webhooks) that have been sent for the event
+    description: The notifications (e.g., webhooks) that have been sent for the event
     items:
       $ref: '#/components/schemas/NotificationSummary'
   _links:

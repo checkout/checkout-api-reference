@@ -3,13 +3,17 @@ description: The source of the payment
 discriminator:
   propertyName: type
   mapping:
-    card: '#/components/schemas/01_CardTokenResponse'
-    applepay: '#/components/schemas/02_ApplePayTokenResponse'
-    googlepay: '#/components/schemas/03_GooglePayTokenResponse'
+    applepay: '#/components/schemas/01_ApplePayTokenResponse'
+    googlepay: '#/components/schemas/02_GooglePayTokenResponse'
+    card: '#/components/schemas/03_CardTokenResponse'
 required:
   - type
   - token
   - expires_on
+  - expiry_month
+  - expiry_year
+  - last4
+  - bin
 properties:
   type:
     type: string
@@ -23,3 +27,62 @@ properties:
     description: The date/time the token will expire
     allOf:
       - $ref: '#/components/schemas/ServerTimestamp'
+  expiry_month:
+    type: integer
+    description: The expiry month
+    minimum: 1
+    example: 6
+    minLength: 1
+    maxLength: 2
+  expiry_year:
+    type: integer
+    description: expiry year
+    example: 2025
+    minLength: 4
+    maxLength: 4
+  scheme:
+    type: string
+    description: The card scheme
+    example: "VISA"
+  last4:
+    type: string
+    description: The last four digits of the card number
+    example: "9996"
+  bin:
+    type: string
+    description: The card issuer BIN
+    example: "454347"
+  card_type:
+    type: string
+    description: The card type
+    enum:
+      - Credit
+      - Debit
+      - Prepaid
+      - Charge
+    example: Credit
+  card_category:
+    type: string
+    description: The card category
+    enum:
+      - Consumer
+      - Commercial
+    example: Consumer
+  issuer:
+    type: string
+    description: The name of the card issuer
+    example: "GOTHAM STATE BANK"
+  issuer_country:
+    type: string
+    maxLength: 2
+    minLength: 2
+    description: The card issuer country ISO-2 code
+    example: "US"
+  product_id:
+    type: string
+    description: The issuer/card scheme product identifier
+    example: "F"
+  product_type:
+    type: string
+    description: The issuer/card scheme product type
+    example: CLASSIC

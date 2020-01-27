@@ -1,0 +1,29 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'OXXO Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    properties:
+      failure_reason:
+        type: string
+        description: 'Reason of payment failure'
+        example: 'Third party response: Rejected (Error code: 300)'
+      failure_code:
+        enum:
+          - third_party_invalid_credentials
+          - third_party_access_denied
+          - third_party_invalid_request
+          - third_party_invalid_parameter
+          - third_party_invalid_transaction_status
+          - third_party_rejected
+          - third_party_amount_exceeded
+          - third_party_timeout
+          - third_party_error
+        type: string
+        description: 'Failure code'
+        example: third_party_rejected

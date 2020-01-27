@@ -8,6 +8,14 @@ properties:
     items:
       type: string
     example:
+      - card_verification_declined
+      - card_verified
+      - dispute_canceled
+      - dispute_evidence_required
+      - dispute_expired
+      - dispute_lost
+      - dispute_resolved
+      - dispute_won
       - payment_approved
       - payment_risk_matched
       - payment_pending

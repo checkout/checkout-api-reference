@@ -9,11 +9,10 @@ required:
   - status
   - response_code
   - processed_on
-  - source
   - _links
 properties:
   id:
-    description: Payment unique identifier
+    description: The payment's unique identifier
     allOf:
       - $ref: '#/components/schemas/PaymentId'
   action_id:
@@ -26,13 +25,13 @@ properties:
     example: 6540
   currency:
     type: string
-    description: The three-letter ISO currency code of the payment
+    description: The three-letter <a href="https://docs.checkout.com/docs/currency-codes" target="blank">ISO currency code</a> of the payment
     example: USD
     maxLength: 3
     minLength: 3
   approved:
     type: boolean
-    description: Whether the authorization or capture was successful
+    description: Whether or not the authorization or capture was successful
     example: true
   status:
     type: string
@@ -43,10 +42,11 @@ properties:
       - Card Verified
       - Captured
       - Declined
+      - Paid
     example: Authorized
   auth_code:
     type: string
-    description: The acquirer authorization code if the payment was Authorized
+    description: The acquirer authorization code if the payment was authorized
     example: "643381"
   response_code:
     type: string
@@ -58,7 +58,7 @@ properties:
     example: "Approved"
   3ds:
     type: object
-    description: Provides 3-D Secure enrollment status if the payment was downgraded to non-3-D Secure
+    description: Provides 3D Secure enrollment status if the payment was downgraded to non-3D Secure
     allOf:
       - $ref: '#/components/schemas/3dsEnrollmentData'
     example:
@@ -66,11 +66,11 @@ properties:
       enrolled: N
   risk:
     type: object
-    description: Returns the payments risk assessment results
+    description: Returns the payment's risk assessment results
     properties:
       flagged:
         type: boolean
-        description: Whether the payment was flagged by a risk check
+        description: Whether or not the payment was flagged by a risk check
         default: false
         example: true
   source:
@@ -78,9 +78,14 @@ properties:
     type: object
     allOf:
       - $ref: '#/components/schemas/PaymentResponseSource'
+  #destination:
+    #description: The destination of the payment
+    #type: object
+    #allOf:
+     # - $ref: '#/components/schemas/PaymentResponseDestination'
   customer:
     type: object
-    description: The customer associated with the payment if provided in the request
+    description: The customer associated with the payment, if provided in the request
     allOf:
       - $ref: '#/components/schemas/PaymentResponseCustomer'
   processed_on:
@@ -105,13 +110,13 @@ properties:
         example: "440644309099499894406"
   eci:
     type: string
-    description: |
+    description:
       The final Electronic Commerce Indicator (ECI) security level used to authorize the payment. 
-      Applicable for 3-D Secure, digital wallets and network token payments.
+      Applicable for 3D Secure, digital wallet, and network token payments
     example: "06"  
   scheme_id:
     type: string
-    description: |
+    description:
       The scheme transaction identifier
     example: "489341065491658"
   _links:

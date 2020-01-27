@@ -28,7 +28,7 @@ post:
     - Webhooks
   summary: Register webhook
   description: |
-    Register a new webhook endpoint that Checkout.com will POST all or selected events to
+    Register a new webhook endpoint that Checkout.com will post all or selected events to
   requestBody:
     content:
       application/json:
@@ -55,4 +55,4 @@ post:
           schema:
             $ref: '#/components/schemas/ValidationError'
     '409':
-      description: Url already registered for another webhook
+      description: URL already registered for another webhook

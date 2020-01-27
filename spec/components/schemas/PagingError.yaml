@@ -1,0 +1,13 @@
+type: object
+properties:
+  request_id:
+    type: string
+    example: 0HL80RJLS76I7
+  error_type:
+    type: string
+    example: request_invalid
+  error_codes:
+    type: array
+    items:
+      type: string
+      example: paging_limit_invalid

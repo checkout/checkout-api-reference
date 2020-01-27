@@ -2,11 +2,11 @@ type: object
 properties:
   address_line1: 
     type: string
-    description: Line 1 of the address
+    description: The first line of the address
     example: Checkout.com
   address_line2:
     type: string
-    description: Line 2 of the address
+    description: The second line of the address
     example: 90 Tottenham Court Road
   city:
     type: string
@@ -22,5 +22,7 @@ properties:
     example: W1T 4TJ
   country:
     type: string
-    description: The two-letter ISO code of the address country
+    description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
     example: GB
+    maxLength: 2
+    minLength: 2

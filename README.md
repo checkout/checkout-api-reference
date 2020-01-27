@@ -17,11 +17,12 @@
 ### Install
 
 1. Install [Node JS](https://nodejs.org/)
-2. Clone repo and `cd`
+2. Install [dotnet cli](https://dotnet.microsoft.com/download)
+3. Clone repo and `cd`
     + Run `npm install`
 
 ### Usage
-
+ 
 1. Run `npm start`
 2. Checkout console output to see where local server is started.
 3. Make changes using your favorite editor or `swagger-editor` (look for URL in console output)

@@ -22,19 +22,24 @@ properties:
     type: object
     allOf:
       - $ref: '#/components/schemas/PaymentResponseSource'
+  destination:
+    description: The destination of the payment
+    type: object
+    allOf:
+      - $ref: '#/components/schemas/PaymentResponseDestination'
   amount:
     type: integer
     description: The original payment amount
     example: 6540
   currency:
     type: string
-    description: The three-letter ISO currency code of the payment
+    description: The three-letter <a href="https://docs.checkout.com/docs/currency-codes" target="blank">ISO currency code</a> of the payment
     example: USD
     maxLength: 3
     minLength: 3
   payment_type:
     type: string
-    description: Must be specified for card payments where the cardholder is not present (recurring or Merchant Offline Telephone Order)
+    description: This must be specified for card payments where the cardholder is not present (i.e., recurring or mail order / telephone order)
     enum:
       - Regular
       - Recurring
@@ -51,7 +56,7 @@ properties:
     example: Set of 3 masks
   approved:
     type: boolean
-    description: Whether the authorization or capture was successful
+    description: Whether the payment was successful
     example: true
   status:
     type: string
@@ -67,10 +72,11 @@ properties:
       - Refunded
       - Declined
       - Cancelled
+      - Paid
     example: Authorized
   3ds:
     type: object
-    description: Provides information relating to the processing of 3-D Secure payments
+    description: Provides information relating to the processing of 3D Secure payments
     allOf:
       - $ref: '#/components/schemas/3dsData'
   risk:
@@ -88,16 +94,17 @@ properties:
     properties:
       id:
         type: string
+        pattern: "^(cus)_(\\w{26})$"
         description: The unique identifier of the customer. This can be passed as a source when making a payment
-        example: cus_y3oqhf46pyzuxjbcn2giaqnb44
+        example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
       email:
         type: string
-        description: The customer email address
-        example: jokershere@gmail.com
+        description: The customer's email address
+        example: "jokershere@gmail.com"
       name:
         type: string
-        description: The customer name
-        example: Jack Napier
+        description: The customer's name
+        example: "Jack Napier"
     required:
       - id
   billing_descriptor:
@@ -122,15 +129,15 @@ properties:
     $ref: '#/components/schemas/PaymentRecipient'
   metadata:
     type: object
-    description: Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format
+    description: A set of key-value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format
     example:
       coupon_code: "NY2018"
       partner_id: 123989
   eci:
     type: string
     description: |
-      The final Electronic Commerce Indicator security level used to authorize the payment. 
-      Applicable for 3-D Secure, digital wallets and network token payments.
+      The final Electronic Commerce Indicator (ECI) security level used to authorize the payment. 
+      Applicable for 3D Secure, digital wallets, and network token payments
     example: "06"  
   scheme_id:
     type: string

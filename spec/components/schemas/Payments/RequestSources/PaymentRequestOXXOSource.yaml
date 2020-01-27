@@ -1,0 +1,46 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'OXXO Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentRequestSource'
+  -
+    type: object
+    required:
+      - integration_type
+      - country
+      - payer
+    properties:
+      integration_type:
+        enum:
+          - redirect
+        type: string
+        description: "The type of the integration.   \nCurrently only `redirect`, for which a redirect url is returned,  which the merchant redirects the customer to, to continue payment"
+      country:
+        maxLength: 2
+        enum:
+          - MX
+        type: string
+        description: 'Payer''s country code. ISO 3166-1 alpha-2 code.'
+      payer:
+        required:
+          - name
+          - email
+          - document
+        type: object
+        properties:
+          name:
+            maxLength: 100
+            type: string
+            description: 'Payer''s full name.'
+          email:
+            maxLength: 100
+            type: string
+            description: 'Payer''s email address.'
+          document:
+            maxLength: 100
+            type: string
+            description: 'Payer''s personal identification number in Mexico (CURP).'
+        description: 'Payer object'

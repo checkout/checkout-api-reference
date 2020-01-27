@@ -6,11 +6,11 @@ allOf:
     properties:
       response_data:
         type: object
-        description: SEPA direct debit details
+        description: SEPA Direct Debit details
         properties:
           mandate_reference:
             type: string
-            description: The direct debit mandate reference
+            description: The Direct Debit mandate reference
             example: "MANDXI9809809"
       _links:
         type: object
@@ -27,4 +27,4 @@ allOf:
             type: object
             allOf:
               - $ref: '#/components/schemas/Link'
-            description: A link to Cancel the SEPA direct debit mandate
+            description: A link to cancel the SEPA Direct Debit mandate

@@ -19,6 +19,7 @@ properties:
       - Void
       - Capture
       - Refund
+      - Payout
   processed_on:
     description: The date/time the action was processed
     allOf:
@@ -46,7 +47,7 @@ properties:
   reference:
     type: string
     description: Your reference for the action
-    example: ORD-5023-4E89
+    example: "ORD-5023-4E89"
   processing:
     type: object
     description: Returns information related to the processing of the payment
@@ -65,6 +66,6 @@ properties:
         example: "440644309099499894406"
   metadata:
     type: object
-    description: A set of key/value pairs that you can attach to an action
+    description: A set of key-value pairs that you can attach to an action
 
 

@@ -1,3 +1,3 @@
-description: Unique identifer of the request
+description: The unique identifier of the request
 schema:
   type: string

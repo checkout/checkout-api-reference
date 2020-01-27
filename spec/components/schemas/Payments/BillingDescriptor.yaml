@@ -1,15 +1,15 @@
 type: object
 description: |
-  An optional dynamic billing descriptor displayed on the account owner's statement.
+  An optional dynamic billing descriptor displayed on the account owner's statement
 properties:
   name:
     type: string
-    description: Dynamic description of the charge
+    description: A dynamic description of the charge
     example: "SUPERHEROES.COM"
     maxLength: 25
   city:
     type: string
-    description: City where the charge originated	
+    description: The city from which the charge originated
     minimum: 1
     example: "GOTHAM"
     maxLength: 13

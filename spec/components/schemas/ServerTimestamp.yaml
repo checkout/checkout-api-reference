@@ -1,4 +1,4 @@
 type: string
-description: Read-only UTC timestamp, automatically assigned by us.
+description: Read-only UTC timestamp, automatically assigned by us
 format: date-time
 readOnly: true
