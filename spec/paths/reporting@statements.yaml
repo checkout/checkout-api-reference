@@ -6,7 +6,6 @@ post:
     Retrieves a report containing all statements within your specified parameters. Please note that the time zone for the request will be UTC.
 
   parameters:
-    parameters:
     - in: query
       name: from
       schema:
