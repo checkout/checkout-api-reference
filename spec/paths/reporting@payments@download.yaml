@@ -1,0 +1,22 @@
+post:
+  tags:
+    - Reporting
+  summary: Retrieve CSV payments report
+  description: 
+    In addition to the JSON format returned by the `reporting/payments` endpoint, you can also download a CSV report containing the same data.
+    For more information on how to read your CSV report, <a href="https://docs.checkout.com/docs/payments-endpoint#section-how-to-read-the-csv-file" target="_blank">click here</a>.
+  parameters:
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: date-time
+      required: false
+      description: Date from which to search for payments
+    - in: query
+      name: to
+      schema:
+        type: string
+        format: date-time
+      required: false
+      description: Date until which to search for payments
