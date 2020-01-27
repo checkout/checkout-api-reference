@@ -10,7 +10,7 @@ post:
   parameters:
     - in: path
       name: paymentId
-      pattern: "^(pay)_(\w{26})$"
+      pattern: "^(pay)_(\\w{26})$"
       schema:
         type: string
       required: true
