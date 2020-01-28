@@ -90,24 +90,24 @@ properties:
             properties:
               payments:
                 type: object
-                description:
-                properties: The payments object
+                description: The payments object
+                properties: 
                   href:
                     type: string
                     description:
                     example: "http://api.checkout.com/reporting/statements/190110B107654/payments?payout_id=ABCDEFGH"
       _links:
         type: object
-          description: The link object
-          properties:
-            payments:
-              type: object
-              description: The payments object
-              properties:
-                href:
-                  type: string
-                  description:
-                  example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
+        description: The link object
+        properties:
+          payments:
+            type: object
+            description: The payments object
+            properties:
+              href:
+                type: string
+                description: The direct link to the payment
+                example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
   _links:
     type: object
     description: The link object
