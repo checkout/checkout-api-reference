@@ -1,8 +1,12 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+
 get:
   tags:
     - Reconciliation
-  summary: Retrieve JSON statements report
-  description: Retrieves a report containing all statements within your specified parameters. Please note that the timezone for the request will be UTC.
+  summary: Get JSON statements report
+  description: Returns a JSON report containing all statements within your specified parameters. Please note that the timezone for the request will be UTC.
 
   parameters:
     - in: query
