@@ -49,10 +49,6 @@ post:
           $ref: "#/components/headers/Cko-Request-Id"
         Cko-Version:
           $ref: "#/components/headers/Cko-Version"
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ValidationError'
     '422':
       description: Invalid data was sent
       content:
