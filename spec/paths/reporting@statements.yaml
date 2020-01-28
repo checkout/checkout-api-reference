@@ -1,4 +1,4 @@
-post:
+get:
   tags:
     - Reconciliation
   summary: Retrieve JSON statements report
