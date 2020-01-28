@@ -1,6 +1,6 @@
 post:
   tags:
-    - Reporting
+    - Reconciliation
   summary: Retrieve CSV payments report
   description: 
     In addition to the JSON format returned by the `reporting/payments` endpoint, you can also download a CSV report containing the same data.
