@@ -1,3 +1,7 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+    
 get:
   tags:
     - Reconciliation
