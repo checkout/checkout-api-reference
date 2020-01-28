@@ -1,9 +1,9 @@
 post:
   tags:
-    - Reporting
+    - Reconciliation
   summary: Retrieve JSON statements report
-  description:
-    Retrieves a report containing all statements within your specified parameters. Please note that the time zone for the request will be UTC.
+  description: Retrieves a report containing all statements within your specified parameters.
+  Please note that the timezone for the request will be UTC.
 
   parameters:
     - in: query
@@ -12,14 +12,14 @@ post:
         type: string
         format: date-time
       required: false
-      description: Date and time from which to search
+      description: Date and time from which to search for statements
     - in: query
       name: to
       schema:
         type: string
         format: date-time
       required: false
-      description: Date and time
+      description: Date and time until which to search for statements
 
   responses:
     '201':
