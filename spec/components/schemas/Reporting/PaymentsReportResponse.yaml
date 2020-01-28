@@ -88,7 +88,7 @@ properties:
             example: "Approved"
           breakdown:
             type: object
-            description: TODO
+            description: The breakdown object
             properties:
               type:
                 type: string
@@ -109,11 +109,11 @@ properties:
                 example: "-0.00229212"
       _links:
         type: object
-          description:
+          description: The link object
           properties:
             payments:
               type: object
-              description:
+              description: The payments object
               properties:
                 href:
                   type: string
@@ -121,11 +121,11 @@ properties:
                   example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
   _links:
     type: object
-    description: 
+    description: The link object
     properties:
       next:
         type: object
-        description: 
+        description: The next object
         properties:
           href:
             type: string
@@ -133,7 +133,7 @@ properties:
             example: "http://api.checkout.com/reporting/payments?from=01%2F03%2F2019%2000%3A00%3A00&to=01%2F03%2F2019%2000%3A00%3A00&limit=1&after=11111111"
       self:
         type: object
-        description:
+        description: The self object
         properties:
           href:
             type: string
