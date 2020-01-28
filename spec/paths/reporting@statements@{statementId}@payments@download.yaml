@@ -1,7 +1,11 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+
 get:
   tags:
     - Reconciliation
-  summary: Retrieve CSV statement report
+  summary: Get CSV statement report
   description: In addition to the JSON format returned by the `reporting/statements` endpoint, you can also download a CSV report containing the same data.
 
   parameters:
