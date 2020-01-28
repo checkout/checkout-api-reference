@@ -14,7 +14,7 @@ properties:
     properties:
       id:
         type: string
-        description: The unique payment identifier. Previously this was called `transaction_id`
+        description: The unique payment identifier. This was previously called `transaction_id`
         example: "pay_nezg6bx2k22utmk4xm5s2ughxi"
       processing_currency:
         type: string
@@ -31,11 +31,11 @@ properties:
         example: "2019-03-08T10:29:51.922"
       channel_name:
         type: string
-        description: The name of the channel where the payment was initiated
+        description: The name of the channel from which the payment was initiated
         example: "www.example.com"
       reference:
         type: string
-        description: An optional identifier used for tracking payments. Previously this was called `track_id`
+        description: An optional identifier used for tracking payments. This was previously called `track_id`
         example: "ORD-5023-4E89"
       payment_method:
         type: string
@@ -71,7 +71,7 @@ properties:
             example: "Authorization"
           id:
             type: string
-            description: The unique identifier associated with an action (referred to as a charge ID in the Hub).
+            description: The unique identifier associated with an action (referred to as a charge ID in the Hub)
             example: "act_nezg6bx2k22utmk4xm5s2ughxi"
           processed_on:
             type: string
@@ -92,7 +92,7 @@ properties:
             properties:
               type:
                 type: string
-                description: Describes an amount/fee associated with an action. For example, a gateway fee, capture fee and capture amount would all be associated with the capture action
+                description: Describes an amount or fee associated with an action. For example, a gateway fee, capture fee and capture amount would all be associated with the capture action
                 example: "Gateway Fee Tax ARE USD/GBP@0.7640412612"
               date:
                 type: string
@@ -117,7 +117,7 @@ properties:
               properties:
                 href:
                   type: string
-                  description: The link to the payment
+                  description: The direct link to the payment
                   example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
   _links:
     type: object
