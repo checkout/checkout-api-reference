@@ -1,9 +1,8 @@
-post:
+get:
   tags:
-    - Reporting
+    - Reconciliation
   summary: Retrieve CSV statement report
-  description:
-    In addition to the JSON format returned by the `reporting/statements` endpoint, you can also download a CSV report containing the same data.
+  description: In addition to the JSON format returned by the `reporting/statements` endpoint, you can also download a CSV report containing the same data.
 
   parameters:
      - in: path
