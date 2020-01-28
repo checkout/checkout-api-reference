@@ -1,8 +1,8 @@
 post:
   tags:
-    - Reporting
+    - Reconciliation
   summary: Retrieve JSON payments report
-  description: |
+  description:
     Retrieves a report containing all payments within your specified parameters.
     You can reconcile the data from this report against your statements (which can be found in the Hub), the list of payments in the Hub (using the `Reference` field) or your own systems.
     *Note:* payments from before February 7th, 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view payments from before this time, please contact our support team.
@@ -14,20 +14,20 @@ post:
         type: string
         format: date-time
       required: false
-      description: Date and time from which to search
+      description: Date and time from which to search for payments
     - in: query
       name: to
       schema:
         type: string
         format: date-time
       required: false
-      description: Date and time until which to search
+      description: Date and time until which to search for payment
     - in: query
       name: reference
       schema:
         type: string
       required: false
-      description: Reference of the payment to search for
+      description: Reference of a specific payment to search for
     - in: query
       name: limit
       schema:
