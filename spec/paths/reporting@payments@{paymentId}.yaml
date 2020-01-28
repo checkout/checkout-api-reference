@@ -1,10 +1,9 @@
 post:
   tags:
-    - Reporting
+    - Reconciliation
   summary: Retrieve JSON single payment report
-  description: |
+  description:
     Retrieves a payment report containing all of the data related to a specific payment, based on the payment's identifier.
-    
     *Note:* No payments from before February 7th, 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view payments from before this time, please contact our support team.
 
   parameters:
