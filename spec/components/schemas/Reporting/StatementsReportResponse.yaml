@@ -86,23 +86,23 @@ properties:
             example: "-5"
           _links:
             type: object
-            description:
+            description: The link object
             properties:
               payments:
                 type: object
                 description:
-                properties:
+                properties: The payments object
                   href:
                     type: string
                     description:
                     example: "http://api.checkout.com/reporting/statements/190110B107654/payments?payout_id=ABCDEFGH"
       _links:
         type: object
-          description:
+          description: The link object
           properties:
             payments:
               type: object
-              description:
+              description: The payments object
               properties:
                 href:
                   type: string
@@ -110,11 +110,11 @@ properties:
                   example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
   _links:
     type: object
-    description:
+    description: The link object
     properties:
       next:
         type: object
-        description: 
+        description: The next link object
         properties:
           href:
             type: string
@@ -122,7 +122,7 @@ properties:
             example: "http://api.checkout.com/reporting/statements?from=01%2F01%2F2019%2000%3A00%3A00&to=01%2F11%2F2019%2000%3A00%3A00&limit=1&skip=1"
       self:
         type: object
-        description:
+        description: The self link object
         properties:
           href:
             type: string
