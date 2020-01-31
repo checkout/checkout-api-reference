@@ -169,20 +169,22 @@ namespace OpenApiGenerator
         static string GetCodeSampleText(string path, string verb)
         {
             var text = "";
-            var codeSample = GetCodeSample(path, verb);
+            var codeSamples = GetCodeSamples(path, verb);
 
-            if (codeSample == null)
+            if (codeSamples.Count == 0)
                 return text;
 
             text += $"      x-code-samples:\n";
-            text += $"        - lang: {codeSample.Language}\n";
-            text += $"          source: {codeSample.SampleString}\n";
+            codeSamples.ForEach(codeSample => {
+                text += $"        - lang: {codeSample.Language}\n";
+                text += $"          source: {codeSample.SampleString}\n";
+            });
             return text;
         }
 
-        static CodeSample GetCodeSample(string path, string verb)
+        static List<CodeSample> GetCodeSamples(string path, string verb)
         {
-            return _codeSamples.FirstOrDefault(x => string.Equals(x.Path, path, StringComparison.InvariantCultureIgnoreCase) && string.Equals(x.HttpVerb, verb, StringComparison.InvariantCultureIgnoreCase));
+            return _codeSamples.FindAll(x => string.Equals(x.Path, path, StringComparison.InvariantCultureIgnoreCase) && string.Equals(x.HttpVerb, verb, StringComparison.InvariantCultureIgnoreCase));
         }
 
         static void LoadCodeSamples()

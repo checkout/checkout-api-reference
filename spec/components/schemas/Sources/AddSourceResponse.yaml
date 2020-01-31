@@ -3,6 +3,7 @@ discriminator:
   propertyName: type
   mapping:
     sepa: '#/components/schemas/01_SepaSourceResponse'
+    ach: '#/components/schemas/AddSourceResponse'
 required:
   - type
   - response_code

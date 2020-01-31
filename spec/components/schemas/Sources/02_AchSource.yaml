@@ -1,0 +1,58 @@
+type: object
+description: An ACH payment source
+required:
+  - billing_address
+  - source_data
+allOf:
+  - $ref: '#/components/schemas/SourceRequest'
+  - type: object
+    properties:
+      source_data:
+        type: object
+        description: Additional data required to create ACH payment sources
+        required:
+          - account_type
+          - account_number
+          - routing_number
+          - account_holder_name
+          - billing_descriptor
+        properties:
+          account_type:
+            type: string
+            description: The type of Direct Debit account
+            enum:
+              - "Checking"
+              - "Savings"
+              - "Corporate"
+              - "CorpSavings"
+            example: "Checking"
+          account_number:
+            type: integer
+            description: The account number of the Direct Debit account
+            minLength: 4
+            maxLength: 17
+            example: 4099999992
+          routing_number:
+            type: integer
+            description: The routing number of the Direct Debit account
+            minLength: 8
+            maxLength: 9
+            example: 211370545
+          account_holder_name:
+            type: string
+            description: The account holder's full name
+            minLength: 1
+            maxLength: 100
+            example: "John Doe"
+          billing_descriptor:
+            type: string
+            description: The billing descriptor
+            minLength: 1
+            maxLength: 15
+            example: "ExampleCompany.com"
+          company_name:
+            type: string
+            description: The name of the company (required for corporate accounts)
+            minLength: 1
+            maxLength: 40
+            example: "Checkout.com"
