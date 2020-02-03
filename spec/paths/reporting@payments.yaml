@@ -25,7 +25,7 @@ get:
         type: string
         format: date-time
       required: false
-      description: Date and time until which to search for payment
+      description: Date and time until which to search for payments
     - in: query
       name: reference
       schema:
