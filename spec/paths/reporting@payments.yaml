@@ -8,7 +8,7 @@ get:
   summary: Get JSON payments report
   description:
     Returns a JSON report containing all payments within your specified parameters.
-    You can reconcile the data from this report against your statements (which can be found in the Hub), the list of payments in the Hub (using the `Reference` field) or your own systems.
+    You can reconcile the data from this report against your statements (which can be found in the <a href="https://hub.checkout.com/login" target="_blank">Hub</a>), the list of payments in the Hub (using the `Reference` field) or your own systems.
     *Note:* payments from before February 7th, 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view payments from before this time, please contact our support team.
 
   parameters:
