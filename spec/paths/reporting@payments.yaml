@@ -37,7 +37,7 @@ get:
       schema:
         type: integer
       required: false
-      description: Number of results to limit your search to
+      description: Sets a limit on the number of results
       maximum: 500
       default: 200
 
