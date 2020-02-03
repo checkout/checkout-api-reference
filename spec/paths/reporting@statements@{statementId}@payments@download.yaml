@@ -5,8 +5,8 @@ servers:
 get:
   tags:
     - Reconciliation
-  summary: Get CSV statement report
-  description: In addition to the JSON format returned by the `reporting/statements` endpoint, you can also download a CSV report containing the same data.
+  summary: Get CSV single statement report
+  description: Downloads a CSV statement report containing all of the data related to a specific statement, based on the statement's identifier.
 
   parameters:
     - in: path
