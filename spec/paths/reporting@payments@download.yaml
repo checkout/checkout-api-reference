@@ -16,11 +16,11 @@ get:
         type: string
         format: date-time
       required: false
-      description: Date from which to search for payments
+      description: Date and time from which to search for payments
     - in: query
       name: to
       schema:
         type: string
         format: date-time
       required: false
-      description: Date until which to search for payments
+      description: Date and time until which to search for payments
