@@ -94,7 +94,7 @@ properties:
                 properties: 
                   href:
                     type: string
-                    description:
+                    description: The direct link to the payout
                     example: "http://api.checkout.com/reporting/statements/190110B107654/payments?payout_id=ABCDEFGH"
       _links:
         type: object
