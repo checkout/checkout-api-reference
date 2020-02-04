@@ -117,9 +117,12 @@ properties:
         type: string
         description: Overrides the default merchant/acceptor identifier (MID) configured on your account
         example: "1234567"
+      senderInformation:
+        type: object
+        description: Allows you to send <a href="https://docs.checkout.com/docs/sender-data-for-payouts" target="_blank">additional data</a> required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.
   metadata:
     type: object
-    description: A set of key-value pairs that you can attach to a payment. This can be useful for storing additional information in a structured format
+    description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.
     example:
       coupon_code: "NY2018"
       partner_id: 123989
