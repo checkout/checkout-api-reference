@@ -3,7 +3,7 @@ properties:
   amount:
     type: integer
     description: |
-      The amount to capture in the major currency. If not specified, the full payment amount will be captured
+      The amount to capture. If not specified, the full payment amount will be captured
     minimum: 0
     example: 6540
   reference:

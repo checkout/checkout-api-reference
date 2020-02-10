@@ -1,0 +1,18 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+
+get:
+  tags:
+    - Reconciliation
+  summary: Get CSV single statement report
+  description: Downloads a CSV statement report containing all of the data related to a specific statement, based on the statement's identifier.
+
+  parameters:
+    - in: path
+      name: StatementId
+      example: "190110B107654"
+      schema:
+        type: string
+      required: true
+      description: The unique statement identifier

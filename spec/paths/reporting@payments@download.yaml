@@ -1,0 +1,26 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+
+get:
+  tags:
+    - Reconciliation
+  summary: Get CSV payments report
+  description: 
+    In addition to the JSON format returned by the `reporting/payments` endpoint, you can also download a CSV report containing the same data.
+    Learn more about <a href="https://docs.checkout.com/docs/payments-endpoint#section-how-to-read-the-csv-file" target="_blank">how to read your CSV report</a>.
+  parameters:
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: date-time
+      required: false
+      description: Date and time from which to search for payments
+    - in: query
+      name: to
+      schema:
+        type: string
+        format: date-time
+      required: false
+      description: Date and time until which to search for payments
