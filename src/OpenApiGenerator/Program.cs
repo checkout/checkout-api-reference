@@ -169,22 +169,23 @@ namespace OpenApiGenerator
         static string GetCodeSampleText(string path, string verb)
         {
             var text = "";
-            var codeSamples = GetCodeSamples(path, verb);
+            var codeSamples = GetCodeSample(path, verb);
 
-            if (codeSamples.Count == 0)
-                return text;
+            if(!codeSamples.Any()) return text;
 
             text += $"      x-code-samples:\n";
-            codeSamples.ForEach(codeSample => {
-                text += $"        - lang: {codeSample.Language}\n";
-                text += $"          source: {codeSample.SampleString}\n";
-            });
+            foreach (var sample in codeSamples)
+            {
+                text += $"        - lang: {sample.Language}\n";
+                text += $"          source: {sample.SampleString}\n";
+            }
+
             return text;
         }
 
-        static List<CodeSample> GetCodeSamples(string path, string verb)
+        static IEnumerable<CodeSample> GetCodeSample(string path, string verb)
         {
-            return _codeSamples.FindAll(x => string.Equals(x.Path, path, StringComparison.InvariantCultureIgnoreCase) && string.Equals(x.HttpVerb, verb, StringComparison.InvariantCultureIgnoreCase));
+            return _codeSamples.Where(x => string.Equals(x.Path, path, StringComparison.InvariantCultureIgnoreCase) && string.Equals(x.HttpVerb, verb, StringComparison.InvariantCultureIgnoreCase));
         }
 
         static void LoadCodeSamples()
@@ -207,7 +208,7 @@ namespace OpenApiGenerator
                 });
             }
         }
-        
+
         private static IEnumerable<string> GetSpecFiles(string relativePath, string searchPattern)
         {
             return Directory.GetFiles($"{_specDirectory}/{relativePath}", searchPattern, SearchOption.AllDirectories)
