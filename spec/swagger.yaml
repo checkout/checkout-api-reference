@@ -2,7 +2,7 @@ openapi: '3.0.1'
 info:
   version: '1.0.0'
   title: Checkout.com API Reference
-   x-logo:
+  x-logo:
     url: "https://assets.checkout.com/docs/logos/cko-api-ref.svg"
     backgroundColor: "#F0F3F7"
     altText: "Checkout.com API logo"
