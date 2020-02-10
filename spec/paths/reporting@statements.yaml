@@ -1,0 +1,46 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+
+get:
+  tags:
+    - Reconciliation
+  summary: Get JSON statements report
+  description: Returns a JSON report containing all statements within your specified parameters. Please note that the timezone for the request will be UTC.
+
+  parameters:
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: date-time
+      required: false
+      description: Date and time from which to search for statements
+    - in: query
+      name: to
+      schema:
+        type: string
+        format: date-time
+      required: false
+      description: Date and time until which to search for statements
+
+  responses:
+    '201':
+      description: Statements report successfully retrieved
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/StatementsReportResponse"
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ValidationError"
+    '502':
+      description: Bad gateway

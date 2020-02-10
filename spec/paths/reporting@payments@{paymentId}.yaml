@@ -1,0 +1,41 @@
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+
+get:
+  tags:
+    - Reconciliation
+  summary: Get JSON single payment report
+  description:
+    Returns a JSON payment report containing all of the data related to a specific payment, based on the payment's identifier.
+    *Note:* no payments from before 7 February 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view earlier payments, please contact our support team.
+
+  parameters:
+    - in: path
+      name: paymentId
+      pattern: "^(pay)_(\\w{26})$"
+      schema:
+        type: string
+      required: true
+      description: The unique payment identifier
+
+  responses:
+    '201':
+      description: Payment report returned successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PaymentsReportResponse'
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
+    '502':
+      description: Bad gateway
