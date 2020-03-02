@@ -361,10 +361,9 @@ label.hover, span.sc-gwVKww.SmuWE.hover {
   background-color: var(--S00)!important;
 }
 
-
-@media screen and (max-width: 1424px) {
-  .cjtbAK, .dtUibw {
-    width: 100%;
+@media screen and (max-width: 1425px) and (min-width: 1361px) {
+  .dtUibw {
+    width: 45%!important;
     padding: 40px;
   }
 }
