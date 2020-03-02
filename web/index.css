@@ -361,6 +361,14 @@ label.hover, span.sc-gwVKww.SmuWE.hover {
   background-color: var(--S00)!important;
 }
 
+
+@media screen and (max-width: 1424px) {
+  .cjtbAK, .dtUibw {
+    width: 100%;
+    padding: 40px;
+  }
+}
+
 /* Hide application/json */
 
 .futasu-0.wbaPa {
