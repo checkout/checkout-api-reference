@@ -14,66 +14,11 @@
   --G20: #E4F4F0;
 }
 
-@font-face {
-  font-family: "Graphik";
-  src: url("fonts/Graphik-Regular-Web.eot");
-  src: url("fonts/Graphik-Regular-Web.eot?#iefix") format("embedded-opentype"),
-  url("fonts/Graphik-Regular-Web.woff2") format("woff2"),
-  url("fonts/Graphik-Regular-Web.woff") format("woff"),
-  url("fonts/Graphik-Regular-Web.ttf") format("truetype");
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: normal;
-  font-family: "Graphik";
-  src: url("fonts/Graphik-RegularItalic-Web.eot");
-  src: url("fonts/Graphik-RegularItalic-Web.eot?#iefix") format("embedded-opentype"),
-  url("fonts/Graphik-RegularItalic-Web.woff2") format("woff2"),
-  url("fonts/Graphik-RegularItalic-Web.woff") format("woff"),
-  url("fonts/Graphik-RegularItalic-Web.ttf") format("truetype");
-}
-
-@font-face {
-  font-weight: 500;
-  font-style: normal;
-  font-family: "Graphik";
-  src: url("fonts/Graphik-Medium-Web.eot");
-  src: url("fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
-  url("fonts/Graphik-Medium-Web.woff2") format("woff2"),
-  url("fonts/Graphik-Medium-Web.woff") format("woff"),
-  url("fonts/Graphik-Medium-Web.ttf") format("truetype");
-}
-
-@font-face {
-  font-weight: 700;
-  font-style: normal;
-  font-family: "Graphik";
-  src: url("fonts/Graphik-Bold-Web.eot");
-  src: url("fonts/Graphik-Bold-Web.eot?#iefix") format("embedded-opentype"),
-  url("fonts/Graphik-Bold-Web.woff2") format("woff2"),
-  url("fonts/Graphik-Bold-Web.woff") format("woff"),
-  url("fonts/Graphik-Bold-Web.ttf") format("truetype");
-}
-
-@font-face {
-  font-weight: 900;
-  font-style: normal;
-  font-family: "Graphik";
-  src: url("fonts/Graphik-Black-Web.eot");
-  src: url("fonts/Graphik-Black-Web.eot?#iefix") format("embedded-opentype"),
-  url("fonts/Graphik-Black-Web.woff2") format("woff2"),
-  url("fonts/Graphik-Black-Web.woff") format("woff"),
-  url("fonts/Graphik-Black-Web.ttf") format("truetype"),
-  url("fonts/Graphik-Black-Web.svg#Graphik-Black-Web") format("svg");
-}
-
-
 body {
   color: var(--S1000);
   background: var(--S00);
   margin: 0;
-  font-family: "Graphik", Arial, sans-serif!important;
+  font-family: Arial, sans-serif!important;
 }
 
 .redoc-wrap p, h1, h1 a, h3, span.sc-jKJlTe.eZZMfQ {
@@ -110,7 +55,7 @@ p {
 }
 
 p, h1, h2, h3, .redoc-wrap {
-  font-family: "Graphik", Arial, sans-serif!important;
+  font-family: Arial, sans-serif!important;
 }
 
 h1, h2, h3 {
@@ -155,7 +100,7 @@ h1.sc-htoDjs.sc-fYxtnH.dTJWQH {
 .sc-ksYbfQ.sc-hmzhuo.jsTAxL {
   text-transform: uppercase;
   color: var(--R500);
-  font-family: "Graphik", Arial, sans-serif!important;
+  font-family: Arial, sans-serif!important;
 }
 
 /* Border between params */
@@ -240,11 +185,11 @@ td.dz44d2-1 {
 }
 
 td.dz44d2-4 {
-  font-family: "Graphik", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 span.sc-jKJlTe.iJiUyY {
-  font-family: "Graphik", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: var(--S1000);
   margin-right: 5px;
 }
@@ -271,7 +216,7 @@ li.sc-eNQAEJ.jdXjUh {
 
 .jXDsIv {
   color: #fd755f!important;
-  font-family: "Graphik", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 9px!important;
   margin-left: 20px!important;
   line-height: 20px!important;
@@ -354,7 +299,7 @@ span.sc-jlyJG.evvbxn {
 /* Links */
 
 span.sc-gwVKww {
-  font-family: "Graphik", Arial, sans-serif!important;
+  font-family: Arial, sans-serif!important;
 }
 
 /* Search box */
