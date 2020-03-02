@@ -3,7 +3,8 @@ get:
     - Disputes
   summary: Get disputes
   description:
-    Returns a list of all disputes against your business. This list is provided in chronological order, showing the latest updates first.
+    Returns a list of all disputes against your business. The results will be returned in reverse chronological order, 
+    showing the last modified dispute (for example, where you've recently added a piece of evidence) first.
     You can use the optional parameters below to skip or limit results.
   parameters:
     - in: query

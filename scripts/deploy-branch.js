@@ -17,6 +17,6 @@ if (branch && branch !== 'gh-pages') {
   cp('-R', 'output/*', branchPath);
   rm('-rf', 'output')
 
-  cp('web/*', branchPath);
+  cp('-R', 'web/*', branchPath);
   exec('deploy-to-gh-pages --update .tmp');
 }
