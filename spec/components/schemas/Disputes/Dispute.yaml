@@ -29,10 +29,10 @@ properties:
     example: "evidence_required"
   relevant_evidence:
     type: array
-  items:
-    type: string
-    enum: [proof_of_delivery_or_service, invoice_or_receipt, invoice_showing_distinct_transactions, customer_communication, refund_or_cancellation_policy, proof_of_delivery_or_service_date, recurring_transaction_agreement, additional_evidence]
-    example: "proof_of_delivery_or_service"
+    items: 
+      type: strings
+      enum: [proof_of_delivery_or_service, invoice_or_receipt, invoice_showing_distinct_transactions, customer_communication, refund_or_cancellation_policy, proof_of_delivery_or_service_date, recurring_transaction_agreement, additional_evidence]
+      example: "proof_of_delivery_or_service"
   evidence_required_by:
     type: string
     format: ISO-8601
