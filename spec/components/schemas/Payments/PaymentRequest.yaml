@@ -119,7 +119,31 @@ properties:
         example: "1234567"
       aft:
         type: boolean
-        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions) 
+        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions)
+      dlocal:
+        type: object
+        description: Processing information required for <a href="https://docs.checkout.com/docs/request-a-payment-using-dlocal" target="_blank">dLocal payments</a>.
+        properties:
+          country:
+            type: string
+            description: The two-letter ISO code of the cardholder's country.
+            example: "MX"
+          payer:
+            type: object
+            description: Details about the cardholder.
+            properties:
+              document:
+                type: string
+                description: The cardholder's personal identification number. The identification required is country-specific. See the <a href="https://docs.dlocal.com/api-documentation/payins-api-reference/country-reference#documents" target="_blank">dLocal documentation</a> for more information.
+                example: "DocumentId"
+              name:
+                type: string
+                description: The cardholder's full name.
+                example: "John Doe"
+              email:
+                type: string
+                description: The cardholder's email address.
+                example: "john.doe@example.com"
   metadata:
     type: object
     description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.
