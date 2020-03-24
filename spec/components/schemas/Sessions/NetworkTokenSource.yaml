@@ -9,7 +9,6 @@ allOf:
       - expiry_month
       - expiry_year
       - token_type
-      - cryptogram
     properties:
       token:
         type: string
@@ -34,12 +33,6 @@ allOf:
         enum:
           - vts
           - mdes
-          - applepay
-          - googlepay
-      cryptogram:
-        type: string
-        description: The Base64 encoded cryptographic identifier (TAVV) used by card schemes to validate the token verification result. Optional if `previous_payment_id` is specified and `3ds.enabled` is false
-        example: hv8mUFzPzRZoCAAAAAEQBDMAAAA=
       name:
         type: string
         description: The customer's name
