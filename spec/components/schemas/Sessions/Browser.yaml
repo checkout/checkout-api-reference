@@ -27,6 +27,8 @@ allOf:
           - Y
           - N
           - U
+        minLength: 1
+        maxLength: 1
         default: U  
         example: U
       accept_header:
@@ -43,7 +45,7 @@ allOf:
       language:
         type: string
         minLength: 1
-        maxLength: 8
+        maxLength: 12
         description: >
           Value representing the browser language as defined in IETF BCP47. Returned from navigator.language property.
         example: "FR-fr"

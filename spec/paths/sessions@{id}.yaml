@@ -19,6 +19,7 @@ get:
         enum: 
           - browser
           - app
+        description: If a value is not provided, and if the `status` is `pending`, then `next_actions` will return `collect_channel_data` and if available, `issuer_fingerprint`.
         example: browser
   responses:
     '200':

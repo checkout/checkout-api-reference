@@ -9,5 +9,18 @@ discriminator:
 properties:
   channel:
     type: string
-    description: "Indicates the type of channel interface being used to initiate the transaction"
+    description: Indicates the type of channel interface being used to initiate the transaction. |
+      If the channel is "app" then a `501 Not Implemented` is returned.
     default: "browser"
+example: 
+  channel: browser
+  accept_header: "Accept:  *.*, q=0.1"
+  java_enabled: true
+  language: "FR-fr"
+  color_depth: "16"
+  screen_height: "1080"
+  screen_width: "1920"
+  timezone: "60"
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+  three_ds_method_completion: "Y"
+  ip_address: "1.12.123.255"

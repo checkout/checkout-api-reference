@@ -36,6 +36,7 @@ allOf:
           <br/><br/>
           In ARes, this data element is contained within the ACS Signed Content JWS Object.
         type: object
+        maxLength: 256
       sdk_reference_number:
         description: >
           Identifies the vendor and version for the 3DS SDK that is integrated in a 3DS Requestor App, assigned by EMVCo when the 3DS SDK is approved.

@@ -15,6 +15,8 @@ allOf:
         type: string
         description: The network token PAN
         example: "4543474002249996"
+        minLength: 9
+        maxLength: 16
       expiry_month:
         type: integer
         description: The expiry month of the token
@@ -31,11 +33,13 @@ allOf:
       name:
         type: string
         description: The customer's name
+        minLength: 2
+        maxLength: 45
         example: "Bruce Wayne"
       billing_address:
         description: The customer's billing address
         allOf:
-          - $ref: '#/components/schemas/Address'
+          - $ref: '#/components/schemas/SessionAddress'
       home_phone:
         $ref: '#/components/schemas/SessionPhone'
       mobile_phone:

@@ -13,6 +13,8 @@ allOf:
         type: string
         description: The card number (without separators)
         example: "4543474002249996"
+        minLength: 13
+        maxLength: 19
       expiry_month:
         type: integer
         description: The expiry month of the card
@@ -29,15 +31,18 @@ allOf:
       name:
         type: string
         description: The name of the cardholder
+        minLength: 2
+        maxLength: 45
         example: "Bruce Wayne"
       email:
         type: string
         description: The email of the cardholder
+        maxLength: 254
         example: "bruce.wayne@email.com"
       billing_address:
         description: The billing address of the cardholder
         allOf:
-          - $ref: '#/components/schemas/Address'
+          - $ref: '#/components/schemas/SessionAddress'
       home_phone:
         $ref: '#/components/schemas/SessionPhone'
       mobile_phone:

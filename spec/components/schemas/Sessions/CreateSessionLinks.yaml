@@ -9,4 +9,13 @@ properties:
     properties:
       href:
         type: string
+        maxLength: 100
         example: http://3ds2.checkout.com/interceptor/sid_y3oqhf46pyzuxjbcn2giaqnb44
+  collect_channel_data:
+    type: object
+    description: The URI to send device information to
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441/collect-data

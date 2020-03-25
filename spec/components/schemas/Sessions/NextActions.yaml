@@ -6,3 +6,4 @@ items:
     - issuer_fingerprint
     - challenge_cardholder
     - redirect_cardholder
+    - complete

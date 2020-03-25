@@ -2,12 +2,26 @@ type: object
 description: The links related to the session
 properties:
   self:
-    type: string
-    format: uri
+    type: object
     description: The URI of the session
-    example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441
   issuer_fingerprint:
-    type: string
-    format: uri
+    type: object
     description: The URI of the Issuer FingerPrint (3DS Method)
-    example: https://api.hbsc.com/3dsmethod?tx=123456
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.hbsc.com/3dsmethod?tx=123456
+  collect_channel_data:
+    type: object
+    description: The URI to send device information to
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441/collect-data

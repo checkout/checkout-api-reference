@@ -3,10 +3,9 @@ description: Public key specific to a DS for encrypting device data
 properties:
   public_key: 
     type: string
+    maxLength: 1024
     example: abc
-  directory_server_id:
-    type: string
-    example: F00000001
   scheme:
     type: string
+    maxLength: 10
     example: amex

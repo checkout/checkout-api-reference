@@ -6,5 +6,6 @@ enum:
   - quashi_card_transaction
   - prepaid_activation_and_load
 description: Identifies the type of transaction being authenticated.
+maxLength: 50
 example: goods_service
 default: goods_service

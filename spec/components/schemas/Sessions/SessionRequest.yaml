@@ -10,8 +10,9 @@ properties:
     type: integer
     description: |
       The payment amount in the major currency.
-      Omitting the amount or providing 0 will perform a card verification.
+      Omitting this value will set `authentication_category` to `non_payment`.
     minimum: 0
+    maxLength: 48
     example: 6540
   currency:
     type: string
@@ -30,8 +31,8 @@ properties:
     $ref: '#/components/schemas/Reference'
   transaction_type:
       $ref: '#/components/schemas/TransactionType'
-  shiiping_address:
-      $ref: '#/components/schemas/Address'
+  shipping_address:
+      $ref: '#/components/schemas/SessionAddress'
   completion:
     $ref: '#/components/schemas/CompletionInfo'
   channel_data:

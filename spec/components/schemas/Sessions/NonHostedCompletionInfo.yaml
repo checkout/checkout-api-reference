@@ -8,4 +8,5 @@
         type: string
         format: uri
         description: For `non-hosted` sessions, you can define a url to be called once the session is complete
+        maxLength: 256
         example: "http://example.com/payments/callback/pay_mbabizu24mvu3mela5njyhpit4"

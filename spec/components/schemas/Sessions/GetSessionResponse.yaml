@@ -15,6 +15,10 @@ properties:
     type: bool
     description: Indicates whether this session has been completed
     example: false
+  challenged:
+    type: bool
+    description: Indicates whether this session involved a challenge
+    example: true
   authentication_type:
     $ref: '#/components/schemas/AuthenticationType'
   authentication_category:
@@ -23,13 +27,6 @@ properties:
     $ref: '#/components/schemas/Status'
   approved:
     $ref: '#/components/schemas/Approved'
-  auto_complete:
-    type: boolean
-    description: >
-      Whether the payment session should be completed and authorised/captured by Checkout.com automatically.</br>
-      Only valid when the session is created through the Payments API.
-      When using this feature you should consume <a href="https://docs.checkout.com/docs/webhooks" target="blank">webhooks</a>.
-    example: true
   protocol_version:
     $ref: '#/components/schemas/ProtocolVersion'
   reference:

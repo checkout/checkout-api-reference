@@ -14,6 +14,10 @@ properties:
       - non_hosted
     description: >
       Whether the session should be hosted by Checkout.com</br>
-      When this value is `hosted` the response will include a `redirect` link.
-    default: hosted
-    example: hosted
+      When this value is `hosted` the response will be a `501 Not Implemented`.
+    maxLength: 10
+    example: non_hosted
+example: 
+  type: non_hosted
+  callback_url: https://merchant.com/callback
+  
