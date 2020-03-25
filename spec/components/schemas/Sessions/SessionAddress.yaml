@@ -33,7 +33,7 @@ properties:
     example: W1T 4TJ
   country:
     type: string
-    description: ISO 3166-1 three-digit country code
-    example: GBR
-    maxLength: 3
-    minLength: 3
+    description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
+    example: GB
+    maxLength: 2
+    minLength: 2
