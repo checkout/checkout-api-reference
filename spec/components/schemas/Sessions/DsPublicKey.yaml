@@ -9,3 +9,10 @@ properties:
     type: string
     maxLength: 10
     example: amex
+  directory_server_id:
+    type: string
+    description: Registered Application Provider Identifier (RID) that is unique to the Payment System. RIDs are defined by the ISO 7816-5 standard. |
+      The 3DS SDK encrypts the device information by using the DS public key. This key is identified based on the this value.
+    minLength: 10
+    maxLength: 10
+    example: F000000000
