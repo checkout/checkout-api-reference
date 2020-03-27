@@ -1,13 +1,13 @@
 type: object
 description: A phone number
 properties:
-    cc:
+    country_code:
       description: Country code
       type: string
       minLength: 1
       maxLength: 3
       example: 234
-    subscriber:
+    number:
       type: string
       description: The rest of the number
       maxLength: 15

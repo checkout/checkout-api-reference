@@ -16,7 +16,7 @@ allOf:
         type: string
         enum:
           - browser
-      3ds_method_completion:
+      three_ds_method_completion:
         type: string
         description: >
           Indicates whether the 3DS Method successfully completed <br/><br/>
