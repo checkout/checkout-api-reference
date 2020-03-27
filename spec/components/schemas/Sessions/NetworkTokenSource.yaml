@@ -16,7 +16,7 @@ allOf:
         description: The network token PAN
         example: "4543474002249996"
         minLength: 9
-        maxLength: 16
+        maxLength: 19
       expiry_month:
         type: integer
         description: The expiry month of the token
