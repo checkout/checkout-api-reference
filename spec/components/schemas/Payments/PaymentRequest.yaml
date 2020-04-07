@@ -150,7 +150,7 @@ properties:
             properties:
               count:
                 type: string
-                description: The number of payments to be made per year.
+                description: The number of payments to be made in the installment plan.
                 example: "3"
   metadata:
     type: object
