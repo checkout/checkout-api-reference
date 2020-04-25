@@ -1,0 +1,103 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'PagoFacil Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentResponseSource'
+  -
+    type: object
+    allOf:
+      -
+        type: object
+        properties:
+          dlocal_order_id:
+            type: string
+            description: 'An ID used for tracking payments in dLocal.  The dLocal ''Order ID'' will contain this value.'
+            example: b777afcdfdb74e6ab005fff223fe4d0f
+          dlocal_payment_id:
+            type: string
+            description: 'An ID returned from dLocal for a created payment.  The dLocal ''Payment ID'' will contain this value. This value will not be available in the case of rejected payments.'
+            example: D-30150-73979261-1667-4a6d-aaca-92a805cf837d
+          failure_reason:
+            type: string
+            description: 'Reason of payment failure'
+            example: 'Third party response: Rejected (Error code: 300)'
+          failure_code:
+            enum:
+              - third_party_invalid_credentials
+              - third_party_access_denied
+              - third_party_invalid_request
+              - third_party_invalid_parameter
+              - third_party_invalid_transaction_status
+              - third_party_rejected
+              - third_party_amount_exceeded
+              - third_party_timeout
+              - third_party_error
+            type: string
+            description: 'Failure code'
+            example: third_party_rejected
+      -
+        type: object
+        properties:
+          integration_type:
+            enum:
+              - direct
+              - redirect
+            type: string
+            description: "The type of the integration:\n  - `direct`: a ticket object is returned, which a merchant can use to render a ticket to a customer; no redirect url is returned\n  - `redirect`: a redirect url is returned, which the merchant redirects the customer to, to continue payment"
+          description:
+            maxLength: 200
+            type: string
+            description: 'Payment description'
+      -
+        type: object
+        properties:
+          ticket:
+            required:
+              - type
+            type: object
+            properties:
+              type:
+                enum:
+                  - numeric
+                  - barcode
+                  - custom
+                  - reference_code
+                type: string
+                description: 'Type of ticket'
+              number:
+                type: string
+                description: 'Numeric code of the numeric or custom ticket'
+              barcode:
+                type: string
+                description: 'Code to be included in the barcode of the barcode or custom ticket'
+              format:
+                type: string
+                description: 'Format of the barcode of the BARCODE or CUSTOM ticket. For example, CODE_128, or ITF.'
+              id:
+                type: string
+                description: 'Reference code of the ticket'
+              expiration_date:
+                type: string
+                description: 'The expiration date of the ticket'
+                format: date-time
+              company_name:
+                type: string
+                description: 'Name of the company that acts as the beneficiary of the payment'
+              company_id:
+                type: string
+                description: 'Identifier of the company'
+              provider_name:
+                type: string
+                description: 'Name of the company/bank that is creating the ticket'
+              provider_logo_url:
+                type: string
+                description: 'URL of the logo of the company/bank that is creating the ticket'
+                format: url
+              ticket_url:
+                type: string
+                description: 'URL of the full version of the ticket'
+                format: url
+            description: 'Ticket object. Returned only when the payment was submitted with integration_type as ''direct''.'

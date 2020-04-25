@@ -144,6 +144,14 @@ properties:
                 type: string
                 description: The cardholder's email address.
                 example: "john.doe@example.com"
+          installments:
+            type: object
+            description: Details about the installments.
+            properties:
+              count:
+                type: string
+                description: The number of payments to be made in the installment plan.
+                example: "3"
   metadata:
     type: object
     description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.

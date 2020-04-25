@@ -1,0 +1,51 @@
+###
+# Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
+###
+type: object
+description: 'RapiPago Source'
+allOf:
+  -
+    $ref: '#/components/schemas/PaymentRequestSource'
+  -
+    type: object
+    required:
+      - integration_type
+      - country
+      - payer
+    properties:
+      integration_type:
+        enum:
+          - redirect
+        type: string
+        description: 'The type of the integration. A redirect url is returned, which the merchant redirects the customer to, to continue payment.'
+      country:
+        maxLength: 2
+        enum:
+          - AR
+        type: string
+        description: 'Payer''s country code. ISO 3166-1 alpha-2 code.'
+      description:
+        maxLength: 200
+        type: string
+        description: 'Payment description'
+      payer:
+        required:
+          - name
+          - email
+          - document
+        type: object
+        properties:
+          name:
+            maxLength: 100
+            type: string
+            description: 'Payer''s full name.'
+          email:
+            maxLength: 100
+            type: string
+            description: 'Payer''s email address.'
+          document:
+            maxLength: 100
+            type: string
+            description: 'Payer''s document identifier in Argentina, namely, Documento Nacional de Identidad (DNI) or Clave Única de Identificación Tributaria (CUIT).'
+            example: '27332162'
+        description: 'Payer object'
