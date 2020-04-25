@@ -11,10 +11,10 @@ try {
       signature: "MIAGCSqGbGUg...",
       header: {
         ephemeralPublicKey: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgA...",
-        transactionId: "3cee89679130a4b..."
-      }
-    }
+        transactionId: "3cee89679130a4b...",
+      },
+    },
   });
-} catch (error) {
+} catch (err) {
   console.log(err.name);
 }

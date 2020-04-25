@@ -36,6 +36,6 @@ try {
         }
     });
 
-} catch (error) {
+} catch (err) {
     console.log(err.name)
 }
