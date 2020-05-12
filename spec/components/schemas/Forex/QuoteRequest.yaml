@@ -11,7 +11,6 @@ properties:
     type: integer
     description: | 
       The amount to be converted from the source currency in the minor currency unit.
-      If omitted the `destination_amount` must be provided.
 
       The amount must be provided in the <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">minor currency unit</a>.
     example: 30000
@@ -23,7 +22,6 @@ properties:
     type: integer
     description: | 
       The amount to be converted to the destination currency in the minor currency unit.
-      If omitted the `source_amount` must be provided.
 
       The amount must be provided in the <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">minor currency unit</a>.
 example:
