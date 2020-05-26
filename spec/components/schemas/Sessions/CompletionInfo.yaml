@@ -1,0 +1,23 @@
+﻿required:
+  - type
+description: The redirect information needed for callbacks or redirects after the payment is completed 
+discriminator:
+  propertyName: type
+  mapping:
+    hosted: '#/components/schemas/HostedCompletionInfo'
+    non_hosted: '#/components/schemas/NonHostedCompletionInfo'
+properties:
+  type:
+    type: string
+    enum: 
+      - hosted
+      - non_hosted
+    description: >
+      Whether the session should be hosted by Checkout.com</br>
+      When this value is `hosted` the response will be a `501 Not Implemented`.
+    maxLength: 10
+    example: non_hosted
+example: 
+  type: non_hosted
+  callback_url: https://merchant.com/callback
+  

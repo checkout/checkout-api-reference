@@ -1,0 +1,43 @@
+put:
+  security:
+    - SessionSecret: []
+  summary: Update a session
+  description: Update a session by providing information about the environment it was created.
+  tags:
+    - Sessions
+  parameters:
+    - name: id
+      in: path
+      description: Session ID
+      required: true
+      schema:
+        type: string
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/ChannelData'
+  responses:
+    '200':
+      description: Session updated. DS has processed the authentication.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GetSessionResponse'
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ForbiddenErrorResponse'
+    '404':
+      description: Session not found
+    '422':
+      description: Unprocessable channel information
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'

@@ -1,0 +1,39 @@
+type: object
+properties:
+  address_line1: 
+    type: string
+    description: The first line of the address
+    maxLength: 50
+    example: Checkout.com
+  address_line2:
+    type: string
+    description: The second line of the address
+    maxLength: 50
+    example: ABC building
+  address_line3:
+    type: string
+    description: The third line of the address
+    maxLength: 50
+    example: 14 Wells Mews
+  city:
+    type: string
+    description: The address city
+    maxLength: 50
+    example: London
+  state:
+    type: string
+    description: The country subdivision code defined in ISO 3166-2
+    minLength: 3
+    maxLength: 3
+    example: ENG
+  zip:
+    type: string
+    description: The address zip/postal code
+    maxLength: 16
+    example: W1T 4TJ
+  country:
+    type: string
+    description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
+    example: GB
+    maxLength: 2
+    minLength: 2

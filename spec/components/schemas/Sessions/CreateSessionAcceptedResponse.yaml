@@ -1,0 +1,29 @@
+properties:
+  session_secret:
+    $ref: '#/components/schemas/SessionSecret'
+  id:
+    $ref: '#/components/schemas/SessionId'
+  transaction_id:
+    description: The transaction identifier that needs to be provided when communicating directly with the ACS server
+    type: string
+    minLength: 36
+    maxLength: 36
+    example: 9aea641d-0549-4222-9ca9-d90b43a4f38c
+  amount:
+    $ref: '#/components/schemas/Amount'
+  currency:
+    $ref: '#/components/schemas/Currency'
+  authentication_type:
+    $ref: '#/components/schemas/AuthenticationType'
+  authentication_category:
+    $ref: '#/components/schemas/Category'
+  status:
+    $ref: '#/components/schemas/Status'
+  next_actions:
+    $ref: '#/components/schemas/NextActions'
+  protocol_version:
+    $ref: '#/components/schemas/ProtocolVersion'
+  reference:
+    $ref: '#/components/schemas/Reference'
+  _links:
+    $ref: '#/components/schemas/CreateSessionLinks'

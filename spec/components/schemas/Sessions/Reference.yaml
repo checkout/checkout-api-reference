@@ -1,0 +1,4 @@
+type: string
+description: A reference you can later use to identify this payment, such as an order number
+maxLength: 100
+example: "ORD-5023-4E89"

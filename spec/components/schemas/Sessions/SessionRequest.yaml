@@ -1,0 +1,46 @@
+type: object
+required:
+  - currency
+  - source
+  - processing_channel_id
+  - completion
+properties:
+  source:
+    $ref: '#/components/schemas/SessionSource'
+  amount:
+    type: integer
+    description: |
+      The payment amount in the major currency.
+      Omitting this value will set `authentication_category` to `non_payment`.
+    minimum: 0
+    maxLength: 48
+    example: 6540
+  currency:
+    type: string
+    description: |
+      The three-letter ISO currency code
+    example: USD
+    maxLength: 3
+    minLength: 3
+  processing_channel_id:
+    type: string
+    description: |
+      The processing channel to be used for the session
+  marketplace:
+    $ref: '#/components/schemas/MarketplaceData'
+  authentication_type:
+    $ref: '#/components/schemas/AuthenticationType'
+  authentication_category:
+    $ref: '#/components/schemas/Category'
+  challenge_indicator:
+    $ref: '#/components/schemas/ChallengeIndicator'
+  reference:
+    $ref: '#/components/schemas/Reference'
+  transaction_type:
+      $ref: '#/components/schemas/TransactionType'
+  shipping_address:
+      $ref: '#/components/schemas/SessionAddress'
+  completion:
+    $ref: '#/components/schemas/CompletionInfo'
+  channel_data:
+    $ref: '#/components/schemas/ChannelData'

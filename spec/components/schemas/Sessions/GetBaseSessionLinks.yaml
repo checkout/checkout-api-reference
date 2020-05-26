@@ -1,0 +1,11 @@
+type: object
+description: The links related to the session
+properties:
+  self:
+    type: object
+    description: The URI of the session
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441

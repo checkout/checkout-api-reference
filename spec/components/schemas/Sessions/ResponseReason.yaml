@@ -1,0 +1,30 @@
+description: >
+  The response from the DS or ACS which provides information on why the `response_code` field has the specified value.  <br/><br/>
+  • 01 = Card authentication failed <br/>
+  • 02 = Unknown Device <br/>
+  • 03 = Unsupported Device <br/>
+  • 04 = Exceeds authentication frequency limit <br/>
+  • 05 = Expired card <br/>
+  • 06 = Invalid card number <br/>
+  • 07 = Invalid transaction <br/>
+  • 08 = No Card record <br/>
+  • 09 = Security failure <br/>
+  • 10 = Stolen card <br/>
+  • 11 = Suspected fraud <br/>
+  • 12 = Transaction not permitted to cardholder <br/>
+  • 13 = Cardholder not enrolled in service <br/>
+  • 14 = Transaction timed out at the ACS <br/>
+  • 15 = Low confidence <br/>
+  • 16 = Medium confidence <br/>
+  • 17 = High confidence <br/>
+  • 18 = Very High confidence <br/>
+  • 19 = Exceeds ACS maximum challenges <br/>
+  • 20 = Non-Payment transaction not supported <br/>
+  • 21 = 3RI transaction not supported <br/>
+  • 22 = ACS technical issue <br/>
+  • 23 = Decoupled Authentication required by ACS but not requested by 3DS Requestor <br/>
+  • 24 = 3DS Requestor Decoupled Max Expiry Time exceeded <br/>
+  • 25 = Decoupled Authentication was provided insufficient time to authenticate cardholder. ACS will not make attempt <br/>
+  • 26 = Authentication attempted but not performed by the cardholder <br/>
+example: "01"
+type: string

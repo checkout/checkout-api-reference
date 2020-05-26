@@ -32,10 +32,10 @@ description: |
 
   Depending on the Environment against which you're making your requests against you'll need to request the token from a different Authorization Server.
 
-  | Environment   |      Authorization Server                          |
-  |---------------|:--------------------------------------------------:|
-  | Sandbox       |  https://access.sandbox.checkout.com/connect/token |
-  | Production    |  https://access.checkout.com/connect/token         |
+  | Environment   |      Authorization Server                            |
+  |---------------|------------------------------------------------------|
+  | Sandbox       |  https://access.sandbox.checkout.com/connect/token   |
+  | Production    |  https://access.checkout.com/connect/token           |
 
 flows:
   clientCredentials:
@@ -50,3 +50,5 @@ flows:
       "gateway:payment-captures": Capture payments
       "gateway:payment-refunds": Refund payments
       fx: Foreign exchange services
+      "sessions:app": App-based authentication
+      "sessions:browser": Browser-based authentication

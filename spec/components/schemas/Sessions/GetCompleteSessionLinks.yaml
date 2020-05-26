@@ -1,0 +1,13 @@
+type: object
+description: The links related to the session
+allOf:
+  - $ref: '#/components/schemas/GetBaseSessionLinks'
+properties:
+  complete:
+    type: object
+    description: The URI to signal the session as complete.
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441/complete

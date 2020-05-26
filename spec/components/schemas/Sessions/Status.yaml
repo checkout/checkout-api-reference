@@ -1,0 +1,13 @@
+type: string
+enum:
+  - pending
+  - processing
+  - challenged
+  - challenge_abandoned
+  - expired
+  - approved
+  - attempted
+  - unavailable
+  - declined
+  - rejected
+description: Indicates the status of the Session

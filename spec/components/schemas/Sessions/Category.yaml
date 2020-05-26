@@ -1,0 +1,6 @@
+type: string
+enum:
+  - payment
+  - non_payment
+description: Indicates the Category of the Authentication request.
+default: payment

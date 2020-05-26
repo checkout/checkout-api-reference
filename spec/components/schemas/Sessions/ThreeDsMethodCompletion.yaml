@@ -1,0 +1,18 @@
+required:
+  - three_ds_method_completion
+description: The result of the 3DS method url
+properties:
+  three_ds_method_completion:
+    type: string
+    enum: 
+      - Y
+      - N
+      - U
+    description: >
+      The result of the 3DS method url, default to U if a response is not received from the 3ds method url within 10 seconds.
+    minLength: 1
+    maxLength: 1
+    example: Y
+example: 
+  three_ds_method_completion: Y
+  

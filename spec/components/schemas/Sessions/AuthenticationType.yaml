@@ -1,0 +1,6 @@
+﻿type: string
+enum:
+  - regular
+description: Indicates the type of payment this session is for
+example: regular
+default: regular

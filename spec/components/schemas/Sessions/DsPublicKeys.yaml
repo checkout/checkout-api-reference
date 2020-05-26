@@ -1,0 +1,13 @@
+type: object
+description: Public certificates specific to a DS for encrypting device data and verifying ACS signed content. Present when channel is "app" and status is "pending".  
+properties:
+  ds_public: 
+    type: string
+    maxLength: 1024
+    description: A public certificate provided by the DS for encrytion of device data  
+    example: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxWEvDZRhKEefZ5sQS7RJZXWbSOPxus-ZyLQjtmrrAQawnKI-AG8BKpVdZVGlpcdxCnGbCIy8CKk2Oi7Mgdqfv5R_4_jI7yl4j7Svmh1Sw934eeF9RyB59Ihl36Y0pNfVW9hBqJuq2o8ulrA1TOtpTpje23CY8sjFE5QnJm1evZRB_ZZQ1txl4nrAiHkno4cVJPouBesryVGVQ0zi1bM0P-05Ydgksvph-1nyjnDldD68mejVF69Tijxa22b6BUCXEuPfbXZcW2NpM_W3msnvKiTWFaMlnIzGYIonAnCIVU7Min6CPn565tv0iyIt8BrcezsGzefUw17NEq0J4tCvWwIDAQAB
+  ca_public:
+    type: string
+    maxLength: 1024
+    description: CA public certificate (root) of the DS-CA. This certifciate is used to validate the ACS signed content JWS object
+    example: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxWEvDZRhKEefZ5sQS7RJZXWbSOPxus-ZyLQjtmrrAQawnKI-AG8BKpVdZVGlpcdxCnGbCIy8CKk2Oi7Mgdqfv5R_4_jI7yl4j7Svmh1Sw934eeF9RyB59Ihl36Y0pNfVW9hBqJuq2o8ulrA1TOtpTpje23CY8sjFE5QnJm1evZRB_ZZQ1txl4nrAiHkno4cVJPouBesryVGVQ0zi1bM0P-05Ydgksvph-1nyjnDldD68mejVF69Tijxa22b6BUCXEuPfbXZcW2NpM_W3msnvKiTWFaMlnIzGYIoFnAnCIVU7Min6CPn565tv0iyIt8BrcezsGzefUw17NEq0J4tCvWwIDAQAB

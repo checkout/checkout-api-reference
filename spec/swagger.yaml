@@ -59,6 +59,8 @@ tags:
     description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
   - name: Marketplace
     description: Manage all your sub-entities (also known as sub-merchants) through one integration, globally.
+  - name: Sessions
+    description: Perform 3DS 1.0 and 2.0 authentications separately from payments.
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs

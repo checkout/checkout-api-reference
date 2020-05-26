@@ -1,0 +1,4 @@
+type: string
+description: >
+  Fully qualified URL where the cardholder will be redirected after the authentication is complete in the Interceptor.
+example: "https://www.xml.com"

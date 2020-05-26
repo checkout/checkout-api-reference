@@ -1,0 +1,5 @@
+description: Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.
+type: string
+minLength: 36
+maxLength: 36
+example: sid_y3oqhf46pyzuxjbcn2giaqnb441

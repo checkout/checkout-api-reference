@@ -1,0 +1,13 @@
+type: object
+description: The session information
+properties:
+  id:
+    description: Session Id generated for external usage
+    type: string
+    minLength: 36
+    maxLength: 36
+    example: sid_y3oqhf46pyzuxjbcn2giaqnb44
+  expires_on:
+    description: Expiration date of the session id
+    type: string
+    example: 01-09-2019 10:12:30

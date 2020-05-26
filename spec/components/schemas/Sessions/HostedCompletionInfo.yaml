@@ -1,0 +1,19 @@
+﻿allOf:
+  - $ref: '#/components/schemas/CompletionInfo'
+  - type: object
+    required:
+      - success_url
+      - failure_url
+    properties:
+      success_url:
+        type: string
+        format: uri
+        description: For `hosted` sessions, this overrides the default success redirect URL configured on your account
+        maxLength: 256
+        example: "http://example.com/payments/success"
+      failure_url:
+        type: string
+        format: uri
+        description: For `hosted` sessions, this overrides the default failure redirect URL configured on your account
+        maxLength: 256
+        example: "http://example.com/payments/fail"

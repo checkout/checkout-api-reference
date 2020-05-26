@@ -1,0 +1,9 @@
+type: array
+description: Identifies what actions to take in order to complete the session.
+items:
+  enum:
+    - collect_channel_data
+    - issuer_fingerprint
+    - challenge_cardholder
+    - redirect_cardholder
+    - complete

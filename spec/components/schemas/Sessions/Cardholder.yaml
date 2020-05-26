@@ -1,0 +1,16 @@
+type: object
+description: "The cardholder information"
+properties:
+  name:
+    description: Name of the Cardholder.
+    type: string
+    minLength: 2
+    maxLength:  45
+    example: Cardholder Name
+  email:
+    type: string
+    description: The email address associated with the account that is either entered by the Cardholder, or is on file with the 3DS Requestor.
+    maxLength: 254
+    example: "example@example.com"
+  billing_address:
+    $ref: '#/components/schemas/Address'
