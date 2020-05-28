@@ -27,6 +27,14 @@ properties:
         type: string
         maxLength: 100
         example: https://api.hbsc.com/3dsmethod?tx=123456
+  challenge_url:
+    type: object
+    description: Fully qualified URL of the ACS to be used for the challenge
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.hbsc.com/challenge
   complete:
     type: object
     description: The URI to signal the session as complete.
