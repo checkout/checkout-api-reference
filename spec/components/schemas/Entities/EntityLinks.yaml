@@ -6,4 +6,4 @@ properties:
       $ref: "#/components/schemas/Link"
     example:
       self:
-        href: "https://marketplace.cko-prod.ckotech.co/entities/ent_wxglze3wwywujg4nna5fb7ldli"
+        href: "https://api.checkout.com/marketplace/entities/ent_wxglze3wwywujg4nna5fb7ldli"
