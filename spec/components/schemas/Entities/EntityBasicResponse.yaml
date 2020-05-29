@@ -1,21 +1,16 @@
 type: object
+title: EntityBasicResponse
 readOnly: true
 properties:
   id:
     type: string
     description: "The unique identifier of the sub-entity"
-    example: ent_wxglze3wwywujg4nna5fb7ldli
-  legal_name:
+    example: "ent_wxglze3wwywujg4nna5fb7ldli"
+  reference:
     type: string
-    description: "The legal name of the sub-entity"
-    example: T-S Inc.
-  custom_id:
-    type: string
-    description: "The sub-entity's custom id. This is a consumer's own id that they can use to identify the sub-entity"
-    example: TshirtsShop1234
-  _links:
-    additionalProperties:
-      $ref: "#/components/schemas/Link"
-    example:
-      self:
-        href: /entities/ent_wxglze3wwywujg4nna5fb7ldli
+    description: "A reference you can later use to identify this sub-entity"
+    minLength: 1
+    maxLength: 15
+    example: "superhero1234"
+  capabilities:
+    $ref: "#/components/schemas/EntityCapabilities"

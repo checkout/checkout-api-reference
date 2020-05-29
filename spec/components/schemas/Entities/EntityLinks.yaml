@@ -1,0 +1,9 @@
+type: object
+title: EntityLinks
+properties:
+  _links:
+    additionalProperties:
+      $ref: "#/components/schemas/Link"
+    example:
+      self:
+        href: "https://marketplace.cko-prod.ckotech.co/entities/ent_wxglze3wwywujg4nna5fb7ldli"

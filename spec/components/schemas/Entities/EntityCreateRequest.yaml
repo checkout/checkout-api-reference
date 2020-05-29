@@ -1,124 +1,89 @@
 type: object
+title: EntityCreateRequest
 properties:
-  legal_name:
+  reference:
     type: string
-    description: "The legal name of the sub-entity"
-    minLength: 4
-    maxLength: 300
-    example: T-Shirts
-  trading_name:
-    type: string
-    description: "The sub-entity's trading (doing business as) name"
-    minLength: 4
-    maxLength: 300
-    example: T-S
-  custom_id:
-    type: string
-    description: "The sub-entity's custom id. This is a consumer's own id that they can use to identify the sub-entity"
+    description: "A reference you can later use to identify this sub-entity"
     minLength: 1
     maxLength: 15
-    example: TshirtsShop1234
-  details:
-    type: object
-    title: EntityDetails
-    description: "The sub-entity's details"
+    example: superhero1234
+  contact_details:
     allOf:
-      - $ref: "#/components/schemas/EntityDetails"
+      - $ref: "#/components/schemas/EntityContactDetails"
+      - type: object
+        properties:
+          phone:
+            description: "The phone number of the sub-entity"
+            allOf:
+              - $ref: "#/components/schemas/EntityPhone"
+            required:
+              - country_code
+              - number
+  profile:
+    allOf:
+      - $ref: "#/components/schemas/EntityProfile"
+    required:
+      - urls
+      - mccs
+  company:
+    allOf:
+      - $ref: "#/components/schemas/EntityCompany"
+      - type: object
+        properties:
+          principal_address:
+            description: "The company's primary location, where business is performed"
+            allOf:
+              - $ref: "#/components/schemas/EntityAddress"
+            required:
+              - address_line1
+              - city
+              - zip
+              - country
+          registered_address:
+            description: "The registered address of the company"
+            allOf:
+              - $ref: "#/components/schemas/EntityAddress"
+            required:
+              - address_line1
+              - city
+              - zip
+              - country
+          representatives:
+            description: "Information about representatives of this company"
+            type: array
+            items:
+              allOf:
+                - $ref: "#/components/schemas/EntityRepresentative"
+                - type: object
+                  properties:
+                    address:
+                      required:
+                        - address_line1
+                        - city
+                        - zip
+                        - country
+                    identification:
+                      required:
+                        - national_id_number
+                    phone:
+                      required:
+                        - country_code
+                        - number
+              required:
+                - first_name
+                - last_name
+                - address
+                - identification
+                - phone
     required:
       - business_registration_number
-  phone:
-    type: object
-    title: EntityPhone
-    description: "The phone number of the sub-entity"
-    allOf:
-      - $ref: "#/components/schemas/EntityPhone"
-    required:
-      - country_code
-      - number
-  mccs:
-    type: array
-    description: "The Merchant Category Codes (MCCs) under which this sub-entity processes payments"
-    items:
-      type: string
-      description: "A 4-digit ISO 18245 merchant category code to classify the sub-entity's industry as specified by card schemes"
-      minLength: 4
-      maxLength: 4
-      example: 5069
-  urls:
-    type: array
-    description: "A collection of urls owned by a sub-entity"
-    items:
-      type: string
-      description: "A url owned by a sub-entity"
-      minLength: 4
-      maxLength: 300
-      example: "https://www.example.com"
-  principal_address:
-    type: object
-    title: EntityAddress
-    description: "A company's primary location where its business is performed"
-    allOf:
-      - $ref: "#/components/schemas/EntityAddress"
-    required:
-      - address_line1
-      - city
-      - postal_code
-      - country
-  registered_address:
-    type: object
-    title: EntityAddress
-    description: "The official company address, the invoice address of the company, as is appearing on statements and invoices. Can be the same as the principal address"
-    allOf:
-      - $ref: "#/components/schemas/EntityAddress"
-    required:
-      - address_line1
-      - city
-      - postal_code
-      - country
-  ultimate_beneficiary_owners:
-    type: array
-    description: "A sub-entity's ultimate beneficiary owners (UBO), generally with a share greater than or equal to 25%"
-    items:
-      allOf:
-        - $ref: "#/components/schemas/EntityUltimateBenificiaryOwner"
-        - type: object
-          title: EntityUltimateBenificiaryOwner
-          properties:
-            address:
-              allOf:
-                - description: "The UBO's address"
-                - $ref: "#/components/schemas/EntityAddress"
-              required:
-                - address_line1
-                - city
-                - postal_code
-                - country
-            identification:
-              allOf:
-                - $ref: "#/components/schemas/EntityUboIdentification"
-              required:
-                - national_id
-            phone:
-              allOf:
-                - description: "The UBO's phone"
-                - $ref: "#/components/schemas/EntityPhone"
-              required:
-                - country_code
-                - number
-      required:
-        - first_name
-        - last_name
-        - address
-        - identification
-        - phone
+      - legal_name
+      - trading_name
+      - principal_address
+      - registered_address
+      - representatives
 required:
-  - legal_name
-  - trading_name
-  - custom_id
-  - urls
-  - details
-  - ultimate_beneficiary_owners
+  - reference
   - phone
-  - principal_address
-  - registered_address
-  - mccs
+  - profile
+  - company

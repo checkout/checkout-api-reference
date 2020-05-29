@@ -1,8 +1,0 @@
-type: object
-properties:
-  business_registration_number:
-    type: string
-    description: "The sub-entity's Business Registration Number such as Commercial Registration, Ministry of Commerce certificate number or equivalent registration number"
-    minLength: 2
-    maxLength: 16
-    example: "452349600005"
