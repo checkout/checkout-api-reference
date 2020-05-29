@@ -1,11 +1,16 @@
 type: object
 description: "The directory server information"
 properties:
+  ds_id:
+    description: Registered Application Provider Identifier (RID) that is unique to the Payment System. RIDs are defined by the ISO 7816-5 standard. Used as part of the device data encryption process.
+    type: string
+    maxLength: 32
+    example: A000000003
   reference_number:
     description: EMVCo-assigned unique identifier to track approved DS.
     type: string
     maxLength: 32
-    example: PIT2DSREFERENCENO2
+    example: VISA.V 17 0003
   transaction_id:
     description: Universally unique transaction identifier assigned by the DS
     type: string

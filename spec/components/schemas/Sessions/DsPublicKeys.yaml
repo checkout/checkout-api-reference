@@ -1,5 +1,5 @@
 type: object
-description: Public certificates specific to a DS for encrypting device data and verifying ACS signed content. Present when channel is "app" and status is "pending".  
+description: Public certificates specific to a DS for encrypting device data and verifying ACS signed content. Required when channel is "app".  
 properties:
   ds_public: 
     type: string

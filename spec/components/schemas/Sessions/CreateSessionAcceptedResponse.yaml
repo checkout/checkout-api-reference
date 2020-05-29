@@ -9,6 +9,15 @@ properties:
     minLength: 36
     maxLength: 36
     example: 9aea641d-0549-4222-9ca9-d90b43a4f38c
+  scheme:    
+    type: string
+    description: Indicates the scheme this authentication is carried out against
+    enum:
+      - Visa
+      - Mastercard
+      - Jcb
+      - Amex
+      - Diners
   amount:
     $ref: '#/components/schemas/Amount'
   currency:
