@@ -32,6 +32,7 @@ properties:
       - Regular
       - Recurring
       - MOTO
+      - Installment
     default: Regular
     example: Recurring
   reference:
