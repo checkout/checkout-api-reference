@@ -1,0 +1,46 @@
+parameters:
+  - $ref: "#/components/parameters/SubEntityId"
+get:
+  summary: Get a sub-entity by its id
+  security:
+    - OAuth:
+      - marketplace
+  responses:
+    "200":
+      description: OK Response
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/EntityExtendedResponse"
+      headers:
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+    "400":
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ValidationError"
+            example:
+              - request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+                error_type: "request_invalid"
+    "401":
+      description: Unauthorized - Access token is missing or invalid
+    "404":
+      description: Resource not found
+    "422":
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ValidationError"
+            example:
+              - request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+                error_type: "validation_failed"
+                error_codes: ["some_property_missing"]
+  tags:
+    - Marketplace
