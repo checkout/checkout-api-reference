@@ -1,5 +1,13 @@
 parameters:
-  - $ref: "#/components/parameters/SubEntityId"
+  - in: path
+    name: id
+    description: The id of the sub-entity
+    required: true
+    allowEmptyValue: false
+    example: ent_w4jelhppmfiufdnatam37wrfc4
+    style: simple
+    schema:
+      type: string
 get:
   summary: Get a sub-entity by its id
   security:
@@ -28,11 +36,11 @@ get:
               - request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
                 error_type: "request_invalid"
     "401":
-      description: Unauthorized - Access token is missing or invalid
+      description: "Unauthorized - Access token is missing or invalid"
     "404":
-      description: Resource not found
+      description: "Resource not found"
     "422":
-      description: Invalid data was sent
+      description: "Invalid data was sent"
       content:
         application/json:
           schema:
