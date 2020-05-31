@@ -1,9 +1,13 @@
 get:
   tags:
     - Disputes
+  security: 
+    - OAuth: 
+      - disputes
+      - disputes:view
+    - ApiKey: []
   summary: Get file information
-  description:
-    Retrieve information about a file that was previously uploaded.
+  description: Retrieve information about a file that was previously uploaded.
   parameters:
     - in: path
       name: file_id
@@ -12,20 +16,20 @@ get:
       required: true
       description: The file identifier. It is always prefixed by `file_`.
   responses:
-    "200":
+    '200':
       description: File information retrieved successfully
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/FileResult"
+            $ref: '#/components/schemas/FileResult'
       headers:
         Cko-Request-Id:
-          $ref: "#/components/headers/Cko-Request-Id"
+          $ref: '#/components/headers/Cko-Request-Id'
         Cko-Version:
-          $ref: "#/components/headers/Cko-Version"
-    "401":
+          $ref: '#/components/headers/Cko-Version'
+    '401':
       description: Unauthorized
-    "404":
+    '404':
       description: File not found
-    "429":
+    '429':
       description: Too many requests or duplicate request detected
