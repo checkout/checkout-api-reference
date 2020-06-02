@@ -1,37 +1,38 @@
 type: object
+title: EntityAddress
 properties:
   address_line1:
     type: string
-    description: The first line of the address
+    description: "The first line of the address"
     minLength: 5
     maxLength: 300
-    example: 54 Elisabeth Street
+    example: "Super Hero Masks"
   address_line2:
     type: string
-    description: The second line of the address
+    description: "The second line of the address"
+    minLength: 0
+    maxLength: 300
+    nullable: true
+    example: "90 Tottenham Court Road"
+  city:
+    type: string
+    description: "The address city"
+    minLength: 2
+    maxLength: 300
+    example: "London"
+  state:
+    type: string
+    description: "The address state (in the US, this needs to be a ISO 3166-1 state code)"
+    minLength: 0
     maxLength: 300
     nullable: true
     example: null
-  city:
+  zip:
     type: string
-    description: The city of the address
-    minLength: 2
-    maxLength: 300
-    example: Brighton
-  state:
-    type: string
-    description: "ISO 3166-1 alpha-2 State Code. This field is applicable only when the country is US"
-    minLength: 2
-    maxLength: 2
-    pattern: "[a-zA-Z]{2}"
-    format: ISO 3166-1
-    example: MI
-  postal_code:
-    type: string
-    description: The postcode or zip code of the address
+    description: "The address zip/postal code"
     minLength: 5
     maxLength: 16
-    example: W1B 1DY
+    example: "W1T4TJ"
   country:
     type: string
     description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
@@ -39,4 +40,4 @@ properties:
     maxLength: 2
     pattern: "[a-zA-Z]{2}"
     format: ISO 3166-1
-    example: GB
+    example: "GB"

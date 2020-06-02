@@ -1,0 +1,33 @@
+type: object
+title: EntityRepresentative
+properties:
+  first_name:
+    type: string
+    description: "The person's first name"
+    minLength: 2
+    maxLength: 300
+    example: "John"
+  middle_name:
+    type: string
+    description: "The person's middle name"
+    maxLength: 300
+    nullable: true
+    example: null
+  last_name:
+    type: string
+    description: "The person's last name"
+    minLength: 2
+    maxLength: 300
+    example: "Doe"
+  address:
+    description: "The representative's address"
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
+  identification:
+    description: "Identification of the person to verify the identity of a representative"
+    allOf:
+      - $ref: "#/components/schemas/EntityIdentification"
+  phone:
+    description: "The phone number of the representative"
+    allOf:
+      - $ref: "#/components/schemas/EntityPhone"

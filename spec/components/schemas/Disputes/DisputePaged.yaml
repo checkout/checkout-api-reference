@@ -18,15 +18,19 @@ properties:
     format: ISO-8601
     description: The date and time until which to filter disputes, based on the dispute's `last_update` field
     example: "2018-08-13T11:09:01Z"
-  statuses:
-    type: string
-    description: One or more comma-separated statuses. This works like a logical *OR* operator
-    example: "evidence_required,evidence_under_review"
   id:
     type: string
     pattern: "^(dsp)_(\\w{22})$"
     description: The unique identifier of the dispute
     example: "dsp_rbhwd2qrg13uhrp2newf"
+  entity_ids:
+    type: string
+    description: One or more comma-separated client entities. This works like a logical *OR* operator
+    example: "ent_wxglze3wwywujg4nna5fb7ldli,ent_vkb5zcy64zoe3cwfmaqvqyqyku"
+  statuses:
+    type: string
+    description: One or more comma-separated statuses. This works like a logical *OR* operator
+    example: "evidence_required,evidence_under_review"
   payment_id:
     type: string
     pattern: "^(pay)_(\\w{26})$"
@@ -40,6 +44,10 @@ properties:
     type: string
     description: The acquirer reference number (ARN) that you can use to query the issuing bank
     example: "74548998294293193445538"
+  payment_mcc:
+    type: string
+    description: The merchant category code (MCC) of the payment (ISO 18245)
+    example: "5021"
   this_channel_only:
     type: boolean
     description: If `true`, only returns disputes of the specific channel that the secret key is associated with. Otherwise, returns all disputes for that business

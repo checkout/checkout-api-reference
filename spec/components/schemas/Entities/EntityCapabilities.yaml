@@ -1,0 +1,12 @@
+type: object
+title: EntityCapabilities
+properties:
+  payments:
+    type: object
+    description: Payment related capabilities of an sub-entity
+    properties:
+      enabled:
+        type: boolean
+        description: True if payments are enabled
+    example:
+      enabled: false

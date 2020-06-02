@@ -1,0 +1,15 @@
+type: object
+title: EntityExtendedResponse
+allOf:
+  - $ref: "#/components/schemas/EntityBasicResponse"
+  - type: object
+    properties:
+      legal_name:
+        type: string
+        description: "The legal name of the sub-entity"
+        example: "Super Hero Masks Inc."
+      trading_name:
+        type: string
+        description: "The trading name of the sub-entity"
+        example: "SuperHero"
+  - $ref: "#/components/schemas/EntityLinks"
