@@ -25,11 +25,22 @@ get:
           $ref: "#/components/headers/Cko-Version"
         Cko-Request-Id:
           $ref: "#/components/headers/Cko-Request-Id"
-    '400':
-      description: Bad Request
-    '401':
+    "401":
       description: Unauthorized
     "404":
-      description: "Sub-entity not found"
+      description: Sub-entity not found
+    "422":
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ValidationError"
+              - type: object
+                properties:
+                  error_codes:
+                    example:
+                      - error_code1
+                      - error_code2
   tags:
     - Marketplace
