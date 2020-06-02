@@ -1,28 +1,27 @@
 var gulp = require('gulp');
 var util = require('gulp-util')
 var gulpConnect = require('gulp-connect');
+var exec = require('gulp-exec');
 var connect = require('connect');
 var cors = require('cors');
-var path = require('path');
-var exec = require('child_process').exec;
 var portfinder = require('portfinder');
 var swaggerRepo = require('swagger-repo');
+const { watch } = require('gulp');
 
 var DIST_DIR = 'web_deploy';
 
-gulp.task('build', function (cb) {
-  return exec('npm run build', function (err, stdout, stderr) {
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('build', function () {
+    return gulp.src(DIST_DIR).pipe(exec('npm run build'));
 });
 
 gulp.task('reload', gulp.series('build', function () {
   return gulp.src(DIST_DIR).pipe(gulpConnect.reload())
 }));
 
-gulp.task('watch', function () {
-  return gulp.watch(['spec/**/*', 'web/**/*'], gulp.series('reload'));
+gulp.task('watch', function (cb) {
+  watch('spec/**/*', gulp.series('reload'));
+  watch('web/**/*', gulp.series('reload'));
+  cb();
 });
 
 
@@ -40,7 +39,7 @@ gulp.task('edit', function () {
       });
 });
 
-gulp.task('start_site', function() {
+gulp.task('start_site', function(cb) {
   return portfinder.getPortPromise({port: 3000})
       .then((port) => {
         // `port` is guaranteed to be a free port in this scope.
@@ -53,7 +52,7 @@ gulp.task('start_site', function() {
               cors()
             ]
           }
-        });
+        }, function () { this.server.on('close', cb) })
       })
       .catch((err) => {
         // Could not get a free port, `err` contains the reason.
