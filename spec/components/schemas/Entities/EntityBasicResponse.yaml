@@ -4,13 +4,13 @@ readOnly: true
 properties:
   id:
     type: string
-    description: "The unique identifier of the sub-entity"
-    example: "ent_wxglze3wwywujg4nna5fb7ldli"
+    description: The unique identifier of the sub-entity
+    example: ent_wxglze3wwywujg4nna5fb7ldli
   reference:
     type: string
-    description: "A reference you can later use to identify this sub-entity"
+    description: A reference you can later use to identify this sub-entity
     minLength: 1
     maxLength: 15
-    example: "superhero1234"
+    example: superhero1234
   capabilities:
     $ref: "#/components/schemas/EntityCapabilities"

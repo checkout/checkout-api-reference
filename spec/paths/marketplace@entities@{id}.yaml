@@ -9,13 +9,13 @@ parameters:
     schema:
       type: string
 get:
-  summary: Get a sub-entity by its id
+  summary: Get sub-entity details
   security:
     - OAuth:
       - marketplace
   responses:
     "200":
-      description: OK Response
+      description: Sub-entity retrieved successfully
       content:
         application/json:
           schema:
@@ -25,30 +25,11 @@ get:
           $ref: "#/components/headers/Cko-Version"
         Cko-Request-Id:
           $ref: "#/components/headers/Cko-Request-Id"
-    "400":
+    '400':
       description: Bad Request
-      content:
-        application/json:
-          schema:
-            allOf:
-              - $ref: "#/components/schemas/ValidationError"
-            example:
-              - request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
-                error_type: "request_invalid"
-    "401":
-      description: "Unauthorized - Access token is missing or invalid"
+    '401':
+      description: Unauthorized
     "404":
-      description: "Resource not found"
-    "422":
-      description: "Invalid data was sent"
-      content:
-        application/json:
-          schema:
-            allOf:
-              - $ref: "#/components/schemas/ValidationError"
-            example:
-              - request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
-                error_type: "validation_failed"
-                error_codes: ["some_property_missing"]
+      description: "Sub-entity not found"
   tags:
     - Marketplace

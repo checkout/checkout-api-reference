@@ -35,7 +35,7 @@ properties:
     example: "W1T4TJ"
   country:
     type: string
-    description: 'The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address'
+    description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
     minLength: 2
     maxLength: 2
     pattern: "[a-zA-Z]{2}"

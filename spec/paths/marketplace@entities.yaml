@@ -2,7 +2,7 @@ post:
   description: |
     Create a sub-entity, so they can start receiving payments. Upon creation, Checkout.com will run due diligence checks. 
     If the checks are successful, payment capabilities for the sub-entity will be enabled and they can start receiving payments.
-  summary: Create a sub-entity
+  summary: Onboard a sub-entity
   requestBody:
     required: true
     description: The sub-entity to be onboarded
@@ -15,7 +15,7 @@ post:
       - marketplace
   responses:
     "201":
-      description: Created Response
+      description: Sub-entity onboarded successfully
       content:
         application/json:
           schema:
@@ -27,27 +27,13 @@ post:
           $ref: "#/components/headers/Cko-Request-Id"
     "400":
       description: Bad Request
-      content:
-        application/json:
-          schema:
-            allOf:
-              - $ref: "#/components/schemas/ValidationError"
-            example:
-              - request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
-                error_type: "request_invalid"
-    "401":
-      description: Unauthorized - Access token is missing or invalid
-    "422":
+    '401':
+      description: Unauthorized
+    '422':
       description: Invalid data was sent
       content:
         application/json:
           schema:
-            allOf:
-              - $ref: "#/components/schemas/ValidationError"
-            example:
-              - request_id: 215e771b-d43a-4b33-a2bf-196fdf0523fa
-                error_type: validation_failed
-                error_codes:
-                  - some_property_missing
+            $ref: '#/components/schemas/ValidationError'
   tags:
     - Marketplace
