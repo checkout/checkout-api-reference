@@ -14,28 +14,28 @@ get:
     - OAuth:
       - marketplace
   responses:
-    "200":
+    '200':
       description: Sub-entity retrieved successfully
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/EntityExtendedResponse"
+            $ref: '#/components/schemas/EntityExtendedResponse'
       headers:
         Cko-Version:
-          $ref: "#/components/headers/Cko-Version"
+          $ref: '#/components/headers/Cko-Version'
         Cko-Request-Id:
-          $ref: "#/components/headers/Cko-Request-Id"
-    "401":
+          $ref: '#/components/headers/Cko-Request-Id'
+    '401':
       description: Unauthorized
-    "404":
+    '404':
       description: Sub-entity not found
-    "422":
+    '422':
       description: Invalid data was sent
       content:
         application/json:
           schema:
             allOf:
-              - $ref: "#/components/schemas/ValidationError"
+              - $ref: '#/components/schemas/ValidationError'
               - type: object
                 properties:
                   error_codes:
