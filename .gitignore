@@ -38,3 +38,5 @@ src/OpenApiGenerator/bin/*
 
 src/OpenApiGenerator/obj/*
 .DS_Store
+
+.idea
