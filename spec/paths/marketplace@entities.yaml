@@ -1,6 +1,6 @@
 post:
   description: |
-    Create a sub-entity, so they can start receiving payments. Upon creation, Checkout.com will run due diligence checks. 
+    Onboard a sub-entity, so they can start receiving payments. Upon creation, Checkout.com will run due diligence checks. 
     If the checks are successful, payment capabilities for the sub-entity will be enabled and they can start receiving payments.
   summary: Onboard a sub-entity
   requestBody:
@@ -9,23 +9,23 @@ post:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/EntityCreateRequest"
+          $ref: '#/components/schemas/EntityCreateRequest'
   security:
     - OAuth:
       - marketplace
   responses:
-    "201":
+    '201':
       description: Sub-entity onboarded successfully
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/EntityBasicResponseWithLinks"
+            $ref: '#/components/schemas/EntityBasicResponseWithLinks'
       headers:
         Cko-Version:
-          $ref: "#/components/headers/Cko-Version"
+          $ref: '#/components/headers/Cko-Version'
         Cko-Request-Id:
-          $ref: "#/components/headers/Cko-Request-Id"
-    "400":
+          $ref: '#/components/headers/Cko-Request-Id'
+    '400':
       description: Bad Request
     '401':
       description: Unauthorized
@@ -34,6 +34,13 @@ post:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ValidationError'
+            allOf:
+              - $ref: '#/components/schemas/ValidationError'
+              - type: object
+                properties:
+                  error_codes:
+                    example:
+                      - error_code1
+                      - error_code2
   tags:
     - Marketplace
