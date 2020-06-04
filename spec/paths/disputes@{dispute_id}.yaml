@@ -1,25 +1,29 @@
 get:
   tags:
     - Disputes
+  security: 
+    - OAuth: 
+      - disputes
+      - disputes:view
+    - ApiKey: []
   summary: Get dispute details
-  description:
-    Returns all the details of a dispute using the dispute identifier.
+  description: Returns all the details of a dispute using the dispute identifier.
   parameters:
     - in: path
       name: dispute_id
       schema:
         type: string
-        pattern: "^(dsp)_(\\w{26})$"
+        pattern: '^(dsp)_(\\w{26})$'
       required: true
       description: The dispute identifier
   responses:
-    "200":
+    '200':
       description: Dispute retrieved successfully
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Dispute"
-    "401":
+            $ref: '#/components/schemas/Dispute'
+    '401':
       description: Unauthorized
-    "404":
+    '404':
       description: Dispute not found

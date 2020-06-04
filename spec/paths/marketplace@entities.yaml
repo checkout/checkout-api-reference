@@ -1,12 +1,11 @@
 post:
   description: |
-    Create a sub-entity, so that 2 operations can occur:
-      1. Checkout.com can conduct VMSS checks on them
-      2. Processing capabilities will be enabled, in the shape of processing channels (signing up the sub-entity with a 3DS setup)
+    Create a sub-entity, so they can start receiving payments. Upon creation, Checkout.com will run due diligence checks. 
+    If the checks are successful, payment capabilities for the sub-entity will be enabled and they can start receiving payments.
   summary: Onboard a sub-entity
   requestBody:
     required: true
-    description: The sub-entity to be onboarded.
+    description: The sub-entity to be onboarded
     content:
       application/json:
         schema:
@@ -16,11 +15,11 @@ post:
       - marketplace
   responses:
     "201":
-      description: Created Response
+      description: Sub-entity onboarded successfully
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/EntityBasicResponse"
+            $ref: "#/components/schemas/EntityBasicResponseWithLinks"
       headers:
         Cko-Version:
           $ref: "#/components/headers/Cko-Version"
@@ -28,15 +27,13 @@ post:
           $ref: "#/components/headers/Cko-Request-Id"
     "400":
       description: Bad Request
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/ValidationError"
-    "401":
-      description: Unauthorised - Bearer token is invalid or missing
-      headers:
-        WWW_Authenticate:
-          schema:
-            type: string
+            $ref: '#/components/schemas/ValidationError'
   tags:
     - Marketplace

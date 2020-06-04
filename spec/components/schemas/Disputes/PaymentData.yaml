@@ -1,0 +1,64 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The payment's unique identifier
+    example: "pay_mbabizu24mvu3mela5njyhpit4"
+  action_id:
+    type: string
+    description: The unique identifier of the payment action
+    example: "act_mbabizu24mvu3mela5njyhpit4"
+  processing_channel_id:
+    type: string
+    description: The processing channel used for the payment
+    example: "mer_q4dbxom5jbgudnjzjpz7j2z6uq"
+  amount:
+    type: number
+    description: The amount that is being disputed, in the processing currency
+    example: 999
+  currency:
+    type: string
+    description: The payment currency
+    example: "GBP"
+  method:
+    type: string
+    description: The payment method used
+    example: "Visa"
+  arn:
+    type: string
+    description: The acquirer reference number (ARN)
+    example: "AA246873253573571073808"
+  mcc:
+    type: string
+    description: The merchant category code (MCC) for the payment (ISO 18245)
+    example: "5021"
+  3ds:
+    type: object
+    description: Provides information relating to the processing of 3D Secure payments
+    properties:
+      enrolled:
+        type: string
+        description: >
+          Indicates the 3D Secure enrollment status of the issuer
+            * `Y` - Issuer enrolled
+            * `N` - Customer not enrolled
+            * `U` - Unknown
+        example: Y
+      version:
+        type: string
+        description: Indicates the version of 3D Secure that was used for authentication
+        example: "2.1.0"
+  eci:
+    type: string
+    description: |
+      The final Electronic Commerce Indicator (ECI) security level used to authorize the payment. 
+      Applicable for 3D Secure, digital wallets, and network token payments
+    example: "06"
+  has_refund:
+    type: boolean
+    description: Indicates if there is any refund against the payment
+  processed_on:
+    type: string
+    format: ISO-8601
+    description: The date and time at which the payment was requested
+    example: "2018-08-01T08:18:10Z" 

@@ -1,9 +1,0 @@
-type: object
-description: "The UBO's identification details"
-properties:
-  national_id:
-    type: string
-    description: "The UBO's national ID card number"
-    minLength: 1
-    maxLength: 25
-    example: AB123456C

@@ -1,0 +1,9 @@
+type: object
+title: EntityIdentification
+properties:
+  national_id_number:
+    type: string
+    description: "The person's official ID number, as applicable in their country"
+    minLength: 1
+    maxLength: 25
+    example: AB123456C

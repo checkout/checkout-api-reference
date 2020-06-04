@@ -1,0 +1,27 @@
+type: object
+title: EntityCompany
+properties:
+  business_registration_number:
+    type: string
+    description: "The sub-entity's Business Registration Number such as Commercial Registration, Ministry of Commerce certificate number or equivalent registration number"
+    minLength: 2
+    maxLength: 16
+    example: "452349600005"
+  legal_name:
+    type: string
+    description: "The legal name of the sub-entity"
+    minLength: 4
+    maxLength: 300
+    example: Super Hero Masks Inc.
+  trading_name:
+    type: string
+    description: "The sub-entity's trading name, also referred to as 'doing business as'"
+    minLength: 4
+    maxLength: 300
+    example: Super Hero Masks
+  principal_address:
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
+  registered_address:
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
