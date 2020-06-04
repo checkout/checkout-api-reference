@@ -50,8 +50,8 @@ flows:
       "gateway:payment-voids": Void payments
       "gateway:payment-captures": Capture payments
       "gateway:payment-refunds": Refund payments
-      fx: Foreign exchange services
-       "payouts:bank-details": Get bank details
+      "fx": Foreign exchange services
+      "payouts:bank-details": Get bank details
       sessions: Access to all Sessions resources
       "sessions:app": App-based authentication
       "sessions:browser": Browser-based authentication
