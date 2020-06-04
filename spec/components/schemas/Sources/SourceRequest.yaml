@@ -15,10 +15,6 @@ properties:
     type: string
     description: A reference you can later use to identify the source
     example: "X-080957-N34"
-  billing_address:
-    description: The payment source owner's billing address
-    allOf:
-      - $ref: '#/components/schemas/Address'
   phone:
     description: The payment source owner's phone number
     allOf:
