@@ -3,9 +3,9 @@ post:
     - Payments
   summary: Request a payment or payout
   description: |
-    To accept payments from <a href="https://docs.checkout.com/docs/cards" target="blank">cards</a>, <a href="https://docs.checkout.com/docs/wallets" target="blank">digital wallets</a> and many <a href="https://docs.checkout.com/docs/bank-transfers" target="blank">alternative payment methods</a>, specify the `source.type` field, along with the source-specific data.
+    To accept payments from <a href="https://docs.checkout.com/payment-methods/cards" target="blank">cards</a>, <a href="https://docs.checkout.com/payment-methods/wallets" target="blank">digital wallets</a> and many <a href="https://docs.checkout.com/payment-methods/" target="blank">alternative payment methods</a>, specify the `source.type` field, along with the source-specific data.
 
-    To <a href="https://docs.checkout.com/docs/pay-out-to-a-card" target="blank">pay out to a card</a>, specify the destination of your payout using the `destination.type` field, along with the destination-specific data.
+    To <a href="https://docs.checkout.com/payment-actions/pay-out-to-a-card" target="blank">pay out to a card</a>, specify the destination of your payout using the `destination.type` field, along with the destination-specific data.
 
     To verify the success of the payment, check the `approved` field in the response.
 

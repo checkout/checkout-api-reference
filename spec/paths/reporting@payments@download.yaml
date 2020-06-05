@@ -8,7 +8,7 @@ get:
   summary: Get CSV payments report
   description: 
     In addition to the JSON format returned by the `reporting/payments` endpoint, you can also download a CSV report containing the same data.
-    Learn more about <a href="https://docs.checkout.com/docs/payments-endpoint#section-how-to-read-the-csv-file" target="_blank">how to read your CSV report</a>.
+    Learn more about <a href="https://docs.checkout.com/reporting-and-insights/reconciliation-api/payments-endpoint#Paymentsendpoint-HowtoreadtheCSVfile" target="_blank">how to read your CSV report</a>.
   parameters:
     - in: query
       name: from

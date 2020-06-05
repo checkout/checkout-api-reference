@@ -8,14 +8,14 @@ properties:
     type: integer
     description: |
       The payment amount.
-      The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">depends on the currency</a>.
+      The exact format <a href="https://docs.checkout.com/resources/calculating-the-value" target="blank">depends on the currency</a>.
       Omit the amount or provide a value of `0` to perform a card verification. 
     minimum: 0
     example: 6540
   currency:
     type: string
     description: |
-      The three-letter <a href="https://docs.checkout.com/docs/currency-codes" target="blank">ISO currency code</a>
+      The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a>
     example: USD
     maxLength: 3
     minLength: 3
@@ -88,7 +88,7 @@ properties:
   previous_payment_id:
     type: string
     description: |
-      For payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>, such as recurring payments –
+      For payments that use <a href="https://docs.checkout.com/quickstart/use-an-existing-card/stored-card-details" target="blank">stored card details</a>, such as recurring payments –
       an existing payment identifier from the recurring series or the Scheme Transaction Id
     example: "pay_fun26akvvjjerahhctaq2uzhu4"
   risk:
@@ -119,10 +119,10 @@ properties:
         example: "1234567"
       aft:
         type: boolean
-        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions)
+        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/payment-actions/account-funding-transactions)
       dlocal:
         type: object
-        description: Processing information required for <a href="https://docs.checkout.com/docs/request-a-payment-using-dlocal" target="_blank">dLocal payments</a>.
+        description: Processing information required for <a href="https://docs.checkout.com/payment-methods/cards/dlocal" target="_blank">dLocal payments</a>.
         properties:
           country:
             type: string

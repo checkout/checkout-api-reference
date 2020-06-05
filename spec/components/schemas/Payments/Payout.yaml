@@ -8,14 +8,14 @@ properties:
     type: integer
     description: |
       The payment amount.
-      The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">depends on the currency</a>.
+      The exact format <a href="https://docs.checkout.com/resources/calculating-the-value" target="blank">depends on the currency</a>.
       Omit the amount or provide a value of `0` to perform a card verification.
     minimum: 0
     example: 6540
   currency:
     type: string
     description: |
-      The three-letter <a href="https://docs.checkout.com/docs/currency-codes" target="blank">ISO currency code</a>
+      The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a>
     example: USD
     maxLength: 3
     minLength: 3
@@ -88,7 +88,7 @@ properties:
   previous_payment_id:
     type: string
     description: |
-      For payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>, such as recurring payments –
+      For payments that use <a href="https://docs.checkout.com/quickstart/use-an-existing-card/stored-card-details" target="blank">stored card details</a>, such as recurring payments –
       an existing payment identifier from the recurring series or the Scheme Transaction Id
     example: "pay_fun26akvvjjerahhctaq2uzhu4"
   risk:
@@ -119,7 +119,7 @@ properties:
         example: "1234567"
       senderInformation:
         type: object
-        description: Allows you to send <a href="https://docs.checkout.com/docs/sender-data-for-payouts" target="_blank">additional data</a> required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.
+        description: Allows you to send <a href="https://docs.checkout.com/payment-actions/pay-out-to-a-card/sender-data-for-payouts" target="_blank">additional data</a> required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.
   metadata:
     type: object
     description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.

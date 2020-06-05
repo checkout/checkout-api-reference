@@ -15,7 +15,7 @@ properties:
     example: 6540
   currency:
     type: string
-    description: The currency in which the payment was made (<a href="https://docs.checkout.com/docs/currency-codes" target="blank">three-letter ISO code</a>)
+    description: The currency in which the payment was made (<a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">three-letter ISO code</a>)
     example: USD
     maxLength: 3
     minLength: 3

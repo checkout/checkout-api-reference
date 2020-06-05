@@ -20,7 +20,7 @@ info:
     Checkout.com provides a collection of APIs that enable you to process and manage payments.  
     
 
-    Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our <a href="https://docs.checkout.com/docs/sdks" target="_blank">SDKs</a>.  
+    Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our <a href="https://docs.checkout.com/quickstart/integrate/sdks" target="_blank">SDKs</a>.  
 
 
     Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, as well as pay out to a variety of destinations, all using the same integration.
