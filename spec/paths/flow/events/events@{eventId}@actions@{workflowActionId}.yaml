@@ -1,0 +1,50 @@
+get:
+  servers:
+    - url: http://flow.cko.lon/admin
+      description: QA
+  security:
+    - OAuth:
+      - flow
+      - flow:events
+  tags:
+    - Events
+  summary: Get event action
+  description: |
+    Gets the details of a workflow action executed for the specified event
+  parameters:
+    - in: path
+      name: eventId
+      schema:
+        type: string
+        pattern: ^evt_[a-z0-9]{26}$
+      required: true
+      description: The event identifier
+      example: evt_x5zm2po6kimubhlfitgt2mfwgi
+    - in: path
+      name: workflowActionId
+      schema:
+        type: string
+        pattern: ^wfa_[a-z0-9]{26}$
+      required: true
+      description: The workflow action identifier
+      example: wfa_uzkxpffkvpiu5fe3h5ira7sqpa
+  responses:
+    '200':
+      description: Workflow action retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/get-event-action-response'        
+      headers:
+        Cko-Request-Id:
+          schema:
+            $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          schema:
+            $ref: "#/components/headers/Cko-Version"    
+    '401':
+      description: Unauthorized
+    '404':
+      description: Workflow action not found
+    '500':
+      description: Internal Error

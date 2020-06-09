@@ -1,0 +1,29 @@
+type: object
+description: Action that sends a webhook
+required:
+  - url
+allOf:
+  - $ref: '#/components/schemas/workflow-action'
+  - type: object
+    required:
+      - url
+    properties:
+      url:
+        type: string
+        format: uri
+        description: Your webhook endpoint URL
+        example: 'https://example.com/webhooks/checkout'
+      headers:
+        type: object
+        description: Optional [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) added to the request
+        additionalProperties:
+          type: string
+          description: The HTTP header value
+        example:
+          Authorization: "70ed20ff-ba31-4ea3-b3ef-772f2be1cbdf"
+      signing_key:
+        type: string
+        description: |
+          An optional key used to produce a signature of the webhook contents that will be included in the `CKO-Signature` header.
+          This value can be computed by you on receipt of a webhook to validate its authenticity.
+        example: x!Yes2ygkcQYTiY6h3Fs

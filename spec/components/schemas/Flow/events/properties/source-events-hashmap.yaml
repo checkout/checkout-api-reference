@@ -1,0 +1,25 @@
+type: object
+additionalProperties:
+  description: The event source
+  type: array
+  items:
+    type: string
+    description: The source event types
+    example: payment_approved
+example:
+  gateway:
+    - card_verified
+    - card_verification_declined
+    - payment_approved
+    - payment_pending
+    - payment_declined
+    - payment_voided
+    - payment_captured
+    - payment_refunded
+  disputes:
+    - dispute_canceled
+    - dispute_evidence_required
+    - dispute_expired
+    - dispute_lost
+    - dispute_resolved
+    - dispute_won

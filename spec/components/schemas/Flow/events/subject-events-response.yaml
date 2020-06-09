@@ -1,0 +1,34 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id: 
+          type: string
+          description: The unique event identifier
+          example: evt_az5sblvku4ge3dwpztvyizgcau
+        type:
+          type: string
+          description: The event type
+          example: payment_approved
+        timestamp:
+          type: string
+          format: date-time
+          description: The date/time the event occurred
+        _links:
+          $ref: '#/components/schemas/event-links'
+    example:
+      - id: evt_zrrgsvsr47ou7fng4shy4mtf64
+        type: payment_approved
+        timestamp: '2019-05-23T08:25:53Z'
+        _links:
+          self:
+            href: https://api.checkout.com/events/evt_zrrgsvsr47ou7fng4shy4mtf64
+      - id: evt_wgwdfyem4ode5furs5swyy6b2u
+        type: payment_captured
+        timestamp: '2019-05-24T07:00:53Z'
+        _links:
+          self:
+            href: https://api.checkout.com/events/evt_zrrgsvsr47ou7fng4shy4mtf64

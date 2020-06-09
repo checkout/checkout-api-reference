@@ -1,0 +1,19 @@
+
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          pattern: ^wf_[a-z0-9]{26}$
+          description: The unique identifier of the workflow
+          example: wf_wlu3wxc26jounofs5iez75qaqa
+        name:
+          type: string
+          description: The name of your workflow
+          example: Webhooks workflow
+        _links:
+          $ref: '#/components/schemas/workflow-links'

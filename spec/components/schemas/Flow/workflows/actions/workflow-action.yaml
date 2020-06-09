@@ -1,0 +1,14 @@
+type: object
+description: The workflow action
+discriminator:
+  propertyName: type
+  mapping:
+    webhook: '#/components/schemas/webhook-action'
+required: 
+  - type
+properties:
+  type:
+    type: string
+    description: The type of workflow action
+    example: webhook
+  

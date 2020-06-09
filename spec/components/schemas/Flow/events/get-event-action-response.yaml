@@ -1,0 +1,51 @@
+type: object
+properties:
+  event_id: 
+    type: string
+    description: The unique event identifier
+    example: evt_az5sblvku4ge3dwpztvyizgcau
+  workflow_action_id: 
+    type: string
+    description: The worfklow action identifier
+    example: wfa_uzkxpffkvpiu5fe3h5ira7sqpa
+  type:
+    type: string
+    description: The workflow action type
+    example: webhook
+  success:
+    type: boolean
+    description: Whether the workflow action was successful
+    example: true
+  invocations:
+    type: array
+    description: The results for each action invocation
+    items:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: The date/time the action was invoked for the event
+        success:
+          type: boolean
+          description: Whether the invocation completed successfully
+        result:
+          type: object
+          description: The results returned from the action
+        is_final:
+          type: boolean
+          description: Whether this is the final attempt
+          example: false
+    example:
+      - timestamp: '2019-05-23T08:26:59Z'
+        success: false
+        result: 
+          status_code: '500'
+          summary: Server Error
+        is_final: false
+      - timestamp: '2019-05-23T08:27:01Z'
+        success: true
+        result: 
+          status_code: '200'
+          summary: OK
+        is_final: true

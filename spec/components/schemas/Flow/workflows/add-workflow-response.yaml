@@ -1,0 +1,8 @@
+type: object
+properties:
+  id: 
+    type: string
+    description: The workflow identifier
+    example: wf_wlu3wxc26jounofs5iez75qaqa
+  _links:
+    $ref: '#/components/schemas/workflow-links'

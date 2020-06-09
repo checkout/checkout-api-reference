@@ -51,16 +51,20 @@ tags:
     description: Create a payment instrument that you can later use as the source or destination for one or more payments.
   - name: Forex
     description: Checkout.com Foreign Exchange services
-  # - name: Webhooks
-  #   description: Create and manage the webhook notifications you receive to keep up to date with the status of your transactions.
-  # - name: Events
-  #   description: Use events to monitor and get insights into your transactions.
   - name: Disputes
     description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
   - name: Marketplace
     description: Manage all your sub-entities (also known as sub-merchants) through one integration, globally.
   - name: Sessions
     description: Sessions are Checkout.com's interpretation of the EMV 3DS protocol which enables support for SCA payments.
+  - name: Events
+  - name: Workflows
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs
+
+# x-tagGroups:
+# - name: Flow
+#   tags:
+#     - Events
+#     - Workflows

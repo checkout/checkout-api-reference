@@ -1,0 +1,84 @@
+type: object
+additionalProperties: true
+properties:
+  id: 
+    type: string
+    description: The unique event identifier
+    example: evt_az5sblvku4ge3dwpztvyizgcau
+  source:
+    type: string
+    description: The source of the event
+    example: gateway
+  type:
+    type: string
+    description: The event type
+    example: payment_approved
+  timestamp:
+    type: string
+    format: date-time
+    description: The date/time the event occurred
+  version:
+    type: string
+    description: The version of the event
+    example: 1.0.0
+  data:
+    $ref: '#/components/schemas/event-data'
+  workflows:
+    type: array
+    description: The workflows that were invoked for this particular event
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique identifier of the workflow
+          example: wf_wlu3wxc26jounofs5iez75qaqa
+        name:
+          type: string
+          description: The name you provided for your workflow
+          example: Webhooks workflow
+        actions:
+          type: array
+          description: The actions that were invoked for this workflow
+          items:
+            type: object
+            properties:
+              id: 
+                type: string
+                description: The worfklow action identifier
+                example: wfa_uzkxpffkvpiu5fe3h5ira7sqpa
+              type:
+                type: string
+                description: The type of workflow action
+                example: webhook
+              status:
+                type: string
+                enum:
+                  - pending
+                  - completed
+                  - failed
+                description: The status of the workflow action
+                example: completed
+              completed_on:
+                type: string
+                format: date-time
+                description: The date/time the workflow action completed
+              _links:
+                type: object
+                description: Links related to the workflow action
+                minItems: 1
+                required:
+                  - self
+                properties:
+                  self:
+                    type: object
+                    allOf:
+                      - $ref: '#/components/schemas/Link'
+                    description: Workflow action results for this event
+                example:
+                  self:
+                    href: "https://api.checkout.com/events/evt_az5sblvku4ge3dwpztvyizgcau/actions/wfa_uzkxpffkvpiu5fe3h5ira7sqpa"  
+  _links:
+    $ref: '#/components/schemas/event-links'
+
+        

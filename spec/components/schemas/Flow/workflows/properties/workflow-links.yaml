@@ -1,0 +1,14 @@
+type: object
+description: Links related to the workflow
+minItems: 1
+required:
+  - self
+properties:
+  self:
+    type: object
+    allOf:
+      - $ref: '#/components/schemas/Link'
+    description: The URI of the workflow
+example:
+  self:
+    href: "http://flow.cko.lon/client/workflows/wf_wlu3wxc26jounofs5iez75qaqa"

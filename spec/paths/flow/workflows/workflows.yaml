@@ -1,0 +1,76 @@
+get:
+  servers:
+    - url: http://flow.cko.lon/admin
+      description: QA
+  security:
+    - OAuth:
+      - flow
+      - flow:workflows
+  tags:
+    - Workflows
+  summary: Get all workflows
+  description: |
+    Gets all workflows
+  responses:
+    '200':
+      description: Workflows retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/get-all-workflows-response'
+      headers:
+        Cko-Request-Id:
+          schema:
+            $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          schema:
+            $ref: "#/components/headers/Cko-Version"
+    '401':
+      description: Unauthorized
+    '500':
+      description: Internal Error
+
+
+post:
+  servers:
+    - url: http://flow.cko.lon/admin
+      description: QA
+  security:
+    - OAuth:
+      - flow
+      - flow:workflows
+  tags:
+    - Workflows
+  summary: Add a workflow
+  description: |
+    Add a new Flow workflow
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/add-workflow-request'
+  responses:
+    '201':
+      description: Workflow added successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/add-workflow-response'
+      headers:
+        Cko-Request-Id:
+          schema:
+            $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          schema:
+            $ref: "#/components/headers/Cko-Version"
+    '401':
+      description: Unauthorized
+    '404':
+      description: Invalid data was sent
+      content:
+        application/json:
+         schema:
+           $ref: '#/components/schemas/ValidationError'
+    '500':
+      description: Internal Error

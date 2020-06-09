@@ -1,0 +1,52 @@
+type: object
+properties:
+  name: 
+    type: string
+    description: A name you can use to describe your workflow
+    example: Webhooks workflow
+  conditions:
+    type: array
+    description: One or more workflow conditions
+    minItems: 1
+    items: 
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - event
+          example: event
+        events:
+          $ref: '#/components/schemas/source-events-hashmap'
+  actions:
+    type: array
+    description: One or more workflow actions
+    minItems: 1
+    items:
+      $ref: '#/components/schemas/workflow-action'
+example:
+  {
+    "name": "Webhooks workflow",
+    "conditions": [
+      {
+        "type": "event",
+        "events": {
+          "gateway": [
+            "payment_approved",
+            "payment_pending",
+            "payment_declined"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "type": "webhook",
+        "url": "https://example.com/webhooks",
+        "signing_key": "8V8x0dLK%AyD*DNS8JJr",
+        "headers": {
+          "Authorization": "70ed20ff-ba31-4ea3-b3ef-772f2be1cbdf"
+        }
+      }
+    ]
+  }
