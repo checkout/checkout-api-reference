@@ -42,6 +42,12 @@ post:
           $ref: "#/components/headers/Cko-Version"
     '401':
       description: Unauthorized
+    '403':
+      description: Forbidden. This can happen when the OAuth token scope is `sessions:app`, but the `channel_data` property in the request is browser related.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ForbiddenErrorResponse'
     '422':
       description: Invalid data was sent
       content:

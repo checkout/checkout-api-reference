@@ -40,6 +40,12 @@ get:
           $ref: "#/components/headers/Cko-Version"
     '401':
       description: Unauthorized
+    '403':
+      description: Forbidden. This can happen when the OAuth token scope is `sessions:app`, but the session was initiated with the scope `sessions:browser`.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ForbiddenErrorResponse'
     '404':
       description: Session not found
     '502':
