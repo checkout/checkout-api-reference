@@ -2,7 +2,6 @@ type: object
 required:
   - currency
   - source
-  - processing_channel_id
   - completion
 properties:
   source:
@@ -25,7 +24,7 @@ properties:
   processing_channel_id:
     type: string
     description: |
-      The processing channel to be used for the session
+      This is required if it is not set in the request OAuth token. The processing channel to be used for the session. 
   marketplace:
     $ref: '#/components/schemas/MarketplaceData'
   authentication_type:
