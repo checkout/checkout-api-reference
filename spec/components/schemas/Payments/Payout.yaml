@@ -113,10 +113,6 @@ properties:
     type: object
     description: Use the processing object to influence or override the data sent during card processing
     properties:
-      mid:
-        type: string
-        description: Overrides the default merchant/acceptor identifier (MID) configured on your account
-        example: "1234567"
       senderInformation:
         type: object
         description: Allows you to send <a href="https://docs.checkout.com/payment-actions/pay-out-to-a-card/sender-data-for-payouts" target="_blank">additional data</a> required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.

@@ -113,10 +113,6 @@ properties:
     type: object
     description: Use the processing object to influence or override the data sent during card processing
     properties:
-      mid:
-        type: string
-        description: Overrides the default merchant/acceptor identifier (MID) configured on your account
-        example: "1234567"
       aft:
         type: boolean
         description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/payment-actions/account-funding-transactions)

@@ -71,8 +71,6 @@ post:
             account_number: "5555554444"
             zip: W1T
             last_name: Jones
-          processing:
-            mid: "1234567"
           metadata:
             coupon_code: "NY2018"
             partner_id: 123989
