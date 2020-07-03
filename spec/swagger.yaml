@@ -4,7 +4,7 @@ info:
   title: Checkout.com API Reference
   x-logo:
     url: "https://assets.checkout.com/docs/logos/logo-checkout-api-dark.svg"
-    backgroundColor: "#F0F3F7"
+    backgroundColor: "#E6E7EC"
     altText: "Checkout.com API logo"
   contact:
     name: Checkout.com Support
