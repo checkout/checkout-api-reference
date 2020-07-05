@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Thin.eot");
+  src: local("Graphik Thin"), local("./font/Graphik-Thin"),
+    url("./font/Graphik-Thin.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Thin.woff2") format("woff2"),
+    url("./font/Graphik-Thin.woff") format("woff"),
+    url("./font/Graphik-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-ThinItalic.eot");
+  src: local("Graphik Thin Italic"), local("./font/Graphik-ThinItalic"),
+    url("./font/Graphik-ThinItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-ThinItalic.woff2") format("woff2"),
+    url("./font/Graphik-ThinItalic.woff") format("woff"),
+    url("./font/Graphik-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik Super";
+  src: url("./font/Graphik-SuperItalic.eot");
+  src: local("Graphik Super Italic"), local("./font/Graphik-SuperItalic"),
+    url("./font/Graphik-SuperItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-SuperItalic.woff2") format("woff2"),
+    url("./font/Graphik-SuperItalic.woff") format("woff"),
+    url("./font/Graphik-SuperItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Medium.eot");
+  src: local("Graphik Medium"), local("./font/Graphik-Medium"),
+    url("./font/Graphik-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Medium.woff2") format("woff2"),
+    url("./font/Graphik-Medium.woff") format("woff"),
+    url("./font/Graphik-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Black.eot");
+  src: local("Graphik Black"), local("./font/Graphik-Black"),
+    url("./font/Graphik-Black.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Black.woff2") format("woff2"),
+    url("./font/Graphik-Black.woff") format("woff"),
+    url("./font/Graphik-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Semibold.eot");
+  src: local("Graphik Semibold"), local("./font/Graphik-Semibold"),
+    url("./font/Graphik-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Semibold.woff2") format("woff2"),
+    url("./font/Graphik-Semibold.woff") format("woff"),
+    url("./font/Graphik-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik Super";
+  src: url("./font/Graphik-Super.eot");
+  src: local("Graphik Super"), local("./font/Graphik-Super"),
+    url("./font/Graphik-Super.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Super.woff2") format("woff2"),
+    url("./font/Graphik-Super.woff") format("woff"),
+    url("./font/Graphik-Super.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-ExtralightItalic.eot");
+  src: local("Graphik Extralight Italic"),
+    local("./font/Graphik-ExtralightItalic"),
+    url("./font/Graphik-ExtralightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./font/Graphik-ExtralightItalic.woff2") format("woff2"),
+    url("./font/Graphik-ExtralightItalic.woff") format("woff"),
+    url("./font/Graphik-ExtralightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-BlackItalic.eot");
+  src: local("Graphik Black Italic"), local("./font/Graphik-BlackItalic"),
+    url("./font/Graphik-BlackItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-BlackItalic.woff2") format("woff2"),
+    url("./font/Graphik-BlackItalic.woff") format("woff"),
+    url("./font/Graphik-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-RegularItalic.eot");
+  src: local("Graphik Regular Italic"), local("./font/Graphik-RegularItalic"),
+    url("./font/Graphik-RegularItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-RegularItalic.woff2") format("woff2"),
+    url("./font/Graphik-RegularItalic.woff") format("woff"),
+    url("./font/Graphik-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Light.eot");
+  src: local("Graphik Light"), local("./font/Graphik-Light"),
+    url("./font/Graphik-Light.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Light.woff2") format("woff2"),
+    url("./font/Graphik-Light.woff") format("woff"),
+    url("./font/Graphik-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Bold.eot");
+  src: local("Graphik Bold"), local("./font/Graphik-Bold"),
+    url("./font/Graphik-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Bold.woff2") format("woff2"),
+    url("./font/Graphik-Bold.woff") format("woff"),
+    url("./font/Graphik-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Regular.eot");
+  src: local("Graphik Regular"), local("./font/Graphik-Regular"),
+    url("./font/Graphik-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Regular.woff2") format("woff2"),
+    url("./font/Graphik-Regular.woff") format("woff"),
+    url("./font/Graphik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-BoldItalic.eot");
+  src: local("Graphik Bold Italic"), local("./font/Graphik-BoldItalic"),
+    url("./font/Graphik-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-BoldItalic.woff2") format("woff2"),
+    url("./font/Graphik-BoldItalic.woff") format("woff"),
+    url("./font/Graphik-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-SemiboldItalic.eot");
+  src: local("Graphik Semibold Italic"), local("./font/Graphik-SemiboldItalic"),
+    url("./font/Graphik-SemiboldItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-SemiboldItalic.woff2") format("woff2"),
+    url("./font/Graphik-SemiboldItalic.woff") format("woff"),
+    url("./font/Graphik-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-LightItalic.eot");
+  src: local("Graphik Light Italic"), local("./font/Graphik-LightItalic"),
+    url("./font/Graphik-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-LightItalic.woff2") format("woff2"),
+    url("./font/Graphik-LightItalic.woff") format("woff"),
+    url("./font/Graphik-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-Extralight.eot");
+  src: local("Graphik Extralight"), local("./font/Graphik-Extralight"),
+    url("./font/Graphik-Extralight.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-Extralight.woff2") format("woff2"),
+    url("./font/Graphik-Extralight.woff") format("woff"),
+    url("./font/Graphik-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./font/Graphik-MediumItalic.eot");
+  src: local("Graphik Medium Italic"), local("./font/Graphik-MediumItalic"),
+    url("./font/Graphik-MediumItalic.eot?#iefix") format("embedded-opentype"),
+    url("./font/Graphik-MediumItalic.woff2") format("woff2"),
+    url("./font/Graphik-MediumItalic.woff") format("woff"),
+    url("./font/Graphik-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
