@@ -1,4 +1,4 @@
-import import { Checkout } from 'checkout-node-sdk';
+import { Checkout } from 'checkout-node-sdk';
 
 const cko = new Checkout('sk_XXXX');
 
@@ -36,6 +36,6 @@ try {
         }
     });
 
-} catch (error) {
+} catch (err) {
     console.log(err.name)
 }

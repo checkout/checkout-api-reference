@@ -38,3 +38,6 @@ src/OpenApiGenerator/bin/*
 
 src/OpenApiGenerator/obj/*
 .DS_Store
+
+.idea
+.vscode/settings.json

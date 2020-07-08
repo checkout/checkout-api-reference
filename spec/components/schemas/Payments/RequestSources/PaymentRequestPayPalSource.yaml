@@ -1,0 +1,127 @@
+type: object
+required:
+  - invoice_number
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    properties:
+      invoice_number:
+        type: string
+        minLength: 1
+        maxLength: 256
+        description: >
+          PayPal recommends using this field to associate transactions with your internal tracking IDs or invoice numbers; 
+          populating the invoice ID field will help you pull transaction information at a later date using only your internal ID.
+      recipient_name:
+        maxLength: 128
+        type: string
+        description: >
+          Person's name associated with the shipping address.
+      logo_url:
+        type: string
+        format: uri
+        description: >
+          A URL to your logo. Use a graphics format, such as .gif, .jpg, or .png. 
+          The logo appears at the top of the cart review area.
+          Host the image on a secure (https) server.
+          Character limit: 127 single-byte alphanumeric characters.
+          Width: 190px
+          Height: 60px
+      stc: 
+        type: object
+        additionalProperties:
+          type: string
+        description: >
+          These details are used by Paypal to perform a pre-transaction risk management evaluation.
+          The property names should be the same one as agreed between the merchant and PayPal.
+        example:
+          ota_type: "airline"
+          ota_start_city: "SKG"
+      
+      #TODO These are all fields supported by the legacy API but not by UPAPI (yet)
+      #order:
+      #  type: boolean
+      #  default: false
+      #  description: >
+      #    Set this flag to 'true' to use the Deferred Settlement (Order / Auth / Capture) flow. 
+      #    This will only create an order for a customer's approval and will require an additional API authorisation call before a capture.
+      #collection:
+      #  type: boolean
+      #  default: false
+      #  description: > 
+      #    Set this to true if the products will be collected by the customer.
+      #display_shipping:
+      #  type: boolean
+      #  default: false
+      #  description: >
+      #    Applies to ECS transactions only.
+      #    Set this flag to 'true' if the shipping details from PayPal should be displayed on the payment screen.
+      #airline_details:
+      #  type: object
+      #  description: >
+      #    Additional details to be provided in case of airline tickets
+      #  properties:
+      #    passenger_name:
+      #      type: string
+      #      minLength: 1
+      #      maxLength: 25
+      #      description: >
+      #        Name of passenger or person to whom the ticket was issued.
+      #    issue_date:
+      #      type: string
+      #      minLength: 8
+      #      maxLength: 8
+      #      description: >
+      #        Date when the ticket was issued to the buyer. 
+      #        In case of multiple issuances of the same ticket to a buyer, the merchant should use the last ticket date. 
+      #        The date is in the format YYYYMMDD.
+      #    travel_agency_name:
+      #      type: string
+      #      minLength: 1
+      #      maxLength: 25
+      #      description: >
+      #        Name of the travel agency issuing the ticket. For direct airline integration, leave this field blank.
+      #    travel_agency_code:
+      #      type: string
+      #      minLength: 1
+      #      maxLength: 8
+      #      description: >
+      #        The travel agency code. For direct airline integration, leave this field blank.
+      #    ticket_number:
+      #      type: string
+      #      minLength: 1
+      #      maxLength: 16
+      #      description: >
+      #        The ticket number. If multiple tickets are purchased with one payment, use the primary ticket number.
+      #    issuing_carrier_code:
+      #      type: string
+      #      minLength: 4
+      #      maxLength: 4
+      #      description: >
+      #        Airline code for the airline issuing the ticket.
+      #    customer_code:
+      #      type: string
+      #      minLength: 1
+      #      maxLength: 17
+      #      description: >
+      #        A code that the buyer supplied to the merchant, such as a frequent flyer number.
+      #    total_fare:
+      #      type: string
+      #      description: >
+      #        Total fare for all legs on the ticket, excluding taxes and fees. If multiple tickets are purchased, this is the total fare for all tickets.
+      #        Character length and limitations: Must not exceed 10,000.00 in any currency. No currency symbol. Must have two decimal places, decimal separator must be a period (.), and the optional thousands separator must be a comma (,).
+      #    total_taxes:
+      #      type: string
+      #      description: >
+      #        Total taxes for all legs on the ticket. If multiple tickets are purchased, this is the total taxes for all tickets.
+      #        Character length and limitations: Must not exceed 10,000.00 in any currency. No currency symbol. Must have two decimal places, decimal separator must be a period (.), and the optional thousands separator must be a comma (,).
+      #    total_fee:
+      #      type: string
+      #      description: >
+      #        The total fee for all legs on the ticket. If multiple tickets are purchased, this is the total fee for all tickets.
+      #        Character length and limitations: Must not exceed 10,000.00 in any currency. No currency symbol. Must have two decimal places, decimal separator must be a period (.), and the optional thousands separator must be a comma (,).
+      #    restricted_ticket:
+      #      type: boolean
+      #      default: false
+      #      description: >
+      #        For direct airline integration, indicates whether the ticket is restricted (refundable).
