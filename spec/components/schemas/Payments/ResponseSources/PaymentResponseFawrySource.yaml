@@ -8,6 +8,8 @@ allOf:
     $ref: '#/components/schemas/PaymentResponseSource'
   -
     type: object
+    required:
+      - description
     properties:
       description:
         maxLength: 65534
