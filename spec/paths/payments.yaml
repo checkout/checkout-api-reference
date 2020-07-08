@@ -1,4 +1,6 @@
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Payments
   summary: Request a payment or payout
@@ -10,12 +12,7 @@ post:
     To verify the success of the payment, check the `approved` field in the response.
 
   parameters:
-    - in: header
-      name: Cko-Idempotency-Key
-      schema:
-        type: string
-      required: false
-      description: An optional idempotency key for safely retrying payment requests
+    - $ref: '#/components/parameters/ckoIdempotencyKey'
 
   requestBody:
     content:

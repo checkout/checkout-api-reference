@@ -1,4 +1,6 @@
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Events
   summary: Retry all webhooks

@@ -1,4 +1,6 @@
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Disputes
   summary: Upload file

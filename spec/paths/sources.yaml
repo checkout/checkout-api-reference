@@ -1,4 +1,6 @@
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Sources
   summary: Add a payment source

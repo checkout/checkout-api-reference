@@ -1,4 +1,6 @@
 get:
+  security:
+    - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Retrieve webhook
@@ -30,6 +32,8 @@ get:
     '404':
       description: Webhook not found
 put:
+  security:
+    - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Update webhook
@@ -70,6 +74,8 @@ put:
     '409':
       description: URL already registered for another webhook
 patch:
+  security:
+    - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Partially update webhook
@@ -114,6 +120,8 @@ patch:
     '409':
       description: URL already exists in another webhook configuration
 delete:
+  security:
+    - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Remove webhook

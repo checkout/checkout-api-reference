@@ -3,6 +3,8 @@ servers:
     description: Live API
 
 get:
+  security:
+    - ApiSecretKey: []
   tags:
     - Reconciliation
   summary: Get CSV payments report

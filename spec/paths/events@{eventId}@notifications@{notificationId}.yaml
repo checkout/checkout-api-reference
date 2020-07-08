@@ -1,4 +1,6 @@
 get:
+  security:
+    - ApiSecretKey: []
   tags:
     - Events
   summary: Retrieve event notification

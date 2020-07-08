@@ -1,4 +1,6 @@
 get:
+  security:
+    - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Retrieve webhooks
@@ -24,6 +26,8 @@ get:
     '401':
       description: Unauthorized
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Register webhook

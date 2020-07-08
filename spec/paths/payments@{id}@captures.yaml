@@ -1,4 +1,6 @@
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Payments
   summary: Capture a payment
@@ -7,6 +9,7 @@ post:
 
     For card payments, capture requests are processed asynchronously. You can use [webhooks](#tag/Webhooks) to be notified if the capture is successful.
   parameters:
+    - $ref: '#/components/parameters/ckoIdempotencyKey'
     - in: path
       name: id
       schema:

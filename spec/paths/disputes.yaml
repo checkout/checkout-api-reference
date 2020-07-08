@@ -1,4 +1,6 @@
 get:
+  security:
+    - ApiSecretKey: []
   tags:
     - Disputes
   summary: Get disputes

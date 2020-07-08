@@ -1,4 +1,6 @@
 put:
+  security:
+    - ApiSecretKey: []
   tags:
     - Disputes
   summary: Provide dispute evidence
@@ -34,6 +36,8 @@ put:
       description: Unprocessable entity
 
 get:
+  security:
+    - ApiSecretKey: []
   tags:
     - Disputes
   summary: Get dispute evidence
@@ -60,6 +64,8 @@ get:
       description: Dispute not found
 
 post:
+  security:
+    - ApiSecretKey: []
   tags:
     - Disputes
   summary: Submit dispute evidence
