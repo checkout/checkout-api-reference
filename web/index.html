@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83886670-8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-83886670-8');
@@ -15,40 +15,54 @@
   <!-- needed for adaptive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./index.css" />
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="./favicons/apple-touch-icon-180x180.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="./favicons/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="./favicons/favicon-16x16.png"
-  />
-  <link
-    rel="mask-icon"
-    href="./favicons/favicon.32.safari.svg"
-    color="#00122C"
-  />
-  <link rel="shortcut icon" href="./favicons/favicon.ico"/>
-  <meta name="msapplication-TileColor" content="#00122C"/>
-  <meta
-    name="msapplication-config"
-    content="./favicons/browserconfig.xml"
-  />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="./favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
+  <link rel="mask-icon" href="./favicons/favicon.32.safari.svg" color="#00122C" />
+  <link rel="shortcut icon" href="./favicons/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#00122C" />
+  <meta name="msapplication-config" content="./favicons/browserconfig.xml" />
 </head>
 
-<body>
+<body class="dark">
+  <div class="toggle-track">
+    <div class="toggle-moon">🌛</div>
+    <div class="toggle-sun">☀️</div>
+    <div class="toggle-thumb"></div>
+  </div>
+  <script>
+    // Set theme based on local storage
+    var toggle = document.querySelector('.toggle-track');
+    var theme = localStorage.getItem("theme");
+    if (theme) {
+      document.body.className = "";
+      document.body.classList.add(theme);
+      if (theme === "dark") {
+        toggle.classList.add("toggled");
+      }
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+
+    toggle.addEventListener('click', function () {
+      if (toggle.classList.contains("toggled")) {
+        toggle.classList.remove("toggled");
+        localStorage.setItem("theme", "light");
+        document.body.className = "";
+        document.body.classList.add("light");
+      } else {
+        toggle.classList.add("toggled");
+        localStorage.setItem("theme", "dark");
+        document.body.className = "";
+        document.body.classList.add("dark");
+      }
+    })
+  </script>
   <redoc spec-url="./swagger.yaml" hide-loading hide-download-button>
   </redoc>
-  <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-rc.23/bundles/redoc.standalone.js"> </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-rc.23/bundles/redoc.standalone.js"> </script>
 </body>
 
 </html>

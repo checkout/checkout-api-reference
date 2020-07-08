@@ -1,0 +1,4 @@
+type: object
+description: 'PayPal payment source'
+allOf:
+  - $ref: "#/components/schemas/PaymentResponseSource"

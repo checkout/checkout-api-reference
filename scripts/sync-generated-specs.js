@@ -35,6 +35,12 @@ var syncPaymentSources = function()
   syncPaymentResponse('OXXO', 'http://sb-gateway-internal.cko.lon/dlocal-internal/oxxo/relations/gw/payment');
   syncPaymentRequest('Boleto', 'http://sb-gateway-internal.cko.lon/dlocal-internal/boleto/relations/gw/pay');
   syncPaymentResponse('Boleto', 'http://sb-gateway-internal.cko.lon/dlocal-internal/boleto/relations/gw/payment');
+  syncPaymentRequest('PagoFacil', 'http://sb-gateway-internal.cko.lon/dlocal-internal/pagofacil/relations/gw/pay');
+  syncPaymentResponse('PagoFacil', 'http://sb-gateway-internal.cko.lon/dlocal-internal/pagofacil/relations/gw/payment');
+  syncPaymentRequest('RapiPago', 'http://sb-gateway-internal.cko.lon/dlocal-internal/rapipago/relations/gw/pay');
+  syncPaymentResponse('RapiPago', 'http://sb-gateway-internal.cko.lon/dlocal-internal/rapipago/relations/gw/payment');
+  syncPaymentRequest('Baloto', 'http://sb-gateway-internal.cko.lon/dlocal-internal/baloto/relations/gw/pay');
+  syncPaymentResponse('Baloto', 'http://sb-gateway-internal.cko.lon/dlocal-internal/baloto/relations/gw/payment');
 }
 
 var syncPaymentRequest = function(paymentSourceName, paymentSpecUrl) {

@@ -1,12 +1,12 @@
 language: csharp
 mono: none
-dotnet: 2.1
+dotnet: 3.1
 script:
   - npm install
   - npm run build
   - npm test
 node_js:
-  - "8.11.3"
+  - "12.16.3"
 deploy:
   - skip_cleanup: true
     provider: script

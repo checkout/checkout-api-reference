@@ -1,0 +1,33 @@
+type: object
+required:
+  - address_line1
+  - city
+  - zip
+  - country
+properties:
+  address_line1: 
+    type: string
+    description: The first line of the address
+    example: Brandenburger Tor
+  address_line2:
+    type: string
+    description: The second line of the address
+    example: Pariser Platz
+  city:
+    type: string
+    description: The address city
+    example: Berlin
+  state:
+    type: string
+    description: The address state
+    example: Berlin
+  zip:
+    type: string
+    description: The address zip/postal code
+    example: 10117
+  country:
+    type: string
+    description: The two-letter <a href="https://docs.checkout.com/docs/country-codes" target="blank">ISO country code</a> of the address
+    example: DE
+    maxLength: 2
+    minLength: 2

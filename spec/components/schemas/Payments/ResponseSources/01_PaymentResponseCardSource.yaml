@@ -68,7 +68,7 @@ allOf:
         type: string
         maxLength: 2
         minLength: 2
-        description: The card issuer's country (<a href="https://docs.checkout.com/docs/country-codes" target="blank">two-letter ISO code</a>)
+        description: The card issuer's country (<a href="https://docs.checkout.com/resources/codes/country-codes" target="blank">two-letter ISO code</a>)
         example: "US"
       product_id:
         type: string
@@ -92,7 +92,7 @@ allOf:
         example: true
       fast_funds:
         type: string
-        description: The fast funds eligibility of the card. [Read more](https://docs.checkout.com/docs/pay-out-to-a-card)
+        description: The fast funds eligibility of the card. [Read more](https://docs.checkout.com/payment-actions/pay-out-to-a-card)
         example: d
       payment_account_reference:
         type: string

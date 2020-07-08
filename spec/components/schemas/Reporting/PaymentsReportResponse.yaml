@@ -9,116 +9,122 @@ properties:
     description: The number of payments included in the report
     example: 1
   data:
-    type: object
+    type: array
     description: The data object
-    properties:
-      id:
-        type: string
-        description: The unique payment identifier. This was previously called `transaction_id`
-        example: "pay_nezg6bx2k22utmk4xm5s2ughxi"
-      processing_currency:
-        type: string
-        description: The currency of the payment when processed by the cardholder
-        example: "USD"
-      payout_currency:
-        type: string
-        description: The currency of the payment when paid out to you
-        example: "GBP"
-      requested_on:
-        type: string
-        format: date-time
-        description: The date on which the payment was initiated
-        example: "2019-03-08T10:29:51.922"
-      channel_name:
-        type: string
-        description: The name of the channel from which the payment was initiated
-        example: "www.example.com"
-      reference:
-        type: string
-        description: An optional identifier used for tracking payments. This was previously called `track_id`
-        example: "ORD-5023-4E89"
-      payment_method:
-        type: string
-        description: The payment method
-        example: "VISA"
-      card_type:
-        type: string
-        description: The card type
-        example: "CREDIT"
-      card_category:
-        type: string
-        description: The card category
-        example: "Consumer"
-      issuer_country:
-        type: string
-        description: The country of the issuing bank
-        example: "US"
-      merchant_country:
-        type: string
-        description: The country of the merchant bank
-        example: "SI"
-      mid:
-        type: string
-        description: An optional, user-defined identifier for the business
-        example: "123456"
-      actions:
-        type: object
-        description: The actions object
-        properties:
-          type:
-            type: string
-            description: The type of action administered to a payment
-            example: "Authorization"
-          id:
-            type: string
-            description: The unique identifier associated with an action (referred to as a charge ID in the Hub)
-            example: "act_nezg6bx2k22utmk4xm5s2ughxi"
-          processed_on:
-            type: string
-            format: date-time
-            description: The date on which the action occurred
-            example: "2019-03-08T10:29:51.922"
-          response_code:
-            type: integer
-            description: The response code of the action (payment request)
-            example: "10000"
-          response_description:
-            type: string
-            description: Further information about the response code
-            example: "Approved"
-          breakdown:
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique payment identifier. This was previously called `transaction_id`
+          example: "pay_nezg6bx2k22utmk4xm5s2ughxi"
+        processing_currency:
+          type: string
+          description: The currency of the payment when processed by the cardholder
+          example: "USD"
+        payout_currency:
+          type: string
+          description: The currency of the payment when paid out to you
+          example: "GBP"
+        requested_on:
+          type: string
+          format: date-time
+          description: The date on which the payment was initiated
+          example: "2019-03-08T10:29:51.922"
+        channel_name:
+          type: string
+          description: The name of the channel from which the payment was initiated
+          example: "www.example.com"
+        reference:
+          type: string
+          description: An optional identifier used for tracking payments. This was previously called `track_id`
+          example: "ORD-5023-4E89"
+        payment_method:
+          type: string
+          description: The payment method
+          example: "VISA"
+        card_type:
+          type: string
+          description: The card type
+          example: "CREDIT"
+        card_category:
+          type: string
+          description: The card category
+          example: "Consumer"
+        issuer_country:
+          type: string
+          description: The country of the issuing bank
+          example: "US"
+        merchant_country:
+          type: string
+          description: The country of the merchant bank
+          example: "SI"
+        mid:
+          type: string
+          description: An optional, user-defined identifier for the business
+          example: "123456"
+        actions:
+          type: array
+          description: The actions object
+          items:
             type: object
-            description: The breakdown object
             properties:
               type:
                 type: string
-                description: Describes an amount or fee associated with an action. For example, a gateway fee, capture fee and capture amount would all be associated with the capture action
-                example: "Gateway Fee Tax ARE USD/GBP@0.7640412612"
-              date:
+                description: The type of action administered to a payment
+                example: "Authorization"
+              id:
+                type: string
+                description: The unique identifier associated with an action (referred to as a charge ID in the Hub)
+                example: "act_nezg6bx2k22utmk4xm5s2ughxi"
+              processed_on:
                 type: string
                 format: date-time
-                description: Specifies an associated date with a specific amount (some external fees are returned after the associated action)
+                description: The date on which the action occurred
                 example: "2019-03-08T10:29:51.922"
-              processing_currency_amount:
+              response_code:
+                type: integer
+                description: The response code of the action (payment request)
+                example: "10000"
+              response_description:
                 type: string
-                description: The associated amount in the processing currency (if applicable). Numerical values up to 8 decimal places are provided in the response
-                example: "-0.003"
-              payout_currency_amount:
-                type: string
-                description: The associated amount in the payout currency. Numerical values up to 8 decimal places are provided in the response
-                example: "-0.00229212"
-      _links:
-        type: object
-        description: The link object
-        properties:
-          payments:
-            type: object
-            description: The payments object
-            properties:
-              href:
-                type: string
-                description: The direct link to the payment
-                example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
+                description: Further information about the response code
+                example: "Approved"
+              breakdown:
+                type: array
+                description: The breakdown object
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      description: Describes an amount or fee associated with an action. For example, a gateway fee, capture fee and capture amount would all be associated with the capture action
+                      example: "Gateway Fee Tax ARE USD/GBP@0.7640412612"
+                    date:
+                      type: string
+                      format: date-time
+                      description: Specifies an associated date with a specific amount (some external fees are returned after the associated action)
+                      example: "2019-03-08T10:29:51.922"
+                    processing_currency_amount:
+                      type: string
+                      description: The associated amount in the processing currency (if applicable). Numerical values up to 8 decimal places are provided in the response
+                      example: "-0.003"
+                    payout_currency_amount:
+                      type: string
+                      description: The associated amount in the payout currency. Numerical values up to 8 decimal places are provided in the response
+                      example: "-0.00229212"
+        _links:
+          type: object
+          description: The link object
+          properties:
+            payments:
+              type: object
+              description: The payments object
+              properties:
+                href:
+                  type: string
+                  description: The direct link to the payment
+                  example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
   _links:
     type: object
     description: The link object
