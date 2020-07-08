@@ -7,7 +7,7 @@ properties:
     example: "dsp_rbhwd2qrg13uhrp2newf"
   category:
     type: string
-    description: The reason for the dispute. [Find out more](https://docs.checkout.com/docs/disputes#section-dispute-reasons-and-recommended-evidence)
+    description: The reason for the dispute. [Find out more](https://docs.checkout.com/risk-management/disputes#Disputes-Disputereasonsandrecommendedevidence)
     enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general]
     example: "fraudulent"
   amount:

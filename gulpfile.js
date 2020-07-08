@@ -1,50 +1,63 @@
 var gulp = require('gulp');
 var util = require('gulp-util')
 var gulpConnect = require('gulp-connect');
+var exec = require('gulp-exec');
 var connect = require('connect');
 var cors = require('cors');
-var path = require('path');
-var exec = require('child_process').exec;
 var portfinder = require('portfinder');
 var swaggerRepo = require('swagger-repo');
+const { watch } = require('gulp');
 
 var DIST_DIR = 'web_deploy';
 
-gulp.task('serve', ['build', 'watch', 'edit'], function() {
-  portfinder.getPort({port: 3000}, function (err, port) {
-    gulpConnect.server({
-      root: [DIST_DIR],
-      livereload: true,
-      port: port,
-      middleware: function (gulpConnect, opt) {
-        return [
-          cors()
-        ]
-      }
-    });
-  });
+gulp.task('build', function () {
+    return gulp.src(DIST_DIR).pipe(exec('npm run build'));
 });
 
-gulp.task('edit', function() {
-  portfinder.getPort({port: 5000}, function (err, port) {
-    var app = connect();
-    app.use(swaggerRepo.swaggerEditorMiddleware());
-    app.listen(port);
-    util.log(util.colors.green('swagger-editor started http://localhost:' + port));
-  });
+gulp.task('reload', gulp.series('build', function () {
+  return gulp.src(DIST_DIR).pipe(gulpConnect.reload())
+}));
+
+gulp.task('watch', function (cb) {
+  watch('spec/**/*', gulp.series('reload'));
+  watch('web/**/*', gulp.series('reload'));
+  cb();
 });
 
-gulp.task('build', function (cb) {
-  exec('npm run build', function (err, stdout, stderr) {
-    console.log(stderr);
-    cb(err);
-  });
+
+gulp.task('edit', function () {
+  return portfinder.getPortPromise({port: 5000})
+      .then((port) => {
+        var app = connect();
+        app.use(swaggerRepo.swaggerEditorMiddleware());
+        app.listen(port);
+        util.log(util.colors.green('swagger-editor started http://localhost:' + port));
+      })
+      .catch((err) => {
+        // Could not get a free port, `err` contains the reason.
+        console.log(err);
+      });
 });
 
-gulp.task('reload', ['build'], function () {
-  gulp.src(DIST_DIR).pipe(gulpConnect.reload())
-});
+gulp.task('start_site', function(cb) {
+  return portfinder.getPortPromise({port: 3000})
+      .then((port) => {
+        // `port` is guaranteed to be a free port in this scope.
+        gulpConnect.server({
+          root: [DIST_DIR],
+          livereload: true,
+          port: port,
+          middleware: function (gulpConnect, opt) {
+            return [
+              cors()
+            ]
+          }
+        }, function () { this.server.on('close', cb) })
+      })
+      .catch((err) => {
+        // Could not get a free port, `err` contains the reason.
+        console.log(err);
+      });
+})
 
-gulp.task('watch', function () {
-  gulp.watch(['spec/**/*', 'web/**/*'], ['reload']);
-});
+gulp.task('serve', gulp.series('build', gulp.parallel('watch', 'edit', 'start_site')));

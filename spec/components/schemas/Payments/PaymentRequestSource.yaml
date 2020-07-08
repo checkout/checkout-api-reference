@@ -10,6 +10,7 @@ discriminator:
     network_token: '#/components/schemas/05_PaymentRequestNetworkTokenSource'
     alipay: '#/components/schemas/PaymentRequestAlipaySource'
     benefitpay: '#/components/schemas/PaymentRequestBenefitPaySource'
+    baloto: '#/components/schemas/PaymentRequestBalotoSource'
     boleto: '#/components/schemas/PaymentRequestBoletoSource'
     eps: '#/components/schemas/PaymentRequestEpsSource'
     giropay: '#/components/schemas/PaymentRequestGiropaySource'
@@ -18,7 +19,10 @@ discriminator:
     knet: '#/components/schemas/PaymentRequestKnetSource'
     oxxo: '#/components/schemas/PaymentRequestOXXOSource'
     p24: '#/components/schemas/PaymentRequestP24Source'
+    pagofacil: '#/components/schemas/PaymentRequestPagoFacilSource'
+    paypal: '#/components/schemas/PaymentRequestPayPalSource'
     poli: '#/components/schemas/PaymentRequestPoliSource'
+    rapipago: '#/components/schemas/PaymentRequestRapiPagoSource'
     sofort: '#/components/schemas/PaymentRequestSofortSource'
     bancontact: '#/components/schemas/PaymentRequestBancontactSource'
     fawry: '#/components/schemas/PaymentRequestFawrySource'
@@ -29,5 +33,5 @@ required:
 properties:
   type:
     type: string
-    description: The payment source type <br> *Note:* *To make a payment with full card details, you must be <a href="https://docs.checkout.com/docs/pci-compliance" target="blank">SAQ D PCI compliant</a>*
+    description: The payment source type <br> *Note:* *To make a payment with full card details, you must be <a href="https://docs.checkout.com/risk-management/pci-compliance" target="blank">SAQ D PCI compliant</a>*
     example: "card"

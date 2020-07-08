@@ -65,7 +65,7 @@ properties:
         type: string
         maxLength: 2
         minLength: 2
-        description: The card issuer's country (<a href="https://docs.checkout.com/docs/country-codes" target="blank">two-letter ISO code</a>)
+        description: The card issuer's country (<a href="https://docs.checkout.com/resources/codes/country-codes" target="blank">two-letter ISO code</a>)
         example: "US"
     product_id:
         type: string

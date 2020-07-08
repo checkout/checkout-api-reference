@@ -38,7 +38,7 @@ allOf:
         maxLength: 4
       stored:
         type: boolean
-        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/docs/stored-card-details" target="blank">stored card details</a>
+        description: This must be set to `true` for payments that use <a href="https://docs.checkout.com/quickstart/use-an-existing-card/stored-card-details" target="blank">stored card details</a>
         default: false
         example: true
       billing_address:
