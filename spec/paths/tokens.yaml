@@ -1,6 +1,6 @@
 post:
   security:
-    - ApiSecretKey: []
+    - ApiPublicKey: []
   tags:
     - Tokens
   summary: Request a token
