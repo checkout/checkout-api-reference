@@ -29,9 +29,10 @@ properties:
     example: "evidence_required"
   relevant_evidence:
     type: array
+    description: <i>This list and the dispute categories will change over time. Your evidence logic should be informed by this field, not hard coded.</i>
     items: 
       type: strings
-      enum: [proof_of_delivery_or_service, invoice_or_receipt, invoice_showing_distinct_transactions, customer_communication, refund_or_cancellation_policy, proof_of_delivery_or_service_date, recurring_transaction_agreement, additional_evidence]
+      enum: [proof_of_delivery_or_service, invoice_or_receipt, invoice_showing_distinct_transactions, customer_communication, refund_or_cancellation_policy, recurring_transaction_agreement, additional_evidence]
       example: "proof_of_delivery_or_service"
   evidence_required_by:
     type: string
