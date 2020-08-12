@@ -1,7 +1,7 @@
 ﻿type: object
 description: A network token payment source
 allOf:
-  - $ref: "#/components/schemas/PaymentRequestSource"
+  - $ref: "#/components/schemas/SessionSource"
   - type: object
     required:
       - type
