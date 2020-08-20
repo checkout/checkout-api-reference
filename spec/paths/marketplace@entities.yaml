@@ -29,6 +29,12 @@ post:
       description: Bad Request
     '401':
       description: Unauthorized
+    '409':
+      description: Sub-entity onboarding request conflicted with an existing sub-entity
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EntityLinks'
     '422':
       description: Invalid data was sent
       content:

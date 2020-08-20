@@ -8,7 +8,7 @@ properties:
     example: ent_wxglze3wwywujg4nna5fb7ldli
   reference:
     type: string
-    description: A reference you can later use to identify this sub-entity
+    description: A unique reference you can later use to identify this sub-entity
     minLength: 1
     maxLength: 15
     example: superhero1234
