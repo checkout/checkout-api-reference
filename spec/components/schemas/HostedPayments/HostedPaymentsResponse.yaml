@@ -1,0 +1,20 @@
+type: object
+required:
+  - _links
+properties:
+  reference:
+    type: string
+    description: A reference you can later use to identify this payment, such as an order number
+    example: ORD-5023-4E89
+  _links:
+    type: object
+    description: The links related to the hosted payment
+    readOnly: true
+    minItems: 1
+    properties:
+      redirect:
+        type: object
+        allOf:
+          - $ref: '#/components/schemas/Link'
+        example:
+          href: 'https://secure.checkout.com/payment/d6a471b9430f13b1035072f9ce45a8ce:9e5de0d41e9748cf6bc91e650f2c823845997bc52be6108969b47eedffcd06c57e034af5d3090b6c137a0c5de665e68458db94c95b89e2acf326d1996d71f3e2cb52fbfdcadf505af7f4078ff6135d1ebf20b02543dc78b883a313605684b7544d3a14146961c3c7b7e47145971d2388d62553eacce2176b9604484023db1017'

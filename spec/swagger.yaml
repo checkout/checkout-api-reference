@@ -56,6 +56,8 @@ tags:
     description: Use events to monitor and get insights into your transactions.
   - name: Disputes
     description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
+  - name: Hosted Payments
+    description: Create a Hosted Payments page to accept and process payment details.
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs

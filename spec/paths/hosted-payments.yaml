@@ -1,0 +1,29 @@
+post:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Hosted Payments
+  summary: Create a Hosted Payments session
+  description: |
+    Create a Hosted Payments session and pass through all the payment information, like the amount, currency, country and reference.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/HostedPaymentsRequest'
+  responses:
+    '201':
+      description: Created Hosted Payments Page
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HostedPaymentsResponse'
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
