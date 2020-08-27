@@ -116,15 +116,18 @@ properties:
             minimum: 0
             maximum: 100000000
   success_url:
-    type: string <uri>
+    type: string
+    format: uri
     description: For redirect payment methods, this overrides the default success redirect URL configured on your account
     example: https://example.com/success
   cancel_url:
-    type: string <uri>
+    type: string
+    format: uri
     description: Direct customer to this URL if they cancel the payment
     example: https://example.com/cancel
   failure_url:
-    type: string <uri>
+    type: string
+    format: uri
     description: For redirect payment methods, this overrides the default failure redirect URL configured on your account
     example: https://example.com/failure
   metadata:
