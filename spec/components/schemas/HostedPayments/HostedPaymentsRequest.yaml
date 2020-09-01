@@ -114,6 +114,7 @@ properties:
   metadata:
     type: object
     title: The Metadata Schema
+    description: Allows you to store additional information about the transaction
     additionalProperties: true
   3ds:
     type: object
