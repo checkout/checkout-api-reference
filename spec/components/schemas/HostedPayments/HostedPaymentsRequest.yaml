@@ -93,7 +93,7 @@ properties:
             minimum: 1
           price:
             type: integer
-            description: 'Minor units. Includes tax, excludes discount. (max value: 100000000)'
+            description: 'Minor units. Includes tax, excludes discounts. (Max value: 100000000)'
             minimum: 0
             maximum: 100000000
   success_url:
