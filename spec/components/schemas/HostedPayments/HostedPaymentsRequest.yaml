@@ -62,15 +62,8 @@ properties:
         description: The customer's phone number. This will override the phone number specified during tokenization
         required:
           - number
-        properties:
-          country_code:
-            type: string
-            description: The international country calling code (https://docs.checkout.com/docs/country-codes). Required for some risk checks
-            pattern: \d{1,7}
-          number:
-            type: string
-            description: The phone number.
-            pattern: \d{6,25}
+        allOf:
+          - $ref: '#/components/schemas/PhoneNumber'
   products:
     type: array
     description: Details about the products in the order
