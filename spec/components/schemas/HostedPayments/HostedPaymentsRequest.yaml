@@ -89,7 +89,7 @@ properties:
             description: Descriptive item name
           quantity:
             type: integer
-            description: Non-negative. The item quantity.
+            description: The item quantity. Non-negative
             minimum: 1
           price:
             type: integer
