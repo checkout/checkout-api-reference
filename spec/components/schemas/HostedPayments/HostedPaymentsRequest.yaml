@@ -104,7 +104,7 @@ properties:
   cancel_url:
     type: string
     format: uri
-    description: Direct customer to this URL if they cancel the payment
+    description: The URL to which the customer should be directed if they cancel the payment
     example: https://example.com/cancel
   failure_url:
     type: string
