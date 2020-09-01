@@ -86,7 +86,7 @@ properties:
         properties:
           name:
             type: string
-            description: Descriptive item name.
+            description: Descriptive item name
           quantity:
             type: integer
             description: Non-negative. The item quantity.
