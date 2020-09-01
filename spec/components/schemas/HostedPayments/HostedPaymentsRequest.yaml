@@ -8,7 +8,7 @@ required:
 properties:
   amount:
     type: integer
-    description: The payment amount. The exact format depends on the currency (https://docs.checkout.com/docs/calculating-the-value)
+    description: The payment amount. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>
     minimum: 1
   currency:
     type: string
