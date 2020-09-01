@@ -73,7 +73,7 @@ properties:
             pattern: \d{6,25}
   products:
     type: array
-    description: Details about the order products
+    description: Details about the products in the order
     minItems: 1
     maxItems: 1000
     items:
