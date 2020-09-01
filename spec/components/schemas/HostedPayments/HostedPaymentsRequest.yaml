@@ -55,27 +55,8 @@ properties:
         description: The billing address
         required:
           - country
-        properties:
-          address_line1:
-            type: string
-            description: The first line of the address
-          address_line2:
-            type: string
-            description: The second line of the address
-          city:
-            type: string
-            description: The address city
-          state:
-            type: string
-            description: The address state
-          zip:
-            type: string
-            description: The address zip/postal code
-          country:
-            type: string
-            description: The two-letter ISO country code (https://docs.checkout.com/docs/country-codes) of the address
-            minLength: 2
-            maxLength: 2
+        allOf:
+          - $ref: '#/components/schemas/Address'
       phone:
         type: object
         description: The customer's phone number. This will override the phone number specified during tokenization
