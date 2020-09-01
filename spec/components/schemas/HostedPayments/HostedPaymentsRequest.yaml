@@ -52,7 +52,7 @@ properties:
     properties:
       address:
         type: object
-        description: The Address Schema
+        description: The billing address
         required:
           - country
         properties:
