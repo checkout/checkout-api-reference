@@ -93,8 +93,6 @@ get:
                     city: London
                     zip: W1T4TJ
                     country: GB
-                  identification:
-                    national_id_number: AB123456C
                 _links:
                   self:
                     href: https://api.checkout.com/marketplace/entities/ent_wxglze3wwywujg4nna5fb7ldli
@@ -192,8 +190,6 @@ put:
                   zip: "W1T4TJ"
                   country: "GB"
                 national_tax_id: "TAX123456"
-                identification:
-                  national_id_number: "AB123456C"
   security:
     - OAuth:
       - marketplace

@@ -36,14 +36,3 @@ properties:
     description: "The registered address of the individual"
     allOf:
       - $ref: "#/components/schemas/EntityAddress"
-  identification:
-    type: object
-    title: Identification
-    description: "Identification of the individual, used for verification"
-    properties:
-      national_id_number:
-        type: string
-        description: "The official ID number, as applicable in the individual's country (For US, this must be numeric otherwise alpha-numeric)"
-        minLength: 1
-        maxLength: 25
-        example: AB123456C

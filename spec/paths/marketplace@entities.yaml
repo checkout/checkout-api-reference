@@ -70,8 +70,6 @@ post:
                   zip: "W1T4TJ"
                   country: "GB"
                 national_tax_id: "TAX123456"
-                identification:
-                  national_id_number: "AB123456C"
   security:
     - OAuth:
       - marketplace
