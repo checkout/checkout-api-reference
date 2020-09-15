@@ -9,15 +9,15 @@ properties:
   crv:
     type: string
     description: The type of elliptic curve.
-    maxLength: 50
+    maxLength: 40
     example: "P-256"
   x:
     type: string
     description: x coordinate of the elliptic curve that is base64url-encoded.
-    maxLength: 254
+    maxLength: 100
     example: "f83OJ3D2xF1Bg8vub9tLe1gHMzV76e8Tus9uPHvRVEU"
   y:
     type: string
     description: y coordinate of the elliptic curve that is base64url-encoded.
-    maxLength: 254
+    maxLength: 100
     example: "x_FEzRu9m36HLN_tue659LNpXW6pCyStikYjKIWI5a0"
