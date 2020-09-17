@@ -8,7 +8,7 @@ properties:
     type: string
     description: The response body returned from the target server
     example: Bad Request
-  retry_mode:
+  send_mode:
     type: string
     description: Whether the notification was sent automatically or requested manually
     enum:
