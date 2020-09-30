@@ -38,5 +38,5 @@ properties:
                 example: cus_gajmdgunwwlehbctuj6a3sifpm
             default: 
                 description: If true, sets this instrument as the default for the customer
-                type: bool
+                type: boolean
                 example: true

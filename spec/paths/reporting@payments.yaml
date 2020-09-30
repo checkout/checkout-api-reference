@@ -38,13 +38,13 @@ get:
       name: limit
       schema:
         type: integer
+        maximum: 500
+        default: 200
       required: false
       description: Sets a limit on the number of results
-      maximum: 500
-      default: 200
 
   responses:
-    '201':
+    '200':
       description: Payments report retrieved successfully
       content:
         application/json:

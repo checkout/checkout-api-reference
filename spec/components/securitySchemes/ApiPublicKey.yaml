@@ -11,4 +11,4 @@ description: >
       - Production `pk_xxxxxxxxxxxxxxxxxxxxxxxxxx`
 name: Authorization
 type: apiKey
-in: Header
+in: header

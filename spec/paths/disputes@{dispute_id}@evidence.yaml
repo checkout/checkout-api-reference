@@ -22,7 +22,6 @@ put:
       application/json:
         schema:
           $ref: "#/components/schemas/ProvideEvidenceRequest"
-        required: true
   responses:
     "204":
       description: Dispute evidence provided successfully

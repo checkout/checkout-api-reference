@@ -27,7 +27,7 @@ get:
       description: Date and time until which to search for statements
 
   responses:
-    '201':
+    '200':
       description: Statements report successfully retrieved
       content:
         application/json:

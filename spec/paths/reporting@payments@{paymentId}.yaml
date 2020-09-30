@@ -15,14 +15,14 @@ get:
   parameters:
     - in: path
       name: paymentId
-      pattern: "^(pay)_(\\w{26})$"
       schema:
         type: string
+        pattern: "^(pay)_(\\w{26})$"
       required: true
       description: The unique payment identifier
 
   responses:
-    '201':
+    '200':
       description: Payment report returned successfully
       content:
         application/json:

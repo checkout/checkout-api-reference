@@ -48,6 +48,8 @@ allOf:
         x-klarna-docs: 'https://developers.klarna.com/api/#payments-api__create-a-new-order__order_tax_amount'
       products:
         type: array
+        items:
+          type: object
         description: "The applicable order lines.  \nThis object is passed directly to Klarna as `order_lines`, \nso for the object definition use the [Klarna documentation](https://developers.klarna.com/api/#payments-api__create-a-new-order__order_lines)."
         x-klarna-name: order_lines
         x-cko-passthrough: true

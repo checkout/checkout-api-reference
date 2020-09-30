@@ -1,6 +1,6 @@
 in: header
 name: Cko-Idempotency-Key
 schema:
-type: string
+  type: string
 required: false
 description: An optional idempotency key for safely retrying payment requests

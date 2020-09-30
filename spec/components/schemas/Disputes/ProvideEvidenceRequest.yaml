@@ -72,16 +72,3 @@ properties:
     maximum: 500
     description: A brief text description of the file. You can also use this field to provide a link
     example: "Copy of the customer receipt showing the merchandise was delivered on 2018-12-20"
-    _links:
-      type: object
-      properties:
-        self:
-          description: The evidence retrieval endpoint
-          properties:    
-            href:
-              example: "https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf/evidence"
-        parent:
-          description: The dispute retrieval endpoint
-          properties:    
-            href:
-               example: "https://api.checkout.com/disputes/dsp_rbhwd2qrg13uhrp2newf"

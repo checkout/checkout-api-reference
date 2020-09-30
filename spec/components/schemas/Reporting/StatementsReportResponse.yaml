@@ -15,99 +15,102 @@ properties:
     description: The number of statements included in the report
     example: 1
   data:
-    type: object
+    type: array
     description: The data object
-    example: 1
-    properties:
-      id:
-        type: string
-        description: The unique identifier of the generated statement
-        example: "190110B107654"
-      period_start:
-        type: string
-        format: date-time
-        description: The start date of all transactions and amounts that are encompassed within the statement
-        example: "2019-01-09T00:00:00.000"
-      period_end:
-        type: string
-        format: date-time
-        description: The end date of all transactions and amounts that are encompassed within the statement
-        example: "2019-01-09T23:59:59.000"
-      date:
-        type: string
-        format: date-time
-        description: The date the statement was generated
-      payouts:
-        type: object
-        description: The summary is a breakdown of your statement, ordered by the payout currency and its associated payout ID
-        properties:
-          currency:
-            type: string
-            description: The currency of the payout
-            example: "GBP"
-          carried_forward_amount:
-            type: string
-            description: The amount carried forward before the statement period
-            example: "0"
-          current_period_amount:
-            type: string
-            description: The total amount of transactions during the statement period
-            example: "15005.24"
-          net_amount:
-            type: string
-            description: The total amount paid out to your bank account
-            example: "15005.24"
-          date:
-            type: string
-            format: date-time
-            description: The date the payout was completed
-            example: "2019-01-10T00:00:00.000"
-          period_start:
-            type: string
-            format: date-time
-            description: The period start date
-            example: "2019-01-09T00:00:00.000"
-          period_end:
-            type: string
-            format: date-time
-            description: The period end date
-            example: "2019-01-09T23:59:59.000"
-          id:
-            type: string
-            description: Identifies the associated payment
-            example: "ABCDEFGH"
-          status:
-            type: string
-            description: The status of the payout
-            example: "Remitted"
-          payout _fee:
-            type: string
-            description: The total fee charged for the payout
-            example: "-5"
-          _links:
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique identifier of the generated statement
+          example: "190110B107654"
+        period_start:
+          type: string
+          format: date-time
+          description: The start date of all transactions and amounts that are encompassed within the statement
+          example: "2019-01-09T00:00:00.000"
+        period_end:
+          type: string
+          format: date-time
+          description: The end date of all transactions and amounts that are encompassed within the statement
+          example: "2019-01-09T23:59:59.000"
+        date:
+          type: string
+          format: date-time
+          description: The date the statement was generated
+        payouts:
+          type: array
+          description: The summary is a breakdown of your statement, ordered by the payout currency and its associated payout ID
+          items:
             type: object
-            description: The link object
             properties:
-              payments:
-                type: object
-                description: The payments object
-                properties: 
-                  href:
-                    type: string
-                    description: The direct link to the payout
-                    example: "http://api.checkout.com/reporting/statements/190110B107654/payments?payout_id=ABCDEFGH"
-      _links:
-        type: object
-        description: The link object
-        properties:
-          payments:
-            type: object
-            description: The payments object
-            properties:
-              href:
+              currency:
                 type: string
-                description: The direct link to the payment
-                example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
+                description: The currency of the payout
+                example: "GBP"
+              carried_forward_amount:
+                type: string
+                description: The amount carried forward before the statement period
+                example: "0"
+              current_period_amount:
+                type: string
+                description: The total amount of transactions during the statement period
+                example: "15005.24"
+              net_amount:
+                type: string
+                description: The total amount paid out to your bank account
+                example: "15005.24"
+              date:
+                type: string
+                format: date-time
+                description: The date the payout was completed
+                example: "2019-01-10T00:00:00.000"
+              period_start:
+                type: string
+                format: date-time
+                description: The period start date
+                example: "2019-01-09T00:00:00.000"
+              period_end:
+                type: string
+                format: date-time
+                description: The period end date
+                example: "2019-01-09T23:59:59.000"
+              id:
+                type: string
+                description: Identifies the associated payment
+                example: "ABCDEFGH"
+              status:
+                type: string
+                description: The status of the payout
+                example: "Remitted"
+              payout _fee:
+                type: string
+                description: The total fee charged for the payout
+                example: "-5"
+              _links:
+                type: object
+                description: The link object
+                properties:
+                  payments:
+                    type: object
+                    description: The payments object
+                    properties:
+                      href:
+                        type: string
+                        description: The direct link to the payout
+                        example: "http://api.checkout.com/reporting/statements/190110B107654/payments?payout_id=ABCDEFGH"
+        _links:
+          type: object
+          description: The link object
+          properties:
+            payments:
+              type: object
+              description: The payments object
+              properties:
+                href:
+                  type: string
+                  description: The direct link to the payment
+                  example: "http://api.checkout.com/reporting/statements/190110B107654/payments"
   _links:
     type: object
     description: The link object

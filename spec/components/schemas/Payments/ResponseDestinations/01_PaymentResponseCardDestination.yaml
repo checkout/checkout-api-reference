@@ -15,8 +15,8 @@ allOf:
         description: The expiry month
         example: 6
         minimum: 1
-        maxLength: 1
-        minLength: 2
+        maxLength: 2
+        minLength: 1
       expiry_year:
         type: integer
         description: The expiry year
