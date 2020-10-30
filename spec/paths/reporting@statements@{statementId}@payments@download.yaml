@@ -12,7 +12,7 @@ get:
 
   parameters:
     - in: path
-      name: StatementId
+      name: statementId
       example: "190110B107654"
       schema:
         type: string
