@@ -120,7 +120,7 @@ post:
               acquirer_transaction_id: "440644309099499894406"
             eci: "06"
             scheme_id: "489341065491658"
-            links:
+            _links:
               self:
                 href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4"
               action:
