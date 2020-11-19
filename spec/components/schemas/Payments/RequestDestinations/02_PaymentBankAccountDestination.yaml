@@ -1,0 +1,57 @@
+type: object
+description: An existing payment instrument
+required:
+  - country
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestDestination"
+  - type: object
+    properties:
+      account_type:
+        description: The type of account
+        type: string
+        enum: 
+          - savings
+          - current
+          - cash
+        example: savings
+
+      account_number:
+        description: Number (which can contain letters) that identifies the account
+        type: string
+        example: '13654567455'
+        
+      bank_code:
+        description: Code that identifies the bank
+        type: string
+        example: 123-456
+
+      branch_code:
+        description: Code that identifies the bank branch
+        type: string
+        example: '6443'
+
+      iban:
+        description: Internationally agreed standard for identifying bank account
+        type: string
+        example: HU93116000060000000012345676
+
+      bban:
+        description: The combination of bank code and/or branch code and account number
+        type: string
+        example: 3704 0044 0532 0130 00
+
+      swift_bic:
+        description: 8 or 11 character code which identifies the bank or bank branch
+        type: string
+        example: '37040044'
+
+      country:
+        description: The two-letter <a href="https://docs.checkout.com/four/resources/codes/country-codes" target="_blank">ISO country code</a> of where the account is based
+        type: string
+        example: GB
+
+      account_holder:
+        $ref: "#/components/schemas/AccountHolder"
+
+      bank:
+        $ref: "#/components/schemas/BankDetails"
