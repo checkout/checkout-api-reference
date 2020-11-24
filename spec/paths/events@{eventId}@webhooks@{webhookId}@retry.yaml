@@ -4,6 +4,7 @@ post:
   tags:
     - Events
   summary: Retry webhook
+  operationId: retryWebhook
   description: Retries a specific webhook notification for the given event
   parameters:
     - in: path

@@ -4,6 +4,7 @@ get:
   tags:
     - Disputes
   summary: Get disputes
+  operationId: getDisputes
   description:
     Returns a list of all disputes against your business. The results will be returned in reverse chronological order, 
     showing the last modified dispute (for example, where you've recently added a piece of evidence) first.

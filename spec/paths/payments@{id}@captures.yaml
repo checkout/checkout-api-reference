@@ -4,6 +4,7 @@ post:
   tags:
     - Payments
   summary: Capture a payment
+  operationId: captureAPayment
   description: |
     Captures a payment if supported by the payment method.
 

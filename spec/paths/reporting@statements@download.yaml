@@ -8,5 +8,5 @@ get:
   tags:
     - Reconciliation
   summary: Get CSV statements report
+  operationId: getCsvStatementsReport
   description: In addition to the JSON format returned by the `reporting/statements` endpoint, you can also download a CSV report containing the same data.
-    

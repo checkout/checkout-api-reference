@@ -4,6 +4,7 @@ post:
   tags:
     - Disputes
   summary: Accept dispute
+  operationId: acceptDispute
   description:
     If a dispute is legitimate, you can choose to accept it. This will close it for you and remove it from your list of open disputes. There are no further financial implications.
   parameters:

@@ -4,6 +4,7 @@ get:
   tags:
     - Events
   summary: Retrieve event notification
+  operationId: retrieveEventNotification
   description: Retrieves the attempts for a specific event notification
   parameters:
     - in: path

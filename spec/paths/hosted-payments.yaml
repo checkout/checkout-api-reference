@@ -4,6 +4,7 @@ post:
   tags:
     - Hosted Payments
   summary: Create a Hosted Payments session
+  operationId: createAHostedPaymentsSession
   description: |
     Create a Hosted Payments session and pass through all the payment information, like the amount, currency, country and reference.
   requestBody:

@@ -1,5 +1,5 @@
 type: object
-description: Information about the recipent of the payment's funds. Relevant for both [Account Funding Transactions](https://docs.checkout.com/payment-actions/account-funding-transactions) and VISA or MasterCard [domestic UK transactions processed by Financial Institutions](https://docs.ckotech.co/risk-management/requirements-for-financial-institutions).
+description: Information about the recipent of the payment's funds. Relevant for both [Account Funding Transactions](https://docs.checkout.com/payment-actions/account-funding-transactions) and VISA or MasterCard [domestic UK transactions processed by Financial Institutions](https://docs.checkout.com/risk-management/requirements-for-financial-institutions).
 properties:
   dob:
     type: string

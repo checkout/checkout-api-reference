@@ -4,6 +4,7 @@ get:
   tags:
     - Events
   summary: Retrieve event
+  operationId: retrieveEvent
   description: |
     Retrieves the event with the specified identifier string. The event `data` includes the full event details, the schema of which will vary based on the `type`.
   parameters:

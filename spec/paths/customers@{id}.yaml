@@ -4,6 +4,7 @@ patch:
   tags:
     - Customers
   summary: Update customer details
+  operationId: updateCustomerDetails
   description: Update details of a customer
   parameters:
     - in: path
@@ -32,4 +33,3 @@ patch:
             $ref: '#/components/schemas/ValidationError'
     '404':
       description: Customer not found
-      

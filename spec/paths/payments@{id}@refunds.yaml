@@ -4,6 +4,7 @@ post:
   tags:
     - Payments
   summary: Refund a payment
+  operationId: refundAPayment
   description: |
     Refunds a payment if supported by the payment method.
 

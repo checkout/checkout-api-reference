@@ -8,6 +8,7 @@ get:
   tags:
     - Reconciliation
   summary: Get CSV payments report
+  operationId: getCsvPaymentsReport
   description: 
     In addition to the JSON format returned by the `reporting/payments` endpoint, you can also download a CSV report containing the same data.
     Learn more about <a href="https://docs.checkout.com/reporting-and-insights/reconciliation-api/payments-endpoint#Paymentsendpoint-HowtoreadtheCSVfile" target="_blank">how to read your CSV report</a>.

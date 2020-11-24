@@ -8,6 +8,7 @@ get:
   tags:
     - Reconciliation
   summary: Get JSON single payment report
+  operationId: getJsonSinglePaymentReport
   description:
     Returns a JSON payment report containing all of the data related to a specific payment, based on the payment's identifier.
     *Note:* no payments from before 7 February 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view earlier payments, please contact our support team.

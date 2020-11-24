@@ -4,6 +4,7 @@ get:
   tags:
     - Webhooks
   summary: Retrieve webhook
+  operationId: retrieveWebhook
   description: |
     Retrieves the webhook with the specified identifier string
   parameters:
@@ -31,12 +32,14 @@ get:
       description: Unauthorized
     '404':
       description: Webhook not found
+
 put:
   security:
     - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Update webhook
+  operationId: updateWebhook
   description: |
     Updates an existing webhook
   parameters:
@@ -73,12 +76,14 @@ put:
       description: Webhook not found
     '409':
       description: URL already registered for another webhook
+
 patch:
   security:
     - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Partially update webhook
+  operationId: partiallyUpdateWebhook
   description: Updates all or some of the registered webhook details
   parameters:
     - name: id
@@ -119,12 +124,14 @@ patch:
       description: Webhook not found
     '409':
       description: URL already exists in another webhook configuration
+
 delete:
   security:
     - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Remove webhook
+  operationId: removeWebhook
   description: Removes an existing webhook
   parameters:
     - name: id

@@ -4,6 +4,7 @@ get:
   tags:
     - Disputes
   summary: Get dispute details
+  operationId: getDisputeDetails
   description:
     Returns all the details of a dispute using the dispute identifier.
   parameters:

@@ -8,6 +8,7 @@ get:
   tags:
     - Reconciliation
   summary: Get CSV single statement report
+  operationId: GetCsvSingleStatementReport
   description: Downloads a CSV statement report containing all of the data related to a specific statement, based on the statement's identifier.
 
   parameters:

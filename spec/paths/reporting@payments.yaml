@@ -8,6 +8,7 @@ get:
   tags:
     - Reconciliation
   summary: Get JSON payments report
+  operationId: getJsonPaymentsReport
   description:
     Returns a JSON report containing all payments within your specified parameters.
     You can reconcile the data from this report against your statements (which can be found in the <a href="https://hub.checkout.com/login" target="_blank">Hub</a>), the list of payments in the Hub (using the `Reference` field) or your own systems.

@@ -4,6 +4,7 @@ get:
   tags:
     - Instruments
   summary: Get instrument details
+  operationId: getInstrumentDetails
   description: Returns details of an instrument
   parameters:
     - in: path
@@ -29,12 +30,14 @@ get:
       description: Unauthorized
     '404':
       description: Instrument not found
+
 patch:
   security:
     - ApiSecretKey: []
   tags:
     - Instruments
   summary: Update instrument details
+  operationId: updateInstrumentDetails
   description: Update details of an instrument
   parameters:
     - in: path
@@ -72,4 +75,3 @@ patch:
             $ref: '#/components/schemas/ValidationError'
     '404':
       description: Instrument not found
-      

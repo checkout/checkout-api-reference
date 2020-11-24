@@ -4,6 +4,7 @@ get:
   tags:
     - Webhooks
   summary: Retrieve webhooks
+  operationId: retrieveWebhooks
   description: |
     Retrieves the webhooks configured for the channel identified by your API key
   parameters: []
@@ -25,12 +26,14 @@ get:
       description: No webhooks configured
     '401':
       description: Unauthorized
+
 post:
   security:
     - ApiSecretKey: []
   tags:
     - Webhooks
   summary: Register webhook
+  operationId: registerWebhook
   description: |
     Register a new webhook endpoint that Checkout.com will post all or selected events to
   requestBody:

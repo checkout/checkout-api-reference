@@ -4,6 +4,7 @@ post:
   tags:
     - Disputes
   summary: Upload file
+  operationId: uploadFile
   description:
     Upload a file to use as evidence in a dispute. Your file must be in either JPEG/JPG, PNG or PDF format, and be no larger than 4MB.
   requestBody:

@@ -4,6 +4,7 @@ post:
   tags:
     - Sources
   summary: Add a payment source
+  operationId: addAPaymentSource
   description: |
     Add a reusable payment source, like a <a href="https://docs.checkout.com/payment-methods/direct-debit/sepa-direct-debit" target="blank">SEPA Direct Debit</a>, that you can later use to make one or more payments.
     Payment sources are linked to a specific customer and cannot be shared between customers.

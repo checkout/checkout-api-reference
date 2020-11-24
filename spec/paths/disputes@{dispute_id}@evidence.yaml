@@ -4,6 +4,7 @@ put:
   tags:
     - Disputes
   summary: Provide dispute evidence
+  operationId: provideDisputeEvidence
   description: |
     Adds supporting evidence to a dispute. Before using this endpoint, you first need to [upload your files](#tag/Disputes/paths/~1files/post) using the file uploader. You will receive a file id (prefixed by `file_`) which you can then use in your request.
     Note that this only attaches the evidence to the dispute, it does not send it to us. Once ready, you will need to submit it.
@@ -40,6 +41,7 @@ get:
   tags:
     - Disputes
   summary: Get dispute evidence
+  operationId: getDisputeEvidence
   description: |
     Retrieves a list of the evidence submitted in response to a specific dispute. 
   parameters:
@@ -68,6 +70,7 @@ post:
   tags:
     - Disputes
   summary: Submit dispute evidence
+  operationId: submitDisputeEvidence
   description: 
     With this final request, you can submit the evidence that you have previously provided. Make sure you have provided all the relevant information before using this request.
     You will not be able to amend your evidence once you have submitted it.

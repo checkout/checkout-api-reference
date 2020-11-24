@@ -4,16 +4,15 @@ post:
   tags:
     - Payments
   summary: Request a payment or payout
+  operationId: requestAPaymentOrPayout
   description: |
     To accept payments from <a href="https://docs.checkout.com/payment-methods/cards" target="blank">cards</a>, <a href="https://docs.checkout.com/payment-methods/wallets" target="blank">digital wallets</a> and many <a href="https://docs.checkout.com/payment-methods/" target="blank">alternative payment methods</a>, specify the `source.type` field, along with the source-specific data.
 
     To <a href="https://docs.checkout.com/payment-actions/pay-out-to-a-card" target="blank">pay out to a card</a>, specify the destination of your payout using the `destination.type` field, along with the destination-specific data.
 
     To verify the success of the payment, check the `approved` field in the response.
-
   parameters:
     - $ref: '#/components/parameters/ckoIdempotencyKey'
-
   requestBody:
     content:
       application/json:
@@ -121,7 +120,7 @@ post:
               acquirer_transaction_id: "440644309099499894406"
             eci: "06"
             scheme_id: "489341065491658"
-            links:
+            _links:
               self:
                 href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4"
               action:

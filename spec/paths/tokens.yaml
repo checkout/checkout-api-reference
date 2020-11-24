@@ -4,6 +4,7 @@ post:
   tags:
     - Tokens
   summary: Request a token
+  operationId: requestAToken
   description: |
     Exchange a digital wallet payment token or card details for a reference token that can be used later to request a card payment. Tokens are single use and expire after 15 minutes. 
     To create a token, please authenticate using your public key. 

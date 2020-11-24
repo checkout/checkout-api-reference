@@ -4,6 +4,7 @@ get:
   tags:
     - Payments
   summary: Get payment details
+  operationId: getPaymentDetails
   description: |
     Returns the details of the payment with the specified identifier string.
 

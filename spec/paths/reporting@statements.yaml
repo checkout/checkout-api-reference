@@ -8,6 +8,7 @@ get:
   tags:
     - Reconciliation
   summary: Get JSON statements report
+  operationId: getJsonStatementsReport
   description: Returns a JSON report containing all statements within your specified parameters. Please note that the timezone for the request will be UTC.
 
   parameters:
