@@ -1,0 +1,24 @@
+type: object
+description: Store a previously tokenized instrument
+allOf:
+  - $ref: '#/components/schemas/PaymentRequestSender'
+required:
+  - type
+  - first_name
+  - last_name
+properties:
+  type:
+    type: string
+    description: The sender type
+  first_name:
+    type: string
+    description: The sender's first name
+    example: "John"
+  last_name:
+    type: string
+    description: The sender's last name
+    example: "Jones"
+  address:
+    description: The sender's address
+    allOf:
+      - $ref: '#/components/schemas/Address'

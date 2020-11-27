@@ -1,0 +1,27 @@
+type: object
+description: Information about the sender of the payment's funds
+discriminator:
+  propertyName: type
+  mapping:
+    individual: '#/components/schemas/01_PaymentResponseIndividualSender'
+    corporate: '#/components/schemas/02_PaymentResponseCorporateSender'
+    instrument: '#/components/schemas/03_PaymentResponseInstrumentSender'
+required:
+  - type
+properties:
+  type:
+    type: string
+    enum:
+      - individual
+      - corporate
+      - instrument
+    description: The type of sender
+
+  reference:
+    type: string
+    description: The sender's reference for the payout
+  
+  account_number:
+    type: string
+    description: The sender's account number (card payouts only)
+    example: "424242424242424242"

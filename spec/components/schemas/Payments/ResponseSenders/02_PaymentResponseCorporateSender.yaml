@@ -1,0 +1,18 @@
+type: object
+description: Store a previously tokenized instrument
+allOf:
+  - $ref: '#/components/schemas/PaymentDetailsResponseSender'
+required:
+  - type
+  - company_name
+properties:
+  type:
+    type: string
+    description: The sender type
+  company_name:
+    type: string
+    description: The sender's company name
+  address:
+    description: The sender's address
+    allOf:
+      - $ref: '#/components/schemas/Address'

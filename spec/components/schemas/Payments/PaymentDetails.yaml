@@ -134,6 +134,11 @@ properties:
     description: The IP address used to make the payment
     allOf:
       - $ref: '#/components/schemas/IPAddress'
+  sender:
+    description: Information about the sender of the payment's funds
+    type: object
+    allOf:
+      - $ref: '#/components/schemas/PaymentDetailsResponseSender'
   marketplace:
     $ref: '#/components/schemas/MarketplaceData'
   recipient:

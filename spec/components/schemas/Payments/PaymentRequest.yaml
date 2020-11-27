@@ -110,7 +110,7 @@ properties:
     allOf:
       - $ref: '#/components/schemas/IPAddress'
   sender:
-    $ref: '#/components/schemas/PaymentSender'
+    $ref: '#/components/schemas/PaymentRequestSender'
   recipient:
     $ref: '#/components/schemas/PaymentRecipient'
   marketplace:

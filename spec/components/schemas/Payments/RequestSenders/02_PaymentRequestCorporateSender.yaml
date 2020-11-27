@@ -1,7 +1,7 @@
 type: object
 description: Store a previously tokenized instrument
 allOf:
-  - $ref: '#/components/schemas/PaymentSender'
+  - $ref: '#/components/schemas/PaymentRequestSender'
 required:
   - type
   - company_name
