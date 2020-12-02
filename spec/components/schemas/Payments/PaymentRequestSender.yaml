@@ -20,9 +20,3 @@ properties:
   reference:
     type: string
     description: The sender's reference for the payout
-  
-  # p2c
-  account_number:
-    type: string
-    description: The sender's account number (card payouts only)
-    example: "424242424242424242"
