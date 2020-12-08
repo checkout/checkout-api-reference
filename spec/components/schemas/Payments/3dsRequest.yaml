@@ -33,3 +33,11 @@ properties:
     description: Indicates the version of 3D Secure that was used for authentication. Defaults to 1.0.0 if not provided
     maxLength: 10
     example: "2.0.1"
+  exemption:
+    type: string
+    description: Specifies an exemption reason so that the payment is not processed using 3D Secure authentication
+    enum:
+      - low_value
+      - secure_corporate_payment
+      - 3ds_outage
+    example: "low_value"
