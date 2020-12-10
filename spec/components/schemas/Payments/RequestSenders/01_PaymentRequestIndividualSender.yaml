@@ -6,10 +6,11 @@ required:
   - type
   - first_name
   - last_name
+  - address
 properties:
   type:
     type: string
-    description: The sender type
+    description: The sender type. If set to `instrument`, the sender information (name and address) will be retrieved from the payment instrument.
   first_name:
     type: string
     description: The sender's first name

@@ -8,6 +8,7 @@ discriminator:
     instrument: '#/components/schemas/03_PaymentRequestInstrumentSender'
 required:
   - type
+  - reference
 properties:
   type:
     type: string
@@ -15,8 +16,8 @@ properties:
       - individual
       - corporate
       - instrument
-    description: The type of sender
+    description: TEST The type of sender
 
   reference:
     type: string
-    description: The sender's reference for the payout
+    description: The unique reference for the sender of the payout

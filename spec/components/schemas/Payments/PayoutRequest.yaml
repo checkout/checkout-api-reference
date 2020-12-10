@@ -5,7 +5,6 @@ required:
   - amount
   - currency
   - billing_descriptor
-  - sender
 properties:
   source: 
     $ref: '#/components/schemas/PayoutRequestSource'

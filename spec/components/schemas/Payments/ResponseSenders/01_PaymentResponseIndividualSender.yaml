@@ -6,6 +6,7 @@ required:
   - type
   - first_name
   - last_name
+  - address
 properties:
   type:
     type: string

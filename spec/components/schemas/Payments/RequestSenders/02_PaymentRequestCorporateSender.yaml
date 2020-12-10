@@ -5,10 +5,11 @@ allOf:
 required:
   - type
   - company_name
+  - address
 properties:
   type:
     type: string
-    description: The sender type
+    description: The sender type. If set to `instrument`, the sender information (name and address) will be retrieved from the payment instrument.
   company_name:
     type: string
     description: The sender's company name
