@@ -37,3 +37,7 @@ properties:
     type: string
     description: Indicates the version of 3D Secure that was used for authentication
     example: "2.1.0"
+  exemption:
+      type: string
+      description: Specifies an exemption reason so that the payment is not processed using 3D Secure authentication
+      example: "low_value"
