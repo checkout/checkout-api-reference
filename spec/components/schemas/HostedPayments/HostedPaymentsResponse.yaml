@@ -18,3 +18,8 @@ properties:
           - $ref: '#/components/schemas/Link'
         example:
           href: 'https://pay.checkout.com/page/d6a471b9430f13b1035072f9ce45a8ce:9e5de0d41e9748cf6bc91e650f2c823845997bc52be6108969b47eedffcd06c57e034af5d3090b6c137a0c5de665e68458db94c95b89e2acf326d1996d71f3e2cb52fbfdcadf505af7f4078ff6135d1ebf20b02543dc78b883a313605684b7544d3a14146961c3c7b7e47145971d2388d62553eacce2176b9604484023db1017'
+example:
+  reference: "ORD-123A"
+  _links:
+    redirect:
+      href: "https://pay.checkout.com/page/c1ad00cc0fb08075645b2aa4fe32ba5c..."

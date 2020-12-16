@@ -126,9 +126,9 @@ post:
               action:
                 href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/actions"
               void:
-                href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/captures"
-              capture:
                 href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/voids"
+              capture:
+                href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/captures"
       headers:
         Cko-Request-Id:
           $ref: "#/components/headers/Cko-Request-Id"

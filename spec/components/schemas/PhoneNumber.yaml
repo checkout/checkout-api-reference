@@ -12,4 +12,4 @@ properties:
     description: The phone number
     minLength: 6
     maxLength: 25
-    example: 415 555 2671
+    example: "4155552671"
