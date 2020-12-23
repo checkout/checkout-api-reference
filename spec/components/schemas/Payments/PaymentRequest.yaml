@@ -8,8 +8,7 @@ properties:
   amount:
     type: integer
     description: |
-      The payment amount. If a `destination` is specified, indicates the payout amount.
-      Omit the amount or provide a value of `0` to perform a card verification.       
+      The payment amount. Omit the amount or provide a value of `0` to perform a card verification.       
 
       The amount must be provided in the <a href="https://docs.checkout.com/four/resources/calculating-the-amount" target="blank">minor currency unit</a>.
     minimum: 0
@@ -18,8 +17,6 @@ properties:
     type: string
     description: |
       The three-letter <a href="https://docs.checkout.com/four/resources/codes/currency-codes" target="blank">ISO currency code</a>
-
-      If a `destination` is specified, indicates the currency of the payout.
     example: USD
     maxLength: 3
     minLength: 3
