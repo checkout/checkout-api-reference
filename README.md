@@ -40,7 +40,7 @@
 5. Repeat (3) through (4) until finished
 6. Create a PR and request review from  
     - a peer developer (if necessary)
-    - [@Toby Knott](https://github.com/toby-knott-cko) and [@Jack Hutchinson](https://github.com/jack-hutchinson-cko)
+    - [@Toby Knott](https://github.com/toby-knott-cko), [@Jack Hutchinson](https://github.com/jack-hutchinson-cko) and [@Chrisi Webster](https://github.com/chrisi-webster-cko)
 7. After merging the PR, please check if your branch can be deleted
 
 ### Troubleshooting
