@@ -1,0 +1,19 @@
+type: object
+description: The response for type of instrument stored
+required:
+  - type
+  - fingerprint
+discriminator:
+  propertyName: type
+  mapping:
+    bank_account: '#/components/schemas/UpdateBankInstrumentResponse'
+properties:
+  type:
+    description: The type of instrument
+    type: string
+  fingerprint:
+    description: A token that can uniquely identify this instrument across all customers
+    pattern: "^([a-z0-9]{26})$"
+    type: string
+    example: "smoua2sbuqhupeofwbe77n5nsm"
+

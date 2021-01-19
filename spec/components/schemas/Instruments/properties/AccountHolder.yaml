@@ -12,22 +12,19 @@ properties:
 
   first_name:
     description: |
-      The account holder's first name. 
-      Required if `type` is `individual`.
+      The account holder's first name 
     type: string
     example: "John"
 
   last_name:
     description: | 
-      The account holder's last name.
-      Required if `type` is `individual`.
+      The account holder's last name
     type: string
     example: "Smith"
 
   company_name:
     description: | 
-      The legal name of a registered company that holds the account.
-      Required if `type` is `corporate`.
+      The legal name of a registered company that holds the account
     type: string
     example: Test company
 

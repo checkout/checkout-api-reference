@@ -1,0 +1,40 @@
+type: object
+description: Update bank account details
+allOf:
+  - $ref: "#/components/schemas/UpdateInstrumentRequest"
+  - type: object
+properties:
+  type:
+    description: This field is used for illustration purposes and does not need to be provided in the request.
+    type: string
+    enum: ["card", "bank_account"]
+
+  expiry_month:
+        type: integer
+        description: The expiry month of the card
+        minimum: 1
+        example: 6
+        minLength: 1
+        maxLength: 2
+
+  expiry_year:
+        type: integer
+        description: The expiry year of the card
+        example: 2025
+        minLength: 4
+        maxLength: 4
+
+  name:
+    description: |
+      Name of the cardholder 
+    type: string
+    example: "Mr. J Smith"
+  
+  account_holder:
+    $ref: '#/components/schemas/UpdateCardAccountHolder'
+        
+
+  customer:
+    $ref: "#/components/schemas/UpdateCustomerRequest"
+
+

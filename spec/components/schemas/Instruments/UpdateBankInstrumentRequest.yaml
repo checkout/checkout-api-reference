@@ -1,0 +1,70 @@
+type: object
+description: Update bank account details
+allOf:
+  - $ref: "#/components/schemas/UpdateInstrumentRequest"
+  - type: object
+properties:
+  type:
+    description: This field is used for illustration purposes and does not need to be provided in the request.
+    type: string
+    enum: ["card", "bank_account"]
+
+  account_type:
+    description: The type of account
+    type: string
+    enum: 
+      - savings
+      - current
+      - cash
+    example: savings
+
+  account_number:
+    description: Number (which can contain letters) that identifies the account
+    type: string
+    example: '13654567455'
+
+  bank_code:
+    description: Code that identifies the bank
+    type: string
+    example: 123-456
+
+  branch_code:
+    description: Code that identifies the bank branch
+    type: string
+    example: '6443'
+
+  iban:
+    description: Internationally agreed standard for identifying bank account
+    type: string
+    example: HU93116000060000000012345676
+
+  bban:
+    description: The combination of bank code and/or branch code and account number
+    type: string
+    example: 3704 0044 0532 0130 00
+
+  swift_bic:
+    description: 8 or 11 character code which identifies the bank or bank branch
+    type: string
+    example: '37040044'
+
+  currency:
+    description: The three-letter <a href="https://docs.checkout.com/four/resources/codes/currency-codes" target="_blank">ISO currency code</a> of the account's currency
+    type: string
+    example: GBP
+
+  country:
+    description: The two-letter <a href="https://docs.checkout.com/four/resources/codes/country-codes" target="_blank">ISO country code</a> of where the account is based
+    type: string
+    example: GB
+
+  account_holder:
+    $ref: "#/components/schemas/AccountHolder"
+
+  bank:
+    $ref: "#/components/schemas/BankDetails"
+
+  customer:
+    $ref: "#/components/schemas/UpdateCustomerRequest"
+
+

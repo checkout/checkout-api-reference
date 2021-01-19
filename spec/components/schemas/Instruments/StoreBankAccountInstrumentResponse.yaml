@@ -16,3 +16,21 @@ properties:
     example: vnsdrvikkvre3dtrjjvlm5du4q
   customer:
     $ref: '#/components/schemas/CustomerResponse'
+  bank:
+    $ref: "#/components/schemas/BankDetails"
+  swift_bic:
+    description: 8 or 11 character code which identifies the bank or bank branch
+    type: string
+    example: '37040044'
+  account_number:
+    description: Number (which can contain letters) that identifies the account
+    type: string
+    example: '13654567455'
+  bank_code:
+    description: Code that identifies the bank
+    type: string
+    example: 123-456
+  iban:
+    description: Internationally agreed standard for identifying bank account
+    type: string
+    example: HU93116000060000000012345676

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\spec",
+    "\\spec\\components",
+    "\\spec\\components\\schemas",
+    "\\spec\\components\\schemas\\Instruments",
+    "\\spec\\components\\schemas\\Instruments\\properties",
+    "\\src",
+    "\\src\\OpenApiGenerator",
+    "\\src\\OpenApiGenerator\\bin",
+    "\\src\\OpenApiGenerator\\obj"
+  ],
+  "SelectedNode": "\\spec\\components\\schemas\\Instruments\\properties\\AccountHolder.yaml",
+  "PreviewInSolutionExplorer": false
+}

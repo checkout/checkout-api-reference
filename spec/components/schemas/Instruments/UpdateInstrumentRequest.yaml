@@ -1,0 +1,9 @@
+type: object
+description: The type of instrument to be updated
+required:
+#  - type
+discriminator:
+  propertyName: type
+  mapping:
+    card: '#/components/schemas/UpdateCardInstrumentRequest'
+    bank_account: '#/components/schemas/UpdateBankInstrumentRequest'

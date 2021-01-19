@@ -1,0 +1,7 @@
+type: object
+description: The response for type of instrument stored
+discriminator:
+  propertyName: type
+  mapping:
+    card: '#/components/schemas/UpdateCardInstrumentResponse'
+    bank_account: '#/components/schemas/UpdateBankInstrumentResponse'
