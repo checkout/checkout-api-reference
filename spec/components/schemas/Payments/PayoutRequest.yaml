@@ -5,6 +5,7 @@ required:
   - amount
   - currency
   - billing_descriptor
+  - processing_channel_id
 properties:
   source: 
     $ref: '#/components/schemas/PayoutRequestSource'
@@ -34,3 +35,6 @@ properties:
     $ref: '#/components/schemas/PayoutSender'
   instruction:
     $ref: '#/components/schemas/PaymentInstruction'
+  processing_channel_id:
+    type: string
+    description: The processing channel identifier
