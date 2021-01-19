@@ -70,25 +70,24 @@ post:
                 partner_id: 123989
           Payout:
             value:
-              currency: GBP
               source:
-                amount: 100
                 type: "currency_account"
-                id: "ca_rdkzbdbiwgju7j47ajz3sascr4"
-                reference: "PTB reference"
+                id: "ca_y3oqhf46pyzuxjbcn2giaqnb44"
               destination:
                 type: "id"
-                id: "src_zyvi7a3wqiourbdfyagg6kqz64"
+                id: "src_gsd2agaqd2sernz5tpcfv555nq"
+              amount: 1000
+              currency: GBP
+              reference: "PO-215-5721"
               billing_descriptor:
-                reference: "Billing descriptor reference"
+                reference: "Withdrawal"
               sender:
                 type: "instrument"
-                reference: "Sender reference"
-                first_name: "John"
-                last_name: "Smith"
+                reference: "8285282045818"
               instruction:
-                purpose: "Purpose reference"
+                purpose: "Withdrawal"
                 scheme: "local"
+                quote_id: "qte_mbabizu24mvu3mela5njyhpit4"
               processing_channel_id: "pc_hpswyyx23geezflc2ocz3exn4y"
 
   responses:
