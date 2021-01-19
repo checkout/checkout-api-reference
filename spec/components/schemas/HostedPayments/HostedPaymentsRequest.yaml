@@ -10,30 +10,33 @@ properties:
     type: integer
     description: The payment amount. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>
     minimum: 1
+    example: 1000
   currency:
     type: string
     description: The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a> of the payment
-    example: USD
+    example: GBP
     minLength: 3
     maxLength: 3
   reference:
     type: string
     description: A reference you can later use to identify this payment, such as an order number
-    example: ORD-5023-4E89
+    example: ORD-123A
   description:
     type: string
     description: A description of the payment
+    example: Payment for Gold Necklace
   customer:
     type: object
     description: The customer's details
     properties:
       email:
         type: string
-        example: example@email.com
         description: An optional email address to associate with the customer
+        example: jokershere@email.com
       name:
         type: string
         description: The customer's name. This will only set the name for new customers
+        example: Jack Napier
   billing:
     type: object
     additionalProperties: false
@@ -71,30 +74,35 @@ properties:
           name:
             type: string
             description: Descriptive item name
+            example: Gold Necklace
           quantity:
             type: integer
             description: The item quantity. Non-negative
             minimum: 1
+            example: 1
           price:
             type: integer
             description: 'Minor units. Includes tax, excludes discounts. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>'
             minimum: 0
             maximum: 100000000
+            example: 1000
+  risk:
+    $ref: '#/components/schemas/RiskRequest'
   success_url:
     type: string
     format: uri
     description: For redirect payment methods, this overrides the default success redirect URL configured on your account
-    example: https://example.com/success
+    example: https://example.com/payments/success
   cancel_url:
     type: string
     format: uri
     description: The URL to which the customer should be directed if they cancel the payment
-    example: https://example.com/cancel
+    example: https://example.com/payments/cancel
   failure_url:
     type: string
     format: uri
     description: For redirect payment methods, this overrides the default failure redirect URL configured on your account
-    example: https://example.com/failure
+    example: https://example.com/payments/failure
   metadata:
     type: object
     title: The Metadata Schema
@@ -108,25 +116,14 @@ properties:
         type: boolean
         description: Whether to process this payment as a 3D Secure payment
         default: false
+        example: false
       attempt_n3d:
         type: boolean
         description: Determines whether to attempt a 3D Secure payment as non-3D Secure should the card issuer not be enrolled
         default: false
+        example: false
   locale:
     type: string
     pattern: /^[a-z]{2,3}(?:-[A-Z]{2,3}(?:-[a-zA-Z]{4})?)?$/
     description: RFC 1766 customer's locale. Optional, default taken from business settings
     example: en-GB
-example:
-  amount: 1000
-  currency: "GBP"
-  reference: "ORD-123A"
-  billing:
-    address:
-      country: "GB"
-  customer:
-    name: "Jack Napier"
-    email: "jokershere@gmail.com"
-  success_url: "https://example.com/payments/success"
-  failure_url: "https://example.com/payments/failure"
-  cancel_url: "https://example.com/payments/checkout"
