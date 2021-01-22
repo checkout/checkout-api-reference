@@ -13,9 +13,7 @@ properties:
     $ref: '#/components/schemas/PaymentRequestDestination'
   amount:
     type: integer
-    description: |
-     The payout amount.
-     The amount must be provided in the <a href="https://docs.checkout.com/four/resources/calculating-the-amount" target="blank">minor currency unit</a>
+    description: The amount you want to pay out to the destination account. The exact format <a href="https://docs.checkout.com/four/resources/calculating-the-amount" target="_blank">depends on the currency</a>. <br><i>You must specify <b>either</b> `amount` <b>or</b> `source.amount`.</i>
     minimum: 0
     example: 6540
   currency:
