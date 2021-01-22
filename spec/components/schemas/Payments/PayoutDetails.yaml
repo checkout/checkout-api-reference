@@ -58,6 +58,11 @@ properties:
   status:
     type: string
     description: The status of the payout
+    enum:
+      - Pending
+      - Paid
+      - Declined
+      - Returned
     example: Pending
   approved:
     type: boolean
