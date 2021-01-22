@@ -19,7 +19,7 @@ properties:
   currency:
     type: string
     description: |
-      The three-letter <a href="https://docs.checkout.com/four/resources/codes/currency-codes" target="blank">ISO code</a> for the destination currency
+      The three-letter <a href="https://docs.checkout.com/four/resources/codes/currency-codes" target="blank">ISO code</a> of the destination currency <br><i>The currency should match that of the destination account</i>.
     example: USD
     maxLength: 3
     minLength: 3
