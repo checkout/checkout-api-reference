@@ -8,25 +8,28 @@ properties:
     type: integer
     description: The payment amount. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>
     minimum: 1
+    example: 200
   currency:
     type: string
-    description: The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a> of the payment
-    example: USD
+    description: The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a> of the payment.<br><i>The `currency` and `billing.address.country` fields determine which payment methods are shown on the payment page</i>.
+    example: GBP
     minLength: 3
     maxLength: 3
   reference:
     type: string
-    description: A reference you can later use to identify this payment, such as an order number
-    example: ORD-5023-4E89
+    description: A reference you can later use to identify this payment, such as an order number.<br><i>Required for PayPal payments<i>.
+    example: ORD-123A
   description:
     type: string
     description: A description of the payment
+    example: Payment for Gold Necklace
   expires_in:
     type: integer
-    description: The seconds the payment link should be kept valid for. Maximum expiry is 14 days and the default is 1 day
-    minimum: 1,
+    description: The time for which the link remains valid, in seconds.
+    minimum: 1
     maximum: 1209600
     default: 86400
+    example: 604800
   customer:
     type: object
     description: The customer's details
@@ -34,9 +37,11 @@ properties:
       email:
         type: string
         description: An email address to associate with the customer
+        example: jokershere@email.com
       name:
         type: string
         description: The customer's name. This will only set the name for new customers
+        example: Jack Napier
   billing:
     type: object
     additionalProperties: false
@@ -74,15 +79,18 @@ properties:
         name:
           type: string
           description: Descriptive item name
+          example: Gold Necklace
         quantity:
           type: integer
-          description: The item quantity. Non-negative
+          description: The item quantity
           minimum: 1
+          example: 1
         price:
           type: integer
-          description: 'Minor units. Includes tax, excludes discounts. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>'
+          description: Minor units. Includes tax, excludes discounts.
           minimum: 0
           maximum: 100000000
+          example: 200
   metadata:
     type: object
     title: The Metadata Schema

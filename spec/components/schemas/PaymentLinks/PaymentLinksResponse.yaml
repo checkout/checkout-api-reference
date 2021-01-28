@@ -8,13 +8,13 @@ properties:
     example: 'cid_7fbeb87f-322d-4a02-9758-2ca48ae65696'
   expires_on:
     type: string
-    description: The date and time for when the payment link expires
+    description: The date and time when the payment link expires
     format: 'ISO 8601 date and time'
     example: '2020-08-20T20:25:28+08:00'
   reference:
     type: string
     description: A reference you can later use to identify this payment, such as an order number
-    example: ORD-5023-4E89
+    example: ORD-123A
   _links:
     type: object
     description: The links related to the hosted payment
