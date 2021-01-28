@@ -82,7 +82,7 @@ properties:
             example: 1
           price:
             type: integer
-            description: 'Minor units. Includes tax, excludes discounts. (Max value: 100000000)'
+            description: 'Minor units. Includes tax, excludes discounts. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>'
             minimum: 0
             maximum: 100000000
             example: 1000
