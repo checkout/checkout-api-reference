@@ -36,6 +36,7 @@ properties:
     properties:
       email:
         type: string
+        format: email
         description: An email address to associate with the customer
         example: jokershere@email.com
       name:
