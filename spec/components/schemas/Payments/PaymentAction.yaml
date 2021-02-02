@@ -20,6 +20,7 @@ properties:
       - Capture
       - Refund
       - Payout
+      - Return
   processed_on:
     description: The date/time the action was processed
     allOf:
