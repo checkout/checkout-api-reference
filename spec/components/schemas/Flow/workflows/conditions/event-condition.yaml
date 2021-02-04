@@ -1,0 +1,10 @@
+type: object
+description: Events workflow object
+required:
+  - events
+allOf:
+  - $ref: "#/components/schemas/workflow-condition"
+  - type: object
+    properties:
+      events:
+        $ref: '#/components/schemas/source-events-hashmap'

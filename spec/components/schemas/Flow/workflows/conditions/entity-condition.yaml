@@ -1,0 +1,13 @@
+type: array
+description: Entities workflow object
+required:
+  - entities
+allOf:
+  - $ref: "#/components/schemas/workflow-condition"
+  - type: object
+    properties:
+      entities:
+        type: array
+        description: The entities array
+        minItems: 1
+        pattern: ^ent_[a-z0-9]{26}$

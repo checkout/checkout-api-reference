@@ -1,0 +1,22 @@
+type: object
+description: Action that sends a Slack message
+required:
+  - url
+allOf:
+  - $ref: '#/components/schemas/workflow-action'
+  - type: object
+    required:
+      - url
+      - channel
+    properties:
+      url:
+        type: string
+        format: uri
+        description: Your incoming webhook URL
+      channel:
+        type: string
+        description: The Slack channel you want to send messages to.
+      message_template:
+        type: string
+        description: The message template (Liquid format) you want to use for Slack messages. If you don't set a template, the full event data will be provided.
+      

@@ -9,15 +9,7 @@ properties:
     description: One or more workflow conditions
     minItems: 1
     items:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-            - event
-          example: event
-        events:
-          $ref: '#/components/schemas/source-events-hashmap'
+     $ref: '#/components/schemas/workflow-condition'
   actions:
     type: array
     description: One or more workflow actions
@@ -26,3 +18,56 @@ properties:
       $ref: '#/components/schemas/workflow-action'
   _links:
     $ref: '#/components/schemas/workflow-links'
+example:
+  {
+    "name": "Webhooks workflow",
+    "conditions": [
+      {
+        "type": "event",
+        "events": {
+          "gateway": [
+            "card_verified",
+            "card_verification_declined",
+            "payment_approved",
+            "payment_pending",
+            "payment_declined",
+            "payment_voided",
+            "payment_captured",
+            "payment_refunded"
+          ],
+          "dispute": [
+            "dispute_canceled",
+            "dispute_evidence_required",
+            "dispute_expired",
+            "dispute_lost",
+            "dispute_resolved",
+            "dispute_won"
+          ]
+        }
+      },
+      {
+        "type": "entity",
+        "entities": [
+          "ent_xyfdshfudosfdshfdiosfds",
+          "ent_fidjosfjdisofdjsifdosfu"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "webhook",
+        "url": "https://example.com/webhook-receiver",
+        "headers": {
+          "Authorization": "secret-key"
+        },
+        "signature": {
+          "key": "signature-key"
+        }
+      }
+    ],
+    "_links": {
+      "self": {
+        "href": "https://api.checkout.com/workflows/wf_wlu3wxc26jounofs5iez75qaqa"
+      }
+    }
+  }

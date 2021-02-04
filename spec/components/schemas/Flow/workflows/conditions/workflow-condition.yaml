@@ -1,0 +1,13 @@
+type: object
+description: One or more workflow conditions
+discriminator:
+  propertyName: type
+  mapping:
+    event: '#/components/schemas/event-condition'
+    entity: '#/components/schemas/entity-condition'
+required:
+  - type
+properties:
+  type:
+    type: string
+    description: The type of workflow condition
