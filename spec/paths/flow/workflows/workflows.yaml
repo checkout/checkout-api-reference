@@ -1,4 +1,4 @@
--get:
+get:
   security:
     - OAuth:
       - flow
