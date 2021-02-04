@@ -1,5 +1,4 @@
 type: object
-description: The workflow action
 discriminator:
   propertyName: type
   mapping:

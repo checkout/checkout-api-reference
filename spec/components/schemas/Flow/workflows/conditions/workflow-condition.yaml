@@ -1,5 +1,4 @@
 type: object
-description: One or more workflow conditions
 discriminator:
   propertyName: type
   mapping:

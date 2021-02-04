@@ -2,17 +2,17 @@ type: object
 properties:
   name:
     type: string
-    description: A name you can use to describe your workflow
+    description: A name to describe your workflow
     example: Webhooks workflow
   conditions:
     type: array
-    description: One or more workflow conditions
+    description: The workflow conditions
     minItems: 1
     items:
      $ref: '#/components/schemas/workflow-condition'
   actions:
     type: array
-    description: One or more workflow actions
+    description: The workflow actions
     minItems: 1
     items:
       $ref: '#/components/schemas/workflow-action'

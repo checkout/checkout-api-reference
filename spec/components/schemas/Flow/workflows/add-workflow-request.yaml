@@ -6,13 +6,13 @@ properties:
     example: Webhooks workflow
   conditions:
     type: array
-    description: One or more workflow conditions
+    description: The workflow conditions. You must include both an `event` and `entity` condition.
     minItems: 1
     items:
       $ref: '#/components/schemas/workflow-condition'
   actions:
     type: array
-    description: One or more workflow actions
+    description: The workflow actions
     minItems: 1
     items:
       $ref: '#/components/schemas/workflow-action'
