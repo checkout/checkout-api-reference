@@ -1,0 +1,4 @@
+type: array
+description: The entities array
+minItems: 1
+pattern: ^ent_[a-z0-9]{26}$
