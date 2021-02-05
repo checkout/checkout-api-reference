@@ -125,8 +125,8 @@ properties:
         properties:
           reference:
             type: string
-            description: Merchant's unique customer ID.
-            maxLength: 19
+            description: Merchant's unique customer ID.<br> <i>Alphanumeric characters only</i>.
+            maxLength: 16
           accountNumber:
             type: string
             description: The account number.
