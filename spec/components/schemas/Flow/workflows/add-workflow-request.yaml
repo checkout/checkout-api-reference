@@ -6,7 +6,7 @@ properties:
     example: Webhooks workflow
   conditions:
     type: array
-    description: The workflow conditions. You must include both an `event` and `entity` condition.
+    description: The workflow conditions. You must include an `event` condition. The `entity` condition is an optional filter, which only supports `gateway` and `dispute` webhooks.
     minItems: 1
     items:
       $ref: '#/components/schemas/workflow-condition'
@@ -37,11 +37,13 @@ example:
             "payment_void_declined",
             "payment_voided"
           ],
-          "marketplace": [
-            "payments_disabled",
-            "payments_enabled",
-            "vmss_failed",
-            "vmss_passed"
+          "dispute": [
+            "dispute_canceled",
+            "dispute_evidence_required",
+            "dispute_expired",
+            "dispute_lost",
+            "dispute_resolved",
+            "dispute_won"
           ]
         }
       },
