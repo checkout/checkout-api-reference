@@ -1,0 +1,58 @@
+post:
+  description: Create a bank account payment instrument for your sub-entity that you can later use as the destination for their payouts
+  summary: Add a payment instrument
+  requestBody:
+    required: true
+    description: A json payload containing the payment instrument details
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/MarketplaceInstrumentCreateRequest'
+        examples:
+          BankAccount:
+            value:
+              label: Peter's Personal Account
+              type: bank_account
+              account_number: "12345678"
+              bank_code: "050389"
+              currency: GBP
+              country: GB
+              account_holder:
+                first_name: Peter
+                last_name: Parker
+                billing_address:
+                  address_line1: 90 Tottenham Court Road
+                  city: London
+                  state: London
+                  zip: W1T 4TJ
+                  country: GB
+  security:
+    - OAuth:
+      - marketplace
+  responses:
+    '202':
+      description: Instrument creation request accepted
+      headers:
+        Cko-Version:
+          $ref: '#/components/headers/Cko-Version'
+        Cko-Request-Id:
+          $ref: '#/components/headers/Cko-Request-Id'
+    '400':
+      description: Bad Request
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/ValidationError'
+              - type: object
+                properties:
+                  error_codes:
+                    example:
+                      - error_code1
+                      - error_code2
+  tags:
+    - Marketplace
