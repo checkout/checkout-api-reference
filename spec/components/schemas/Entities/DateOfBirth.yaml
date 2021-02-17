@@ -1,0 +1,25 @@
+type: object
+title: DateOfBirth
+description: The date of birth according to the Gregorian calendar
+properties:
+  day:
+    type: number
+    description: The calendar day of the month they were born
+    minimum: 1
+    maximum: 31
+    example: 16
+  month:
+    type: number
+    description: The month of the year they were born
+    minimum: 1
+    maximum: 12
+    example: 03
+  year:
+    type: number  
+    description: The year they were born
+    minimum: 1900
+    example: 1985
+required:
+  - day
+  - month
+  - year

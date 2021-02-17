@@ -10,3 +10,12 @@ properties:
         description: True if payments are enabled
     example:
       enabled: false
+  payouts:
+    type: object
+    description: "Payout related capabilities of a sub-entity"
+    properties:
+      enabled:
+        type: boolean
+        description: "True if payouts are enabled"
+    example:
+      enabled: false

@@ -36,3 +36,7 @@ properties:
     description: "The registered address of the individual"
     allOf:
       - $ref: "#/components/schemas/EntityAddress"
+  date_of_birth:
+    $ref: "#/components/schemas/DateOfBirth"
+  identification:
+    $ref: "#/components/schemas/EntityIdentification"

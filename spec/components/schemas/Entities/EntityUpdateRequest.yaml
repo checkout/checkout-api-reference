@@ -30,8 +30,6 @@ properties:
       - legal_name
       - trading_name
       - principal_address
-      - registered_address
-      - representatives
     properties:
       business_registration_number:
         type: string
@@ -138,48 +136,10 @@ properties:
           - city
           - zip
           - country
+      date_of_birth:
+        $ref: "#/components/schemas/DateOfBirth"
+      identification:
+        $ref: "#/components/schemas/EntityIdentification"
 required:
   - contact_details
   - profile
-example:
-  contact_details: 
-    phone:
-      number: 2345678910
-  profile:
-    urls:
-      - https://www.superheroexample.com
-    mccs:
-      - 5669
-  company:
-    business_registration_number: "452349600005"
-    legal_name: "Super Hero Masks Inc."
-    trading_name: "Super Hero Masks"
-    principal_address: 
-      address_line1: "90 Tottenham Court Road"
-      address_line2: null
-      city: "London"
-      state: null
-      zip: "W1T4TJ"
-      country: "GB"
-    registered_address:
-      address_line1: "90 Tottenham Court Road"
-      address_line2: null
-      city: "London"
-      state: null
-      zip: "W1T4TJ"
-      country: "GB"
-    representatives: 
-      - first_name: "John"
-        middle_name: null
-        last_name: "Doe"
-        address: 
-          address_line1: "90 Tottenham Court Road"
-          address_line2: null
-          city: "London"
-          state: null
-          zip: "W1T4TJ"
-          country: "GB"
-        identification:
-          national_id_number: "AB123456C"
-        phone:
-          number: 2345678910

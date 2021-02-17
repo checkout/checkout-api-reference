@@ -1,0 +1,67 @@
+type: object
+title: AccountHolder
+properties:
+  type:
+    title: Type
+    description: The type of account holder
+    type: string
+    enum:
+      - individual
+      - corporate
+      - government
+  first_name:
+    title: FirstName
+    description: "The account holder's first name. Required if `type` is `individual`"
+    type: string
+    example: Peter
+  last_name:
+    title: LastName
+    description: "The account holder's last name. Required if `type` is `individual`"
+    type: string
+    example: Parker
+  company_name:
+    title: CompanyName
+    description: "The legal name of a registered company that holds the account. Required if `type` is `corporate`"
+    type: string
+    example: Super Hero Masks Inc.
+  tax_id:
+    title: TaxId
+    description: The account holder's tax number/reference
+    type: string
+    example: "123456"
+  date_of_birth:
+    title: DateOfBirth
+    description: The account holder's date of birth
+    allOf:
+      - $ref: "#/components/schemas/DateOfBirth"
+  country_of_birth:
+    title: CountryOfBirth
+    description: The two-letter ISO country code of the account holder's country of birth
+    type: string
+    format: ISO 3166-1
+    example: "GB"
+  residential_status:
+    title: ResidentalStatus
+    description: The two-letter ISO country code of the account holder's country of birth
+    type: string
+    enum:
+      - resident
+      - non_resident
+  billing_address:
+    title: BillingAddress
+    description: The billing address of the account holder
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
+  phone:
+    title: Phone
+    description: The phone number of the account holder
+    allOf:
+      - $ref: "#/components/schemas/EntityPhone"
+  identification:
+    $ref: "#/components/schemas/MarketplaceAccountHolderIdentification"
+  email:
+    title: email
+    description: The account holder's email address
+    type: string
+    format: email
+    example: peter.parker@superhero.masks

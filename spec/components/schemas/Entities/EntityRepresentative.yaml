@@ -22,6 +22,7 @@ properties:
     title: Address
     description: "The representative's address"
     allOf:
+      - $ref: "#/components/schemas/EntityAddress"
       - type: object
         properties:
           address_line1:
@@ -30,19 +31,11 @@ properties:
             minLength: 0
             maxLength: 300
             example: "90 Tottenham Court Road"
-      - $ref: "#/components/schemas/EntityAddress"
   identification:
-    type: object
-    title: Identification
-    description: "Identification of the representative, used for verification"
-    properties:
-      national_id_number:
-        type: string
-        description: "The official ID number, as applicable in the representative's country (For US, this must be numeric otherwise alpha-numeric)"
-        minLength: 1
-        maxLength: 25
-        example: AB123456C
+    $ref: "#/components/schemas/EntityIdentification"
   phone:
     description: "The phone number of the representative"
     allOf:
       - $ref: "#/components/schemas/EntityPhone"
+  date_of_birth:
+    $ref: "#/components/schemas/DateOfBirth"

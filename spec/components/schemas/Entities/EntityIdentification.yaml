@@ -1,0 +1,36 @@
+type: object
+title: Identification
+description: Identification details of an individual that are used for verification
+properties:
+  national_id_number:
+    type: string
+    description: "The official ID number, as applicable in the representative's country (For US, this must be numeric otherwise alpha-numeric)"
+    minLength: 1
+    maxLength: 25
+    example: AB123456C
+  document:
+    type: object
+    description: "A legal document used to verify identity"
+    properties: 
+      type:
+        type: string
+        description: The type of document
+        enum:
+          - passport
+          - national_identity_card
+          - driving_license
+          - citizen_card
+          - residence_permit
+          - electoral_id
+        example: passport
+      front:
+        type: string
+        description: The ID of the front side of the document as represented within Checkout.com systems
+        example: file_wxglze3wwywujg4nna5fb7ldli
+      back:
+        type: string
+        description: The ID of the back side of the document as represented within Checkout.com systems. The back of the document is required for all document types apart from passports.
+        example: file_adglze3wwywujg4nna5fb7l1sg
+    required:
+      - type
+      - front

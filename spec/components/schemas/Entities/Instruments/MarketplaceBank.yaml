@@ -1,0 +1,18 @@
+type: object
+title: Bank
+properties:
+  name:
+    title: Name
+    description: The bank's name
+    type: string
+    example: Lloyds TSB
+  branch:
+    title: Branch
+    description: The bank branch's name
+    type: string
+    example: London
+  address:
+    title: Address
+    description: The bank's contact address
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
