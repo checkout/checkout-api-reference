@@ -1,0 +1,12 @@
+type: object
+title: EntityIndividualResponse
+allOf:
+  - $ref: "#/components/schemas/EntityIndividual"
+  - type: object
+    properties:
+      legal_name:
+        type: string
+        description: "The legal name of the individual sub-entity"
+        example: John Paul Doe
+      identification:
+        $ref: "#/components/schemas/EntityIdentificationResponse"

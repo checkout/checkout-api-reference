@@ -1,0 +1,13 @@
+type: object
+title: EntityCompanyResponse
+allOf:
+  - $ref: "#/components/schemas/EntityCompany"
+  - type: object
+    properties:
+      representatives:
+        type: array
+        items:
+          type: object
+          properties:
+            identification:
+              $ref: "#/components/schemas/EntityIdentificationResponse"

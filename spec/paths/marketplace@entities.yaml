@@ -45,10 +45,13 @@ post:
                       zip: "W1T4TJ"
                       country: "GB"
                     identification:
-                      description: Identification of the representative, used for verification
                       national_id_number: "AB123456C"
                     phone:
                       number: "2345678910"
+                    date_of_birth:
+                      day: 05
+                      month: 06
+                      year: 1995
           Individual:
             value:
               reference: superhero1234
@@ -70,6 +73,12 @@ post:
                   zip: "W1T4TJ"
                   country: "GB"
                 national_tax_id: "TAX123456"
+                date_of_birth:
+                  day: 05
+                  month: 06
+                  year: 1995
+                identification:
+                  national_id_number: "AB123456C"
   security:
     - OAuth:
       - marketplace

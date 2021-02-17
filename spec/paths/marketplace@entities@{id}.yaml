@@ -28,6 +28,8 @@ get:
                 capabilities:
                   payments:
                     enabled: false
+                  payouts:
+                    enabled: false
                 contact_details:
                   phone:
                     number: "2345678910"
@@ -60,9 +62,20 @@ get:
                       zip: W1T4TJ
                       country: GB
                     identification:
-                      national_id_number: AB123456C
+                      national_id_number: "AB123456C"
+                      document:
+                        type: "driving_license"
+                        front: "file_wxglze3wwywujg4nna5fb7ldli"
+                        back: "file_adglze3wwywujg4nna5fb7l1sg"
                     phone:
                       number: "2345678910"
+                    date_of_birth:
+                      day: 05
+                      month: 06
+                      year: 1995
+                instruments:
+                  - id: src_hmnkhxlshf3uhljow7zt7sf2cq
+                    label: Peter's Personal Account
                 _links:
                   self:
                     href: https://api.checkout.com/marketplace/entities/ent_wxglze3wwywujg4nna5fb7ldli
@@ -72,6 +85,8 @@ get:
                 reference: superhero1234
                 capabilities:
                   payments:
+                    enabled: false
+                  payouts:
                     enabled: false
                 contact_details:
                   phone:
@@ -93,6 +108,19 @@ get:
                     city: London
                     zip: W1T4TJ
                     country: GB
+                  date_of_birth:
+                    day: 05
+                    month: 06
+                    year: 1995
+                  identification:
+                    national_id_number: "AB123456C"
+                    document:
+                      type: "driving_license"
+                      front: "file_wxglze3wwywujg4nna5fb7ldli"
+                      back: "file_adglze3wwywujg4nna5fb7l1sg"
+                instruments:
+                  - id: src_hmnkhxlshf3uhljow7zt7sf2cq
+                    label: Peter's Personal Account
                 _links:
                   self:
                     href: https://api.checkout.com/marketplace/entities/ent_wxglze3wwywujg4nna5fb7ldli
@@ -137,12 +165,12 @@ put:
             value:
               contact_details: 
                 phone:
-                  number: 2345678910
+                  number: "2345678910"
               profile:
                 urls:
                   - https://www.superheroexample.com
                 mccs:
-                  - 5669
+                  - "5669"
               company:
                 business_registration_number: "452349600005"
                 legal_name: "Super Hero Masks Inc."
@@ -166,20 +194,23 @@ put:
                       zip: "W1T4TJ"
                       country: "GB"
                     identification:
-                      description: Identification of the representative, used for verification
                       national_id_number: "AB123456C"
                     phone:
-                      number: 2345678910
+                      number: "2345678910"
+                    date_of_birth:
+                      day: 05
+                      month: 06
+                      year: 1995
           Individual:
             value:
               contact_details:
                 phone:
-                  number: 2345678910
+                  number: "2345678910"
               profile:
                 urls:
                   - https://www.superheroexample.com
                 mccs:
-                  - 5669
+                  - "5669"
               individual:
                 first_name: "John"
                 last_name: "Doe"
@@ -190,6 +221,12 @@ put:
                   zip: "W1T4TJ"
                   country: "GB"
                 national_tax_id: "TAX123456"
+                date_of_birth:
+                  day: 05
+                  month: 06
+                  year: 1995
+                identification:
+                  national_id_number: "AB123456C"
   security:
     - OAuth:
       - marketplace
