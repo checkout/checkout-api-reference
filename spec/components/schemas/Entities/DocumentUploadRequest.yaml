@@ -1,0 +1,25 @@
+type: object
+title: DocumentUploadRequest
+properties:
+  type:
+    type: string
+    description: The type of document
+    enum:
+      - passport
+      - national_identity_card
+      - driving_license
+      - citizen_card
+      - residence_permit
+      - electoral_id
+    example: passport
+  front:
+    type: string
+    description: An image of the front side of the identification document. This must be a jpg, jpeg or png.
+    format: binary
+  back:
+    type: string
+    description: An image of the front side of the identification document. The back of the document is required for all document types apart from passports.
+    format: binary
+required:
+  - type
+  - front

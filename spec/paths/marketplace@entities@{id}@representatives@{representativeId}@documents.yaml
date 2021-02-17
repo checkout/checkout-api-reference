@@ -1,0 +1,59 @@
+parameters:
+  - in: path
+    name: id
+    description: The id of the sub-entity
+    required: true
+    allowEmptyValue: false
+    example: ent_w4jelhppmfiufdnatam37wrfc4
+    style: simple
+    schema:
+      type: string
+  - in: path
+    name: representativeId
+    description: The id of the company sub-entity representative
+    required: true
+    allowEmptyValue: false
+    example: rep_a6omkepkkfiutynatam37wrfc4
+    style: simple
+    schema:
+      type: string
+post:
+  description: Upload an identification document for your entity. If a document already exists for the entity, it will be replaced by the new document provided in this request.
+  summary: Upload a document (Representatives)
+  requestBody:
+    required: true
+    description: A multipart request outlining the document to be created. The document must have a document type, and can have a front and a back.
+    content:
+      multipart/form-data:
+        schema:
+          $ref: '#/components/schemas/DocumentUploadRequest'
+  security:
+    - OAuth:
+      - marketplace
+  responses:
+    '202':
+      description: Document accepted
+      headers:
+        Cko-Version:
+          $ref: '#/components/headers/Cko-Version'
+        Cko-Request-Id:
+          $ref: '#/components/headers/Cko-Request-Id'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Sub-entity not found
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/ValidationError'
+              - type: object
+                properties:
+                  error_codes:
+                    example:
+                      - error_code1
+                      - error_code2
+  tags:
+    - Marketplace

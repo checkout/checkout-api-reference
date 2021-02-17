@@ -1,3 +1,13 @@
+parameters:
+  - in: path
+    name: id
+    description: The id of the sub-entity
+    required: true
+    allowEmptyValue: false
+    example: ent_w4jelhppmfiufdnatam37wrfc4
+    style: simple
+    schema:
+      type: string
 post:
   description: Create a bank account payment instrument for your sub-entity that you can later use as the destination for their payouts
   summary: Add a payment instrument
