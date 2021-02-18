@@ -18,7 +18,7 @@ properties:
     format: binary
   back:
     type: string
-    description: An image of the front side of the identification document. The back of the document is required for all document types apart from passports.
+    description: An image of the back side of the identification document. The back of the document is required for all document types apart from passports.
     format: binary
 required:
   - type
