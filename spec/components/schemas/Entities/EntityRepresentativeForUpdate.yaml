@@ -1,0 +1,8 @@
+type: object
+title: RepresentativeForUpdate
+allOf:
+  - type: object
+    properties:
+      id:
+        readOnly: false
+  - $ref: "#/components/schemas/EntityRepresentative"

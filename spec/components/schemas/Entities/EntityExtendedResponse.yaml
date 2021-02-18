@@ -9,9 +9,9 @@ allOf:
       profile:
         $ref: "#/components/schemas/EntityProfile"
       company:
-        $ref: "#/components/schemas/EntityCompanyResponse"
+        $ref: "#/components/schemas/EntityCompany"
       individual:
-        $ref: "#/components/schemas/EntityIndividualResponse"
+        $ref: "#/components/schemas/EntityIndividual"
       instruments:
         type: array
         description: A collection of payment instruments added for this sub-entity

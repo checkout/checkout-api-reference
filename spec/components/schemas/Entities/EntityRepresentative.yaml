@@ -1,6 +1,11 @@
 type: object
 title: Representative
 properties:
+  id:
+    type: string
+    description: "The id of the company sub-entity representative"
+    example: "rep_a6omkepkkfiutynatam37wrfc4"
+    readOnly: true
   first_name:
     type: string
     description: "The person's first name"

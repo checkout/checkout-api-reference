@@ -19,6 +19,11 @@ properties:
     minLength: 2
     maxLength: 50
     example: "Doe"
+  legal_name:
+    type: string
+    description: "The legal name of the individual sub-entity"
+    example: John Paul Doe
+    readOnly: true
   trading_name:
     type: string
     description: "If applicable, the individual's trading name"

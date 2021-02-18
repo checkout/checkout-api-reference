@@ -77,7 +77,7 @@ properties:
         maxItems: 5
         items:
           allOf:
-            - $ref: "#/components/schemas/EntityRepresentativeWithId"
+            - $ref: "#/components/schemas/EntityRepresentativeForUpdate"
             - type: object
               required:
                 - first_name
