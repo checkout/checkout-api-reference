@@ -1,0 +1,5 @@
+type: object
+title: BasicResponseWithLinks
+allOf:
+  - $ref: "#/components/schemas/EntityBasicResponse"
+  - $ref: "#/components/schemas/EntityLinks"

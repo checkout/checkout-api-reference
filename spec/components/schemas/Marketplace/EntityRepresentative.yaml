@@ -1,0 +1,46 @@
+type: object
+title: Representative
+properties:
+  id:
+    type: string
+    description: "The id of the company sub-entity representative"
+    example: "rep_a6omkepkkfiutynatam37wrfc4"
+    readOnly: true
+  first_name:
+    type: string
+    description: "The person's first name"
+    minLength: 2
+    maxLength: 300
+    example: "John"
+  middle_name:
+    type: string
+    description: "The person's middle name"
+    maxLength: 300
+    example: null
+  last_name:
+    type: string
+    description: "The person's last name"
+    minLength: 2
+    maxLength: 300
+    example: "Doe"
+  address:
+    title: Address
+    description: "The representative's address"
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
+      - type: object
+        properties:
+          address_line1:
+            type: string
+            description: "The first line of the address. If provided, the length of line 1 and line 2 combined must be at least 5 characters long"
+            minLength: 0
+            maxLength: 300
+            example: "90 Tottenham Court Road"
+  identification:
+    $ref: "#/components/schemas/EntityIdentification"
+  phone:
+    description: "The phone number of the representative"
+    allOf:
+      - $ref: "#/components/schemas/EntityPhone"
+  date_of_birth:
+    $ref: "#/components/schemas/DateOfBirth"

@@ -1,0 +1,151 @@
+type: object
+title: CreateRequest
+properties:
+  reference:
+    type: string
+    description: A unique reference you can later use to identify this sub-entity
+    minLength: 1
+    maxLength: 15
+    example: superhero1234
+  contact_details:
+    title: ContactDetails
+    allOf:
+      - $ref: "#/components/schemas/EntityContactDetails"
+      - type: object
+        properties:
+          phone:
+            description: "The phone number of the sub-entity"
+            allOf:
+              - $ref: "#/components/schemas/EntityPhone"
+            required:
+              - number
+        required:
+          - phone
+  profile:
+    title: Profile
+    allOf:
+      - $ref: "#/components/schemas/EntityProfile"
+    required:
+      - urls
+      - mccs
+  company:
+    type: object
+    title: Company
+    description: "Information about the company represented by the sub-entity. Include this object if you are onboarding a company or business. This is required if the individual object is omitted."
+    required:
+      - legal_name
+      - trading_name
+      - principal_address
+    properties:
+      business_registration_number:
+        type: string
+        description: "The Business Registration Number of the sub-entity, such as Commercial Registration, Ministry of Commerce certificate number or equivalent registration number"
+        minLength: 2
+        maxLength: 16
+        example: "452349600005"
+      legal_name:
+        type: string
+        description: "The legal name of the sub-entity"
+        minLength: 2
+        maxLength: 300
+        example: Super Hero Masks Inc.
+      trading_name:
+        type: string
+        description: "The trading name of the sub-entity, also referred to as 'doing business as'"
+        minLength: 2
+        maxLength: 300
+        example: Super Hero Masks
+      principal_address:
+        title: Address
+        description: "The primary location of the company where business is performed"
+        allOf:
+          - $ref: "#/components/schemas/EntityAddress"
+        required:
+          - address_line1
+          - city
+          - zip
+          - country
+      registered_address:
+        title: Address
+        description: "The registered address of the company"
+        allOf:
+          - $ref: "#/components/schemas/EntityAddress"
+        required:
+          - address_line1
+          - city
+          - zip
+          - country
+      representatives:
+        type: array
+        title: Representatives
+        description: "Information about representatives of this company"
+        minItems: 1
+        maxItems: 5
+        items:
+          allOf:
+            - $ref: "#/components/schemas/EntityRepresentative"
+            - type: object
+              required:
+                - first_name
+                - last_name
+              properties:
+                address:
+                  required:
+                    - country
+  individual:
+    type: object
+    title: Individual
+    description: "Information about the individual represented by the sub-entity. Include this object if you are onboarding a sole proprietor. This is required if the company object is omitted."
+    required:
+      - first_name
+      - last_name
+      - trading_name
+      - registered_address
+    properties:
+      first_name:
+        type: string
+        description: "The individual's first name"
+        minLength: 2
+        maxLength: 50
+        example: "John"
+      middle_name:
+        type: string
+        description: "The individual's middle name"
+        maxLength: 50
+        example: "Paul"
+      last_name:
+        type: string
+        description: "The individual's last name"
+        minLength: 2
+        maxLength: 50
+        example: "Doe"
+      trading_name:
+        type: string
+        description: "If applicable, the individual's trading name"
+        minLength: 2
+        maxLength: 300
+        example: Super Hero Masks
+      national_tax_id:
+        type: string
+        description: "The sub-entity's Tax Identification Code; for example, a Value Added Tax (VAT) Number in the UK"
+        minLength: 2
+        maxLength: 16
+        example: "1234567"
+      registered_address:
+        title: Address
+        description: "The registered address of the individual"
+        allOf:
+          - $ref: "#/components/schemas/EntityAddress"
+        required:
+          - address_line1
+          - city
+          - zip
+          - country
+      date_of_birth:
+        $ref: "#/components/schemas/DateOfBirth"
+      identification:
+        $ref: "#/components/schemas/EntityIdentification"
+required:
+  - reference
+  - contact_details
+  - profile

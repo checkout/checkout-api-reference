@@ -1,0 +1,33 @@
+type: object
+title: Profile
+description: "Information about the profile of the sub-entity, primarily regarding the products/services offered."
+properties:
+  urls:
+    type: array
+    description: "A collection of URLs of websites the sub-entity accepts payments on. All URLs joined with a space must be no longer than 4000 characters."
+    minItems: 1
+    maxItems: 100
+    items:
+      type: string
+      description: "A URL of a website the sub-entity accepts payments on"
+      minLength: 4
+      maxLength: 300
+      example: "https://www.superheroexample.com"
+  mccs:
+    type: array
+    description: "A collection of 4-digit ISO 18245 merchant category codes classifying the sub-entity's industry"
+    minItems: 1
+    maxItems: 5
+    items:
+      type: string
+      description: "A 4-digit ISO 18245 merchant category code classifying the sub-entity's industry"
+      minLength: 4
+      maxLength: 4
+      example: "5669"
+  default_holding_currency:
+    type: string
+    description: "The ISO 4217 currency code this entity processes funds with."
+    format: ISO 4217
+    minLength: 3
+    maxLength: 3
+    example: "GBP"

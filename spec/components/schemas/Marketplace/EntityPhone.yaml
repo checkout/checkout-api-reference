@@ -1,0 +1,9 @@
+type: object
+title: Phone
+properties:
+  number:
+    type: string
+    description: "The phone number. This must not contain non-numeric characters and can't contain only zeros (For US numbers: Cannot start with 0 or 1 and must be at least 10 characters in length)"
+    minLength: 8
+    maxLength: 16
+    example: "2345678910"

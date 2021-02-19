@@ -1,0 +1,38 @@
+type: object
+title: Company
+description: "Information about the company represented by the sub-entity. Include this object if you are onboarding a company or business. This is required if the individual object is omitted."
+properties:
+  business_registration_number:
+    type: string
+    description: "The Business Registration Number of the sub-entity, such as Commercial Registration, Ministry of Commerce certificate number or equivalent registration number"
+    minLength: 2
+    maxLength: 16
+    example: "452349600005"
+  legal_name:
+    type: string
+    description: "The legal name of the sub-entity"
+    minLength: 2
+    maxLength: 300
+    example: Super Hero Masks Inc.
+  trading_name:
+    type: string
+    description: "The trading name of the sub-entity, also referred to as 'doing business as'"
+    minLength: 2
+    maxLength: 300
+    example: Super Hero Masks
+  principal_address:
+    description: "The primary location of the company where business is performed"
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
+  registered_address:
+    description: "The registered address of the company"
+    allOf:
+      - $ref: "#/components/schemas/EntityAddress"
+  representatives:
+    type: array
+    title: Representatives
+    description: "Information about representatives of this company"
+    minItems: 1
+    maxItems: 5
+    items:
+      $ref: "#/components/schemas/EntityRepresentative"

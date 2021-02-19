@@ -1,0 +1,6 @@
+type: object
+title: ContactDetails
+description: "Contact details of this sub-entity"
+properties:
+  phone:
+    $ref: "#/components/schemas/EntityPhone"
