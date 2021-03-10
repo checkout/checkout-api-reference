@@ -1,0 +1,33 @@
+get:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Customers
+  summary: Get customer details using email
+  operationId: getCustomerDetailsByEmail
+  description: Returns details of a customer and their instruments
+  parameters:
+    - in: path
+      name: name
+      required: true
+      schema:
+        type: string
+        format: email
+        maxLength: 255
+      description: The customer email
+  responses:
+    '200':
+      description: Customer retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CustomerGetResponse'
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    '401':
+      description: Unauthorized
+    '404':
+      description: Customer not found
