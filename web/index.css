@@ -130,6 +130,10 @@ body.dark button span {
   background-color: var(--background) !important;
 }
 
+td > div {
+  background-color: var(--background)!important;
+}
+
 /* Logo */
 
 img.sc-kafWEX.hZCbNs {
@@ -717,7 +721,7 @@ caption {
   z-index: 100;
   top: 20px;
   right: 20px;
-  background-color: #1a1a1a;
+  background-color: grey;
   border-radius: 30px;
   cursor: pointer;
   display: flex;

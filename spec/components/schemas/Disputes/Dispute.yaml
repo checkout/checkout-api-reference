@@ -27,6 +27,11 @@ properties:
     description: The current status of the dispute
     enum: [evidence_required, evidence_under_review, resolved, won, lost, canceled, expired, accepted]
     example: "evidence_required"
+  resolved_reason:
+    type: string
+    description: If the dispute is automatically resolved, `resolved_reason` will contain the reason why it was resolved
+    enum: [rapid_dispute_resolution, negative_amount, already_refunded]
+    example: "already_refunded"
   relevant_evidence:
     type: array
     description: <i>This list and the dispute categories will change over time. Your evidence logic should be informed by this field, not hard coded.</i>

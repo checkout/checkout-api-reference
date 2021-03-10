@@ -13,10 +13,23 @@
   </script>
   <title>Checkout.com API Reference</title>
   <!-- needed for adaptive design -->
+
+  <!-- Hotjar Tracking Code for https://api-reference.checkout.com/ -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2272523,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./index.css" />
-  <link rel="apple-touch-icon" sizes="180x180"
-    href="./favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
   <link rel="mask-icon" href="./favicons/favicon.32.safari.svg" color="#00122C" />
@@ -35,7 +48,6 @@
     // Set theme based on local storage
     var toggle = document.querySelector('.toggle-track');
     var theme = localStorage.getItem("theme");
-    
     if (theme) {
       document.body.className = "";
       document.body.classList.add(theme);
@@ -59,14 +71,11 @@
         document.body.classList.add("dark");
       }
     })
-
-   
   </script>
-  <redoc spec-url="./swagger.yaml" hide-loading hide-download-button>
-  </redoc>
-  <script
-    src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script>
-    > </script>
+  
+  <redoc spec-url="./swagger.yaml" hide-loading hide-download-button></redoc>
+  
+  <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-rc.31/bundles/redoc.standalone.js"> </script>
 </body>
 
 </html>

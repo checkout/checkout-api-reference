@@ -65,28 +65,28 @@ properties:
     minItems: 1
     maxItems: 1000
     items:
-        type: object
-        additionalProperties: false
-        required:
-          - name
-          - quantity
-          - price
-        properties:
-          name:
-            type: string
-            description: Descriptive item name
-            example: Gold Necklace
-          quantity:
-            type: integer
-            description: The item quantity. Non-negative
-            minimum: 1
-            example: 1
-          price:
-            type: integer
-            description: 'Minor units. Includes tax, excludes discounts. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>'
-            minimum: 0
-            maximum: 100000000
-            example: 1000
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - quantity
+        - price
+      properties:
+        name:
+          type: string
+          description: Descriptive item name
+          example: Gold Necklace
+        quantity:
+          type: integer
+          description: The item quantity. Non-negative
+          minimum: 1
+          example: 1
+        price:
+          type: integer
+          description: 'Minor units. Includes tax, excludes discounts. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>'
+          minimum: 0
+          maximum: 100000000
+          example: 1000
   risk:
     $ref: '#/components/schemas/RiskRequest'
   success_url:
@@ -123,8 +123,3 @@ properties:
         description: Determines whether to attempt a 3D Secure payment as non-3D Secure should the card issuer not be enrolled
         default: false
         example: false
-  locale:
-    type: string
-    pattern: /^[a-z]{2,3}(?:-[A-Z]{2,3}(?:-[a-zA-Z]{4})?)?$/
-    description: RFC 1766 customer's locale. Optional, default taken from business settings
-    example: en-GB

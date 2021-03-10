@@ -32,7 +32,7 @@
 
 ### Contribute
 
-1. Your contribution should have a JIRA ticket on the [Documentation Board](https://checkout.atlassian.net/secure/RapidBoard.jspa?rapidView=543)
+1. Your contribution should have a JIRA ticket on the [Documentation Board](https://checkout.atlassian.net/secure/RapidBoard.jspa?rapidView=543&projectKey=DOC)
 2. Name your branch `<type>/<JIRA-issue-key>-<JIRA-issue-title>`  
 *for example: "task/DOCS-534-add-oas3-operationid"*
 3. Work, commit, push
