@@ -46,10 +46,10 @@ properties:
         maxLength: 255
         example: "Jack Napier"  
       phone:
-          description: The customer's phone number. This will only set the phone number for new customers
+          description: The customer's phone number. This will only set the phone number for *new* customers
           allOf:
               - $ref: "#/components/schemas/Phone"
       default:
         type: boolean
-        description: If true, sets this instrument as the default for the customer (if a new customer is created as a result of this request, the instrument will automatically be the default)
+        description: If true, sets this instrument as the default for the customer (if a *new* customer is created as a result of this request, the instrument will automatically be the default)
         example: true
