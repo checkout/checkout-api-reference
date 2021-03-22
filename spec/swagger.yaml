@@ -30,13 +30,19 @@ info:
     
     # Authentication
     
-    When you sign up for an account, you are given a public API key, and an access key ID and secret for OAuth 2.0. You authenticate with our API by following the appropriate authentication flow, using either your API keys or your access key credentials.
+    When you sign up for an account, you are given a public key, and either a set of client credentials or a secret key. You authenticate with our API by following the appropriate authentication flow, using either your API keys or your client credentials.
 
 
-    Unless explicitly stated, all endpoints require authentication using OAuth. Public keys should only be used in JavaScript or native applications.
+    Unless explicitly stated, all endpoints require authentication using either your client credentials or your secret key. Public keys should only be used in JavaScript or native applications.
 
 
-    Never share your access key credentials or access tokens. Keep them guarded and secure.
+    - <b>Client-side authentication</b>. Use your [public key](#section/Authentication/ApiPublicKey) for client-side authentication. It only has access to a limited set of our APIs – mostly those called as part of your payment environment.
+
+
+    - <b>Server-to-server authentication</b>. Use your [secret key](#section/Authentication/ApiSecretKey) or [client credentials](#section/Authentication/OAuth) for server-to-server communication. Support for API keys depends on the endpoint.
+
+
+    Never share your client credentials, API keys, or access tokens. Keep them guarded and secure.
 
 servers:
   - url: https://api.checkout.com
