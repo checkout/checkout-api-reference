@@ -13,7 +13,7 @@ properties:
         type: string
         description: The customer's name
         maxLength: 255
-        example: Jack Napier
+        example: John Test
     phone:
         type: object
         description: The customer's phone number
@@ -21,7 +21,7 @@ properties:
             - $ref: '#/components/schemas/PhoneNumber'
     metadata:
         type: object
-        description: Allows you to store additional information about a customer. Max length of key(s) and value(s) is 100 each. A max. of 10 KVP are allowed.
+        description: Allows you to store additional information about a customer. You can include a maximum of 10 key-value pairs. Each key and value can be up to 100 characters long.
         example:
             coupon_code: "NY2018"
             partner_id: 123989

@@ -9,7 +9,7 @@ required:
   - bin
 properties:
     id:
-        description: The instrument id for the retrieved instrument
+        description: The ID of the retrieved instrument
         type: string
         example: src_lmyvsjadlxxu7kqlgevt6ebkra
     type:

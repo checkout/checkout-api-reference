@@ -95,4 +95,4 @@ properties:
             name:
                 type: string
                 description: The customer's name
-                example: Jack Napier
+                example: Jack Test

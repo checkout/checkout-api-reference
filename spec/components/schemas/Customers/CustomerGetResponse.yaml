@@ -14,13 +14,13 @@ properties:
         description: The customer's email address
         example: JohnTest@test.com
     default: 
-        description: The instrument ID for this customer’s default instrument
+        description: The ID for this customer's default instrument
         type: string
         example: src_imu3wifxfvlebpqqq5usjrze6y
     name:
         type: string
         description: The customer's name
-        example: Jack Napier
+        example: Jack Test
     phone:
         type: object
         description: The customer's phone number
@@ -35,6 +35,6 @@ properties:
     instruments:
         type: array
         title: Instrument
-        description: The details of instruments linked to this customer
+        description: The details of the instruments linked to this customer
         items:
             $ref: '#/components/schemas/CustomerGetInstrumentResponse'
