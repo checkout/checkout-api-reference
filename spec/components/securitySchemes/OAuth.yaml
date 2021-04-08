@@ -1,7 +1,7 @@
 type: oauth2
 description: |
-  We will provide you with a set of access key credentials – an access key ID and secret – which you can exchange for an access token by calling the 'request an access token' endpoint below. 
-  You will need to authenticate using basic authentication, using your access key ID and access key secret as your username and password:
+  We will provide you with a set of client credentials – a client ID and client secret – which you can exchange for an access token by calling the 'request an access token' endpoint below. 
+  You will need to authenticate using basic authentication, using your client ID and client secret as your username and password:
 
   ```
   curl --location --request POST 'https://access.checkout.com/connect/token' \

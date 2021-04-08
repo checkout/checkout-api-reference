@@ -41,7 +41,7 @@ post:
                  - unauthorized_client
                  - unsupported_grant_type
                  - invalid_scope
-  description: OAuth endpoint to exchange your access key ID and access key secret for an access token.
+  description: OAuth endpoint to exchange your client ID and client secret for an access token.
   requestBody:
     content:
       application/x-www-form-urlencoded:
@@ -55,10 +55,10 @@ post:
               example: client_credentials
             client_id:
               type: string
-              description: "Access key ID"
+              description: "Client ID"
             client_secret:
               type: string
-              description: "Access key secret"
+              description: "Client secret"
             scope:
               type: string
               description: The access key scope
