@@ -5,7 +5,7 @@ post:
     - OAuth: 
       - gateway
       - gateway:payment-authorizations
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Increment authorization
   description: |
     Request an incremental authorization to increase the authorization amount or extend the authorization's validity period (Mastercard only).

@@ -1,5 +1,8 @@
 post:
   security:
+    - OAuth:
+      - gateway
+      - gateway:payment
     - ApiSecretKey: []
   tags:
     - Payments

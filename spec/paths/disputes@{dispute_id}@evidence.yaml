@@ -5,7 +5,7 @@ put:
     - OAuth: 
       - disputes
       - disputes:provide-evidence
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Provide dispute evidence
   description: >
     Adds supporting evidence to a dispute. Before using this endpoint, you first

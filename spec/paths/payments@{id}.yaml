@@ -5,7 +5,7 @@ get:
     - OAuth: 
       - gateway
       - gateway:payment-details
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Get payment details
   description: |
     Returns the details of the payment with the specified identifier string.

@@ -5,6 +5,7 @@ post:
     - OAuth: 
       - vault
       - vault:instruments
+    - ApiSecretKey: []
   summary: Create an instrument
   description: |
     Create a bank account payment instrument that you can later use as the destination for one or more payouts. <br><br>The parameters you need to provide depend on the destination country and currency. See <a href="https://docs.checkout.com/pay-to-bank/payout-formatting" target="_blank">our docs</a> and the <a href="#tag/Instruments/paths/~1validation~1bank-accounts~1{country}~1{currency}/get">GET endpoint below</a>.

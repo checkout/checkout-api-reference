@@ -5,7 +5,7 @@ post:
     - OAuth: 
       - disputes
       - disputes:provide-evidence
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Upload file
   description: >-
     Upload a file to use as evidence in a dispute. Your file must be in either

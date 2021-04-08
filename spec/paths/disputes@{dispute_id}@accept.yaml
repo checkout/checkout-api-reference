@@ -5,7 +5,7 @@ post:
     - OAuth: 
       - disputes
       - disputes:accept
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Accept dispute
   description: >-
     If a dispute is legitimate, you can choose to accept it. This will close it

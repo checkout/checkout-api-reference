@@ -5,7 +5,7 @@ get:
     - OAuth: 
       - disputes
       - disputes:view
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Get dispute details
   description: Returns all the details of a dispute using the dispute identifier.
   parameters:

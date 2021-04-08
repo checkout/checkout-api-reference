@@ -5,7 +5,7 @@ get:
     - OAuth: 
       - disputes
       - disputes:view
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Get file information
   description: Retrieve information about a file that was previously uploaded.
   parameters:

@@ -5,7 +5,7 @@ get:
     - OAuth: 
       - gateway
       - gateway:payment-details
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Get payment actions
   description: |
     Returns all the actions associated with a payment ordered by processing date in descending order (latest first).

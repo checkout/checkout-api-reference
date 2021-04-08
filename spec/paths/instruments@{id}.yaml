@@ -5,6 +5,7 @@ patch:
     - OAuth: 
       - vault
       - vault:instruments
+    - ApiSecretKey: []
   summary: Update an instrument
   description: |
     Update a bank account payment instrument that you can later use as the destination for one or more payouts.
@@ -56,6 +57,7 @@ delete:
     - OAuth: 
       - vault
       - vault:instruments
+    - ApiSecretKey: []
   summary: Delete an instrument
   description: |
     Delete a payment instrument.

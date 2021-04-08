@@ -5,7 +5,7 @@ get:
     - OAuth: 
       - disputes
       - disputes:view
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Get disputes
   description: >-
     Returns a list of all disputes against your business. The results will be

@@ -5,7 +5,7 @@ post:
     - OAuth: 
       - gateway
       - gateway:payment-voids
-    # - ApiKey: []
+    - ApiSecretKey: []
   summary: Void a payment
   description: |
     Voids a payment if supported by the payment method.
