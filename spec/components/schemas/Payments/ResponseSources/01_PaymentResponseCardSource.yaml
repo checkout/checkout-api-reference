@@ -64,6 +64,7 @@ allOf:
           - Debit
           - Prepaid
           - Charge
+          - Deferred Debit
         example: Credit
       card_category:
         type: string
