@@ -62,13 +62,12 @@ properties:
         type: string
         pattern: "^(cus)_(\\w{26})$"
         description: |
-          The identifier of an existing customer. If neither customer `id` nor `email` is provided, then 
-          a new customer will be registered
+          The identifier of an existing customer.
         example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
       email:
         type: string
         format: email
-        description: An optional email address to associate with the customer
+        description: The customer's email address. Providing this will create a new customer, unless you have already stored a customer with the same email.
         maxLength: 255
         example: "jokershere@gmail.com"
       name:
