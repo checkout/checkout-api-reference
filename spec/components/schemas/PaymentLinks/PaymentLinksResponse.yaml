@@ -26,4 +26,4 @@ properties:
         allOf:
           - $ref: '#/components/schemas/Link'
         example:
-          href: 'https://pay.checkout.com/link/ELqQJXdXzabU'
+          href: 'https://pay.sandbox.checkout.com/link/ELqQJXdXzabU'
