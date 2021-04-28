@@ -12,7 +12,7 @@ properties:
     example: "ORD-5023-4E89"
   metadata:
     type: object
-    description: A set of key-value pairs that you can attach to the authorization request. This can be useful for storing additional information in a structured format
+    description: A set of key-value pairs that you can attach to the authorization request. This can be useful for storing additional information in a structured format. **Note** that this object only allows one level of depth, so cannot accept non-primitive data types such as objects or arrays.
     example:
       coupon_code: "NY2018"
       partner_id: 123989

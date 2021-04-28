@@ -16,9 +16,11 @@ properties:
       • not_found = Usually with an http status code 404. The resource requested was not found. <br/>
       • forbidden = Usually with an http status code 401. You do not have permissions for the requested operation. <br/>
       • callback_failed = (Non Hosted Only) Only during the complete request. The callback_url responded with a non-success status code. <br/>
-      • internal_server_error = Usually with an http status code 500. Unexpected error during the request or some upstream service failed. <br/>
+      • internal_server_error = Usually with an http status code 500. Unexpected error during the request or an upstream service failure. <br/>
       • unprocessable_entity = Usually with an http status code 422. The request payload failed validation. <br/>
       • conflict = Usually with an http status code 409 during the creation of a resource. The resource already exists. <br/>
+      • duplicate_requests_detected = Usually with an http status code 409. This is returned when a Session is currently being processed. <br />
+      • service_not_available = Usually with an http status code 503. Triggered given an upstream service failure.<br />
     enum:
       - operation_not_allowed
       - not_implemented
@@ -28,13 +30,17 @@ properties:
       - internal_server_error
       - unprocessable_entity
       - conflict
+      - duplicate_requests_detected
+      - service_not_available
   error_codes:
     description: >
       Error response code. Full list of error codes below: <br/>
       • unknown_error = Usually with an error type `internal_server_error`. An unexpected/unhandled error occured. <br/>
       • operation_not_allowed = Usually with an error type `operation_not_allowed`. The request is not allowed by business rules. <br/>
+      • scheme_not_supported = The processor was setup with a scheme not supported by the server. <br/>
       • card_not_enrolled = The card number was not enrolled for 3DS2 and 3DS1 was either not enabled or not supported for Session (eg amount is 0). <br/>
       • card_not_eligible = The card number was not eligible for 3DS1. <br/>
+      • card_eligibility_unavailable = A technical issue prevented the 3DS1 transaction from completing. <br />
       • issuer_not_enrolled = The card issuer  was not enrolled for 3DS2 and 3DS1 was either not enabled or not supported for Session (eg amount is 0). <br/>
       • card_protocol_version_not_supported = The protocol version provided is not enabled for the processor being used. <br/>
       • update_not_allowed_due_to_state = The Session was in a state that did not allow for the operation attempted. <br/>
@@ -50,12 +56,17 @@ properties:
       • processing_channel_disabled = The Processing Channel or processor used for this Session is not active. <br/>
       • vault_not_configured_for_processing_channel = Using a Processing Channel not configured for use with Checkout.com Vault offering but trying to use a relevant source (`id` or `token`). <br/>
       • error_getting_instrument = Getting an instrument responded with an unexpected error or timed out. Only relevant for sources `id` or `token`. <br/>
+      • invalid_token = The token used in the source object was invalid. <br/>
       • instrument_used_is_not_card = Using an `id` type source that is not a card (only card type instruments are supported in 3DS) . <br/>
-      • no_processor_configured_for_card_scheme = Using a card that belongs to a scheme that is not configured in the Processing Channel being used. <br/><br/>
+      • no_processor_configured_for_card_scheme = Using a card that belongs to a scheme that is not configured in the Processing Channel being used. <br/>
+      • currency_not_supported = An Amex SE number is not associated with the currency in the request. <br/>
+      • scheme_outage = With error type `operation_not_allowed`. This is returned when there is a technical issue on the scheme's platform. <br/>
+      • session_already_in_use = With error type `duplicate_requests_detected`. More than one action requests have been sent in parallel for the same session. <br/><br/>
 
       Also, there is a number of generic error codes as described below: <br/>
       • some_field_required = Usually with an error type `unprocessable_entity`. The field `some_field` is required but not provided in the payload. <br/>
       • some_field_invalid = Usually with an error type `unprocessable_entity`. The field `some_field` failed validation. Please consult the API spec. <br/>
+      • unable_to_verify_some_field = Usually with an error type `service_not_available`. The field `some_field` could not be validated due to an upstream service failure. <br/>
       • some_resource_already_exists = Usually with an error type `conflict`. The resource you are trying to create already exists (not relevant for Sessions with an auto-generated id). <br/>
       • some_resource_not_found = Usually with an error type `not_found`. The resource you are trying to get does not exist. <br/>
 

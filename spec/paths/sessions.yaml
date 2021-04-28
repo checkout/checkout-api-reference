@@ -19,7 +19,7 @@ post:
           $ref: '#/components/schemas/SessionRequest'
   responses:
     '201':
-      description: Session created successfully
+      description: Session processed successfully
       content:
         application/json:
           schema:
@@ -30,7 +30,7 @@ post:
         Cko-Version:
           $ref: "#/components/headers/Cko-Version"
     '202':
-      description: Session accepted successfully
+      description: Session accepted and further action required
       content:
         application/json:
           schema:
@@ -56,5 +56,9 @@ post:
             $ref: '#/components/schemas/ErrorResponse'
     '501':
       description: Not Implemented
-    '502':
-      description: Bad gateway
+    '503':
+      description: Service not available. A temporary server error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'

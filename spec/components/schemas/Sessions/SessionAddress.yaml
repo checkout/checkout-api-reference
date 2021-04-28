@@ -1,5 +1,5 @@
 type: object
-description: The shipping address
+description: The shipping address. Any special characters will be replaced.
 properties:
   address_line1: 
     type: string

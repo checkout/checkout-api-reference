@@ -22,7 +22,7 @@ put:
           $ref: '#/components/schemas/ThreeDsMethodCompletion'
   responses:
     '200':
-      description: Session updated. Directory Server (DS) has processed the authentication.
+      description: Session updated successfully
       content:
         application/json:
           schema:

@@ -23,7 +23,7 @@ put:
           $ref: '#/components/schemas/ChannelData'
   responses:
     '200':
-      description: Session updated. DS has processed the authentication.
+      description: Session updated successfully
       content:
         application/json:
           schema:

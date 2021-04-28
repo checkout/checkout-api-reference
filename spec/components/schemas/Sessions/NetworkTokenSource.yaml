@@ -31,7 +31,7 @@ allOf:
         maxLength: 4
       name:
         type: string
-        description: The customer's name
+        description: The customer's name. Any special characters will be replaced.
         minLength: 2
         maxLength: 45
         example: "Bruce Wayne"

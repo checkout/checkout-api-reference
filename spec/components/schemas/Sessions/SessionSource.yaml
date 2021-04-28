@@ -16,7 +16,7 @@ properties:
     description: The payment source type
     example: "card"
   billing_address:
-    description: The customer's billing address
+    description: The customer's billing address. Any special characters will be replaced.
     allOf:
       - $ref: '#/components/schemas/SessionAddress'
   home_phone:

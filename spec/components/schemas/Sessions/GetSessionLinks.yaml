@@ -65,3 +65,30 @@ properties:
         type: string
         maxLength: 100
         example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441/complete
+  success_url:
+    type: object
+    description: The cardholder will be redirected to this URI given an authentication was approved or attempted. Only available if the completion type is `hosted`.
+    properties:
+      required:
+        - href
+      href:
+        type: string
+        maxLength: 300
+  failure_url:
+    type: object
+    description: The cardholder will be redirected to this URI given an authentication was not approved or attempted. Only available if the completion type is `hosted`.
+    properties:
+      required:
+        - href
+      href:
+        type: string
+        maxLength: 300
+  callback_url:
+    type: object
+    description: An endpoint which will receive a POST request highlighting the result of an authentication. See the "Complete a Session" request for more details. Only available if the completion type is `non_hosted`.
+    properties:
+      required:
+        - href
+      href:
+        type: string
+        maxLength: 300

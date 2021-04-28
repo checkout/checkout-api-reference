@@ -1,7 +1,7 @@
 allOf:
   - $ref: '#/components/schemas/GetSessionLinks'  
 properties:
-  redirect:
+  redirect_url:
     type: object
     description: >
       The link to which the cardholder should be redirected. </br>

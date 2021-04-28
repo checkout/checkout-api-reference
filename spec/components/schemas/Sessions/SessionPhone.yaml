@@ -1,13 +1,18 @@
 type: object
+required:
+  - country_code
+  - number
 properties:
     country_code:
-      description: Country code
+      description: Country code. According to ITU-E.164
       type: string
       minLength: 1
       maxLength: 3
+      pattern: '^\d{1,3}$'
       example: 234
     number:
       type: string
-      description: The rest of the number
+      description: The rest of the number. According to ITU-E.164
       maxLength: 15
+      pattern: '^\d{1,15}$'
       example: "0204567895"

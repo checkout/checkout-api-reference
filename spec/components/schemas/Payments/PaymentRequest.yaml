@@ -119,6 +119,6 @@ properties:
     #$ref: '#/components/schemas/ProcessingSettings'
   metadata:
     type: object
-    description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.
+    description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules. **Note** that this object only allows one level of depth, so cannot accept non-primitive data types such as objects or arrays.
     example:
       coupon_code: "NY2018"

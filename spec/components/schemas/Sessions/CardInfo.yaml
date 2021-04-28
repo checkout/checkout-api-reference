@@ -19,7 +19,7 @@ properties:
       card_type:
         type: string
         description: The card type.
-        enum: ["DEBIT", "CREDIT", "PREPAID", "CHARGE"]
+        enum: ["DEBIT", "CREDIT", "PREPAID", "CHARGE", "DEFERRED DEBIT"]
         example: CREDIT
       card_category:
         type: string
