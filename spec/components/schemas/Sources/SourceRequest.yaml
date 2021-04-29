@@ -5,7 +5,6 @@ discriminator:
   propertyName: type
   mapping:
     sepa: '#/components/schemas/01_SepaSource'
-    ach: '#/components/schemas/02_AchSource'
 properties:
   type:
     type: string
