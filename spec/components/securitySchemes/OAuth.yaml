@@ -42,6 +42,7 @@ flows:
     scopes:
       vault: Access to all Vault resources
       "vault:instruments": Create instruments
+      "vault:tokenization": Tokenize payment instruments
       gateway: Access to all Gateway resources
       "gateway:payment": Request payments
       "gateway:payment-details": Get payment details
@@ -62,3 +63,11 @@ flows:
       flow: Access to all Flow resources
       "flow:workflows": Manage workflows
       "flow:events": Retrieve events
+      files: Access to all Files resources
+      "files:retrieve": Retrieve files
+      "files:upload": Upload files
+      "issuing:client": Access to all client-related resources
+      "issuing:partner": Access to all partner-related resources
+      risk: Access to all Risk resources
+      "risk:assessment": Manage risk assessment
+      "risk:settings": Manage risk settings
