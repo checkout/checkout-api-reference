@@ -3,7 +3,7 @@ description: Simulator action
 required:
   - url
 allOf:
-  - $ref: '#/components/schemas/workflow-action'
+  #- $ref: '#/components/schemas/workflow-action'
   - type: object
     required:
       - api_key
