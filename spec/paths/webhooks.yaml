@@ -7,7 +7,7 @@ get:
   summary: Retrieve webhooks
   operationId: retrieveWebhooks
   description: |
-    Retrieves the webhooks configured for the channel identified by your API key
+    THIS IS NEW
   parameters: []
   responses:
     '200':

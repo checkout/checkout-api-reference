@@ -7,7 +7,7 @@ get:
   summary: Retrieve webhook
   operationId: retrieveWebhook
   description: |
-    Retrieves the webhook with the specified identifier string
+    THIS IS A CHANGE!
   parameters:
     - name: id
       required: true

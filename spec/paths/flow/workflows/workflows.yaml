@@ -16,7 +16,7 @@ get:
     Get all workflows
   responses:
     '200':
-      description: Workflows retrieved successfully
+      description: THIS TOO IS NEW
       content:
         application/json:
           schema:
