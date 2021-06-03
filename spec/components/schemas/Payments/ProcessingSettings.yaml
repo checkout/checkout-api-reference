@@ -1,46 +1,46 @@
 type: object
 description: Use the processing object to influence or override the data sent during card processing
 properties:
-  mid:
-    type: string
-    description: Overrides the default merchant/acceptor identifier (MID) configured on your account
-    example: "1234567"
-  senderInformation:
-    type: object
-    description: | 
-      Allows you to send additional data required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.
+  # mid:
+  #   type: string
+  #   description: Overrides the default merchant/acceptor identifier (MID) configured on your account
+  #   example: "1234567"
+  # senderInformation:
+  #   type: object
+  #   description: | 
+  #     Allows you to send additional data required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.
   aft:
     type: boolean
     description: Indicates whether the payment is an Account Funding Transaction
-  dlocal:
-    type: object
-    description: Processing information required for dLocal payments.
-    properties:
-      country:
-        type: string
-        description: The two-letter ISO code of the cardholder's country.
-        example: "MX"
-      payer:
-        type: object
-        description: Details about the cardholder.
-        properties:
-          document:
-            type: string
-            description: The cardholder's personal identification number. The identification required is country-specific. See the <a href="https://docs.dlocal.com/api-documentation/payins-api-reference/country-reference#documents" target="_blank">dLocal documentation</a> for more information.
-            example: "DocumentId"
-          name:
-            type: string
-            description: The cardholder's full name.
-            example: "John Doe"
-          email:
-            type: string
-            description: The cardholder's email address.
-            example: "john.doe@example.com"
-      installments:
-        type: object
-        description: Details about the installments.
-        properties:
-          count:
-            type: string
-            description: The number of payments to be made in the installment plan.
-            example: "3"
+  # dlocal:
+  #   type: object
+  #   description: Processing information required for dLocal payments.
+  #   properties:
+  #     country:
+  #       type: string
+  #       description: The two-letter ISO code of the cardholder's country.
+  #       example: "MX"
+  #     payer:
+  #       type: object
+  #       description: Details about the cardholder.
+  #       properties:
+  #         document:
+  #           type: string
+  #           description: The cardholder's personal identification number. The identification required is country-specific. See the <a href="https://docs.dlocal.com/api-documentation/payins-api-reference/country-reference#documents" target="_blank">dLocal documentation</a> for more information.
+  #           example: "DocumentId"
+  #         name:
+  #           type: string
+  #           description: The cardholder's full name.
+  #           example: "John Doe"
+  #         email:
+  #           type: string
+  #           description: The cardholder's email address.
+  #           example: "john.doe@example.com"
+  #     installments:
+  #       type: object
+  #       description: Details about the installments.
+  #       properties:
+  #         count:
+  #           type: string
+  #           description: The number of payments to be made in the installment plan.
+  #           example: "3"

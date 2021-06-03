@@ -1,5 +1,5 @@
 type: object
-description: Information about the recipent of the payment's funds. Relevant for VISA or Mastercard [domestic UK transactions processed by financial institutions](https://docs.checkout.com/four/risk-management/requirements-for-financial-institutions).
+description: Information about the recipent of the payment's funds. Relevant for [Account Funding Transactions](https://docs.checkout.com/four/payments/manage-payments/account-funding-transactions) and VISA or Mastercard [domestic UK transactions processed by financial institutions](https://docs.checkout.com/four/payments/regulation-support/requirements-for-financial-institutions).
 properties:
   dob:
     type: string
@@ -28,3 +28,8 @@ properties:
     description: The recipient's last name
     maxLength: 50
     example: "Jones"
+  country:
+    type: string
+    description: The country ([two-letter ISO country code](https://docs.checkout.com/four/resources/codes/country-codes)) of the recipient's address
+    maxLength: 2
+    example: "GB"
