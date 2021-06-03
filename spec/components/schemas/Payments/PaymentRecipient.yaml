@@ -31,5 +31,6 @@ properties:
   country:
     type: string
     description: The country ([two-letter ISO country code](https://docs.checkout.com/four/resources/codes/country-codes)) of the recipient's address
+    minLength: 2
     maxLength: 2
     example: "GB"

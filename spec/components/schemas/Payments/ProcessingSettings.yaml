@@ -11,7 +11,7 @@ properties:
   #     Allows you to send additional data required for Visa Direct Original Credit Transaction (OCT) and Mastercard Moneysend payments.
   aft:
     type: boolean
-    description: Indicates whether the payment is an Account Funding Transaction
+    description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/four/payments/manage-payments/account-funding-transactions)
   # dlocal:
   #   type: object
   #   description: Processing information required for dLocal payments.
