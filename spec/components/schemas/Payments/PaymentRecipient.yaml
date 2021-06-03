@@ -28,3 +28,9 @@ properties:
     description: The recipient's last name
     maxLength: 50
     example: "Jones"
+  country:
+    type: string
+    description: The country ([two-letter ISO country code](https://docs.checkout.com/resources/codes/country-codes)) of the recipient's address
+    minLength: 2
+    maxLength: 2
+    example: "GB"
