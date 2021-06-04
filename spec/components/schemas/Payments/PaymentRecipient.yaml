@@ -16,7 +16,7 @@ properties:
   zip:
     type: string
     description: The first part of the UK postcode (e.g., W1T 4TJ would be W1T)
-    maxLength: 50
+    maxLength: 6
     example: "W1T"
   first_name:
     type: string
