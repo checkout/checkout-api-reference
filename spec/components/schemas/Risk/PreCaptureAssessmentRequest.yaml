@@ -1,0 +1,44 @@
+type: object
+properties:
+  assessment_id:
+    type: string
+    pattern: "^(ras)_(\\w{26})$"
+    description: The risk assessment identifier returned in the /pre-authentication response
+  date:
+    description: An ISO 8601 timestamp of the date of the original payment attempt
+    allOf: 
+      - $ref: '#/components/schemas/Timestamp'
+  source: 
+    $ref: '#/components/schemas/RiskPaymentRequestSource'
+  customer:
+    $ref: '#/components/schemas/Customer'
+  amount:
+    type: integer
+    description: |
+      The payment amount.
+      The exact format <a href="https://docs.checkout.com/resources/calculating-the-value" target="blank">depends on the currency</a>.
+    minimum: 0
+    example: 6540
+  currency:
+    type: string
+    description: |
+      The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a>
+    example: GBP
+    maxLength: 3
+    minLength: 3
+  payment:
+    $ref: '#/components/schemas/RiskPayment'
+  shipping:
+    description: The shipping details
+    allOf:
+      - $ref: '#/components/schemas/RiskShippingDetails'
+  device:
+    description: Device data
+    allOf:
+      - $ref: '#/components/schemas/Device'
+  metadata:
+    $ref: '#/components/schemas/Metadata'
+  authentication_result: 
+    $ref: '#/components/schemas/AuthenticationResult'
+  authorization_result: 
+    $ref: '#/components/schemas/AuthorizationResult'

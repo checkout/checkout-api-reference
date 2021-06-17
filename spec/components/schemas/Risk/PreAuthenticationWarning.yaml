@@ -1,0 +1,21 @@
+type: object 
+required: 
+  - decision
+  - reasons
+properties: 
+  decision:
+    type: string
+    description: The resulting decision based on pre-authentication risk settings
+    enum: 
+    - try_exemptions
+    - try_frictionless
+    - no_preference
+    - force_challenge
+    - decline
+    example: decline
+  reasons:
+    description: How the decision was concluded
+    type: array
+    items:
+      type: string
+    example: [decline_list_email, decline_list_shipping]

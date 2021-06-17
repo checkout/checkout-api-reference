@@ -1,0 +1,41 @@
+type: object
+description: Pre-Authentication Response
+required:
+  - assessment_id
+  - result
+properties:
+  assessment_id:
+    type: string
+    description: The correlation id across scans for a given transaction
+    example: "ras_c4oqhf46pyzuxjbcn2giaqnb44"
+  score: 
+    type: integer
+    description: The risk score calculated by Checkout. Absent if not enough data provided.
+    example: 22
+    minimum: 0
+    maximum: 100
+  result:
+    description: The scan result based on defined pre-authentication risk settings
+    allOf:
+      - $ref: '#/components/schemas/PreAuthenticationResult'
+  warning:
+    description: Present when Checkout scan is more restrictive
+    allOf:
+      - $ref: '#/components/schemas/PreAuthenticationWarning'
+  _links:
+    type: object
+    properties:
+      self:
+        description: The URL of the assessment
+        properties:
+          href:
+            type: string
+            description: The link URL
+            example: "https://api.checkout.com/risk/assessments/{assessment_id}"
+      pre-capture:
+        description: A link to perform a pre-capture assessment using the same context. Absent if no pre-capture risk settings configured
+        properties:
+          href:
+            type: string 
+            description: The link URL
+            example: "https://api.checkout.com/risk/assessments/{assessment_id}/pre-capture"

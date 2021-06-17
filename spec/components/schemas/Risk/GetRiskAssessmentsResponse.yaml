@@ -1,0 +1,12 @@
+type: object
+properties:
+  assessment_id:
+    type: string
+    description: The correlation id across scans for a given transaction
+    example: "ras_c4oqhf46pyzuxjbcn2giaqnb44"
+  pre_authentication:
+    type: object
+    $ref: '#/components/schemas/PreAuthenticationDetails'
+  pre_capture:
+    type: object
+    $ref: '#/components/schemas/PreCaptureDetails'

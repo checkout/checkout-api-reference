@@ -1,0 +1,19 @@
+type: object
+description: Details of the pre-authentication response
+required:
+  - result
+properties:
+  score: 
+    type: integer
+    description: The risk score calculated by Checkout. Absent if not enough data provided.
+    example: 22
+    minimum: 0
+    maximum: 100
+  result:
+    description: The scan result based on defined pre-authentication risk settings
+    allOf:
+      - $ref: '#/components/schemas/PreAuthenticationResult'
+  warning:
+    description: Present when Checkout scan is more restrictive
+    allOf:
+      - $ref: '#/components/schemas/PreAuthenticationWarning'

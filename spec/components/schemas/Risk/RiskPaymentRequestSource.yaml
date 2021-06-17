@@ -1,0 +1,38 @@
+type: object
+description: The source of the payment.<br>
+discriminator:
+  propertyName: type
+  mapping:
+    token: '#/components/schemas/01_PaymentRequestTokenSource'
+    id: '#/components/schemas/IdSourcePrism'
+    card: '#/components/schemas/CardSourcePrism'
+    customer: '#/components/schemas/CustomerSourcePrism'
+    # network_token: '#/components/schemas/05_PaymentRequestNetworkTokenSource'
+    # alipay: '#/components/schemas/PaymentRequestAlipaySource'
+    # benefitpay: '#/components/schemas/PaymentRequestBenefitPaySource'
+    # baloto: '#/components/schemas/PaymentRequestBalotoSource'
+    # boleto: '#/components/schemas/PaymentRequestBoletoSource'
+    # eps: '#/components/schemas/PaymentRequestEpsSource'
+    # giropay: '#/components/schemas/PaymentRequestGiropaySource'
+    # ideal: '#/components/schemas/PaymentRequestIdealSource'
+    # klarna: '#/components/schemas/PaymentRequestKlarnaSource'
+    # knet: '#/components/schemas/PaymentRequestKnetSource'
+    # oxxo: '#/components/schemas/PaymentRequestOXXOSource'
+    # p24: '#/components/schemas/PaymentRequestP24Source'
+    # pagofacil: '#/components/schemas/PaymentRequestPagoFacilSource'
+    # paypal: '#/components/schemas/PaymentRequestPayPalSource'
+    # poli: '#/components/schemas/PaymentRequestPoliSource'
+    # rapipago: '#/components/schemas/PaymentRequestRapiPagoSource'
+    # bancontact: '#/components/schemas/PaymentRequestBancontactSource'
+    # fawry: '#/components/schemas/PaymentRequestFawrySource'
+    # qpay: '#/components/schemas/PaymentRequestQPaySource'
+    # multibanco: '#/components/schemas/PaymentRequestMultibancoSource'
+    # dLocal: '#/components/schemas/06_PaymentRequestdLocalSource'
+    # sofort: '#/components/schemas/PaymentRequestSofortSource'
+required:
+  - type
+properties:
+  type:
+    type: string
+    description: The payment source type
+    example: "card"

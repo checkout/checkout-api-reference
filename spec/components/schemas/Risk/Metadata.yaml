@@ -1,0 +1,8 @@
+type: object
+description: Allows you to attach custom information to the risk assessment. A dictionary of string as keys and string values are expected. Those properties can be referenced in rules
+additionalProperties:
+  type: string
+example:
+  VoucherCode: "loyalty_10"
+  discountApplied: "10"
+  customer_id: "2190EF321"

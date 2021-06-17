@@ -1,0 +1,42 @@
+type: object
+description: A card payment source
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    required:
+      - type
+      - number
+      - expiry_month
+      - expiry_year
+    properties:
+      number:
+        type: string
+        description: The card number (without separators)
+        maxLength: 19
+        example: "4543474002249996"
+      expiry_month:
+        type: integer
+        description: The expiry month of the card
+        minimum: 1
+        minLength: 1
+        maxLength: 2
+        example: 6
+      expiry_year:
+        type: integer
+        description: The expiry year of the card
+        minLength: 4
+        maxLength: 4
+        example: 2025
+      name:
+        type: string
+        description: The name of the cardholder
+        maxLength: 255
+        example: "Bruce Wayne"
+      billing_address:
+        description: The billing address of the cardholder
+        allOf:
+          - $ref: '#/components/schemas/Address'
+      phone:
+        description: The phone number of the cardholder
+        allOf:
+          - $ref: '#/components/schemas/PhoneNumber'

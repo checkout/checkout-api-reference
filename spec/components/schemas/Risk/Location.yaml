@@ -1,0 +1,10 @@
+type: object
+properties:
+  latitude:
+    description: The latitude of the device location
+    type: number
+    example: 51.5107
+  longitude:
+    description: The longitude of the device location
+    type: number
+    example: 0.1313

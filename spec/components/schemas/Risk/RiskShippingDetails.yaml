@@ -1,0 +1,7 @@
+type: object
+description: The shipping details
+properties:
+  address:
+    description: The shipping address
+    allOf:
+      - $ref: '#/components/schemas/Address'

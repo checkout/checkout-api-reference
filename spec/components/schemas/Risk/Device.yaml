@@ -1,0 +1,34 @@
+type: object
+properties:
+  ip:
+    description: The IP V4 address used to make the payment
+    allOf:
+      - $ref: '#/components/schemas/IPAddress'
+  location:
+    description: The physical location of the request source
+    allOf:
+      - $ref: '#/components/schemas/Location'
+  os:
+    description: The device's operating system
+    type: string
+    example: ISO
+  type: 
+    description: The type of device
+    type: string
+    example: Phone
+  model: 
+    description: The device model
+    type: string
+    example: iPhone X
+  date:
+    description: The device's date in UTC as an ISO 8601 timestamp.
+    allOf: 
+      - $ref: '#/components/schemas/Timestamp'
+  user_agent: 
+    description: The device's user-agent
+    type: string 
+    example: Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+  fingerprint: 
+    description: The device fingerprint
+    type: string
+    example: 34304a9e3fg09302

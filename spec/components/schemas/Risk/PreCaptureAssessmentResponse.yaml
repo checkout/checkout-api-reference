@@ -1,0 +1,28 @@
+type: object
+description: Pre-Capture Response
+required:
+  - assessment_id
+  - result
+properties:
+  assessment_id:
+    type: string
+    description: The correlation id across scans for a given transaction
+    example: "ras_c4oqhf46pyzuxjbcn2giaqnb44"
+  result:
+    description: The scan result based on the pre-capture risk settings
+    allOf:
+      - $ref: '#/components/schemas/PreCaptureResult'
+  warning:
+    description: Present when Checkout scan is more restrictive
+    allOf:
+      - $ref: '#/components/schemas/PreCaptureWarning'
+  _links:
+    type: object
+    properties:
+      self:
+        description: The URL of the assessment
+        properties:
+          href:
+            type: string
+            description: The link URL
+            example: "https://api.checkout.com/risk/assessments/{assessment_id}"
