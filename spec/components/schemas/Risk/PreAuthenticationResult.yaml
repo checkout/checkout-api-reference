@@ -1,0 +1,19 @@
+type: object 
+required: 
+  - decision
+description: The assessment result
+properties: 
+  decision:
+    type: string
+    description: The resulting decision based on pre-authentication risk settings
+    enum: 
+    - try_exemptions
+    - try_frictionless
+    - no_preference
+    - force_challenge
+    - decline
+    example: try_frictionless
+  details:
+    description: Explanation of the risk processing decsion
+    type: string
+    example: "low_value_item_rule"

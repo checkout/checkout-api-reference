@@ -1,0 +1,26 @@
+type: object
+properties: 
+  attempted:
+    type: boolean
+    description: Authentication was initiated between the issuer and cardholder
+    example: true
+  challenged:
+    type: boolean
+    description: The customer was asked to enter a password or biometric authentication
+    example: true
+  succeeded:
+    type: boolean
+    description: Did the customer succeed authentication
+    example: true
+  liability_shifted:
+    type: boolean
+    description: Was liability shifted
+    example: true
+  method:
+    type: string
+    description: Authentication method
+    example: 3ds
+  version: 
+    type: string
+    description: The authentication method version
+    example: "2.0"

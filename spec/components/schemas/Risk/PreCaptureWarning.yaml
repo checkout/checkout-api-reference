@@ -1,0 +1,19 @@
+type: object 
+required: 
+  - decision
+  - reasons
+properties: 
+  decision:
+    type: string
+    description: Checkout recommended decision
+    enum: 
+    - capture
+    - void
+    - flag
+    example: capture
+  reasons:
+    description: How the decision was concluded
+    type: array
+    items:
+      type: string
+    example: [rule_low_risk_postal_address]

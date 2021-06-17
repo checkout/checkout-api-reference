@@ -1,0 +1,46 @@
+type: object
+properties:
+  date:
+    description: An ISO 8601 timestamp of the date of the original payment attempt
+    allOf: 
+      - $ref: '#/components/schemas/Timestamp'
+  source: 
+    $ref: '#/components/schemas/RiskPaymentRequestSource'
+  customer:
+    $ref: '#/components/schemas/Customer'
+  payment:
+    $ref: '#/components/schemas/RiskPayment'
+  shipping:
+    description: The shipping details
+    allOf:
+      - $ref: '#/components/schemas/RiskShippingDetails'
+  reference:
+    type: string
+    description: A reference you can later use to identify this assessment, such as an order number.
+    maxLength: 50
+    example: "ORD-1011-87AH"
+  description:
+    type: string
+    description: A description
+    maxLength: 100
+    example: "Set of 3 masks"
+  amount:
+    type: integer
+    description: |
+      The payment amount.
+      The exact format <a href="https://docs.checkout.com/resources/calculating-the-value" target="blank">depends on the currency</a>.
+    minimum: 0
+    example: 6540
+  currency:
+    type: string
+    description: |
+      The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a>
+    example: GBP
+    maxLength: 3
+    minLength: 3
+  device:
+    description: Device data
+    allOf:
+      - $ref: '#/components/schemas/Device'
+  metadata:
+    $ref: '#/components/schemas/Metadata'
