@@ -70,6 +70,3 @@ Review from the documentation team is now mandatory. You won't be able to merge 
   `dotnet --version`
 
 If you are receiving the error message `ReferenceError: primordials is not defined` that's probably because you're using Node.js version >= 12 and Gulp version < 4. It's possible to overcome that by downgrading your Node.js version or by upgrading gulp on your machine. For more information, please check the issue https://github.com/gulpjs/gulp/issues/2324.
-
-
-
