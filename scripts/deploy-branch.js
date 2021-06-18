@@ -6,10 +6,6 @@ var path = require('path');
 set('-e');
 set('-v');
 
-
-
-let branch;
-
 exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
     if (err) {
       // handle your error
