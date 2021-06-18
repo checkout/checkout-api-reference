@@ -2,6 +2,7 @@
 'use strict';
 require('shelljs/global');
 var path = require('path');
+var ghpages = require('gh-pages');
 
 set('-e');
 set('-v');
@@ -20,6 +21,10 @@ exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
     rm('-rf', 'output')
 
     cp('-R', 'web/*', branchPath);
-    exec('deploy-to-gh-pages --update .tmp');
-});
+
+    exec(`gh-pages -d .tmp`, (err, stdout, stderr) => {
+    // ...
+    });
+  });
+  
 
