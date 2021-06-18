@@ -7,7 +7,7 @@ env:
   CI: true
   
 jobs:
-  checks:
+  validate-deploy:
     runs-on: ubuntu-latest
 
     steps:
