@@ -1,7 +1,6 @@
 on:
   push:
     branches:
-      - crusoe
       - master
 
 env:
@@ -26,14 +25,5 @@ jobs:
       - name: Validate schema
         run: npm run test
   
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-
       - name: Deploy main
         run: npm run deploy
