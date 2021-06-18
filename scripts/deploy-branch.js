@@ -23,6 +23,3 @@ exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
     exec('deploy-to-gh-pages --update .tmp');
 });
 
-
-
-
