@@ -20,13 +20,6 @@ exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
   rm('-rf', 'output')
 
   cp('-R', 'web/*', branchPath);
-
-  exec('git config --local user.email "action@github.com"')
-  exec('git config --local user.name "GitHub Action"')
-
-  exec(`gh-pages -d .tmp`, (err, stdout, stderr) => {
-  // ...
-  });
 });
   
 
