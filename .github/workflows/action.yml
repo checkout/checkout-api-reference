@@ -27,4 +27,6 @@ jobs:
         run: npm run test
   
       - name: Deploy branch
-        run: npm run deploy-branch
+        run: |
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config user.name "$GITHUB_ACTOR"  
+          npm run deploy-branch
