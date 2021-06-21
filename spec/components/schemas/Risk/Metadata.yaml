@@ -1,0 +1,8 @@
+type: object
+description: Allows you to attach additional information about a transaction with custom fields of type <string,string>
+additionalProperties:
+  type: string
+example:
+  VoucherCode: "loyalty_10"
+  DiscountApplied: "10"
+  CustomerId: "2190EF321"

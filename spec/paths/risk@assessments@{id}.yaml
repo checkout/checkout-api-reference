@@ -1,0 +1,34 @@
+get:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Risk
+  summary: Get risk assessment
+  operationId: getRiskAssessment
+  description: |
+    Request an array of pre-authentication and pre-capture responses for a given risk assessment
+  parameters:
+    - in: path
+      name: risk_assessment_id
+      schema:
+        type: string
+        pattern: "^(ras)_(\\w{26})$"
+      required: true
+      description: The risk assessment identifier returned in the /pre-authentication response
+  responses:
+    '200':
+      description: Risk assessments
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GetRiskAssessmentsResponse'
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    '401':
+      description: Unauthorized
+    '404':
+      description: Assessment not found
+    '502':
+      description: Bad gateway

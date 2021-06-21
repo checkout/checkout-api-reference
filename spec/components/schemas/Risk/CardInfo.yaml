@@ -1,0 +1,52 @@
+type: object
+required:
+  - type
+description: The details of the card being used
+properties:
+  cardholder_name:
+    type: string
+    description: The cardholder name provided
+    example: Mrs Jane Doe
+  bin:
+    type: string
+    description: The card issuer's Bank Identification Number (BIN)
+    maxLength: 6
+    example: "454540"
+  expiry_month:
+    type: integer
+    description: The expiry month
+    minimum: 1
+    example: 6
+    maxLength: 2
+  expiry_year:
+    type: integer
+    description: The expiry year
+    example: 2025
+    minLength: 4
+    maxLength: 4
+  last4:
+    type: string
+    description: The last four digits of the card number
+    example: "9996"
+    minLength: 4
+    maxLength: 4
+  scheme:
+    type: string
+    enum: 
+    - Mastercard
+    - Visa
+    description: The card scheme
+    example: VISA
+  card_type:
+    type: string
+    description: The card type
+    enum:
+    - Credit
+    - Debit
+    - Prepaid
+    - Charge
+    example: Credit
+  type:
+    type: string
+    description: The payment method type
+    example: card

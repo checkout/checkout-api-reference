@@ -1,0 +1,17 @@
+type: object
+description: The customer making the payment
+properties:
+  first_name:
+    type: string
+    description: "The first name of the customer"
+    example: "John"
+  last_name:
+    type: string
+    description: "The last name of the customer"
+    example: "Doe"
+  email:
+    type: string
+    description: "The customer's email address"
+    example: "john.doe@checkout.com"
+  phone: 
+    $ref: '#/components/schemas/Phone'

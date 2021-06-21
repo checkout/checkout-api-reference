@@ -1,0 +1,23 @@
+type: object 
+required: 
+  - decision
+  - reasons
+properties: 
+  decision:
+    type: string
+    description: Checkout recommended decision
+    enum: 
+    - capture
+    - void
+    - flag
+    example: capture
+  reasons:
+    description: How the decision was concluded
+    type: array
+    items:
+      enum: 
+      - decline_list_email 
+      - decline_list_bin
+      - decline_list_shipping
+      - routing_strategy      
+      example: [decline_list_email, routing_strategy]

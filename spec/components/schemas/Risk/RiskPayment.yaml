@@ -1,0 +1,30 @@
+type: object
+description: The details of the payment being processed
+properties:
+  psp:
+    type: string
+    description: "The payment service provider processing this transaction"
+    example: "Checkout.com"
+  id:
+    type: string
+    description: "The PSP's transaction identifier. Can be back-filled at a later step, e.g /pre-capture"
+    example: "78453878"
+    maxLength: 32
+  amount:
+    type: integer
+    description: |
+      The payment amount.
+      The exact format <a href="https://docs.checkout.com/resources/calculating-the-value" target="blank">depends on the currency</a>.
+    minimum: 0
+    example: 6540
+  currency:
+    type: string
+    description: |
+      The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a>
+    example: GBP
+    maxLength: 3
+    minLength: 3
+  source:
+    description: The method used to make the payment
+    oneOf:
+      - $ref: '#/components/schemas/CardInfo'

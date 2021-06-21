@@ -1,0 +1,24 @@
+type: object
+properties:
+  date:
+    description: An ISO 8601 timestamp of the date of the original payment attempt
+    allOf: 
+      - $ref: '#/components/schemas/Timestamp'
+  customer:
+    $ref: '#/components/schemas/Customer'
+  payment:
+    $ref: '#/components/schemas/RiskPayment'
+  shipping:
+    description: The shipping address
+    allOf:
+      - $ref: '#/components/schemas/Address'
+  billing:
+    description: The billing address
+    allOf:
+      - $ref: '#/components/schemas/Address'
+  device:
+    description: Device data
+    allOf:
+      - $ref: '#/components/schemas/Device'
+  metadata:
+    $ref: '#/components/schemas/Metadata'
