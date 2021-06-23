@@ -1,0 +1,9 @@
+type: object
+description: A Payment Link that is active and can accept a payment from a customer.
+allOf:
+  - $ref: "#/components/schemas/GetPaymentLinkResponse"
+  - type: object
+    properties:
+      _links:
+        allOf:
+          - $ref: "#/components/schemas/PaymentLinkResponseLinks"

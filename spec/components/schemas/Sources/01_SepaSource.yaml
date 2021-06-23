@@ -18,7 +18,6 @@ allOf:
           - first_name
           - last_name
           - account_iban
-          - bic
           - billing_descriptor
           - mandate_type
         properties:

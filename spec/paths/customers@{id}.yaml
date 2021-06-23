@@ -1,3 +1,42 @@
+get:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Customers
+  summary: Get customer details
+  operationId: getCustomerDetails
+  description: Returns details of a customer and their instruments
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        pattern: "^(cus)_(\\w{26})$"
+      description: The customer's ID. Required if `email` is not provided.
+    - in: path
+      name: email
+      schema:
+        type: string
+        format: email
+        maxLength: 255
+      description: The customer's email address. Required if `id` is not provided.
+  responses:
+    '200':
+      description: Customer retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CustomerGetResponse'
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    '401':
+      description: Unauthorized
+    '404':
+      description: Customer not found
+
 patch:
   security:
     - ApiSecretKey: []
@@ -33,3 +72,27 @@ patch:
             $ref: '#/components/schemas/ValidationError'
     '404':
       description: Customer not found
+
+delete:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Customers
+  summary: Delete a customer
+  operationId: deleteCustomerDetails
+  description: Delete a customer and all of their linked payment instruments
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        pattern: "^(cus)_(\\w{26})$"
+      description: The customer id
+  responses:
+    '204':
+      description: Customer deleted successfully
+    '401':
+      description: Unauthorized
+    '404':
+      description: Customer not found or not associated with client

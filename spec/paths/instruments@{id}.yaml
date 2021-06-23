@@ -44,7 +44,8 @@ patch:
       name: id
       schema:
         type: string
-        pattern: "^(src)_(\\w{26})$"
+      pattern: "^(src)_(\\w{26})$"
+      example: src_ubfj2q76miwundwlk72vxt2i7q
       required: true
       description: The instrument ID
   requestBody:
@@ -75,3 +76,28 @@ patch:
             $ref: '#/components/schemas/ValidationError'
     '404':
       description: Instrument not found
+
+delete:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Instruments
+  summary: Delete an instrument
+  operationId: removeInstrument
+  description: Delete a payment instrument.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        pattern: "^(src)_(\\w{26})$"
+        example: src_ubfj2q76miwundwlk72vxt2i7q
+      required: true
+      description: The payment instrument to be deleted
+  responses:
+    '204':
+      description: Instrument deleted successfully
+    '401':
+      description: Unauthorized
+    '404':
+      description: Instrument not found or not associated with client

@@ -1,42 +1,42 @@
 type: object
 properties:
-    expiry_month:
-        type: integer
-        description: The expiry month
-        minimum: 1
-        example: 6
-        maxLength: 2
-    expiry_year:
-        type: integer
-        description: The expiry year
-        example: 2025
-        minLength: 4
-        maxLength: 4
-    name:
-        description: The name of the cardholder
+  expiry_month:
+    type: integer
+    description: The expiry month
+    minimum: 1
+    example: 6
+    maxLength: 2
+  expiry_year:
+    type: integer
+    description: The expiry year
+    example: 2025
+    minLength: 4
+    maxLength: 4
+  name:
+    description: The name of the cardholder
+    type: string
+    example: John Test
+  account_holder:
+    type: object
+    description: The account holder details
+    properties:
+      billing_address:
+        description: The billing address of the account holder
+        allOf:
+          - $ref: "#/components/schemas/Address"
+      phone:
+        description: The phone number of the account holder
+        allOf:
+          - $ref: "#/components/schemas/Phone"
+  customer:
+    type: object
+    description: The customer attached to the instrument
+    properties:
+      id:
+        description: The identifier of an existing customer
         type: string
-        example: John Test
-    account_holder:
-        type: object
-        description: The account holder details
-        properties:
-            billing_address:
-                description: The billing address of the account holder
-                allOf:
-                  - $ref: "#/components/schemas/Address"
-            phone:
-                description: The phone number of the account holder
-                allOf:
-                    - $ref: "#/components/schemas/Phone"
-    customer:
-        type: object
-        description: The customer attached to the instrument
-        properties:
-            id: 
-                description: The identifier of an existing customer
-                type: string 
-                example: cus_gajmdgunwwlehbctuj6a3sifpm
-            default: 
-                description: If true, sets this instrument as the default for the customer (if false, no changes are actioned)
-                type: boolean
-                example: true
+        example: cus_gajmdgunwwlehbctuj6a3sifpm
+      default:
+        description: If true, sets this instrument as the default for the customer (if false, no changes are actioned)
+        type: boolean
+        example: true

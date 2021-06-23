@@ -1,39 +1,40 @@
-openapi: '3.0.1'
+openapi: "3.0.1"
 info:
-  version: '1.0.0'
+  version: "1.0.0"
   title: Checkout.com API Reference
   x-logo:
     url: "https://assets.checkout.com/docs/logos/logo-checkout-api-dark.svg"
-    backgroundColor: "#E6E7EC"
     altText: "Checkout.com API logo"
   contact:
     name: Checkout.com Support
-    url: 'https://checkout.com'
+    url: "https://checkout.com"
     email: support@checkout.com
   license:
     name: Checkout.com
-    url: 'https://checkout.com/api/license/'
-  termsOfService: 'https://checkout.com/terms/'
+    url: "https://checkout.com/api/license/"
+  termsOfService: "https://checkout.com/terms/"
   description: >
-    # Introduction
+    ## Get started
 
-    Checkout.com provides a collection of APIs that enable you to process and manage payments.  
-    
+    Checkout.com provides a collection of APIs that enable you to process and manage payments. Our APIs accept and return JSON in the HTTP body, and return standard <a href="https://docs.checkout.com/resources/codes/http-response-codes">HTTP response codes</a>. 
 
-    Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our <a href="https://docs.checkout.com/quickstart/integrate/sdks" target="_blank">SDKs</a>.  
+    You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our <a href="https://docs.checkout.com/integrate/sdks" target="_blank">SDKs</a>.  
 
+    We have a testing environment called sandbox, which you can <a href="https://www.checkout.com/get-test-account">sign up for</a> to test API calls without affecting live data.
 
-    Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, as well as pay out to a variety of destinations, all using the same integration.
+    ### Looking for more guidance?
 
+    Depending on what integration you need, we've provided <a href="https://docs.checkout.com/integrate/">guides to get you set up</a>.
 
-    And with our webhook management, events and disputes APIs, you can keep on top of your transactions and react to any chargebacks, keeping your business running smoothly.
+    ### Not using APIs?
+
+    We've partnered with many popular <a href="https://docs.checkout.com/integrate/e-commerce-platforms">e-commerce platforms</a> so you can get up and running quickly, processing online payments with one of our e-commerce plugins.
 
     # Authentication
 
     When you sign up for an account, you are given a secret and public API key
     pair. You authenticate with our API by providing the appropriate key in
     the request Authorization header.
-
 
     Never share your secret keys. Keep them guarded and secure.
 servers:
@@ -44,8 +45,10 @@ servers:
 tags:
   - name: Payments
     description: Process and manage payments from a variety of sources and to various destinations all within one integration.
-  - name: Hosted Payments
-    description: Create a Hosted Payments page to accept and process payment details.
+  - name: Payment Links
+    description: Create a Payment Link to accept and process payment details.
+  - name: Hosted Payments Page
+    description: Create a Hosted Payments Page to accept and process payment details.
   - name: Sources
     description: Create a payment source for a customer that you can use for one or more payments.
   - name: Tokens
@@ -58,17 +61,30 @@ tags:
     description: Use events to monitor and get insights into your transactions.
   - name: Disputes
     description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
+  - name: Reconciliation
+    description: Quickly find all fees associated with each of your payments, so you can concentrate on the important stuff while streamlining your financial reporting.
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs
-# x-tagGroups:
-#   - name: Gateway
-#     tags:
-#       - Payments
-#       - Tokens
-#       - Sources
-#       - Files
-#   - name: Broadcast
-#     tags:
-#       - Events
-#       - Webhooks
+x-tagGroups:
+  - name: Handle payments and payouts
+    tags:
+      - Payments
+      - Payment Links
+      - Hosted Payments Page
+  - name: Stored payment details
+    tags:
+      - Tokens
+      - Sources
+      - Instruments
+      - Customers
+  - name: Notifications
+    tags:
+      - Events
+      - Webhooks
+  - name: Disputes
+    tags:
+      - Disputes
+  - name: Statements and reporting
+    tags:
+      - Reconciliation

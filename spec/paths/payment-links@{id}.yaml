@@ -1,0 +1,35 @@
+get:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Payment Links
+  summary: Get Payment Link details
+  operationId: getPaymentLinkDetails
+  description: |
+    Retrieve details about a specific Payment Link using its ID returned when the link was created. In the response, you will see the status of the Payment Link.<br> <br>For more information, see the <a target="_blank" href="https://docs.checkout.com/integrate/payment-links">Payment Links documentation</a>.
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        allOf:
+          - $ref: "#/components/schemas/PaymentLinkId"
+      minLength: 15
+      maxLength: 15
+      description: The Payment Link ID.
+  responses:
+    "200":
+      description: Payment Link details retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/GetPaymentLinkResponse"
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    "401":
+      description: Unauthorized
+    "404":
+      description: Payment Link session not found

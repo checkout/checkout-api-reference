@@ -1,0 +1,5 @@
+type: string
+pattern: "^(pl)_([A-Za-z0-9_-]{12})$"
+description: The unique identifier for a Payment Link.
+maxLength: 15
+minLength: 15

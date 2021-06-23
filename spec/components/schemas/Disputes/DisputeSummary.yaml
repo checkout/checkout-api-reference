@@ -13,7 +13,7 @@ properties:
   status:
     type: string
     description: The current status of the dispute
-    enum: [received, evidence_required, evidence_under_review, resolved, closed, won, lost, canceled, accepted]
+    enum: [evidence_required, evidence_under_review, resolved, won, lost, canceled, expired, accepted, arbitration_under_review, arbitration_won, arbitration_lost]
     example: "evidence_required"
   amount:
     type: number
@@ -23,6 +23,10 @@ properties:
     type: string
     description: The currency the payment was made in
     example: "GBP"
+  reason_code:
+    type: string
+    description: The reason code provided by the card scheme
+    example: "12.4"
   payment_id:
     type: string
     description: The unique payment identifier

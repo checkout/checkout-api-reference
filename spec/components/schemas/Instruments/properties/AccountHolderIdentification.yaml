@@ -1,0 +1,21 @@
+type: object
+description: Bank account holder's proof of identification
+properties:
+  type:
+    description: The type of identification used to identify the account holder
+    type: string
+    enum: 
+      - passport
+      - driving_licence
+      - national_id
+      - company_registration
+      - tax_id
+    example: passport
+  number:
+    description: The identification number
+    type: string
+    example: 09876
+  issuing_country:
+    description: The two-letter <a href="https://docs.checkout.com/four/resources/codes/country-codes" target="_blank">ISO country code</a> of the country that issued the identification
+    type: string
+    example: US

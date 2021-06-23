@@ -1,0 +1,122 @@
+type: object
+discriminator:
+  propertyName: status
+  mapping:
+    Active: "#/components/schemas/PaymentLinkResponseStatusActive"
+    Payment Received: "#/components/schemas/PaymentLinkResponseStatusPaymentReceived"
+    Expired: "#/components/schemas/PaymentLinkResponseStatusExpired"
+
+required:
+  - id
+  - status
+  - amount
+  - currency
+  - expires_on
+  - billing
+  - _links
+
+properties:
+  id:
+    example: pl_ELqQJXdXzabU
+    allOf:
+      - $ref: "#/components/schemas/PaymentLinkId"
+  status:
+    type: string
+    enum:
+      - Active
+      - Payment Received
+      - Expired
+    description: "The status of the Payment Link:\n  - `Active`: The Payment Link can accept a payment from the customer. A payment may have been attempted by the customer but not completed successfully.\n  - `Payment Received`: A payment has been received successfully using this Payment Link.\n  - `Expired`: The Payment Link has expired and can no longer be accessed."
+    example: Active
+  payment_id:
+    type: string
+    description: Unique identifier for an in progress or completed payment for this Payment Link.
+    example: undefined
+  amount:
+    type: integer
+    description: The original payment amount.
+    example: 100
+  currency:
+    type: string
+    description: The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a> of the payment.<br>
+    example: GBP
+  reference:
+    type: string
+    description: Your reference for the payment.
+    example: ORD-123A
+  description:
+    type: string
+    description: A description of the payment.
+    example: Payment for Gold Necklace
+  expires_on:
+    type: string
+    description: The date and time when the Payment Link expires.
+    format: ISO 8601 date and time
+    example: "2021-08-20T20:25:28+08:00"
+  customer:
+    type: object
+    description: The customer's details.
+    properties:
+      email:
+        type: string
+        format: email
+        description: The email address for the customer.
+        example: jokershere@email.com
+      name:
+        type: string
+        description: The customer's name.
+        example: Jack Napier
+  billing:
+    type: object
+    additionalProperties: false
+    description: The billing details.
+    required:
+      - address
+    properties:
+      address:
+        type: object
+        description: The billing address.
+        required:
+          - country
+        allOf:
+          - $ref: "#/components/schemas/Address"
+      phone:
+        type: object
+        description: The customer's phone number.
+        required:
+          - number
+        allOf:
+          - $ref: "#/components/schemas/PhoneNumber"
+  products:
+    type: array
+    description: Details about the provided products.
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - quantity
+        - price
+      properties:
+        name:
+          type: string
+          description: Descriptive item name.
+          example: Gold Necklace
+        quantity:
+          type: integer
+          description: The item quantity
+          example: 1
+        price:
+          type: integer
+          description: Minor units. Includes tax, excludes discounts.
+          example: 200
+    metadata:
+      type: object
+      title: The Metadata Schema
+      description: Any additional information stored at the point of creation.
+      additionalProperties: true
+    return_url:
+      type: string
+      format: uri
+      description: The provided success page where your customer will be redirected to.
+      example: https://example.com/success

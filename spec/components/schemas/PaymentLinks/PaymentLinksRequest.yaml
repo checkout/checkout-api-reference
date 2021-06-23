@@ -1,0 +1,127 @@
+type: object
+required:
+  - amount
+  - currency
+  - billing
+properties:
+  amount:
+    type: integer
+    description: The payment amount. The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="_blank">depends on the currency</a>.
+    minimum: 1
+    example: 200
+  currency:
+    type: string
+    description: The three-letter <a href="https://docs.checkout.com/resources/codes/currency-codes" target="blank">ISO currency code</a> of the payment.<br><i>The `currency` and `billing.address.country` fields determine which payment methods are shown on the payment page</i>.
+    example: GBP
+    minLength: 3
+    maxLength: 3
+  reference:
+    type: string
+    description: A reference you can later use to identify this payment, such as an order number.<br><i>Required for PayPal payments<i>.
+    example: ORD-123A
+  description:
+    type: string
+    description: A description of the payment.
+    example: Payment for Gold Necklace
+  expires_in:
+    type: integer
+    description: The time for which the link remains valid, in seconds.
+    minimum: 1
+    maximum: 1209600
+    default: 86400
+    example: 604800
+  customer:
+    type: object
+    description: The customer's details.
+    properties:
+      email:
+        type: string
+        format: email
+        description: An email address to associate with the customer.
+        example: jokershere@email.com
+      name:
+        type: string
+        description: The customer's name. This will only set the name for new customers.
+        example: Jack Napier
+  billing:
+    type: object
+    additionalProperties: false
+    description: The billing details.
+    required:
+      - address
+    properties:
+      address:
+        type: object
+        description: The billing address.
+        required:
+          - country
+        allOf:
+          - $ref: "#/components/schemas/Address"
+      phone:
+        type: object
+        description: The customer's phone number
+        required:
+          - number
+        allOf:
+          - $ref: "#/components/schemas/PhoneNumber"
+  products:
+    type: array
+    description: Details about the products in the order.
+    minItems: 1
+    maxItems: 1000
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - quantity
+        - price
+      properties:
+        name:
+          type: string
+          description: Descriptive item name.
+          example: Gold Necklace
+        quantity:
+          type: integer
+          description: The item quantity.
+          minimum: 1
+          example: 1
+        price:
+          type: integer
+          description: Minor units. Includes tax, excludes discounts.
+          minimum: 0
+          maximum: 100000000
+          example: 200
+  metadata:
+    type: object
+    title: The Metadata Schema
+    description: Allows you to store additional information about the transaction. This object only allows one level of depth, so cannot accept non-primitive data types such as objects or arrays.
+    additionalProperties: true
+  3ds:
+    type: object
+    description: Information required for 3D Secure payments.
+    properties:
+      enabled:
+        type: boolean
+        description: Whether to process this payment as a 3D Secure payment.
+        default: false
+      attempt_n3d:
+        type: boolean
+        description: Determines whether to attempt a 3D Secure payment as non-3D Secure should the card issuer not be enrolled.
+        default: false
+  risk:
+    $ref: "#/components/schemas/RiskRequest"
+  return_url:
+    type: string
+    format: uri
+    description: If provided, the success page will include a button that redirects your customer to the provided URL.
+    example: https://example.com/success
+  locale:
+    type: string
+    description: Creates a translated version of the page in the specified language
+    enum:
+      - en-GB
+      - nl-NL
+      - it-IT
+      - fr-FR
+    default: en-GB

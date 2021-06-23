@@ -1,0 +1,37 @@
+type: object
+description: The links related to the Payment Link.
+minItems: 2
+required:
+  - self
+  - redirect
+properties:
+  self:
+    type: object
+    allOf:
+      - $ref: "#/components/schemas/Link"
+    description: The URI of the Payment Link details.
+  redirect:
+    type: object
+    description: The link to visit the Payment Link page.
+    allOf:
+      - $ref: "#/components/schemas/Link"
+  payment:
+    type: object
+    description: The URI of the in progress or completed payment for this Payment Link.
+    allOf:
+      - $ref: "#/components/schemas/Link"
+  payment_actions:
+    type: object
+    description: The URI of the actions associated with the in progress or completed payment for this Payment Link.
+    allOf:
+      - $ref: "#/components/schemas/Link"
+
+example:
+  self:
+    href: "https://api.sandbox.checkout.com/payment-links/pl_ELqQJXdXzabU"
+  redirect:
+    href: "https://pay.sandbox.checkout.com/ELqQJXdXzabU"
+  payment:
+    href: https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4
+  payment_actions:
+    href: https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/actions

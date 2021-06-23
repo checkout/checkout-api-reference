@@ -1,0 +1,9 @@
+type: object
+description: Customer
+required:
+  - id
+properties:
+  id:
+    type: string
+    description: The customer's unique identifier
+    example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"

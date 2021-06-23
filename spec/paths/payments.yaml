@@ -8,7 +8,7 @@ post:
   description: |
     To accept payments from <a href="https://docs.checkout.com/payment-methods/cards" target="blank">cards</a>, <a href="https://docs.checkout.com/payment-methods/wallets" target="blank">digital wallets</a> and many <a href="https://docs.checkout.com/payment-methods/" target="blank">alternative payment methods</a>, specify the `source.type` field, along with the source-specific data.
 
-    To <a href="https://docs.checkout.com/payment-actions/pay-out-to-a-card" target="blank">pay out to a card</a>, specify the destination of your payout using the `destination.type` field, along with the destination-specific data.
+    To <a href="https://docs.checkout.com/payment-actions/card-payouts" target="blank">pay out to a card</a>, specify the destination of your payout using the `destination.type` field, along with the destination-specific data.
 
     To verify the success of the payment, check the `approved` field in the response.
   parameters:
@@ -126,9 +126,9 @@ post:
               action:
                 href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/actions"
               void:
-                href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/captures"
-              capture:
                 href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/voids"
+              capture:
+                href: "https://api.sandbox.checkout.com/payments/pay_mbabizu24mvu3mela5njyhpit4/captures"
       headers:
         Cko-Request-Id:
           $ref: "#/components/headers/Cko-Request-Id"

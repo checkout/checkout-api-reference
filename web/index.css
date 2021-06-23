@@ -1,19 +1,57 @@
 @import "font.css";
+
 :root {
-  /* --cko-dark-blue: #0c1142;
-  --cko-dark-contrast-blue: #121a58; */
-  --primary-dark-blue: #0C1141;
-  --secondary-dark-blue: #0C1142;
-  --cko-dark-blue: #202124;
-  --cko-dark-contrast-blue: #2c3034;
+  --S00: #FFFFFF;
+  --S05: #E6E7EC;
+  --S10: #F0F3F7;
+  --S20: #B6B8C6;
+  --S90: #9EA0B4;
+  --S100: #8688A0;
+  --S300: #6D708E;
+  --S500: #55587B;
+  --S700: #3D4168;
+  --S800: #242955;
+  --S1000: #0C1142;
+  --Y10: #141407;
+  --Y20: #FFFFEE;
+  --Y30: #FFFFE9;
+  --Y40: #FFFFE3;
+  --Y50: #FFFFDE;
+  --Y60: #FFFFD8;
+  --Y70: #FFFFD3;
+  --Y80: #FFFFCE;
+  --Y500: #F3C25D;
+  --T10: #D5F6F8;
+  --T20: #C0F2F4;
+  --T40: #AAEEF1;
+  --T60: #95EAED;
+  --T80: #80E5E9;
+  --T100: #6BE1E6;
+  --T200: #55DDE2;
+  --T300: #40D8DF;
+  --T500: #3AB9F4;
+  --B500: #0082D9;
+  --P10: #F5F5FC;
+  --P600: #6964B3;
+  --R10: #FFF8F7;
+  --R500: #EE6D5F;
+  --R800: #CC4B3D;
+  --G20: #E4F4F0;
+  --G500: #00B48F;
+  --G700: #009E7E;
+
+  --primary-dark-blue: var(--S1000);
+  --secondary-dark-blue: var(--S800);
+  --cko-dark-blue: #090C30;
+  --cko-dark-contrast-blue: var(--S800);
   --cko-green: #02b48f;
   --cko-light-green: rgb(45, 179, 136, 0.5);
   --cko-light-green: rgb(45, 179, 136, 0.5);
   --cko-bright-blue: #2ad4db;
   --cko-light-blue: #d5f6f9;
-  --cko-grey-tint-blue: #E6E7ED;
+  --cko-grey-tint-blue: var(--S05);
   --cko-contrast-gray: #CECFD9;
-  --cko-yellow: #ffffc8;
+  --cko-yellow: var(--Y80);
   --cko-white: #fff;
   --cko-light-grey: #b7b8c6;
   --cko-code-yellow: #D4D5A5;
@@ -31,33 +69,38 @@
   --cko-http-put-color: #b77ba1;
   --cko-http-patch-color: #fab82b;
   --cko-http-del-color: #fd755f;
+
 }
 
 .dark {
   --background: var(--cko-dark-blue);
   --sidebar-background: var(--cko-dark-blue);
+  --toggle-bg: var(--S500);
   --primary-text: var(--cko-white);
-  --secondary-text: var(--cko-light-grey);
+  --secondary-text: var(--S10);
   --logo: url("./favicons/white-logo.svg");
   --header-link: url("./favicons/link-gray.svg");
+  --endpoint-dropdown: var(--S500);
   --link-color: var(--cko-bright-blue);
   --link-hover: var(--cko-light-blue);
   --active: var(--cko-light-blue);
   --background-contrast: var(--cko-dark-contrast-blue);
   --subtitle: var(--cko-yellow);
   --required: var(--cko-red);
-  --border: var(--cko-dark-contrast-blue);
+  --border: var(--S700);
   --field-params: var(--cko-yellow);
   --param-rule: var(--cko-green);
   --primary-button: var(--cko-bright-blue);
   --secondary-button: var(--cko-yellow);
   --code-background: var(--cko-dark-contrast-blue);
   --code-bracket: var(--cko-code-yellow);
-  --code-param: var(--cko-code-blue);
-  --code-string: var(--cko-code-green);
+  --code-param: white;
+  --code-string: var(--cko-red);
   --code-value-link: var(--cko-green);
   --code-value-bool: var(--cko-green);
-  --code-value-number: var(--cko-bright-blue);
+  --code-value-number: var(--T500);
+  --code-type: var(--S1000);
+  --code-label-background: var(--S800);
   --primary-button-color: var(--cko-dark-blue);
   --example-area-background: var(--cko-dark-blue);
   --request-body-content-background: var(--cko-dark-blue);
@@ -70,17 +113,19 @@
 .light {
   --background: var(--cko-white);
   --sidebar-background: var(--cko-grey-tint-blue);
+  --toggle-bg: var(--S1000);
   --primary-text: var(--primary-dark-blue);
   --secondary-text: var(--secondary-dark-blue);
   --logo: url("./favicons/dark-logo.svg");
   --header-link: url("./favicons/link-blue.svg");
+  --endpoint-dropdown: var(--S05);
   --link-color: var(--cko-green);
   --link-hover: var(--cko-dark-blue);
   --active: var(--cko-dark-blue);
   --background-contrast: var(--cko-white);
   --subtitle: var(--cko-dark-blue);
   --required: var(--cko-red);
-  --border: var(--cko-contrast-gray);
+  --border: var(--S05);
   --field-params: var(--cko-code-blue);
   --param-rule: var(--cko-green);
   --primary-button: var(--cko-bright-blue);
@@ -88,10 +133,12 @@
   --code-background: var(--sidebar-background);
   --code-bracket: var(--cko-code-gray);
   --code-param: var(--cko-code-light-blue);
-  --code-string: var(--cko-code-orange);
+  --code-string: #6964B3;
   --code-value-link: var(--cko-green);
   --code-value-bool: var(--cko-green);
-  --code-value-number: var(--cko-bright-blue);
+  --code-value-number: var(--cko-red);
+  --code-label-background: var(--P10);
+  --code-type: var(--S800);
   --primary-button-color: var(--cko-dark-blue);
   --example-area-background: var(--cko-white);
   --request-body-content-background: var(--cko-white);
@@ -101,8 +148,93 @@
   --url-area: var(--primary-dark-blue);
 }
 
+/*===========================================
+ = 	              	Fonts	              	  =
+============================================*/
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Super-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Super-Cy-Gr-Web.woff') format('woff');
+  font-weight:  900;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Black-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Black-Cy-Gr-Web.woff') format('woff');
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Bold-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Bold-Cy-Gr-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Semibold-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Semibold-Cy-Gr-Web.woff') format('woff');
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Medium-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Medium-Cy-Gr-Web.woff') format('woff');
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Regular-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Regular-Cy-Gr-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Light-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Light-Cy-Gr-Web.woff') format('woff');
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Extralight-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Extralight-Cy-Gr-Web.woff') format('woff');
+  font-weight:  200;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG Web';
+  src: url('./fonts/Graphik-Thin-Cy-Gr-Web.woff2') format('woff2'),
+       url('./fonts/Graphik-Thin-Cy-Gr-Web.woff') format('woff');
+  font-weight:  100;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
 * {
-  font-family: Arial, sans-serif !important;
+  font-family: "Graphik LCG Web", Arial, sans-serif !important;
 }
 
 body {
@@ -112,8 +244,20 @@ body {
 
 /* General text elements */
 
-.redoc-wrap p, h1, h1 a, h3, th, td, span.sc-jKJlTe.eZZMfQ {
-  color: var(--secondary-text) !important;
+.redoc-wrap p, h1, h1 a, h3, th, td, span.sc-jKJlTe.eZZMfQ,label.jIStei,
+span.sc-fzqKxP.dvqdvD,
+h5, 
+span.sc-fzpkJw.hctKJM {
+  color: var(--secondary-text)!important;
+}
+
+button {
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+.eDnpFZ {
+  color: var(--R500);
 }
 
 /* Main areas */
@@ -124,6 +268,14 @@ body {
 
 .api-content {
   background-color: var(--background) !important;
+}
+
+td > div {
+  background-color: var(--background)!important;
+}
+
+td > button {
+  color: var(--secondary-text)!important;
 }
 
 /* Logo */
@@ -140,14 +292,23 @@ img.sc-kafWEX.hZCbNs {
 
 /* Overwrite swagger logo with own logo file */
 
-.sc-kafWEX {
+.jrEndp {
   content: var(--logo) !important;
 }
 
 /* Hyperlinks color */
 
 a {
-  color: var(--link-color) !important;
+  color: var(--primary-text)!important;
+  font-weight: 600;
+}
+
+.ldExJi, .iwWBsD, .hKsEtX {
+  color: var(--primary-text)!important;
+}
+
+.jHQZJv {
+  background-color: var(--cko-dark-contrast-blue);
 }
 
 b, strong {
@@ -164,13 +325,25 @@ a:active, .active, ul[role="navigation"] label:hover, .loading {
 /* Menu item hover */
 
 ul[role="navigation"] label:hover {
-  background: var(--background-contrast) !important;
+  background: var(--background-contrast)!important;
+}
+
+[role="menuitem"] > span.operation-type {
+  color: white!important;
+}
+
+[role="menuitem"] > span {
+  color: var(--primary-text)!important;
+}
+
+.jwVCIw {
+  background-color: transparent!important;
 }
 
 /* Hyperlink hover */
 
 a:hover {
-  color: var(--link-hover) !important;
+  color: var(--primary-text) !important;
   text-decoration: underline !important;
 }
 
@@ -181,24 +354,26 @@ p {
   font-weight: normal;
 }
 
-h1, h2, h3 {
-  font-weight: 400 !important;
-}
-
 h1 {
   font-size: 40px !important;
   line-height: 44px !important;
+  font-weight: 600!important;
+  color: var(--primary-text)!important;
 }
 
 h2 {
   font-size: 24px !important;
   line-height: 32px !important;
   color: var(--subtitle) !important;
+  font-weight: 600!important;
+  color: var(--primary-text)!important;
 }
 
 h3 {
   font-size: 18px !important;
   line-height: 24px !important;
+  font-weight: 400 !important;
+  color: var(--primary-text)!important;
 }
 
 h4 {
@@ -230,6 +405,18 @@ h1.sc-htoDjs.sc-fYxtnH.dTJWQH {
   color: var(--required);
 }
 
+.dcDVxm, .jrkSYj {
+  background-color: var(--cko-dark-contrast-blue)!important;
+}
+
+.hHgrjJ {
+  background-color: var(--code-type)!important;
+}
+
+.djymDt {
+  background-color: var(--endpoint-dropdown)!important;
+}
+
 /* Border between params */
 
 td.sc-kgoBCf.kGwPhO {
@@ -248,15 +435,15 @@ td.sc-kgoBCf.kGwPhO {
 }
 
 .security-details table {
-  border: 1px solid var(--secondary-text) !important;
+  border: 1px solid var(--border) !important;
 }
 
 .security-details th {
-  border: 1px solid var(--secondary-text) !important;
+  border: 1px solid var(--border) !important;
 }
 
 .security-details td {
-  border: 1px solid var(--secondary-text) !important;
+  border: 1px solid var(--border) !important;
 }
 
 /* Request body schema background */
@@ -283,10 +470,9 @@ span.sc-cHGsZl.sc-jqCOkK.beUper {
   background: none;
 }
 
-code, .evgDyP, .sc-cHGsZl.sc-jbKcbu.bMfIUD {
+code, .evgDyP, .sc-cHGsZl.sc-jbKcbu.bMfIUD{
   font-family: Courier, monospace !important;
   font-style: italic !important;
-  background: var(--S10) !important;
   padding: 2px !important;
   border-radius: 3px !important;
   color: var(--S500) !important;
@@ -338,14 +524,14 @@ td.dz44d2-1 {
   font-family: Courier, monospace;
 }
 
-li.sc-eNQAEJ.gYsnwL {
+.fvfRMB { /*Redoc upgrate changed these to buttons not li*/
   background: var(--primary-button) !important;
   border: 1px solid var(--primary-button) !important;
   font-weight: 500;
   color: var(--primary-button-color) !important;
 }
 
-li.sc-eNQAEJ.jdXjUh {
+.kCktTl {
   color: var(--primary-text);
   border: 1px solid var(--border);
   background-color: unset;
@@ -371,6 +557,20 @@ li.sc-eNQAEJ.jdXjUh {
   background-color: var(--secondary-button) !important;
   color: var(--primary-button-color) !important;
   border-color: var(--secondary-button) !important;
+}
+
+.hHuJoM > .react-tabs__tab-panel {
+  border-radius: 8px!important;
+  border: 1px solid var(--border)!important;
+}
+
+.dcDVxm {
+  border-radius: 4px!important;
+}
+
+.djymDt {
+  box-shadow: none!important;
+  border: 1px solid var(--border)!important;
 }
 
 .jXDsIv {
@@ -456,6 +656,14 @@ span.sc-jlyJG.evvbxn {
   background-color: var(--sidebar-background) !important;
 }
 
+[type="group"] > span {
+  color: var(--secondary-text);
+}
+
+code {
+  color: var(--primary-text)!important;
+}
+
 /* Search box */
 
 div[role="search"] {
@@ -471,7 +679,7 @@ div[role="search"] {
 }
 
 input.search-input {
-  font-weight: 300;
+  font-weight: 400;
   color: var(--primary-text);
 }
 
@@ -507,6 +715,18 @@ label.active, span.sc-gwVKww.SmuWE.active {
 
 .sc-eTuwsz {
   color: var(--secondary-text) !important;
+}
+
+.eXkYNB {
+  padding-top: 24px;
+}
+
+.kvaPQj {
+  background-color: transparent!important;
+}
+
+.kvaPQj .sc-fzocqA:hover, .kvaPQj .sc-fzocqA.active {
+  background-color: var(--background-contrast)!important;
 }
 
 /* RIGHT MENU */
@@ -557,12 +777,30 @@ span.sc-dqBHgY.iENVAs {
 
 span.token.punctuation {
   border: none !important;
+  background-color: transparent!important;
 }
 
 .react-tabs__tab-panel, .react-tabs__tab {
   background: var(--code-background) !important;
-  color: var(--code-bracket) !important;
+  color: var(--code-string) !important;
   border-color: var(--background-contrast) !important;
+}
+
+.eLPRJp .token.atrule, .eLPRJp .token.attr-value, .eLPRJp .token.keyword {
+  color: var(--R800)!important;
+}
+
+.heGpRL {
+  top: 0px!important;
+  color: var(--S05)!important;
+}
+
+.hNIqAi {
+  right: 32px!important;
+}
+
+code a {
+  font-weight: 500;
 }
 
 ul>li.react-tabs__tab, ul>li.tab-success, ul>li.tab-error {
@@ -713,7 +951,7 @@ caption {
   z-index: 100;
   top: 20px;
   right: 20px;
-  background-color: #1a1a1a;
+  background-color: var(--toggle-bg);
   border-radius: 30px;
   cursor: pointer;
   display: flex;
@@ -766,6 +1004,65 @@ code span {
   fill: var(--secondary-text) !important;
 }
 
-.sc-bxivhb li {
+div.sc-AxhCb.iWvlZG li {
   color: var(--secondary-text) !important;
+}
+
+/*Chrisi quick fixes */
+
+/*DARK THEME CHANGES*/
+
+/*Just stuck to the navy color - so had to remove it and then insert it with css*/
+body.dark div.logiML
+ {
+  background-color: transparent !important;
+  background: url('favicons/white-logo.svg') no-repeat center;
+  padding-top: 50px;
+}
+body.dark div.sc-fzppip img {
+  display: none;
+}
+
+/* LIGHT THEME CHANGES */
+
+/*Logo really close to the top on the light theme*/
+body.light div.logiML {
+  padding-top: 40px;
+}
+
+/*BOTH THEME CHANGES*/
+
+/*New darker background appeared */
+
+body.light div.eIeJha,
+body.dark div.eIeJha {
+  background-color: transparent;
+}
+
+/*There are new boxes above the response examples*/
+
+body.light span.yvLAA {
+  font-weight: 800;
+  top: 0;
+  color: var(--cko-dark-blue);
+}
+
+body.light div.hHgrjJ {
+  color: white;
+  padding: 1.5em 1.6em 0.9em 0.9em;
+}
+
+body.light div.iFDKZT.iFDKZT {
+  padding: 1.2em 2em 0.9em 0.9em;
+}
+
+/*Plus symbols were white on the responses*/
+
+.fAIZSm .collapsed > .collapser::after {
+  color: var(--code-param);
+}
+
+/*Changing the endpoint drop down to navy*/
+button.sc-qQmou.hnIgFW{
+  background-color: var(--url-area) !important;
 }

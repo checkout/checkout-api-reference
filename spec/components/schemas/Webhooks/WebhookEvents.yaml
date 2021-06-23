@@ -3,7 +3,6 @@ items:
   type: string
 example:
   - payment_approved
-  - payment_flagged
   - payment_pending
   - payment_declined
   - payment_expired

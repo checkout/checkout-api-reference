@@ -59,6 +59,7 @@ properties:
         - Debit
         - Prepaid
         - Charge
+        - Deferred Debit
         example: Credit
     card_category:
         type: string
@@ -115,5 +116,5 @@ properties:
                 example: John Test
             default: 
                 description: True, if this instrument is set as the default for the customer
-                type: string
+                type: boolean
                 example: true

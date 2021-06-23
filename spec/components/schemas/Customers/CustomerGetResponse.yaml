@@ -1,0 +1,40 @@
+type: object
+description: The customer details
+required:
+    - id
+    - email
+properties:
+    id:
+        type: string
+        description: The customer's unique identifier
+        example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
+    email: 
+        type: string
+        format: email
+        description: The customer's email address
+        example: JohnTest@test.com
+    default: 
+        description: The ID for this customer's default instrument
+        type: string
+        example: src_imu3wifxfvlebpqqq5usjrze6y
+    name:
+        type: string
+        description: The customer's name
+        example: Jack Test
+    phone:
+        type: object
+        description: The customer's phone number
+        allOf:
+            - $ref: '#/components/schemas/PhoneNumber'
+    metadata:
+        type: object
+        description: A set of key-value pairs that is attached to a customer
+        example:
+            coupon_code: "NY2018"
+            partner_id: 123989
+    instruments:
+        type: array
+        title: Instrument
+        description: The details of the instruments linked to this customer
+        items:
+            $ref: '#/components/schemas/CustomerGetInstrumentResponse'

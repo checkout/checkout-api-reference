@@ -1,0 +1,29 @@
+type: object
+required:
+  - _links
+properties:
+  id:
+    type: string
+    description: The request ID.
+    example: "pl_ELqQJXdXzabU"
+  expires_on:
+    type: string
+    description: The date and time when the Payment Link expires.
+    format: "ISO 8601 date and time"
+    example: "2020-08-20T20:25:28+08:00"
+  reference:
+    type: string
+    description: A reference you can later use to identify this payment, such as an order number.
+    example: ORD-123A
+  _links:
+    type: object
+    description: The links related to the Payment Link session.
+    readOnly: true
+    minItems: 1
+    properties:
+      redirect:
+        type: object
+        allOf:
+          - $ref: "#/components/schemas/Link"
+        example:
+          href: "https://pay.sandbox.checkout.com/link/pl_ELqQJXdXzabU"

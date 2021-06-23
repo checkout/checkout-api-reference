@@ -1,0 +1,72 @@
+type: object
+description: The account holder details
+properties:
+  type:
+    description: The type of account holder
+    type: string
+    enum:
+      - individual
+      - corporate
+      - government
+    example: individual
+
+  first_name:
+    description: |
+      The account holder's first name 
+    type: string
+    example: "John"
+
+  last_name:
+    description: | 
+      The account holder's last name
+    type: string
+    example: "Smith"
+
+  company_name:
+    description: | 
+      The legal name of a registered company that holds the account
+    type: string
+    example: Test company
+
+  tax_id:
+    description: The account holder's tax number/reference
+    type: string
+    example: "123456"
+
+  date_of_birth:
+    description: The account holder's date of birth in `YYYY-MM-DD` format
+    type: string
+    format: date
+    example: "1986-01-01"
+
+  country_of_birth:
+    description: The two-letter <a href="https://docs.checkout.com/four/resources/codes/country-codes" target="_blank">ISO country code</a> of the account holder's country of birth
+    type: string
+    example: GB
+
+  residential_status:
+    description: The account holder's residential status
+    type: string
+    enum:
+      - resident
+      - non_resident
+    example: resident
+
+  billing_address:
+    description: The billing address of the account holder
+    allOf:
+      - $ref: "#/components/schemas/Address"
+
+  phone:
+    description: The phone number of the account holder
+    allOf:
+      - $ref: "#/components/schemas/PhoneNumber"
+
+  identification:
+    $ref: "#/components/schemas/AccountHolderIdentification"
+
+  email:
+    description: The account holder's email address
+    type: string
+    format: email
+    example: test.user@checkout.com

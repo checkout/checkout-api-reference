@@ -1,0 +1,16 @@
+type: object
+description: A Payment Link that has received a payment
+required:
+  - payment_id
+allOf:
+  - $ref: "#/components/schemas/GetPaymentLinkResponse"
+  - type: object
+    properties:
+      payment_id:
+        example: pay_mbabizu24mvu3mela5njyhpit4
+      _links:
+        required:
+          - payment
+          - payment_actions
+        allOf:
+          - $ref: "#/components/schemas/PaymentLinkResponseLinks"

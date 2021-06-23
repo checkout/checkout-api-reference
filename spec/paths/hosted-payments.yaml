@@ -2,29 +2,31 @@ post:
   security:
     - ApiSecretKey: []
   tags:
-    - Hosted Payments
-  summary: Create a Hosted Payments session
+    - Hosted Payments Page
+  summary: Create a Hosted Payments Page session
   operationId: createAHostedPaymentsSession
   description: |
-    Create a Hosted Payments session and pass through all the payment information, like the amount, currency, country and reference.
+    Create a Hosted Payments Page session and pass through all the payment information, like the amount, currency, country and reference.
+
+    To get started with our Hosted Payments Page, contact your Solutions Engineer or integration@checkout.com.
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/HostedPaymentsRequest'
+          $ref: "#/components/schemas/HostedPaymentsRequest"
   responses:
-    '201':
+    "201":
       description: Created Hosted Payments Page
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/HostedPaymentsResponse'
-    '401':
+            $ref: "#/components/schemas/HostedPaymentsResponse"
+    "401":
       description: Unauthorized
-    '422':
+    "422":
       description: Invalid data was sent
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ValidationError'
+            $ref: "#/components/schemas/ValidationError"
