@@ -21,8 +21,9 @@ $phone = new Phone();
 $phone->country_code = '0044';
 $phone->number = '02073233888';
 
+$payment->customer = $customer;
 $payment->shipping = new Shipping($address, $phone);
-$payment->billing_descriptor = new BillingDescriptor("Dynamic desc charge", "City charge");
+$payment->billing_descriptor = new BillingDescriptor('Dynamic desc charge', 'City charge');
 $payment->amount = 5600;
 $payment->capture = false;
 $payment->reference = 'ORD-090857';
