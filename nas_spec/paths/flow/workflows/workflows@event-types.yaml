@@ -8,6 +8,7 @@ get:
     - OAuth:
         - flow
         - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Get event types

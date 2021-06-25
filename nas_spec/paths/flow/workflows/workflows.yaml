@@ -8,6 +8,7 @@ get:
     - OAuth:
         - flow
         - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Get all workflows
@@ -42,6 +43,7 @@ post:
     - OAuth:
         - flow
         - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Add a workflow

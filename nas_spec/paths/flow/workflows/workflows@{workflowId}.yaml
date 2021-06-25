@@ -8,6 +8,7 @@
     - OAuth:
         - flow
         - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Get a workflow
@@ -49,6 +50,11 @@ delete:
       description: Live API
     - url: https://api.sandbox.checkout.com
       description: Sandbox API
+  security:
+    - OAuth:
+        - flow
+        - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Remove a workflow
@@ -91,6 +97,7 @@ patch:
     - OAuth:
         - flow
         - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Patch a workflow

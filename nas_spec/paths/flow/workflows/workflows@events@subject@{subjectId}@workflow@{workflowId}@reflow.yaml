@@ -3,6 +3,7 @@ post:
     - OAuth:
         - flow
         - flow:reflow
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Reflow by subject and workflow

@@ -8,6 +8,7 @@ get:
     - OAuth:
         - flow
         - flow:events
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Get an event

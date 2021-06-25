@@ -8,6 +8,7 @@
     - OAuth:
         - flow
         - flow:workflows
+    - ApiSecretKey: []
   tags:
     - Workflows
   summary: Update a workflow action
