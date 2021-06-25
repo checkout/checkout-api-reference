@@ -3,6 +3,7 @@ get:
     - OAuth:
         - vault
         - vault:customers
+    - ApiSecretKey: []
   tags:
     - Customers
   summary: Get customer details
@@ -45,6 +46,7 @@ patch:
     - OAuth:
         - vault
         - vault:customers
+    - ApiSecretKey: []
   summary: Update customer details
   description: Update the details of a customer and link payment instruments to them.
   parameters:
@@ -82,6 +84,7 @@ delete:
     - OAuth:
         - vault
         - vault:customers
+    - ApiSecretKey: []
   summary: Delete a customer
   description: Delete a customer and all of their linked payment instruments.
   parameters:
