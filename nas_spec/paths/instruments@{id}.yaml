@@ -3,6 +3,7 @@ get:
     - OAuth:
         - vault
         - vault:instruments
+    - ApiSecretKey: []
   tags:
     - Instruments
   summary: Get instrument details
