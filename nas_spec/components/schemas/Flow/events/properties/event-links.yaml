@@ -9,16 +9,9 @@ properties:
     allOf:
       - $ref: '#/components/schemas/Link'
     description: The URI of the event
-  subject:
-    type: object
-    allOf:
-      - $ref: '#/components/schemas/Link'
-    description: The URI of the subject
 example:
   self:
     href: 'https://api.checkout.com/workflows/events/evt_az5sblvku4ge3dwpztvyizgcau'
-  subject:
-    href: 'https://api.checkout.com/workflows/events/subject/pay_wlu3wxc26jounofs5iez75qaqa'
   payment:
     href: 'https://api.checkout.com/payments/pay_wlu3wxc26jounofs5iez75qaqa'
   dispute:
