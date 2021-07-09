@@ -60,6 +60,11 @@ properties:
     type: string
     example: GB
 
+  processing_channel_id:
+    description: The ID of the primary processing channel this instrument is intended to be used for
+    type: string
+    example: pc_u2l6xz5joigedmk7g5vxzt7rqy
+
   account_holder:
     $ref: '#/components/schemas/AccountHolder'
 
