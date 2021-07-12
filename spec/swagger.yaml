@@ -61,6 +61,8 @@ tags:
     description: Use Sessions to authenticate transactions with 3D Secure (3DS) and comply with Strong Customer Authentication (SCA) requirements.
   - name: Workflows
     description: Use Workflows to start receiving webhook notifications for your payments, disputes, and marketplace sub-entities.
+  - name: Apple Pay
+    description: Manage your apple pay certificates in order to process via apple pay  
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs
@@ -88,3 +90,6 @@ x-tagGroups:
   - name: Marketplace
     tags:
       - Marketplace
+  - name: Apple Pay
+    tags:
+      - Apple Pay    

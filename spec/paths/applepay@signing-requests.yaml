@@ -1,0 +1,23 @@
+post:
+  tags:
+    - Apple Pay
+  security: 
+    - ApiPublicKey: []
+  summary: Generate a signing request
+  description: |
+    Generate a signing request to be uploaded to the apple developer portal in order to download a processing certificate.
+  responses:
+    '200':
+      description: Retrieved signing request for client successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApplePaySigningRequestResponse'
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'

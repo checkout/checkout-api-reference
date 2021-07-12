@@ -1,0 +1,29 @@
+post:
+  tags:
+    - Apple Pay
+  security: 
+    - ApiPublicKey: []
+  summary: Upload a payment procesing certificate
+  description: |
+    Upload a payment processing certificate to allow processing with apple pay.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/ApplePayCertificateRequest'
+  responses:
+    '201':
+      description: Certificate uploaded successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApplePayCertificateResponse'
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
+    
