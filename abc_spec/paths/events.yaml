@@ -29,6 +29,12 @@ get:
         description: The tracking ID of a payment
         example: TRK12345
     - in: query
+      name: reference
+      schema:
+        type: string
+        description: The reference of a payment
+        example: ORD-5023-4E89
+    - in: query
       name: skip
       schema:
         type: integer
