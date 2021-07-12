@@ -1,5 +1,13 @@
 type: object 
 properties:
+  request_id:
+    type: string
+    description: The identifier of the request
+    example: 0HMA0CMCKVMI1:00000001
+  error_type:
+    type: string
+    description: The type of error
+    example: request_invalid
   error_codes:
     type: array
     description: Array containing error codes

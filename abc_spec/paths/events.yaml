@@ -19,14 +19,13 @@ get:
       name: charge_id
       schema:
         type: string
-        pattern: "^(charge)_(\\w{26})$"
+        pattern: "^(charge|charge_test)_(\\w{20})$"
         description: The identifier of a charge
         example: charge_FC1919EE547L23CC6BE1
     - in: query
       name: track_id
       schema:
         type: string
-        pattern: "^(TRK)_(\\w{26})$"
         description: The tracking ID of a payment
         example: TRK12345
     - in: query
