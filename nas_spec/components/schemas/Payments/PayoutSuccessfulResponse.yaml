@@ -4,10 +4,15 @@ properties:
   id:
     type: string
     description: The payout's unique identifier.
+    pattern: "^(pay)_(\\w{26})$"
+    maxLength: 30
+    minLength: 30
     example: pay_dvxl6j6stpqufkzfgbaahmfrzm
   status:
     type: string
     description: The status of the payout.
+    enum:
+      - Pending
     example: Pending
   reference:
     type: string
@@ -26,6 +31,7 @@ properties:
         properties:
           href:
             type: string
+            description: The link URL.
             example: https://api.sandbox.checkout.com/payments/pay_dvxl6j6stpqufkzfgbaahmfrzm
       actions:
         type: object
@@ -33,4 +39,5 @@ properties:
         properties:
           href:
             type: string
+            description: The link URL.
             example: https://api.sandbox.checkout.com/payments/pay_dvxl6j6stpqufkzfgbaahmfrzm/actions
