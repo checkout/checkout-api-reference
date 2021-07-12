@@ -1,0 +1,83 @@
+get:
+  security:
+    - ApiSecretKey: []
+  tags:
+    - Events
+  summary: Retrieve events
+  operationId: retrieveEvents
+  description: |
+    Retrieves events based on your query parameters.
+  parameters:
+    - in: query
+      name: payment_id
+      schema:
+        type: string
+        pattern: "^(pay)_(\\w{26})$"
+        description: The identifier of a payment
+        example: pay_ok2ynq6ubn3ufmo6jsdfmdvy5q
+    - in: query
+      name: charge_id
+      schema:
+        type: string
+        pattern: "^(charge)_(\\w{26})$"
+        description: The identifier of a charge
+        example: charge_FC1919EE547L23CC6BE1
+    - in: query
+      name: track_id
+      schema:
+        type: string
+        pattern: "^(TRK)_(\\w{26})$"
+        description: The tracking ID of a payment
+        example: TRK12345
+    - in: query
+      name: skip
+      schema:
+        type: integer
+        description: Set how many events you want to skip
+        example: 0
+    - in: query
+      name: limit
+      schema:
+        type: integer
+        description: Limit how many events your request returns
+        example: 5
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: date-time
+        description: Set the date and time from which you want to retrieve events
+        example: "2020-11-07T04:00:00Z"
+    - in: query
+      name: to
+      schema:
+        type: string
+        format: date-time
+        description: Set the date and time to which you want to retrieve events
+        example: "2020-11-07T08:15:00Z"
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: '#/components/schemas/Payment_Id'
+              - $ref: '#/components/schemas/Charge_Id'
+      headers:
+        Cko-Request-Id:
+          $ref: '#/components/headers/Cko-Request-Id'
+        Cko-Version:
+          $ref: '#/components/headers/Cko-Version'
+    '204':
+      description: No Content
+    '401':
+      description: Unauthorized
+    '422':
+      description: Unprocessable Entry
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: '#/components/schemas/PaymentIdInvalidResponse'
+              - $ref: '#/components/schemas/ChargeIdInvalidResponse'

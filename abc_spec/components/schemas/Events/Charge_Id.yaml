@@ -1,0 +1,56 @@
+type: object 
+properties:
+  total_count:
+    type: integer
+    description: The total number of events returned
+    example: 1
+  limit:
+    type: integer
+    description: The limit you set on the number of events returned
+    example: 10
+  skip:
+    type: integer
+    description: The number of events skipped
+    example: 0
+  from:
+    type: string
+    description: The date and time from which the events were retrieved
+    example: "2021-06-11T10:36:32Z"
+  to:
+    type: string
+    description: The date and time to which the events were retrieved
+    example: "2021-06-25T10:36:17Z"
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The event identifier
+          example: "evt_a4aqkopnq65udagtnlpqsqr7uy"
+        type:
+          type: string
+          description: The type of event
+          example: "charge.succeeded"
+        created_on:
+          type: string
+          description: The date and time the event was created
+          example: "2021-06-25T10:36:17Z"
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  description: The URL
+                  example: "https://qaapi.ckotech.co/broadcast/events/evt_a4aqkopnq65udagtnlpqsqr7uy"
+            webhooks-retry:
+              type: object
+              properties:
+                href:
+                  type: string
+                  description: The URL
+                  example: "https://qaapi.ckotech.co/broadcast/events/evt_a4aqkopnq65udagtnlpqsqr7uy/webhooks/retry"

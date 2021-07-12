@@ -1,0 +1,8 @@
+type: object 
+properties:
+  error_codes:
+    type: array
+    description: Array containing error codes
+    items:
+      type: string
+      example: "charge_id_invalid"
