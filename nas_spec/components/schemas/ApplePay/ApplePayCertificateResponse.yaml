@@ -1,0 +1,30 @@
+type: object
+description: Response for an attached certificate for a client
+required: 
+  - id
+  - public_key_hash
+  - valid_from
+  - valid_until
+properties:
+    id:
+      type: string
+      pattern: ^(alpc)_(\\w{26})$
+      description: The identifier of the client domain
+      example: aplc_hefptsiydvkexnzzb35zrlqgfq
+
+    public_key_hash:
+      type: string
+      description: Hash of the certificate public key
+      example: tqYV+tmG9aMh+l/K6cicUnPqkb1gUiLjSTM9gEz6Nl0=
+
+    valid_from:
+      type: string
+      format: date-time
+      description: When the certificate is valid from
+      example: 2021-01-01T17:32:28Z
+
+    valid_until:
+      type: string
+      format: date-time
+      description: When the certificate is valid until
+      example: 2025-01-01T17:32:28Z 

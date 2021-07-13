@@ -63,6 +63,8 @@ tags:
     description: Use Workflows to start receiving webhook notifications for your payments, disputes, and marketplace sub-entities.
   - name: Risk
     description: Evaluate the risk of a transaction at the pre-authentication and pre-capture stages of the payment process.
+  - name: Apple Pay
+    description: Manage your apple pay certificates in order to process via apple pay  
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs
@@ -91,3 +93,6 @@ x-tagGroups:
   - name: Marketplace
     tags:
       - Marketplace
+  - name: Apple Pay
+    tags:
+      - Apple Pay  

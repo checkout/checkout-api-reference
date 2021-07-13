@@ -1,0 +1,9 @@
+type: object
+description: Retrieve a signing request for a client to begin certification process
+required:
+  - value
+properties:
+  content:
+    type: string
+    description: The signing request content
+    example: -----BEGIN CERTIFICATE-----MIIBSDCB8AIBADCBjzELMAkGA1UEBhMCR0IxDzANBgNVBAgMBkxvbmRvbjEPMA0GA1UEBwwGTG9uZG9uMRUwEwYDVQQKDAxDaGVja291dC5jb20xCzAJBgNVBA8MAklUMRUwEwYDVQQDDAxjaGVja291dC5jb20xIzAhBgkqhkiG9w0BCQEWFHN1cHBvcnRAY2hlY2tvdXQuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEXf/MDFRLSblykajGm0GE+lUNoOIEa0DbWc7Bv3s55bYtW1fJo2/MJIPojUKuKUx2VsEfGmmqXKbq4IhAr0bM8TAKBggqhkjOPQQDAgNHADBEAiAo1Dv4TXTacSeIfy4HDjzPMQY2+OxTW6szRJjGyfKgXQIgdHAX0BmI+1rozysjXv8MvoxehQIGACQ+UWJle+UZ2ms=-----END CERTIFICATE----- 
