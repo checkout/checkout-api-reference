@@ -39,18 +39,21 @@ properties:
           example: "2021-06-25T09:40:12Z"
         _links:
           type: object
+          description: The links relating to the event
           properties:
             self:
               type: object
+              description: The URI of the event
               properties:
                 href:
                   type: string
-                  description: The URL
-                  example: "https://qaapi.ckotech.co/broadcast/events/evt_3nup2pts3emebenhtw6ky4frim"
+                  description: The link URL
+                  example: "https://api.checkout.com/events/evt_3nup2pts3emebenhtw6ky4frim"
             webhooks-retry:
               type: object
+              description: A link to retry all of the webhooks configured for the event
               properties:
                 href:
                   type: string
-                  description: The URL
-                  example: "https://qaapi.ckotech.co/broadcast/events/evt_3nup2pts3emebenhtw6ky4frim/webhooks/retry"
+                  description: The link URL
+                  example: "https://api.checkout.com/events/evt_3nup2pts3emebenhtw6ky4frim/webhooks/retry"
