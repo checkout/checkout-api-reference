@@ -3,9 +3,9 @@ post:
     - Apple Pay
   security: 
     - ApiPublicKey: []
-  summary: Upload a payment procesing certificate
+  summary: Upload a payment processing certificate
   description: |
-    Upload a payment processing certificate to allow processing with apple pay.
+    Upload a payment processing certificate. This will allow you to start processing payments via Apple Pay.
   requestBody:
     content:
       application/json:
