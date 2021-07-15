@@ -3,9 +3,9 @@ post:
     - Apple Pay
   security: 
     - ApiPublicKey: []
-  summary: Generate a signing request
+  summary: Generate a certificate signing request
   description: |
-    Generate a signing request to be uploaded to the apple developer portal in order to download a processing certificate.
+    Generate a certificate signing request. You'll need to upload this to your Apple Developer account to download a payment processing certificate.
   responses:
     '200':
       description: Generated signing request successfully
