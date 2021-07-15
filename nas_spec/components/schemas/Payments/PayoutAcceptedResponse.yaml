@@ -1,5 +1,5 @@
 type: object
-description: Payout successful response
+description: Payout accepted response
 properties:
   id:
     type: string

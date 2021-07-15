@@ -163,7 +163,7 @@ post:
           schema:
             oneOf:
               - $ref: '#/components/schemas/PaymentAcceptedResponse'
-              - $ref: '#/components/schemas/PayoutSuccessfulResponse'
+              - $ref: '#/components/schemas/PayoutAcceptedResponse'
       headers:
         Cko-Request-Id:
           $ref: '#/components/headers/Cko-Request-Id'
