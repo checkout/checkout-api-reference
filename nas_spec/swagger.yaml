@@ -77,6 +77,7 @@ x-tagGroups:
     tags:
       - Payments
       - Forex
+      - Apple Pay
   - name: Stored payment details
     tags:
       - Tokens
@@ -93,6 +94,3 @@ x-tagGroups:
   - name: Marketplace
     tags:
       - Marketplace
-  - name: Apple Pay
-    tags:
-      - Apple Pay  
