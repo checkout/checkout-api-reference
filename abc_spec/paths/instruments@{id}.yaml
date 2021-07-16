@@ -44,8 +44,8 @@ patch:
       name: id
       schema:
         type: string
-      pattern: "^(src)_(\\w{26})$"
-      example: src_ubfj2q76miwundwlk72vxt2i7q
+        pattern: "^(src)_(\\w{26})$"
+        example: src_ubfj2q76miwundwlk72vxt2i7q
       required: true
       description: The instrument ID
   requestBody:

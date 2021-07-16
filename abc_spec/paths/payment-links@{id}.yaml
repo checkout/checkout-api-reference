@@ -14,8 +14,8 @@ get:
       schema:
         allOf:
           - $ref: '#/components/schemas/PaymentLinkId'
-      minLength: 15
-      maxLength: 15
+        minLength: 15
+        maxLength: 15
       description: The Payment Link ID.
   responses:
     '200':

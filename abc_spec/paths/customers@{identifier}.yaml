@@ -8,18 +8,23 @@ get:
   description: Returns details of a customer and their instruments
   parameters:
     - in: path
-      name: id
+      name: identifier
+      required: true
+      description: The customer's ID or email
       schema:
         type: string
-        pattern: "^(cus)_(\\w{26})$"
-      description: The customer's ID. Required if `email` is not provided.
-    - in: path
-      name: email
-      schema:
-        type: string
-        format: email
-        maxLength: 255
-      description: The customer's email address. Required if `id` is not provided.
+        properties:
+          id:
+            type: string
+            pattern: "^(cus)_(\\w{26})$"
+          email:
+            type: string
+            format: email
+            maxLength: 255
+        additionalProperties: false
+        oneOf:
+          - required: [id]
+          - required: [email]
   responses:
     '200':
       description: Customer retrieved successfully
@@ -29,9 +34,11 @@ get:
             $ref: '#/components/schemas/CustomerGetResponse'
       headers:
         Cko-Request-Id:
-          $ref: '#/components/headers/Cko-Request-Id'
+          schema:
+            $ref: '#/components/headers/Cko-Request-Id'
         Cko-Version:
-          $ref: '#/components/headers/Cko-Version'
+          schema:
+            $ref: '#/components/headers/Cko-Version'
     '401':
       description: Unauthorized
     '404':
@@ -47,7 +54,7 @@ patch:
   description: Update details of a customer
   parameters:
     - in: path
-      name: id
+      name: identifier
       schema:
         type: string
         pattern: "^(cus)_(\\w{26})$"
@@ -83,7 +90,7 @@ delete:
   description: Delete a customer and all of their linked payment instruments
   parameters:
     - in: path
-      name: id
+      name: identifier
       required: true
       schema:
         type: string
