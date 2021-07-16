@@ -1,0 +1,43 @@
+type: object
+description: Payout accepted response
+properties:
+  id:
+    type: string
+    description: The payout's unique identifier.
+    pattern: "^(pay)_(\\w{26})$"
+    maxLength: 30
+    minLength: 30
+    example: pay_dvxl6j6stpqufkzfgbaahmfrzm
+  status:
+    type: string
+    description: The status of the payout.
+    enum:
+      - Pending
+    example: Pending
+  reference:
+    type: string
+    description: The payout reference.
+    example: PO-215-5721
+  instruction:
+    allOf:
+      - $ref: '#/components/schemas/PaymentInstructionResponse'
+  _links:
+    type: object
+    description: The links related to the payout.
+    properties:
+      self:
+        type: object
+        description: The URI of the payout.
+        properties:
+          href:
+            type: string
+            description: The link URL.
+            example: https://api.sandbox.checkout.com/payments/pay_dvxl6j6stpqufkzfgbaahmfrzm
+      actions:
+        type: object
+        description: The actions URI of the payout.
+        properties:
+          href:
+            type: string
+            description: The link URL.
+            example: https://api.sandbox.checkout.com/payments/pay_dvxl6j6stpqufkzfgbaahmfrzm/actions

@@ -28,11 +28,6 @@ properties:
     description: Provides 3D Secure enrollment status
     allOf:
       - $ref: '#/components/schemas/3dsEnrollmentData'
-  instruction:
-    type: object
-    description: Instruction details for payouts to bank accounts
-    allOf:
-      - $ref: '#/components/schemas/PaymentInstructionResponse'
   _links:
     type: object
     description: The links related to the payment
