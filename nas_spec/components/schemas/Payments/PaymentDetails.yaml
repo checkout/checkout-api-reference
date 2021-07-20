@@ -76,6 +76,7 @@ properties:
       - Refunded
       - Declined
       - Canceled
+      - Expired
       - Paid
     example: Authorized
   balances:
