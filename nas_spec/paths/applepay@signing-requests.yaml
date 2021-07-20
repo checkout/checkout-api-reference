@@ -1,0 +1,23 @@
+post:
+  tags:
+    - Apple Pay
+  security: 
+    - ApiPublicKey: []
+  summary: Generate a certificate signing request
+  description: |
+    Generate a certificate signing request. You'll need to upload this to your Apple Developer account to download a payment processing certificate.
+  responses:
+    '200':
+      description: Generated signing request successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApplePaySigningRequestResponse'
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
