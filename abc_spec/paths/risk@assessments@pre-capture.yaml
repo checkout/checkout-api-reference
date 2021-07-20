@@ -6,7 +6,7 @@ post:
   summary: Request a pre-capture risk scan
   operationId: preCaptureRiskAssessment
   description: |
-    Perform a pre-capture fraud assessment using your defined risk settings.<br><br> **Note**: If you’ve already requested a pre-authentication fraud assessment for the transaction, provide the `assessment_id` returned in that response in your request to carry over the data. If you do include the `assessment_id`, the other fields you provide in this request will only fill in any gaps in the data; they will not overwrite any data.
+    Any object specified in the request is optional but is not needed if you pass the assessment_id across the steps. If however specified, the assessment data will be patched
   # parameters:
   #   - $ref: '#/components/parameters/ckoIdempotencyKey'
   requestBody:

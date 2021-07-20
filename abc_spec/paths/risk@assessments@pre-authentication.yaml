@@ -6,7 +6,7 @@ post:
   summary: Request a pre-authentication risk scan
   operationId: preAuthenticationRiskAssessment
   description: |
-    Perform a pre-authentication fraud assessment using your defined risk settings.
+    Creates a risk assessment context and performs a pre-authentication risk scan resulting from the defined risk settings.
   #parameters:
    # - $ref: '#/components/parameters/ckoIdempotencyKey'
   requestBody:

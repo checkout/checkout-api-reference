@@ -21,7 +21,7 @@ properties:
     example: "ORD-1011-87AH"
   description:
     type: string
-    description: A description of the order
+    description: A description
     maxLength: 100
     example: "Set of 3 masks"
   amount:

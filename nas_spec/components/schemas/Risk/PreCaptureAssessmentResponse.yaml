@@ -6,14 +6,14 @@ required:
 properties:
   assessment_id:
     type: string
-    description: The correlation ID across scans for a given transaction
+    description: The correlation id across scans for a given transaction
     example: "ras_c4oqhf46pyzuxjbcn2giaqnb44"
   result:
-    description: The scan result based on your pre-capture risk settings
+    description: The scan result based on the pre-capture risk settings
     allOf:
       - $ref: '#/components/schemas/PreCaptureResult'
   warning:
-    description: Present when our risk settings are more restrictive
+    description: Present when Checkout scan is more restrictive
     allOf:
       - $ref: '#/components/schemas/PreCaptureWarning'
   _links:

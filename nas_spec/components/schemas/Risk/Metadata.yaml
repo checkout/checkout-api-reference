@@ -1,5 +1,5 @@
 type: object
-description: Allows you to attach additional information to the assessment in key-value pairs. You can reference these properties in your custom risk rules.
+description: Allows you to attach custom information to the risk assessment. A dictionary of string as keys and string values are expected. Those properties can be referenced in rules
 additionalProperties:
   type: string
 example:
