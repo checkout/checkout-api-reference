@@ -10,10 +10,10 @@ properties:
     minimum: 0
     maximum: 100
   result:
-    description: The scan result based on your defined pre-authentication risk settings
+    description: The scan result based on defined pre-authentication risk settings
     allOf:
       - $ref: '#/components/schemas/PreAuthenticationResult'
   warning:
-    description: Present when our risk settings are more restrictive
+    description: Present when Checkout scan is more restrictive
     allOf:
       - $ref: '#/components/schemas/PreAuthenticationWarning'

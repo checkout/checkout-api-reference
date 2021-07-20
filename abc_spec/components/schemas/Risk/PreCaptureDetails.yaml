@@ -10,7 +10,7 @@ properties:
     minimum: 0
     maximum: 100
   result:
-    description: The scan result based on your defined pre-capture risk settings
+    description: The scan result based on defined pre-authentication risk settings
     allOf:
       - $ref: '#/components/schemas/PreCaptureResult'
   warning:

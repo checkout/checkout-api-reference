@@ -6,7 +6,7 @@ required:
 properties:
   assessment_id:
     type: string
-    description: The correlation ID across scans for a given transaction
+    description: The correlation id across scans for a given transaction
     example: "ras_c4oqhf46pyzuxjbcn2giaqnb44"
   score: 
     type: integer
@@ -15,11 +15,11 @@ properties:
     minimum: 0
     maximum: 100
   result:
-    description: The scan result based on your defined pre-authentication risk settings
+    description: The scan result based on defined pre-authentication risk settings
     allOf:
       - $ref: '#/components/schemas/PreAuthenticationResult'
   warning:
-    description: Present when our risk settings are more restrictive
+    description: Present when Checkout scan is more restrictive
     allOf:
       - $ref: '#/components/schemas/PreAuthenticationWarning'
   _links:
@@ -33,7 +33,7 @@ properties:
             description: The link URL
             example: "https://api.checkout.com/risk/assessments/{assessment_id}"
       pre-capture:
-        description: A link to perform a pre-capture assessment using the same context. Absent if no pre-capture risk settings configured.
+        description: A link to perform a pre-capture assessment using the same context. Absent if no pre-capture risk settings configured
         properties:
           href:
             type: string 
